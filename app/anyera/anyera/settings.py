@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_spectacular',
     'ckeditor',
+    'articles',
+    'projects'
 ]
 
 MIDDLEWARE = [
