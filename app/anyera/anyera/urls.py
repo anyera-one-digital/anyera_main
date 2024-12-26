@@ -5,7 +5,8 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path("api/v1/", include("api.urls")),
+    path("api/v1/", include("api.urls")),
+    #path("api/v1/articles", ArticleApiView.as_view()),
     path(
         'api/swagger/download/',
         SpectacularAPIView.as_view(), name='schema'
@@ -16,3 +17,4 @@ urlpatterns = [
     ),
     # path('api/csrf/', get_csrf_token),
 ]
+

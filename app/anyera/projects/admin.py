@@ -1,4 +1,17 @@
 from django.contrib import admin
-from .models import Project
+from projects.models import Project, ContentBlock
 
-admin.site.register(Project)
+
+class ContentBlockInline(admin.TabularInline):
+    model = ContentBlock
+    classes = ['collapse']
+    fields = ('name', 'text', )
+    extra = 0
+
+
+@admin.register(Project)
+
+class ProjectAdmin(admin.ModelAdmin):
+    inlines = [ContentBlockInline]
+    list_display = ['name', 'preview']
+    search_fields = ['name']
