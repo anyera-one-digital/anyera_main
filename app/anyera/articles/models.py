@@ -20,9 +20,9 @@ class Article(models.Model):
         upload_to='imgs/'
     )
 
-class Meta:
-    verbose_name = 'Статья'
-    verbose_name_plural = 'Статьи'
+    class Meta:
+        verbose_name = 'Статья'
+        verbose_name_plural = 'Статьи'
 
     def __str__(self):
         return self.title
@@ -40,6 +40,11 @@ class ContentBlock(models.Model):
         related_name="user_moderation",
         verbose_name="Блок статьи"
     )
+
+    class Meta:
+        verbose_name = 'Блок'
+        verbose_name_plural = 'Блоки'
+
 
     def __str__(self):
         return self.name
