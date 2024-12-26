@@ -1,15 +1,5 @@
 from django.db import models
 
-class ContentBlock(models.Model):
-    name = models.CharField(
-        "Название блока", 
-        max_length=200
-    )
-    text = models.TextField("Текст блока")
-
-    def __str__(self):
-        return self.name
-
 
 class Article(models.Model):
     title = models.CharField(
@@ -21,10 +11,6 @@ class Article(models.Model):
         max_length=200, 
         default=''
     )
-    txt_block = models.ManyToManyField(
-        ContentBlock, 
-        verbose_name="Блок с текстом"
-    )  
     preview_img = models.ImageField(
         "Превью", 
         upload_to='imgs/'
@@ -40,3 +26,20 @@ class Meta:
 
     def __str__(self):
         return self.title
+
+
+class ContentBlock(models.Model):
+    name = models.CharField(
+        "Название блока", 
+        max_length=200
+    )
+    text = models.TextField("Текст блока")
+    article = models.ForeignKey(
+        Article, 
+        on_delete=models.CASCADE,
+        related_name="user_moderation",
+        verbose_name="Блок статьи"
+    )
+
+    def __str__(self):
+        return self.name
