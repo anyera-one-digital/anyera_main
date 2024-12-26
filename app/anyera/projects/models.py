@@ -49,6 +49,16 @@ class Project(models.Model):
         "Название",
         max_length=200
     )
+    link = models.CharField(
+        "Ссылка на сайт",
+        null=True,
+        max_length=200,
+        default=""
+    )
+    select_on_main = models.BooleanField(
+        "Выводить в блоке на главной?",
+        default=False
+    )
     intro_text = models.TextField(
         "Вводный текст"
     )
