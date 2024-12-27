@@ -41,13 +41,13 @@ class ContentBlock(models.Model):
         verbose_name="Блок статьи"
     )
     order = models.PositiveSmallIntegerField(
-        "Положение",
-        unique=True
+        "Положение"
     )
 
     class Meta:
         verbose_name = 'Блок'
         verbose_name_plural = 'Блоки'
+        unique_together = ["article", "order", ]
 
 
     def __str__(self):
