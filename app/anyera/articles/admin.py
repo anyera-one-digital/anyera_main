@@ -5,7 +5,7 @@ from .models import Article, ContentBlock
 class ContentBlockInline(admin.TabularInline):
     model = ContentBlock
     classes = ['collapse']
-    fields = ('name', 'text', )
+    fields = ('name', 'text', 'order')
     extra = 0
 
 

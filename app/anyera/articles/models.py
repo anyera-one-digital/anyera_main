@@ -40,6 +40,10 @@ class ContentBlock(models.Model):
         related_name="user_moderation",
         verbose_name="Блок статьи"
     )
+    order = models.PositiveSmallIntegerField(
+        "Положение",
+        unique=True
+    )
 
     class Meta:
         verbose_name = 'Блок'
