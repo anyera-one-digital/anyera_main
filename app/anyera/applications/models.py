@@ -30,7 +30,7 @@ class NewProject(models.Model):
         verbose_name_plural = 'Заявки "Обсудить проект"'
 
     def __str__(self):
-        return self.title
+        return self.fio
 
 
 class Briefing(models.Model):
@@ -144,4 +144,4 @@ class Briefing(models.Model):
         verbose_name_plural = 'Заявки "Брифинг"'
 
     def __str__(self):
-        return self.title
+        return self.product
