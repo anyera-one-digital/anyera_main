@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.utils.html import format_html
+from django.urls import reverse
 from .models import (
     Project, 
     Industry, 
@@ -8,6 +10,7 @@ from .models import (
     Slider, 
     SliderImage
 )
+
 
 @admin.register(Industry)
 class IndustryAdmin(admin.ModelAdmin):
@@ -40,13 +43,23 @@ class SliderImageInline(admin.TabularInline):
 class SliderInline(admin.TabularInline):
     model = Slider
     extra = 1
+    fields = ("type", "edit_slider_link")
+    readonly_fields = ("edit_slider_link",)
+
+    def edit_slider_link(self, obj):
+        if obj.pk:
+            url = reverse("admin:projects_slider_change", args=[obj.pk])
+            return format_html(f'<a href="{url}" class="button">Изменить</a>')
+        return "Слайдер еще не сохранен"
+
+    edit_slider_link.short_description = "Изменить"
 
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ("name", "type", "is_visible")
     search_fields = ("name", )
-    filter_horizontal = ("industries", "services")
+    filter_horizontal = ("industries", "services", "other_projects")
     inlines = [DescriptionBlockInline, SliderInline]
 
 

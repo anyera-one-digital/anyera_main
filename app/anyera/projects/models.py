@@ -63,13 +63,13 @@ class Project(models.Model):
         "Вводный текст"
     )
     additional_intro_field = models.CharField(
-        "Доп. вводное поле",
+        "Вводное описание",
         max_length=200,
         blank=True,
         null=True
     )
     intro_image = models.ImageField(
-        "Картинка вводного текста",
+        "Картинка в списке объектов",
         upload_to="projects/images/"
     )
     background_image = models.ImageField(
@@ -160,13 +160,13 @@ class DescriptionBlock(models.Model):
         "Текст блока"
     )
     order = models.PositiveSmallIntegerField(
-        "Положение",
-        unique=True
+        "Положение"
     )
 
     class Meta:
         verbose_name = 'Блок описания'
         verbose_name_plural = 'Блоки описания'
+        unique_together = ["project", "order", ]
 
 
 class Slider(models.Model):
@@ -209,10 +209,10 @@ class SliderImage(models.Model):
         upload_to="projects/images/sliders"
     )
     order = models.PositiveSmallIntegerField(
-        "Положение",
-        unique=True
+        "Положение"
     )
 
     class Meta:
         verbose_name = 'Картинка слайдера'
         verbose_name_plural = 'Картинки слайдера'
+        unique_together = ["slider", "order", ]
