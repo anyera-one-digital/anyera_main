@@ -1,18 +1,36 @@
 from django.db import models
 
-# Create your models here.
+
 class NewProject(models.Model):
+
+    class Communication(models.TextChoices):
+        CALL = "call", "Звонок"
+        EMAIL = "email", "Почта"
+        TELEGRAM = "telegram", "Телеграм"
+
     fio = models.CharField(
         "Как обращаться", 
         max_length=40
     )
     phone = models.CharField(
         "Номер для связи", 
-        max_length=17, 
-        default=''
+        max_length=17
+    )
+    email = models.CharField(
+        "E-mail",
+        max_length=40,
+        blank=True,
+        null=True
+    )
+    telegram_name = models.CharField(
+        "Telegram",
+        max_length=40,
+        blank=True,
+        null=True
     )
     communications = models.TextField(
         "Способ связи",
+        choices=Communication.choices,
     )
     budget = models.TextField(
         "Бюджет проекта"
@@ -22,7 +40,9 @@ class NewProject(models.Model):
     )
     promocode = models.CharField(
         "Промокод", 
-        max_length=40
+        max_length=40,
+        blank=True,
+        null=True
     )
 
     class Meta:
@@ -40,8 +60,7 @@ class Briefing(models.Model):
     )
     phone = models.CharField(
         "Номер телефона", 
-        max_length=17, 
-        default=''
+        max_length=17
     )
     email = models.CharField(
         "E-mail",

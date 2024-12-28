@@ -139,6 +139,25 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = env.get("EMAIL_HOST")
+
+EMAIL_PORT = env.get("EMAIL_PORT")
+
+EMAIL_HOST_USER = env.get("EMAIL_HOST_USER")
+
+EMAIL_HOST_PASSWORD = env.get("EMAIL_HOST_PASSWORD")
+
+EMAIL_USE_SSL = env.get("EMAIL_USE_SSL")
+
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+EMAIL_ADMIN = EMAIL_HOST_USER
+
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8083"]
 CORS_ALLOW_CREDENTIALS = True
