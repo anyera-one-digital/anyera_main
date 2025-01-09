@@ -1,5 +1,4 @@
 import requests
-from urllib.parse import urlencode
 from rest_framework import mixins, viewsets, status
 from rest_framework.response import Response
 from django.core.mail import send_mail
