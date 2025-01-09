@@ -3,8 +3,12 @@ from rest_framework import mixins, viewsets, status
 from rest_framework.response import Response
 from django.core.mail import send_mail
 from django.conf import settings
-from applications.models import NewProject, Briefing
-from applications.serializers import NewProjectSerializer, BriefingSerializer
+from applications.models import NewProject, Briefing, Feedback
+from applications.serializers import (
+    NewProjectSerializer,
+    BriefingSerializer,
+    FeedbackSerializer
+)
 
 class NewProjectViewSet(
     mixins.CreateModelMixin,
@@ -122,6 +126,53 @@ class BriefingViewSet(
             f"Детали заявки 'Брифинг':\n\n"
             f"Как обращаться: {briefing.fio}\n"
             f"Номер телефона: {briefing.phone}\n"
+        ) + message
+        recipient_list = ["NikSen09@mail.ru"]
+
+        send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+
+
+class FeedbackViewSet(
+    mixins.CreateModelMixin,
+    viewsets.GenericViewSet
+):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        feedback = serializer.save()
+
+        message = (
+            f"Telegram: {feedback.telegram if feedback.telegram else "Не указано"}\n"
+        )
+
+        self.send_to_bitrix24(message, feedback)
+        self.send_email_notification(message, feedback)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def send_to_bitrix24(self, message, feedback):
+        url = "https://anyera.bitrix24.ru/rest/6/eh6y29fnoal7d14n/crm.lead.add.json"
+        payload = {
+            'fields': (
+                {
+                    'NAME': feedback.name,
+                    'PHONE': feedback.phone,
+                    'UF_CRM_TEXTAREA': message,
+                }
+            ),
+            'params': {'REGISTER_SONET_EVENT': 'Y'}
+        }
+        requests.post(url, json=payload)
+
+    def send_email_notification(self, message, feedback):
+        subject = "Заявка на обратную связь"
+        message = (
+            f"Детали заявки 'Обратная связь':\n\n"
+            f"Имя: {feedback.name}\n"
+            f"Телефон: {feedback.phone if feedback.phone else "Не указано"}\n"
         ) + message
         recipient_list = ["NikSen09@mail.ru"]
 

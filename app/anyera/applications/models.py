@@ -158,9 +158,35 @@ class Briefing(models.Model):
         "Основной сегмент ЦА", 
         max_length=300
     )
+
     class Meta:
         verbose_name = 'Заявка "Брифинг"'
         verbose_name_plural = 'Заявки "Брифинг"'
 
     def __str__(self):
         return self.product
+    
+
+class Feedback(models.Model):
+
+    name = models.CharField(
+        "Имя",
+        max_length=255
+    )
+    phone = models.CharField(
+        "Номер телефона", 
+        max_length=17
+    )
+    telegram = models.CharField(
+        "Имя",
+        max_length=255,
+        blank=True,
+        null=True
+    )
+
+    class Meta:
+        verbose_name = 'Заявка "Обратная связь"'
+        verbose_name_plural = 'Заявки "Обратная связь"'
+
+    def __str__(self):
+        return self.phone
