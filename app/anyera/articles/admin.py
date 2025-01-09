@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article, ContentBlock
+from articles.models import Article, ContentBlock
 
 
 class ContentBlockInline(admin.TabularInline):

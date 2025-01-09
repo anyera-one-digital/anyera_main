@@ -20,8 +20,8 @@ class NewProjectViewSet(
 
         message = (
             f"Способ связи: {new_project.communications}\n"
-            f"Telegram: {new_project.telegrtelegram_nameam if new_project.telegram_name else "Не указано"}"
-            f"Email: {new_project.email if new_project.email else "Не указано"}"
+            f"Telegram: {new_project.telegram_name if new_project.telegram_name else "Не указано"}\n"
+            f"Email: {new_project.email if new_project.email else "Не указано"}\n"
             f"Бюджет проекта: {new_project.budget}\n"
             f"Описание проекта: {new_project.project_descr}\n"
             f"Промокод: {new_project.promocode}\n"

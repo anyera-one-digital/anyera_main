@@ -40,17 +40,11 @@ class SliderImageSerializer(serializers.ModelSerializer):
 
 class SliderSerializer(serializers.ModelSerializer):
 
-    images = serializers.SerializerMethodField()
+    images = SliderImageSerializer(many=True)
 
     class Meta:
         model = Slider
         fields = ['type', 'images']
-
-    def get_images(self, obj):
-        images = SliderImage.objects.filter(
-            slider=obj
-        )
-        return SliderImageSerializer(images, many=True).data
 
 
 class ProjectsListSerializer(serializers.ModelSerializer):
@@ -65,7 +59,7 @@ class ProjectsListSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
 
     content_blocks = serializers.SerializerMethodField()
-    sliders = serializers.SerializerMethodField()
+    sliders = SliderSerializer(many=True)
     services = ServiceSerializer(many=True)
     industries = IndustrySerializer(many=True)
     type = serializers.CharField(source='type.name')
@@ -80,9 +74,3 @@ class ProjectSerializer(serializers.ModelSerializer):
             project=obj
         ).order_by('order')
         return DescriptionBlockSerializer(blocks, many=True).data
-
-    def get_sliders(self, obj):
-        sliders = Slider.objects.filter(
-            project=obj
-        )
-        return SliderSerializer(sliders, many=True).data

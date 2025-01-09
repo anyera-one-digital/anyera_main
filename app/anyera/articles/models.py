@@ -37,8 +37,8 @@ class ContentBlock(models.Model):
     article = models.ForeignKey(
         Article, 
         on_delete=models.CASCADE,
-        related_name="user_moderation",
-        verbose_name="Блок статьи"
+        related_name="content_block",
+        verbose_name="Статья"
     )
     order = models.PositiveSmallIntegerField(
         "Положение"

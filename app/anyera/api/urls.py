@@ -3,6 +3,7 @@ from django.urls import include, path
 from articles.views import ArticleViewSet
 from projects.views import ProjectViewSet
 from applications.views import NewProjectViewSet, BriefingViewSet
+from vacancies.views import VacancyViewSet
 
 
 router = DefaultRouter()
@@ -19,6 +20,9 @@ router.register('new_project',
 router.register('briefing',
                 BriefingViewSet,
                 basename='briefing')
+router.register('vacancies',
+                VacancyViewSet,
+                basename='vacancies')
 
 
 urlpatterns = [
