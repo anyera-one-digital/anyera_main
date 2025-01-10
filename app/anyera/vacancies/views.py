@@ -37,7 +37,7 @@ class VacancyViewSet(
         return Response(
             serializer.data, status=status.HTTP_201_CREATED
         )
-    
+
     def send_email_notification(self, response, vacancy_title):
         subject = "Отклик на вакансию"
         message = (
@@ -50,7 +50,12 @@ class VacancyViewSet(
         )
         recipient_list = ["NikSen09@mail.ru"]
 
-        email = EmailMessage(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+        email = EmailMessage(
+            subject,
+            message,
+            settings.EMAIL_HOST_USER,
+            recipient_list
+        )
 
         if response.get('portfolio_file'):
             file = response.get('portfolio_file')

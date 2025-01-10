@@ -16,4 +16,3 @@ urlpatterns = [
     ),
     # path('api/csrf/', get_csrf_token),
 ]
-

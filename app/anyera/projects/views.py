@@ -1,4 +1,4 @@
-from rest_framework import generics, mixins, viewsets
+from rest_framework import mixins, viewsets
 from projects.models import Project
 from projects.serializers import ProjectSerializer, ProjectsListSerializer
 
@@ -15,5 +15,4 @@ class ProjectViewSet(
     def get_serializer_class(self):
         if self.action == "retrieve":
             return ProjectSerializer
-        return ProjectsListSerializer 
-
+        return ProjectsListSerializer

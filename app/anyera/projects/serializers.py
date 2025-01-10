@@ -17,6 +17,7 @@ class TypeSerializer(serializers.ModelSerializer):
         model = Type
         fields = ['name']
 
+
 class ServiceSerializer(serializers.ModelSerializer):
 
     class Meta:

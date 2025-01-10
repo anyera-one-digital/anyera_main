@@ -63,4 +63,4 @@ class ResponseAdmin(admin.ModelAdmin):
     ]
 
     def get_vacancy_title(self, obj):
-        return obj.vacancy.title 
+        return obj.vacancy.title

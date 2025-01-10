@@ -129,9 +129,9 @@ class Project(models.Model):
         max_length=7,
     )
     other_projects = models.ManyToManyField(
-        "self", 
-        blank=True, 
-        null=True, 
+        "self",
+        blank=True,
+        null=True,
         verbose_name="Другие проекты"
     )
 

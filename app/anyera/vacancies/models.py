@@ -69,7 +69,7 @@ class Responsibility(models.Model):
 
     def __str__(self):
         return self.text
-    
+
 
 class InfoBlock(models.Model):
 
@@ -97,7 +97,7 @@ class InfoBlock(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 
 class Response(models.Model):
 

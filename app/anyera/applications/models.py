@@ -9,11 +9,11 @@ class NewProject(models.Model):
         TELEGRAM = "telegram", "Телеграм"
 
     fio = models.CharField(
-        "Как обращаться", 
+        "Как обращаться",
         max_length=40
     )
     phone = models.CharField(
-        "Номер для связи", 
+        "Номер для связи",
         max_length=17
     )
     email = models.CharField(
@@ -39,7 +39,7 @@ class NewProject(models.Model):
         "Описание проекта"
     )
     promocode = models.CharField(
-        "Промокод", 
+        "Промокод",
         max_length=40,
         blank=True,
         null=True
@@ -55,11 +55,11 @@ class NewProject(models.Model):
 
 class Briefing(models.Model):
     fio = models.CharField(
-        "Как обращаться", 
+        "Как обращаться",
         max_length=40
     )
     phone = models.CharField(
-        "Номер телефона", 
+        "Номер телефона",
         max_length=17
     )
     email = models.CharField(
@@ -67,95 +67,95 @@ class Briefing(models.Model):
         max_length=40,
     )
     product = models.CharField(
-        "Какой продукт нужен", 
+        "Какой продукт нужен",
         max_length=300
     )
     budget = models.CharField(
-        "Бюджет проекта", 
+        "Бюджет проекта",
         max_length=300
     )
     project_descr = models.TextField(
-        "Описание проекта в основных чертах", 
+        "Описание проекта в основных чертах",
         max_length=300
     )
     purpose = models.CharField(
-        "Цели сайта", 
+        "Цели сайта",
         max_length=300
     )
     main_info = models.TextField(
-        "Необходимая информация", 
+        "Необходимая информация",
         max_length=300
     )
     target_audience = models.TextField(
-        "Целевая аудитория", 
+        "Целевая аудитория",
         max_length=300
     )
     advantages = models.TextField(
-        "Преимущества", 
+        "Преимущества",
         max_length=300
     )
     url_competitors = models.TextField(
-        "Ссылки на конкурентов", 
+        "Ссылки на конкурентов",
         max_length=300
     )
     url_same_like = models.TextField(
-        "Нравящиеся сайты", 
+        "Нравящиеся сайты",
         max_length=300
     )
     url_same_dislike = models.TextField(
-        "Плохие сайты", 
+        "Плохие сайты",
         max_length=300
     )
     price = models.TextField(
-        "Основа для формирования цен", 
+        "Основа для формирования цен",
         max_length=300
     )
     repulsive_impression = models.TextField(
-        "Отталкивающее клиентов", 
+        "Отталкивающее клиентов",
         max_length=300
     )
     сriteria = models.TextField(
-        "Критерии", 
+        "Критерии",
         max_length=300
     )
     target = models.TextField(
-        "Сильные стороны конкурентов", 
+        "Сильные стороны конкурентов",
         max_length=300
     )
     problems = models.TextField(
-        "Проблемы", 
+        "Проблемы",
         max_length=300
     )
     triggers = models.TextField(
-        "Триггеры", 
+        "Триггеры",
         max_length=300
     )
     info_pain = models.TextField(
-        "Инфоболь", 
+        "Инфоболь",
         max_length=300
     )
     needs = models.TextField(
-        "Потребности", 
+        "Потребности",
         max_length=300
     )
     barriers = models.TextField(
-        "Барьеры", 
+        "Барьеры",
         max_length=300
     )
     look_for = models.TextField(
-        "Цель при выборе продукта", 
+        "Цель при выборе продукта",
         max_length=300
     )
     design = models.TextField(
-        "Впечатление", 
+        "Впечатление",
         max_length=300
     )
     associations = models.TextField(
-        "Дизайн", 
+        "Дизайн",
         max_length=300
     )
     main_segment = models.TextField(
-        "Основной сегмент ЦА", 
+        "Основной сегмент ЦА",
         max_length=300
     )
 
@@ -165,7 +165,7 @@ class Briefing(models.Model):
 
     def __str__(self):
         return self.product
-    
+
 
 class Feedback(models.Model):
 
@@ -174,7 +174,7 @@ class Feedback(models.Model):
         max_length=255
     )
     phone = models.CharField(
-        "Номер телефона", 
+        "Номер телефона",
         max_length=17
     )
     telegram = models.CharField(

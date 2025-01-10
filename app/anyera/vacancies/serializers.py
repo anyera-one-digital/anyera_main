@@ -41,18 +41,18 @@ class VacancySerializer(serializers.ModelSerializer):
 
     def get_requirements(self, obj):
         return self.sort_object(Requirement, obj, RequirementSerializer)
-    
+
     def get_responsibilities(self, obj):
         return self.sort_object(Responsibility, obj, ResponsibilitySerializer)
-    
+
     def get_info_blocks(self, obj):
         return self.sort_object(InfoBlock, obj, InfoBlockSerializer)
-    
+
     def sort_object(self, type_obj, object, serializer):
-        blocks =  type_obj.objects.filter(
+        blocks = type_obj.objects.filter(
             vacancy=object
         ).order_by('order')
-        return serializer(blocks, many=True).data 
+        return serializer(blocks, many=True).data
 
 
 class ResponseSerializer(serializers.ModelSerializer):

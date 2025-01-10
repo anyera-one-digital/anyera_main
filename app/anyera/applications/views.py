@@ -10,6 +10,7 @@ from applications.serializers import (
     FeedbackSerializer
 )
 
+
 class NewProjectViewSet(
     mixins.CreateModelMixin,
     viewsets.GenericViewSet
@@ -35,7 +36,7 @@ class NewProjectViewSet(
         self.send_email_notification(message, new_project)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
+
     def send_to_bitrix24(self, message, new_project):
         url = "https://anyera.bitrix24.ru/rest/6/eh6y29fnoal7d14n/crm.lead.add.json"
         payload = {
@@ -79,7 +80,7 @@ class BriefingViewSet(
             f"Продукт: {briefing.product}\n"
             f"Бюджет: {briefing.budget}\n"
             f"Описание проекта в основных чертах: {briefing.project_descr}\n"
-            f"Главные цели, которые должны решаться с помощью сайта: {briefing.purpose}\n"
+            f"Главные цели, которые должны решатьсяс помощью сайта: {briefing.purpose}\n"
             f"Что важно знать пользователям сайта о продукте: {briefing.main_info}\n"
             f"Предположительная главная целевая аудитория: {briefing.target_audience}\n"
             f"Преимущества относительно конкурентов: {briefing.advantages}\n"
@@ -105,7 +106,7 @@ class BriefingViewSet(
         self.send_email_notification(message, briefing)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
+
     def send_to_bitrix24(self, message, briefing):
         url = "https://anyera.bitrix24.ru/rest/6/eh6y29fnoal7d14n/crm.lead.add.json"
         payload = {
@@ -152,7 +153,7 @@ class FeedbackViewSet(
         self.send_email_notification(message, feedback)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
+
     def send_to_bitrix24(self, message, feedback):
         url = "https://anyera.bitrix24.ru/rest/6/eh6y29fnoal7d14n/crm.lead.add.json"
         payload = {

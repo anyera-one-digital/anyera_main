@@ -14,4 +14,3 @@ class ArticleViewSet(
         if self.action == "retrieve":
             return ArticleSerializer
         return ArticleListSerializer
-

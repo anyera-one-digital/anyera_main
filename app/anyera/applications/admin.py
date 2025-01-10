@@ -12,4 +12,3 @@ class NewProjectAdmin(admin.ModelAdmin):
 class BriefingAdmin(admin.ModelAdmin):
     list_display = ['fio', 'product', 'budget']
     search_fields = ['fio', 'budget', 'product', 'project_descr']
-
