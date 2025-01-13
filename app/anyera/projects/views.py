@@ -1,6 +1,15 @@
 from rest_framework import mixins, viewsets
+from django.shortcuts import render
 from projects.models import Project
 from projects.serializers import ProjectSerializer, ProjectsListSerializer
+
+def project_list(request):
+    projects = Project.objects.filter(is_visible=True)
+    return render(request, 'projects.html', {'projects': projects})
+
+def project_detail(request, id):
+    project = Project.objects.get(id=id)
+    return render(request, 'project.html', {'project': project})
 
 
 class ProjectViewSet(
