@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anyera</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="76x76">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="144x144">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="152x152">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-  <link href="img/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-  <meta name="msapplication-TileImage" content="img/apple-touch-icon.png">
-  <link href="img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-  <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="img/favicon.ico" rel="shortcut icon">
-  <link href="img/site.webmanifest" rel="manifest">
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="72x72">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="76x76">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="144x144">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="152x152">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="180x180">
+  <link href="{% static 'img/apple-touch-icon-192x192.png' %}" rel="apple-touch-icon" sizes="192x192">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <meta name="msapplication-TileImage" content="{% static 'img/apple-touch-icon.png' %}">
+  <link href="{% static 'img/favicon-16x16.png' %}" rel="icon" sizes="16x16" type="image/png">
+  <link href="{% static 'img/favicon-32x32.png' %}" rel="icon" sizes="32x32" type="image/png">
+  <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon">
+  <link href="{% static 'img/site.webmanifest' %}" rel="manifest">
+  <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <script>window.console = window.console || function(t) {};</script>
 </head>
 <body>
@@ -124,7 +125,7 @@
               </a>
             </div>
             <div class="home_item_figurines">
-              <img src="./img/home/figurines_1.png" alt="figurines"/>
+              <img src="{% static '/img/home/figurines_1.png' %}" alt="figurines"/>
             </div>
           </div>
           <div class="home__flex_two">
@@ -141,7 +142,7 @@
                 </div>
               </div>
               <div class="home_item_figurines">
-                <img src="./img/home/figurines_2.png" alt="figurines"/>
+                <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
               </div>
             </a>
             <div class="home__flex_three">
@@ -158,7 +159,7 @@
                   </div>
               </div>
                 <div class="home_item_figurines">
-                  <img src="./img/home/figurines_3.png" alt="figurines"/>
+                  <img src="{% static '/img/home/figurines_3.png' %}" alt="figurines"/>
                 </div>
               </a>
               <a class="home_item home_item__four">
@@ -174,7 +175,7 @@
                   </div>
                 </div>
                 <div class="home_item_figurines">
-                  <img src="./img/home/figurines_4.png" alt="figurines"/>
+                  <img src="{% static '/img/home/figurines_4.png' %}" alt="figurines"/>
                 </div>
               </a>
             </div>
@@ -192,7 +193,7 @@
               </div>
             </div>
             <div class="home_item_figurines">
-              <img src="./img/home/figurines_2.png" alt="figurines"/>
+              <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
             </div>
           </a>
         </div>
@@ -206,7 +207,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/JS.png"  alt="icon"/>
+                  <img src="{% static '/img/stack/JS.png' %}"  alt="icon"/>
                 </div>
                 <p class="body_long">JavaScript</p>
               </div>
@@ -214,7 +215,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/TS.png"  alt="icon"/>
+                  <img src="{% static '/img/stack/TS.png' %}"  alt="icon"/>
                 </div>
                 <p class="body_long">TypeScript</p>
               </div>
@@ -222,7 +223,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/Python.png" alt="icon"/>
+                  <img src="{% static '/img/stack/Python.png' %}" alt="icon"/>
                 </div>
                 <p class="body_long">Python</p>
               </div>
@@ -230,7 +231,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/React.png" alt="icon"/>
+                  <img src="{% static '/img/stack/React.png' %}" alt="icon"/>
                 </div>
                 <p class="body_long">React</p>
               </div>
@@ -238,7 +239,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/Vue.png" alt="icon"/>
+                  <img src="{% static '/img/stack/Vue.png' %}" alt="icon"/>
                 </div>
                 <p class="body_long">Vue</p>
               </div>
@@ -246,7 +247,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/Next.png" alt="icon"/>
+                  <img src="{% static '/img/stack/Next.png' %}" alt="icon"/>
                 </div>
                 <p class="body_long">Next</p>
               </div>
@@ -254,7 +255,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/Vite.png" alt="icon"/>
+                  <img src="{% static '/img/stack/Vite.png' %}" alt="icon"/>
                 </div>
                 <p class="body_long">Vite</p>
               </div>
@@ -262,7 +263,7 @@
             <li class="stack_scroll__item">
               <div class="stack_scroll__link">
                 <div class="stack_scroll__icon">
-                  <img src="./img/stack/Postgres.png" alt="icon"/>
+                  <img src="{% static '/img/stack/Postgres.png' %}" alt="icon"/>
                 </div>
                 <p class="body_long">Postgres</p>
               </div>
@@ -326,19 +327,19 @@
         </div>
       </div>
     </section>-->
-    <section class="showreel" data-scroll-section data-persistent data-scroll-section-inview>
+    <!-- <section class="showreel" data-scroll-section data-persistent data-scroll-section-inview>
       <div class="container showreel__container">
         <div class="showreel__inview inview" data-scroll data-scroll-repeat>
           <div class="showreel__target inview__target" id="showreel__target"></div>
           <button class="showreel__button inview__flex" data-scroll data-scroll-sticky data-scroll-target="#showreel__target">
             <div class="showreel__block inview__block">
-              <img src="img/main/showreel.webp" alt="">
+              <img src="{% static 'img/main/showreel.webp' %}" alt="">
             </div>
           </button>
         </div>
       </div>
-    </section>
-    <section class="expertise" data-scroll-section>
+    </section> -->
+    <!-- <section class="expertise" data-scroll-section>
       <div class="expertise__border"></div>
       <div class="container expertise__container">
         <div class="expertise__block">
@@ -460,7 +461,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="projects parallax" data-scroll-section>
       <div class="projects__block">
         <div class="container projects__container">
@@ -470,125 +471,42 @@
               <p class="projects__desc">Мы реализуем как свои собственные проекты, так и помогаем стартапам выйти на рынок. Раньше мы позиционировали себя как веб-студия, но сейчас сфокусировались на том, что нам действительно интересно — приложения и сервисы.              </p>
             </div>
             <div class="projects__right_btn"> 
-              <a class="link_arrow btn btn_new_two"> 
+              <a href="/projects/" class="link_arrow btn btn_new_two"> 
                   <span class="button__text">Больше проектов</span>
               </a>
             </div>
           </div>
           <ul class="projects__list">
-            <li class="projects__item">
-              <a href="project.html" class="projects__link">
-                <div class="projects__image">
-                  <img src="img/projects/projects_1.webp" alt="">
-                  <div class="btn__arrow projects__arrow">
-                    <div class="btn__side btn__side_hover">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
-                    <div class="btn__side btn__side_default">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="projects__info">
-                  <p class="projects__description">Fin Fine</p>
-                  <h4 class="projects__heading">Финансовый трекер</h4>
-                  <ul class="projects_tags">
-                    <li class="projects_tags__item">UI/UX</li>
-                    <li class="projects_tags__item">Product Strategy</li>
-                    <li class="projects_tags__item">E-commerce</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="projects__item">
-              <a href="project.html" class="projects__link">
-                <div class="projects__image">
-                  <img src="img/projects/projects_2.webp" alt="">
-                  <div class="btn__arrow projects__arrow">
-                    <div class="btn__side btn__side_hover">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
-                    <div class="btn__side btn__side_default">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
+            {% for project in projects %}
+              <li class="projects__item">
+                <a href="/projects/{{ project.id }}/" class="projects__link">
+                  <div class="projects__image">
+                    <img src="/media/{{ project.intro_image }}" alt="">
+                    <div class="btn__arrow projects__arrow">
+                      <div class="btn__side btn__side_hover">
+                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                        </svg>
+                      </div>
+                      <div class="btn__side btn__side_default">
+                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="projects__info">
-                  <p class="projects__description">Volleybox</p>
-                  <h4 class="projects__heading">Сервис для волейбольного клуба</h4>
-                  <ul class="projects_tags">
-                    <li class="projects_tags__item">UI/UX</li>
-                    <li class="projects_tags__item">Product Strategy</li>
-                    <li class="projects_tags__item">E-commerce</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="projects__item">
-              <a href="project.html" class="projects__link">
-                <div class="projects__image">
-                  <img src="img/projects/projects_3.webp" alt="">
-                  <div class="btn__arrow projects__arrow">
-                    <div class="btn__side btn__side_hover">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
-                    <div class="btn__side btn__side_default">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
+                  <div class="projects__info">
+                    <p class="projects__description">{{ project.name }}</p>
+                    <h4 class="projects__heading">{{ project.intro_text }}</h4>
+                    <ul class="projects_tags">
+                      {% for service in project.services.all %} 
+                        <li class="projects_tags__item">{{ service.name }}</li>
+                      {% endfor %}
+                    </ul>
                   </div>
-                </div>
-                <div class="projects__info">
-                  <p class="projects__description">Feliksov Diamonds</p>
-                  <h4 class="projects__heading">Интернет-каталог ювелирных изделий</h4>
-                  <ul class="projects_tags">
-                    <li class="projects_tags__item">UI/UX</li>
-                    <li class="projects_tags__item">Product Strategy</li>
-                    <li class="projects_tags__item">E-commerce</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="projects__item">
-              <a href="project.html" class="projects__link">
-                <div class="projects__image">
-                  <img src="img/projects/projects_4.webp" alt="">
-                  <div class="btn__arrow projects__arrow">
-                    <div class="btn__side btn__side_hover">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
-                    <div class="btn__side btn__side_default">
-                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="projects__info">
-                  <p class="projects__description">ArtHomeDecor</p>
-                  <h4 class="projects__heading">Магазин мебели</h4>
-                  <ul class="projects_tags">
-                    <li class="projects_tags__item">UI/UX</li>
-                    <li class="projects_tags__item">Product Strategy</li>
-                    <li class="projects_tags__item">E-commerce</li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            
+                </a>
+              </li>
+            {% endfor %}
           </ul>
         </div>
       </div>
@@ -602,7 +520,7 @@
               <p class="projects__desc">Здесь вы найдёте актуальную информацию о последних тенденциях в мире digital, советы по продвижению бизнеса в интернете, а также интересные материалы о развитии технологий и их влиянии на нашу жизнь.</p>
             </div>  
             <div class="projects__right_btn"> 
-              <a href="articles.html" class="btn btn_new_two articles__project">
+              <a href="/articles/" class="btn btn_new_two articles__project">
                 <span class="button__text">Подробнее</span>
               </a>
             </div>
@@ -610,66 +528,20 @@
           <div class="articles__slider">
             <div class="articles__swiper swiper">
               <ul class="articles__list swiper-wrapper">
-                <li class="articles__item swiper-slide">
-                  <a href="article.html" class="articles__link">
-                    <div class="articles__image">
-                      <img src="img/articles/articles_1.webp" alt="">
-                      <span class="articles__date">31.07.2023</span>
-                    </div>
-                    <div class="articles__info">
-                      <h4 class="articles__head">Как мы искали название</h4>
-                      <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="articles__item swiper-slide">
-                  <a href="article.html" class="articles__link">
-                    <div class="articles__image">
-                      <img src="img/articles/articles_2.webp" alt="">
-                      <span class="articles__date">31.07.2023</span>
-                    </div>
-                    <div class="articles__info">
-                      <h4 class="articles__head">В Поиске</h4>
-                      <p class="articles__desc">агентство ipsum.</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="articles__item swiper-slide">
-                  <a href="article.html" class="articles__link">
-                    <div class="articles__image">
-                      <img src="img/articles/articles_3.webp" alt="">
-                      <span class="articles__date">31.07.2023</span>
-                    </div>
-                    <div class="articles__info">
-                      <h4 class="articles__head">Как создать команду мечты</h4>
-                      <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="articles__item swiper-slide">
-                  <a href="article.html" class="articles__link">
-                    <div class="articles__image">
-                      <img src="img/articles/articles_4.webp" alt="">
-                      <span class="articles__date">31.07.2023</span>
-                    </div>
-                    <div class="articles__info">
-                      <h4 class="articles__head">Работаем и отдыхаем на бали</h4>
-                      <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="articles__item swiper-slide">
-                  <a href="article.html" class="articles__link">
-                    <div class="articles__image">
-                      <img src="img/articles/articles_4.webp" alt="">
-                      <span class="articles__date">31.07.2023</span>
-                    </div>
-                    <div class="articles__info">
-                      <h4 class="articles__head">Работаем и отдыхаем на бали</h4>
-                      <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                    </div>
-                  </a>
-                </li>
+                {% for article in articles %}
+                  <li class="articles__item swiper-slide">
+                    <a href="/article/{{ article.id }}/" class="articles__link">
+                      <div class="articles__image">
+                        <img src="/media/{{ article.preview_img }}" alt="">
+                        <span class="articles__date">{{ article.created_at }}</span>
+                      </div>
+                      <div class="articles__info">
+                        <h4 class="articles__head">{{ article.title }}</h4>
+                        <p class="articles__desc">{{ article.preview }}</p>
+                      </div>
+                    </a>
+                  </li>
+                {% endfor %}
               </ul>
             </div>
             <div class="swiper-button-next articles__next">
@@ -1187,12 +1059,12 @@
   });
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/form.js"></script>
-  <script src="js/scroll.js"></script>
-  <script src="js/scrollbar.js"></script>
-  <script src="js/textarea.js"></script>
-  <script src="js/particles.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{% static 'js/swiper.min.js' %}"></script>
+  <script src="{% static 'js/form.js' %}"></script>
+  <script src="{% static 'js/scroll.js' %}"></script>
+  <script src="{% static 'js/scrollbar.js' %}"></script>
+  <script src="{% static 'js/textarea.js' %}"></script>
+  <script src="{% static 'js/particles.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

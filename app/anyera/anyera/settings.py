@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'articles',
     'projects',
     'applications',
-    'vacancies'
+    'vacancies',
+    'pages'
 ]
 
 MIDDLEWARE = [

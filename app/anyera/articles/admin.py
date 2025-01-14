@@ -12,5 +12,5 @@ class ContentBlockInline(admin.TabularInline):
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     inlines = [ContentBlockInline]
-    list_display = ['title', 'preview']
+    list_display = ['title', 'preview', 'created_at']
     search_fields = ['title']

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Article(models.Model):
@@ -18,6 +19,10 @@ class Article(models.Model):
     element_img = models.ImageField(
         "Картинка в элементе",
         upload_to='imgs/'
+    )
+    created_at = models.DateField(
+        "Дата создания",
+        auto_now_add=True
     )
 
     class Meta:
