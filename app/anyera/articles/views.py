@@ -1,6 +1,6 @@
 from rest_framework import mixins, viewsets
 from django.shortcuts import render
-from articles.models import Article
+from articles.models import Article, ContentBlock
 from articles.serializers import ArticleSerializer, ArticleListSerializer
 
 def article_list(request):
@@ -9,7 +9,9 @@ def article_list(request):
 
 def article_detail(request, id):
     article = Article.objects.get(id=id)
-    return render(request, 'article.html', {'article': article})
+    blocks = ContentBlock.objects.filter(article=article)
+    other_articles = Article.objects.exclude(id=id)
+    return render(request, 'article.html', {'article': article, 'blocks' : blocks, "other_articles" : other_articles})
 
 
 class ArticleViewSet(

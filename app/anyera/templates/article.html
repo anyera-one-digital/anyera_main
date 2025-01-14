@@ -2,18 +2,21 @@
 {% load static %}
 
 {% block content %}
-<section class="project_top project_top__shadow" data-scroll-section id="top" style="background-image: url('img/articles/article_1.webp');">
+<section class="project_top project_top__shadow" data-scroll-section id="top" style="background-image: url('/media/{{ article.element_img }}');">
   <div class="container project_top__container">
     <div class="project_top__block">
       <div class="project_top__info">
         <div class="project_top__info_block">
           <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link text">Главная</a></li>
-            <li class="breadcrumbs__item"><a href="articles.html" class="breadcrumbs__link text">Статьи</a></li>
-            <li class="breadcrumbs__item"><a href="article.html" class="breadcrumbs__link text">Название статьи</a></li>
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link text">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="/articles/" class="breadcrumbs__link text">Статьи</a></li>
+            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link text">{{ article.title }}</a></li>
           </ul>
-          <h1 class="project_top__desc">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</h1>
-          <h4 class="project_top__head">#Аналитика</h4>
+          <h1 class="project_top__desc">{{ article.preview }}</h1>
+          <h4 class="project_top__head">
+            {% for theme in article.theme.all %} 
+            #{{ theme }}
+            {% endfor %}</h4>
         </div>
       </div>
     </div>
@@ -25,34 +28,20 @@
       <div class="article__info_left">
         <div class="article__info_sticky" data-scroll data-scroll-sticky data-scroll-target="#article__fixed">
           <div class="article__info_block" data-scroll>
-            <a data-scroll-to href="#article_1" class="article__heading text text__big"><h4>Введение</h4></a>
-            <a data-scroll-to href="#article_2" class="article__heading text text__big"><h4>Основной вопрос 1</h4></a>
-            <a data-scroll-to href="#article_3" class="article__heading text text__big"><h4>Основной вопрос 2</h4></a>
-            <a data-scroll-to href="#article_4" class="article__heading text text__big"><h4>Вывод</h4></a>
+            {% for block in blocks.all %} 
+            <a data-scroll-to href="#article_{{ block.order }}" class="article__heading text text__big"><h4>{{ block.name }}</h4></a>
+            {% endfor %}
           </div>
         </div>
       </div>
       <div class="article__info_right">
-        <div class="article__info_flex" id="article_1">
-          <h3 class="article__head">Введение</h3>
-          <p class="article__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreetLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+       {% for block in blocks.all %} 
+        <div class="article__info_flex" id="article_{{ block.order }}">
+          <h3 class="article__head">{{ block.name }}</h3>
+          <p class="article__desc">{{ block.text }}</p>
           <img class="article__image" src="img/articles/article_2.webp" alt="">
         </div>
-        <div class="article__info_flex" id="article_2">
-          <h3 class="article__head">Основной вопрос 1</h3>
-          <p class="article__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreetLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
-          <img class="article__image" src="img/articles/article_3.webp" alt="">
-        </div>
-        <div class="article__info_flex" id="article_3">
-          <h3 class="article__head">Основной вопрос 2</h3>
-          <p class="article__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreetLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
-          <img class="article__image" src="img/articles/article_4.webp" alt="">
-        </div>
-        <div class="article__info_flex" id="article_4">
-          <h3 class="article__head">Вывод</h3>
-          <p class="article__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreetLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
-          <img class="article__image" src="img/articles/article_5.webp" alt="">
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -63,73 +52,27 @@
     <div class="articles__block">
       <div class="articles__top">
         <h3 class="articles__head">Похожие статьи</h3>
-        <a href="articles.html" class="btn btn_new articles__project">
+        <a href="/articles/" class="btn btn_new articles__project">
           <span class="button__text">НАШ БЛОГ</span>
         </a>
       </div>
       <div class="articles__slider">
         <div class="articles__swiper swiper">
           <ul class="articles__list swiper-wrapper">
-            <li class="articles__item swiper-slide">
-              <a href="#" class="articles__link">
-                <div class="articles__image">
-                  <img src="img/articles/articles_1.webp" alt="">
-                  <span class="articles__date">31.07.2023</span>
-                </div>
-                <div class="articles__info">
-                  <h4 class="articles__head">Как мы искали название</h4>
-                  <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                </div>
-              </a>
-            </li>
-            <li class="articles__item swiper-slide">
-              <a href="#" class="articles__link">
-                <div class="articles__image">
-                  <img src="img/articles/articles_2.webp" alt="">
-                  <span class="articles__date">31.07.2023</span>
-                </div>
-                <div class="articles__info">
-                  <h4 class="articles__head">В Поиске</h4>
-                  <p class="articles__desc">агентство ipsum.</p>
-                </div>
-              </a>
-            </li>
-            <li class="articles__item swiper-slide">
-              <a href="#" class="articles__link">
-                <div class="articles__image">
-                  <img src="img/articles/articles_3.webp" alt="">
-                  <span class="articles__date">31.07.2023</span>
-                </div>
-                <div class="articles__info">
-                  <h4 class="articles__head">Как создать команду мечты</h4>
-                  <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                </div>
-              </a>
-            </li>
-            <li class="articles__item swiper-slide">
-              <a href="#" class="articles__link">
-                <div class="articles__image">
-                  <img src="img/articles/articles_4.webp" alt="">
-                  <span class="articles__date">31.07.2023</span>
-                </div>
-                <div class="articles__info">
-                  <h4 class="articles__head">Работаем и отдыхаем на бали</h4>
-                  <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                </div>
-              </a>
-            </li>
-            <li class="articles__item swiper-slide">
-              <a href="#" class="articles__link">
-                <div class="articles__image">
-                  <img src="img/articles/articles_4.webp" alt="">
-                  <span class="articles__date">31.07.2023</span>
-                </div>
-                <div class="articles__info">
-                  <h4 class="articles__head">Работаем и отдыхаем на бали</h4>
-                  <p class="articles__desc">Немного о наших  долгих поисках названия в тчении 2х лет Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. О его собрал силуэт назад вдали пояс предупредила повстречался правилами до города грустный свой запятой своих меня, однажды агентство ipsum.</p>
-                </div>
-              </a>
-            </li>
+            {% for other in other_articles %}
+              <li class="articles__item swiper-slide">
+                <a href="/article/{{ other.id }}/" class="articles__link">
+                  <div class="articles__image">
+                    <img src="/media/{{ other.preview_img }}" alt="">
+                    <span class="articles__date">{{ other.created_at }}</span>
+                  </div>
+                  <div class="articles__info">
+                    <h4 class="articles__head">{{ other.title }}</h4>
+                    <p class="articles__desc">{{ other.preview }}</p>
+                  </div>
+                </a>
+              </li>
+            {% endfor %}
           </ul>
         </div>
         <div class="swiper-button-next articles__next">
