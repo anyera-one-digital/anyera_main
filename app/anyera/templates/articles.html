@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anyera</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="76x76">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="144x144">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="152x152">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-  <link href="img/apple-touch-icon-192x192.png" rel="apple-touch-icon" sizes="192x192">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-  <meta name="msapplication-TileImage" content="img/apple-touch-icon.png">
-  <link href="img/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-  <link href="img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="img/favicon.ico" rel="shortcut icon">
-  <link href="img/site.webmanifest" rel="manifest">
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="72x72">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="76x76">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="144x144">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="152x152">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="180x180">
+  <link href="{% static 'img/apple-touch-icon-192x192.png' %}" rel="apple-touch-icon" sizes="192x192">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <meta name="msapplication-TileImage" content="{% static 'img/apple-touch-icon.png' %}">
+  <link href="{% static 'img/favicon-16x16.png' %}" rel="icon" sizes="16x16" type="image/png">
+  <link href="{% static 'img/favicon-32x32.png' %}" rel="icon" sizes="32x32" type="image/png">
+  <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon">
+  <link href="{% static 'img/site.webmanifest' %}" rel="manifest">
+  <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <script>window.console = window.console || function(t) {};</script>
 </head>
 <body>
@@ -59,7 +60,7 @@
     </div>
     <div class="container header__container">
       <div class="header__content">
-        <a class="header__name" href="index.html">
+        <a class="header__name" href="/">
           <svg width="170" height="34" viewBox="0 0 170 34" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path style="--inc-step: 1;" d="M32.5327 2.84143C32.5054 2.63655 32.459 2.4347 32.394 2.23855C32.2422 1.78279 31.9952 1.36477 31.6697 1.01238C31.3284 0.668391 30.9145 0.405703 30.4586 0.243702C30.2653 0.16637 30.0642 0.110478 29.8588 0.0770211C29.675 0.0361788 29.4878 0.012729 29.2997 0.0069799C28.6734 -0.0210865 28.0462 0.0355733 27.4349 0.175434C26.4162 0.426043 25.4252 0.778606 24.4766 1.22783C22.6587 2.07275 21.0139 3.08436 19.4221 4.1598C18.4664 4.80436 17.5406 5.48172 16.6325 6.1777C16.3611 6.38576 16.0905 6.59529 15.8208 6.8063C16.9285 7.64147 19.0432 9.29587 19.2658 9.48471C19.5013 9.27784 19.7393 9.07274 19.9795 8.86941C20.5625 8.3738 21.1544 7.88795 21.7586 7.41894C23.1516 6.33729 24.6109 5.33721 26.0958 4.53572C26.788 4.14769 27.5182 3.83246 28.275 3.59504C28.5581 3.50582 28.8514 3.45309 29.1477 3.43811C29.1907 3.43584 29.2337 3.43584 29.2767 3.43811H29.3253C29.3306 3.47092 29.335 3.50372 29.3412 3.53564C29.3584 3.84621 29.3328 4.15769 29.2652 4.46125C29.0857 5.25567 28.8219 6.02847 28.4781 6.7664C27.7715 8.33745 26.8537 9.88013 25.8732 11.3927C25.3944 12.1321 24.8909 12.8618 24.3715 13.5808C24.224 13.7891 24.0712 13.9957 23.9192 14.2014C24.4731 14.8442 25.1435 15.6741 25.4783 16.089L25.3511 15.9276C25.5578 15.6971 25.7654 15.4657 25.9695 15.2316C26.6426 14.4674 27.3015 13.6854 27.9375 12.8777C29.1327 11.366 30.1997 9.75655 31.1273 8.06615C31.6223 7.15797 32.0228 6.201 32.3224 5.21042C32.4919 4.61752 32.577 4.00352 32.5751 3.38669C32.5778 3.20401 32.5636 3.02148 32.5327 2.84143ZM12.7776 9.3136C12.6699 9.40846 12.5612 9.50156 12.4526 9.59642C11.8015 10.1594 11.147 10.7197 10.5428 11.3359C9.50751 12.3928 8.59502 13.5631 7.68429 14.7325L7.40428 15.0871L7.29739 15.2263C7.26824 15.2644 7.23909 15.3008 7.20906 15.338C5.93484 16.9717 4.74859 18.6725 3.65537 20.4333C2.65808 22.0664 1.73764 23.7589 0.992102 25.5729C0.600783 26.5038 0.304813 27.4722 0.10876 28.4632C0.00501703 29.012 -0.0246941 29.5724 0.0204263 30.1291C0.0734268 30.7108 0.285428 31.4307 0.84105 31.9538C1.40815 32.4591 2.1113 32.5886 2.6625 32.5744C3.19243 32.5569 3.71727 32.4647 4.2216 32.3004C4.37795 32.2463 4.53342 32.1869 4.68888 32.1329C3.01054 31.8332 2.30386 31.4502 2.02473 30.756C1.9652 30.5981 1.92371 30.4339 1.90106 30.2666C1.90106 30.2621 1.90106 30.2568 1.90106 30.2506C1.90106 30.1868 1.90106 30.1167 1.90106 30.0414C1.93922 29.6743 2.02046 29.313 2.1431 28.965C2.4319 28.1705 2.80193 27.4081 3.24727 26.69C3.91161 25.5918 4.64756 24.5389 5.45032 23.5382C5.75066 23.1498 6.05453 22.7686 6.37077 22.3909C6.86014 21.8102 7.36276 21.2383 7.87245 20.6762C8.103 20.4236 8.33797 20.17 8.57382 19.9182C8.56807 19.9113 8.56081 19.9059 8.55262 19.9022C8.55262 19.9022 10.2548 18.0971 11.6682 16.7734C11.6743 16.7734 11.6743 16.7734 11.6796 16.7681C12.3642 16.1111 14.948 13.5684 15.857 12.6703L16.0063 12.5213C15.3711 11.8785 13.6115 10.0965 12.7776 9.31271V9.3136ZM12.5603 9.11145L12.737 9.27725C12.6716 9.21253 12.6125 9.15756 12.5603 9.11057V9.11145Z" fill="currentColor"/>
             <path style="--inc-step: 2;" d="M32.6648 28.5477C32.4184 27.5223 32.0667 26.5251 31.6152 25.5722C30.7704 23.7478 29.7589 22.0911 28.6898 20.492C27.7856 19.1519 26.8282 17.8606 25.8318 16.6012L25.7015 16.438L25.6226 16.3387C25.2866 15.9236 24.6137 15.097 24.0579 14.4505C23.2255 13.4749 22.3798 12.5179 21.5093 11.5813C20.8155 10.9528 20.1081 10.3358 19.387 9.73038C19.1628 9.54147 17.0405 7.88652 15.9298 7.05106C14.7773 6.2227 13.6187 5.41473 12.4095 4.67506C10.7747 3.641 9.05666 2.74481 7.27327 1.99574C6.34221 1.60451 5.37438 1.30739 4.38422 1.10884C3.8363 1.00525 3.277 0.975417 2.72118 1.02015C2.1361 1.07336 1.41628 1.28622 0.899458 1.84408C0.382639 2.40194 0.258532 3.11855 0.26917 3.67907C0.29105 4.20871 0.383469 4.73306 0.54398 5.23824C0.857036 6.15428 1.25968 7.03718 1.74605 7.8741C2.66533 9.53083 3.77343 11.0386 4.91256 12.5019C5.70331 13.5183 6.53039 14.5028 7.36989 15.4748L7.47716 15.3356C6.69882 14.3352 5.95063 13.3143 5.25209 12.2598C4.23585 10.7336 3.35064 9.12406 2.60594 7.44839C2.25271 6.63635 1.98905 5.78819 1.81963 4.91895C1.74449 4.53106 1.72657 4.13425 1.76644 3.74115C1.80988 3.38107 1.9393 3.13806 2.0838 3.03607C2.2283 2.93408 2.46587 2.89062 2.79919 2.91279C3.16627 2.94725 3.52772 3.02679 3.87538 3.14959C4.67038 3.44295 5.43441 3.8143 6.1563 4.25822C7.65091 5.15664 9.07548 6.24842 10.4469 7.39518C11.2004 8.03108 11.9344 8.68827 12.6551 9.35611C12.7074 9.40311 12.7668 9.4581 12.8324 9.52196L12.8714 9.55832C13.7056 10.3423 15.4741 12.1241 16.1115 12.768C16.1567 12.8159 16.2196 12.8798 16.295 12.9587C16.3269 12.9924 16.3446 13.0092 16.3446 13.0092C17.474 14.1746 21.1946 17.9661 21.1946 17.9661C21.7806 18.5107 22.7025 19.575 22.7247 19.6149V19.6211C23.6608 20.6694 24.5685 21.7354 25.4249 22.8379C26.5064 24.2427 27.5117 25.7061 28.3121 27.1978C28.6956 27.8959 29.0112 28.6292 29.2545 29.3876C29.3372 29.6736 29.3892 29.9677 29.4096 30.2647C29.4145 30.3082 29.4127 30.3522 29.4043 30.3951V30.4474C29.3777 30.4528 29.3458 30.4528 29.3156 30.459C29.0054 30.4791 28.6939 30.4555 28.3902 30.3889C28.1863 30.3454 27.9806 30.2913 27.7696 30.2275C27.7371 30.224 27.7049 30.2186 27.673 30.2115C24.7476 29.5127 17.5981 25.1101 13.4574 22.6028C16.1035 25.589 19.6796 28.828 21.7673 30.3774C22.7335 31.0577 23.7374 31.6828 24.7742 32.2496C25.682 32.7518 26.6414 33.1541 27.6358 33.4496C28.2265 33.6218 28.8386 33.7093 29.4539 33.7095C29.6378 33.7072 29.8213 33.6909 30.0027 33.6607C30.208 33.6381 30.4098 33.5907 30.6037 33.5197C31.0643 33.3748 31.4857 33.1267 31.8359 32.7942C32.1783 32.452 32.4408 32.0383 32.6045 31.5827C32.6776 31.3856 32.7337 31.1827 32.772 30.976C32.8082 30.7912 32.8295 30.6038 32.8359 30.4155C32.8667 29.788 32.8092 29.1592 32.6648 28.5477Z" fill="currentColor"/>
@@ -143,10 +144,11 @@
       </div>
       <div class="container articles_page__list_container">
         <ul class="articles_page__list">
+          {% for article in articles %} 
           <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
+            <a href="/article/{{ article.id }}" class="articles_page__link">
               <div class="articles_page__image">
-                <img src="img/articles/article_1.webp" alt="">
+                <img src="/media/{{ article.preview_img }}" alt="">
                 <div class="btn__arrow articles_page__arrow">
                   <div class="btn__side btn__side_hover">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,497 +163,18 @@
                 </div>
               </div>
               <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
+                <p class="articles_page__heading">{{ article.title }}</p>
                 <p class="articles_page__description">Аналитика</p>
               </div>
             </a>
           </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_2.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_3.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_4.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_5.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_1.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_2.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_3.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_4.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_5.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_1.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_2.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_3.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_4.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_5.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_1.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_2.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_3.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
-          <li class="articles_page__item">
-            <a href="article.html" class="articles_page__link">
-              <div class="articles_page__image">
-                <img src="img/articles/article_4.webp" alt="">
-                <div class="btn__arrow articles_page__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="articles_page__info">
-                <p class="articles_page__heading">Как организовать A/B-тестирование на крупном проекте и где брать идеи для гипотез</p>
-                <p class="articles_page__description">Аналитика</p>
-              </div>
-            </a>
-          </li>
+          {% endfor %}
         </ul>
-        <div class="articles_page__bottom">
+        <div class="articles_page__bogttom">
           <button class="btn articles_page__button">
             <span class="button__text">Показать еще статьи</span>
             <span class="button__hover"></span>
           </button>
-        </div>
-      </div>
-    </section>
-    <section class="subscription" data-scroll-section>
-      <div class="container subscription__container">
-        <div class="subscription__block">
-          <form id="form__subscription" class="subscription__form">
-            <div class="subscription__info">
-              <h2 class="subscription__head">Подпишитесь на нашу рассылку</h2>
-              <p class="subscription__desc">Обещаем, что мы не будем спамить, а будем отправлять только полезные материалы</p>
-            </div>
-            <div class="subscription__form_controls">
-              <div class="form__control">
-                <input class="form__input" type="text" minl="4" maxl="40" id="subscription__email">
-                <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">40</span></small>
-                <label class="form__label" for="subscription__email">E-mail</label>
-                <span class="form__bar"></span>
-                <span class="form__border"></span>
-                <small class="form__error">Введите e-mail</small>
-              </div>
-            </div>
-            <div class="subscription__bottom">
-              <label class="form__policy">
-                <input class="form__policy_input" type="checkbox" checked="">
-                <span class="form__policy_check">
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.3335 3.73301L4.8335 7.33301L10.6668 1.33301" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                </span>
-                <span>Я даю свое согласие на <a href="policy.html" class="text text__middle">обработку персональных данных</a>.</span>
-              </label>
-              <div class="btn btn__input header__form_button">
-                <input type="submit" name="submit" value="Подписаться" class="button__text">
-                <span class="button__hover"></span>
-              </div>
-            </div>
-          </form>
-          <div class="subscription__image">
-            <svg width="797" height="937" viewBox="0 0 797 937" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M182.823 328.463C9.70731 416.129 109.759 593.539 181.424 671.286C397.048 852.496 463.396 631.268 370.416 486.116C277.436 340.963 599.694 406.545 583.84 192.447C565.456 -55.8094 399.217 218.881 182.823 328.463Z" stroke="currentColor"/>
-              <path opacity="0.95875" d="M189.355 334.96C13.2852 416.53 107.084 597.324 175.993 677.525C385.161 866.149 459.189 647.372 371.331 499.063C283.474 350.754 603.246 427.543 594.874 213.021C585.166 -35.7253 409.441 232.996 189.355 334.96Z" stroke="currentColor"/>
-              <path opacity="0.9175" d="M195.656 341.68C16.8469 417.056 104.279 601.013 170.347 683.57C372.805 879.38 454.423 663.319 371.794 512.034C289.166 360.749 606.064 448.651 605.184 233.968C604.163 -14.9655 419.167 247.46 195.656 341.68Z" stroke="currentColor"/>
-              <path opacity="0.87625" d="M201.719 348.616C20.3881 417.706 101.347 604.603 164.493 689.415C359.994 892.171 449.103 679.09 371.805 525.014C294.507 370.937 608.144 469.845 614.756 255.262C622.424 6.44465 428.382 262.254 201.719 348.616Z" stroke="currentColor"/>
-              <path opacity="0.835" d="M207.536 355.76C23.9045 418.479 98.2917 608.087 158.439 695.051C346.745 904.507 443.236 694.666 371.362 537.986C299.488 381.305 609.483 491.099 623.58 276.877C639.926 28.479 437.075 277.36 207.536 355.76Z" stroke="currentColor"/>
-              <path opacity="0.79375" d="M213.1 363.102C27.3917 419.374 95.1164 611.463 152.192 700.473C333.074 916.373 436.829 710.028 370.467 550.934C304.105 391.841 610.079 512.386 631.644 298.787C656.649 51.1108 445.235 292.761 213.1 363.102Z" stroke="currentColor"/>
-              <path opacity="0.7525" d="M218.405 370.634C30.8456 420.391 91.8252 614.726 145.76 705.674C318.996 927.755 429.89 725.156 369.12 563.844C308.351 402.532 609.932 533.682 638.938 320.965C672.571 74.3123 452.854 308.437 218.405 370.634Z" stroke="currentColor"/>
-              <path opacity="0.71125" d="M223.443 378.346C34.2618 421.527 88.4221 617.872 139.15 710.647C304.53 938.639 422.427 740.034 367.324 576.699C312.222 413.364 609.041 554.959 645.453 343.385C687.675 98.0555 459.92 324.37 223.443 378.346Z" stroke="currentColor"/>
-              <path opacity="0.67" d="M228.209 386.23C37.6364 422.782 84.9113 620.898 132.37 715.387C289.693 949.011 414.449 754.641 365.08 589.483C315.712 424.324 607.409 576.192 651.183 366.017C701.94 122.311 466.426 340.539 228.209 386.23Z" stroke="currentColor"/>
-              <path opacity="0.62875" d="M232.698 394.275C40.9651 424.154 81.2971 623.799 125.43 719.886C274.503 958.859 405.966 768.962 362.392 602.181C318.817 435.4 605.037 597.355 656.119 388.836C715.351 147.05 472.364 356.926 232.698 394.275Z" stroke="currentColor"/>
-              <path opacity="0.5875" d="M236.902 402.472C44.2438 425.642 77.5838 626.572 118.336 724.141C258.979 968.171 396.989 782.977 359.262 614.777C321.534 446.577 601.927 618.423 660.255 411.814C727.889 172.242 477.726 373.51 236.902 402.472Z" stroke="currentColor"/>
-              <path opacity="0.54625" d="M240.818 410.81C47.4677 427.242 73.775 629.214 111.097 728.146C243.138 976.935 387.527 796.671 355.693 627.257C323.859 457.843 598.083 639.369 663.587 434.921C739.54 197.856 482.505 390.27 240.818 410.81Z" stroke="currentColor"/>
-              <path opacity="0.505" d="M244.44 419.281C50.6348 428.955 69.8773 631.722 103.724 731.896C227.002 985.141 377.594 810.026 351.692 639.604C325.789 469.182 593.512 660.169 666.11 458.131C750.291 223.861 486.697 407.188 244.44 419.281Z" stroke="currentColor"/>
-              <path opacity="0.46375" d="M247.766 427.872C53.7411 430.777 65.8954 634.092 96.2257 735.386C210.59 992.78 367.202 823.027 347.263 651.805C327.324 480.582 588.218 680.796 667.824 481.415C760.129 250.226 490.298 424.241 247.766 427.872Z" stroke="currentColor"/>
-              <path opacity="0.4225" d="M250.788 436.574C56.78 432.706 61.8313 636.321 88.608 738.612C193.92 999.84 356.361 835.656 342.41 663.843C328.458 492.029 582.206 701.226 668.721 504.745C769.039 276.917 493.299 441.41 250.788 436.574Z" stroke="currentColor"/>
-              <path opacity="0.38125" d="M253.507 445.377C59.7517 434.74 57.6938 638.407 80.8843 741.571C177.015 1006.32 345.087 847.9 337.141 675.704C329.194 503.508 575.487 721.433 668.806 528.091C777.013 303.904 495.701 458.673 253.507 445.377Z" stroke="currentColor"/>
-              <path opacity="0.34" d="M255.914 454.269C62.6486 436.876 53.4841 640.348 73.0601 744.258C159.893 1012.2 333.391 859.743 331.459 687.375C329.527 515.006 568.064 741.394 668.074 551.427C784.04 331.152 497.497 476.009 255.914 454.269Z" stroke="currentColor"/>
-              <path opacity="0.29875" d="M258.011 463.239C65.4702 439.113 49.2102 642.14 65.1479 746.67C142.577 1017.48 321.29 871.171 325.375 698.84C329.459 526.509 559.95 761.083 666.529 574.722C790.111 358.629 498.688 493.398 258.011 463.239Z" stroke="currentColor"/>
-              <path opacity="0.2575" d="M259.794 472.278C68.212 441.446 44.8764 643.783 57.1563 748.805C125.087 1022.15 308.798 882.169 318.894 710.086C328.99 538.002 551.154 780.478 664.172 597.95C795.221 386.301 499.271 510.817 259.794 472.278Z" stroke="currentColor"/>
-              <path opacity="0.21625" d="M261.261 481.373C70.8717 443.874 40.4888 645.273 49.096 750.66C107.446 1026.21 295.93 892.724 312.025 721.098C328.121 549.472 541.687 799.553 661.007 621.081C799.362 414.135 499.247 528.247 261.261 481.373Z" stroke="currentColor"/>
-              <path opacity="0.175" d="M262.407 490.513C73.4431 446.393 36.05 646.609 40.974 752.232C89.6721 1029.65 282.699 902.824 304.775 731.865C326.85 560.905 531.559 818.287 657.034 644.087C802.527 442.096 498.613 545.664 262.407 490.513Z" stroke="currentColor"/>
-              <path opacity="0.13375" d="M263.235 499.689C75.9259 449 31.5682 647.789 32.803 753.52C71.7898 1032.47 269.125 912.457 297.154 742.371C325.183 572.286 520.784 836.656 652.262 666.941C804.716 470.15 497.372 563.049 263.235 499.689Z" stroke="currentColor"/>
-              <path opacity="0.0925" d="M263.743 508.887C78.3163 451.692 27.0479 648.812 24.5921 754.522C53.8201 1034.66 255.224 921.609 289.171 752.606C323.118 583.602 509.374 854.637 646.695 689.614C805.924 498.264 495.526 580.38 263.743 508.887Z" stroke="currentColor"/>
-              <path opacity="0.05125" d="M263.929 518.097C80.6113 454.466 22.4947 649.677 16.3512 755.236C35.7847 1036.22 241.011 930.271 280.836 762.555C320.661 594.839 497.344 872.21 640.341 712.08C806.151 526.403 493.075 597.636 263.929 518.097Z" stroke="currentColor"/>
-              <path opacity="0.01" d="M263.793 527.309C82.808 457.319 17.9141 650.382 8.09033 755.663C17.7058 1037.16 226.505 938.431 272.159 772.208C317.812 605.984 484.708 889.351 633.206 734.31C805.395 554.532 490.024 614.796 263.793 527.309Z" stroke="currentColor"/>
-            </svg>
-          </div>
         </div>
       </div>
     </section>

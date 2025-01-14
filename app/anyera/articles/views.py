@@ -2,6 +2,14 @@ from rest_framework import mixins, viewsets
 from articles.models import Article
 from articles.serializers import ArticleSerializer, ArticleListSerializer
 
+def article_list(request):
+    articles = Article.objects.filter(is_visible=True)
+    return render(request, 'articles.html', {'articles': articles})
+
+def article_detail(request, id):
+    article = Article.objects.get(id=id)
+    return render(request, 'article.html', {'article': article})
+
 
 class ArticleViewSet(
     mixins.ListModelMixin,
