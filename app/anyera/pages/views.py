@@ -9,6 +9,3 @@ def main_page(request):
         'projects': projects,
         'articles': articles
     })
-
-def contacts_page(request):
-    return render(request, 'contacts.html')
