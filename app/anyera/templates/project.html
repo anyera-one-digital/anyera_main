@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block content %}
-<section class="project_top" data-scroll-section id="top" style="background: #001254;">
-  <img class="project_top__back" src="img/project/project_1/project_shadow.webp" alt="">
+<section class="project_top" data-scroll-section id="top" style="background: {{ project.color }}">
+  <img class="project_top__back" src="/media/{{ project.background_image }}" alt="">
   <div class="container project_top__container">
     <div id="project_top__star" class="project_top__star"></div>
     <div class="project_top__block">
@@ -26,7 +26,7 @@
         </a>
       </div>
       <div class="project_top__image">
-        <img src="/media/{{ project.background_image }}" alt="">
+        <img src="/media/{{ project.element_image }}" alt="">
       </div>
     </div>
   </div>
@@ -318,7 +318,7 @@
         <h3 class="projects__head">Похожие кейсы</h3>
         <div class="projects__right_btn">
           <div class="projects__buttons">
-            <a href="projects.html" class="btn projects__button">
+            <a href="/projects/" class="btn projects__button">
               <span class="button__text">Все работы</span>
               <span class="button__hover"></span>
             </a>
@@ -357,10 +357,11 @@
       </div>
       <div class="projects__swiper swiper">
         <ul class="projects__wrapper swiper-wrapper">
+          {% for other in other_projects %} 
           <li class="projects__item swiper-slide">
-            <a href="project.html" class="projects__link">
+            <a href="/projects/{{ other.id }}/" class="projects__link">
               <div class="projects__image">
-                <img src="img/projects/projects_1.webp" alt="">
+                <img src="/media/{{ other.intro_image }}" alt="">
                 <div class="btn__arrow projects__arrow">
                   <div class="btn__side btn__side_hover">
                     <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -375,156 +376,17 @@
                 </div>
               </div>
               <div class="projects__info">
-                <p class="projects__description">Fin Fine</p>
-                <h4 class="projects__heading">Финансовый трекер</h4>
+                <p class="projects__description">{{ other.name }}</p>
+                <h4 class="projects__heading">{{ other.intro_text }}</h4>
                 <ul class="projects_tags">
-                  <li class="projects_tags__item">UI/UX</li>
-                  <li class="projects_tags__item">Product Strategy</li>
-                  <li class="projects_tags__item">E-commerce</li>
+                  {% for service in other.services.all %} 
+                    <li class="projects_tags__item">{{ service.name }}</li>
+                  {% endfor %}
                 </ul>
               </div>
             </a>
           </li>
-          <li class="projects__item swiper-slide">
-            <a href="project.html" class="projects__link">
-              <div class="projects__image">
-                <img src="img/projects/projects_2.webp" alt="">
-                <div class="btn__arrow projects__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__info">
-                <p class="projects__description">Volleybox</p>
-                <h4 class="projects__heading">Сервис для волейбольного клуба</h4>
-                <ul class="projects_tags">
-                  <li class="projects_tags__item">UI/UX</li>
-                  <li class="projects_tags__item">Product Strategy</li>
-                  <li class="projects_tags__item">E-commerce</li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item swiper-slide">
-            <a href="project.html" class="projects__link">
-              <div class="projects__image">
-                <img src="img/projects/projects_3.webp" alt="">
-                <div class="btn__arrow projects__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__info">
-                <p class="projects__description">Feliksov Diamonds</p>
-                <h4 class="projects__heading">Интернет-каталог ювелирных изделий</h4>
-                <ul class="projects_tags">
-                  <li class="projects_tags__item">UI/UX</li>
-                  <li class="projects_tags__item">Product Strategy</li>
-                  <li class="projects_tags__item">E-commerce</li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item swiper-slide">
-            <a href="project.html" class="projects__link">
-              <div class="projects__image">
-                <img src="img/projects/projects_4.webp" alt="">
-                <div class="btn__arrow projects__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__info">
-                <p class="projects__description">ArtHomeDecor</p>
-                <h4 class="projects__heading">Магазин мебели</h4>
-                <ul class="projects_tags">
-                  <li class="projects_tags__item">UI/UX</li>
-                  <li class="projects_tags__item">Product Strategy</li>
-                  <li class="projects_tags__item">E-commerce</li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item swiper-slide">
-            <a href="project.html" class="projects__link">
-              <div class="projects__image">
-                <img src="img/projects/projects_5.webp" alt="">
-                <div class="btn__arrow projects__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__info">
-                <p class="projects__description">Агрочемпион</p>
-                <h4 class="projects__heading">Корпоративный сайт и каталог сельхоз техники</h4>
-                <ul class="projects_tags">
-                  <li class="projects_tags__item">UI/UX</li>
-                  <li class="projects_tags__item">Product Strategy</li>
-                  <li class="projects_tags__item">E-commerce</li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="projects__item swiper-slide">
-            <a href="project.html" class="projects__link">
-              <div class="projects__image">
-                <img src="img/projects/projects_6.webp" alt="">
-                <div class="btn__arrow projects__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div class="projects__info">
-                <p class="projects__description">АСО</p>
-                <h4 class="projects__heading">Аренда строительной опалубки</h4>
-                <ul class="projects_tags">
-                  <li class="projects_tags__item">UI/UX</li>
-                  <li class="projects_tags__item">Product Strategy</li>
-                  <li class="projects_tags__item">E-commerce</li>
-                </ul>
-              </div>
-            </a>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
