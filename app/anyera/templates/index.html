@@ -1,1070 +1,469 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anyera</title>
-  <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="72x72">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="76x76">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="144x144">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="152x152">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="180x180">
-  <link href="{% static 'img/apple-touch-icon-192x192.png' %}" rel="apple-touch-icon" sizes="192x192">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
-  <meta name="msapplication-TileImage" content="{% static 'img/apple-touch-icon.png' %}">
-  <link href="{% static 'img/favicon-16x16.png' %}" rel="icon" sizes="16x16" type="image/png">
-  <link href="{% static 'img/favicon-32x32.png' %}" rel="icon" sizes="32x32" type="image/png">
-  <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon">
-  <link href="{% static 'img/site.webmanifest' %}" rel="manifest">
-  <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
-  <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <script>window.console = window.console || function(t) {};</script>
-</head>
-<body>
-  <div class="overlay"></div>
-  <!-- <div class="preloader">
-    <div class="preloader__top"></div>
-    <svg class="preloader__image" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">
-      <path d="M2.32467 23.0762C0.852365 20.7515 0 17.9953 0 15.04C0 6.73365 6.73365 0 15.04 0C15.2501 0 15.4591 0.00430619 15.6671 0.012836L2.32467 23.0762Z" fill="currentColor"/>
-      <path d="M18.8191 0.478815L29.5746 18.9199C29.9042 17.6821 30.0798 16.3816 30.0798 15.04C30.0798 8.03889 25.2962 2.15511 18.8191 0.478815Z" fill="currentColor"/>
-      <path d="M26.5359 24.7384L23.4677 20.3018L19.5899 20.0344C18.4098 19.953 17.3278 19.3482 16.6402 18.3855L16.0843 17.6073C15.922 17.38 16.0395 17.0606 16.3105 16.9929L21.2899 15.7481L17.1017 7.81303L6.03521 26.986C6.02162 27.0095 6.00783 27.0329 5.9938 27.056C8.51128 28.9544 11.6444 30.0799 15.0403 30.0799C19.6509 30.0799 23.777 28.0052 26.5359 24.7384Z" fill="currentColor"/>
-    </svg>
-    <div class="preloader__bottom"></div>
-  </div> -->
-  <div class="cursor">
-    <div class="cursor__block">
-      <div class="cursor__wrapper">
-        <div class="cursor__text cursor__text_slider">
-          <p>
-            <svg width="80" height="26" viewBox="0 0 80 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.545556 14.0454C-0.18185 13.5274 -0.181853 12.4726 0.545553 11.9546L16.9788 0.253285C17.8607 -0.374635 19.1034 0.236825 19.1034 1.29864V24.7014C19.1034 25.7632 17.8607 26.3746 16.9788 25.7467L0.545556 14.0454Z" fill="currentColor"/>
-              <path d="M79.4544 14.0454C80.1819 13.5274 80.1819 12.4726 79.4544 11.9546L63.0212 0.253285C62.1393 -0.374635 60.8966 0.236825 60.8966 1.29864V24.7014C60.8966 25.7632 62.1393 26.3746 63.0212 25.7467L79.4544 14.0454Z" fill="currentColor"/>
-              <path d="M45.9705 13.2336C45.9705 16.4353 43.2974 19.0308 40 19.0308C36.7026 19.0308 34.0295 16.4353 34.0295 13.2336C34.0295 10.0318 36.7026 7.43635 40 7.43635C43.2974 7.43635 45.9705 10.0318 45.9705 13.2336Z" fill="currentColor"/>
-            </svg>
-          </p>
+
+{% block content %}
+<section class="top" data-scroll-section id="top"></section>
+<section class="home" data-scroll-section>
+  <div class="container home__container">
+    <div class="home__flex_one">
+      <div class="home_item home_item__one">
+        <div class="home_item__wrapper">
+          <h2>IT партнер <br> в разработке <br> и поддержке <br> веб-сервисов</h2>
+          <p>Продуктовая команда для решения задач бизнеса. Мы используем современные технологии и Agile, чтобы обеспечить прозрачность и эффективность.</p>
+          <a href="/projects/" class="btn btn_new">
+            <span class="button__text">Смотреть проекты</span>
+          </a>
         </div>
-        <div class="cursor__text cursor__text_showreel"><p>ОТКРЫТЬ</p></div>
+        <div class="home_item_figurines">
+          <img src="{% static '/img/home/figurines_1.png' %}" alt="figurines"/>
+        </div>
       </div>
-      <div class="cursor__left"></div>
-      <div class="cursor__right"></div>
-    </div>
-  </div>
-  <header class="header">
-    <div class="header__progress">
-      <div class="header__progress_bar"></div>
-    </div>
-    <div class="container header__container">
-      <div class="header__content">
-        <a class="header__name" href="index.html">
-          <svg width="166.000000" height="26.000000" viewBox="0 0 166 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs/>
-            <circle id="Ellipse 123" r="13.000000" transform="matrix(1 -2.93962e-08 2.93962e-08 1 13 13)" fill="currentColor" fill-opacity="1.000000"/>
-            <path id="Vector" d="M19.4 7.39C19.39 7.3 19.37 7.22 19.35 7.14C19.29 6.96 19.18 6.79 19.05 6.65C18.91 6.51 18.75 6.4 18.56 6.33C18.49 6.3 18.4 6.28 18.32 6.27C18.25 6.25 18.17 6.24 18.09 6.24C17.84 6.23 17.59 6.25 17.34 6.31C16.93 6.41 16.53 6.55 16.14 6.73C15.41 7.08 14.74 7.48 14.1 7.92C13.71 8.18 13.33 8.45 12.97 8.74C12.86 8.82 12.75 8.91 12.64 8.99C13.09 9.33 13.94 10 14.03 10.08C14.13 9.99 14.23 9.91 14.32 9.83C14.56 9.62 14.8 9.43 15.04 9.24C15.61 8.8 16.2 8.4 16.8 8.07C17.08 7.91 17.37 7.79 17.68 7.69C17.79 7.66 17.91 7.63 18.03 7.63C18.05 7.63 18.07 7.63 18.08 7.63L18.1 7.63C18.11 7.64 18.11 7.65 18.11 7.67C18.12 7.79 18.11 7.92 18.08 8.04C18.01 8.36 17.9 8.67 17.76 8.97C17.48 9.61 17.1 10.23 16.71 10.85C16.51 11.15 16.31 11.44 16.1 11.73C16.04 11.82 15.98 11.9 15.92 11.98C16.14 12.24 16.41 12.58 16.55 12.75L16.5 12.68C16.58 12.59 16.66 12.5 16.75 12.4C17.02 12.09 17.29 11.77 17.54 11.45C18.03 10.83 18.46 10.18 18.83 9.5C19.03 9.13 19.2 8.75 19.32 8.34C19.39 8.1 19.42 7.86 19.42 7.61C19.42 7.53 19.41 7.46 19.4 7.39ZM11.41 10C11.36 10.04 11.32 10.08 11.28 10.12C11.01 10.35 10.75 10.57 10.5 10.82C10.08 11.25 9.71 11.73 9.34 12.2L9.23 12.34L9.19 12.4C9.18 12.41 9.16 12.43 9.15 12.44C8.64 13.1 8.16 13.79 7.72 14.5C7.31 15.17 6.94 15.85 6.64 16.58C6.48 16.96 6.36 17.35 6.28 17.75C6.24 17.98 6.23 18.2 6.24 18.43C6.26 18.66 6.35 18.96 6.58 19.17C6.81 19.37 7.09 19.42 7.31 19.42C7.53 19.41 7.74 19.38 7.94 19.31C8.01 19.29 8.07 19.26 8.13 19.24C7.45 19.12 7.17 18.96 7.06 18.68C7.03 18.62 7.01 18.55 7 18.49C7 18.48 7 18.48 7 18.48C7 18.45 7 18.42 7 18.39C7.02 18.25 7.05 18.1 7.1 17.96C7.22 17.64 7.37 17.33 7.55 17.04C7.82 16.59 8.12 16.17 8.44 15.76C8.56 15.6 8.69 15.45 8.81 15.3C9.01 15.06 9.22 14.83 9.42 14.6C9.51 14.5 9.61 14.4 9.71 14.3C9.7 14.29 9.7 14.29 9.7 14.29C9.7 14.29 10.39 13.56 10.96 13.02C10.96 13.02 10.96 13.02 10.96 13.02C11.24 12.76 12.29 11.73 12.65 11.36L12.71 11.3C12.46 11.04 11.75 10.32 11.41 10L11.41 10ZM11.32 9.92L11.39 9.99C11.36 9.96 11.34 9.94 11.32 9.92L11.32 9.92Z" fill="#FAFAFA" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M19.45 17.39C19.35 16.97 19.21 16.57 19.03 16.18C18.69 15.44 18.28 14.77 17.85 14.12C17.48 13.58 17.09 13.06 16.69 12.55L16.64 12.48L16.6 12.44C16.47 12.28 16.2 11.94 15.97 11.68C15.63 11.28 15.29 10.9 14.94 10.52C14.66 10.26 14.37 10.01 14.08 9.77C13.99 9.69 13.13 9.02 12.68 8.68C12.22 8.35 11.75 8.02 11.26 7.72C10.59 7.3 9.9 6.94 9.18 6.64C8.8 6.48 8.41 6.36 8.01 6.28C7.79 6.24 7.56 6.23 7.33 6.24C7.1 6.26 6.81 6.35 6.6 6.58C6.39 6.8 6.34 7.09 6.34 7.32C6.35 7.53 6.39 7.75 6.45 7.95C6.58 8.32 6.74 8.68 6.94 9.02C7.31 9.69 7.76 10.3 8.22 10.89C8.54 11.3 8.88 11.7 9.22 12.09L9.26 12.04C8.95 11.63 8.64 11.22 8.36 10.79C7.95 10.17 7.59 9.52 7.29 8.84C7.15 8.52 7.04 8.17 6.97 7.82C6.94 7.66 6.93 7.5 6.95 7.34C6.97 7.2 7.02 7.1 7.08 7.06C7.14 7.02 7.23 7 7.37 7.01C7.51 7.02 7.66 7.06 7.8 7.1C8.12 7.22 8.43 7.37 8.73 7.55C9.33 7.92 9.91 8.36 10.46 8.82C10.77 9.08 11.07 9.35 11.36 9.62C11.38 9.64 11.4 9.66 11.43 9.68L11.44 9.7C11.78 10.02 12.5 10.74 12.75 11C12.77 11.02 12.8 11.04 12.83 11.08C12.84 11.09 12.85 11.1 12.85 11.1C13.31 11.57 14.81 13.1 14.81 13.1C15.05 13.32 15.42 13.75 15.43 13.77L15.43 13.77C15.81 14.2 16.18 14.63 16.52 15.07C16.96 15.64 17.37 16.24 17.69 16.84C17.85 17.12 17.98 17.42 18.08 17.73C18.11 17.84 18.13 17.96 18.14 18.08C18.14 18.1 18.14 18.12 18.14 18.13L18.14 18.15C18.12 18.16 18.11 18.16 18.1 18.16C17.97 18.17 17.85 18.16 17.73 18.13C17.64 18.11 17.56 18.09 17.47 18.07C17.46 18.06 17.45 18.06 17.43 18.06C16.25 17.78 13.36 15.99 11.68 14.98C12.75 16.19 14.2 17.5 15.04 18.13C15.43 18.4 15.84 18.65 16.26 18.88C16.63 19.09 17.02 19.25 17.42 19.37C17.66 19.44 17.91 19.47 18.16 19.47C18.23 19.47 18.3 19.47 18.38 19.45C18.46 19.45 18.54 19.43 18.62 19.4C18.81 19.34 18.98 19.24 19.12 19.1C19.26 18.97 19.36 18.8 19.43 18.61C19.46 18.53 19.48 18.45 19.5 18.37C19.51 18.29 19.52 18.22 19.52 18.14C19.54 17.89 19.51 17.63 19.45 17.39Z" fill="#FAFAFA" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M77.83 14.3L71.75 6.9L69.41 6.9L69.41 19.09L72.2 19.09L72.2 11.69L78.3 19.09L80.62 19.09L80.62 6.9L77.83 6.9L77.83 14.3Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M99.98 6.9L96.7 12.31L93.44 6.9L90.43 6.9L95.17 14.75L95.17 19.09L98 19.09L98 14.78L102.77 6.9L99.98 6.9Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M115.37 14.01L121.01 14.01L121.01 11.81L115.37 11.81L115.37 9.16L121.75 9.16L121.75 6.9L112.58 6.9L112.58 19.09L121.98 19.09L121.98 16.83L115.37 16.83L115.37 14.01Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M139.88 15.17C140.63 14.86 141.27 14.34 141.71 13.66C142.14 13.01 142.36 12.23 142.36 11.32C142.36 10.41 142.14 9.62 141.71 8.95C141.27 8.28 140.63 7.75 139.88 7.43C139.1 7.08 138.16 6.9 137.06 6.9L131.79 6.9L131.79 19.09L134.61 19.09L134.61 15.69L137.06 15.69L137.19 15.69L139.54 19.09L142.58 19.09L139.86 15.18L139.88 15.17ZM138.86 9.75C139.29 10.13 139.5 10.65 139.5 11.32C139.5 11.98 139.29 12.5 138.86 12.88C138.43 13.26 137.78 13.45 136.91 13.45L134.61 13.45L134.61 9.19L136.91 9.19C137.78 9.19 138.43 9.38 138.86 9.75L138.86 9.75Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M51.4 6.9L46 19.09L48.87 19.09L52.77 9.67L55.54 16.41L52.79 16.41L56.65 19.09L59.59 19.09L54.17 6.9L51.4 6.9Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
-            <path id="Vector" d="M160.57 6.9L157.8 6.9L152.39 19.09L155.27 19.09L159.17 9.67L161.94 16.41L159.19 16.41L163.05 19.09L165.99 19.09L160.57 6.9Z" fill="currentColor" fill-opacity="1.000000" fill-rule="nonzero"/>
-          </svg>
-          
-          
-          
+      <div class="home__flex_two">
+        <a href="" class="home_item home_item__two">
+          <div class="home_item__wrapper">
+            <h4>Чем мы можем помочь?</h4>
+            <p>Web-sites & Web-app </p> <p>Telegram bots & Mini apps </p> <p>E-Commerce</p>
+            <p class="sub_headerXL">Разрабатываем</p>
+            <div class="home_item__icon">
+              <svg width="21.822266" height="21.818359" viewBox="0 0 21.8223 21.8184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs/>
+                <path id="Линия 5" d="M1 20.8L20.82 1.02M1.02 1L20.82 1.02L20.8 20.81" stroke="#262626" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg> 
+            </div>
+          </div>
+          <div class="home_item_figurines">
+            <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
+          </div>
         </a>
-        <button class="header__burger" aria-label="Открыть меню">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="header__right">
-          <div class="header__links">
-            <a class="header__link text text__middle" href="team.html"><span class="text__rotate">Команда</span></a>
-            <a class="header__link text text__middle" href="projects.html"><span class="text__rotate">Проекты</span></a>
-          </div>
-          <div class="header__buttons">
-            <button class="btn btn_new button__project">
-              <span class="button__text">ОБСУДИТЬ ПРОЕКТ</span>
-            </button>
-            <a href="briefing.html" class="btn btn_new button__briefing">
-              <span class="button__text">БРИФИНГ</span>
-            </a> 
-            <!-- <a href="briefing.html" class="btn button__feedback">
-              <span class="button__text">КАЛЬКУЛЯТОР</span>
-              <span class="button__hover"></span>
-            </a> -->
-            <div class="header__consultation_burger_flex">
-              <button class="header__consultation_burger" aria-label="Закрыть меню">
-                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 21.3241L21.3241 1M1.42335 1L21.7475 21.3241" stroke="currentColor"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="main" data-scroll-container>
-    <section class="top" data-scroll-section id="top"></section>
-    <section class="home" data-scroll-section>
-      <div class="container home__container">
-        <div class="home__flex_one">
-          <div class="home_item home_item__one">
+        <div class="home__flex_three">
+          <a href="/about_us/" class="home_item home_item__three">
             <div class="home_item__wrapper">
-              <h2>IT партнер <br> в разработке <br> и поддержке <br> веб-сервисов</h2>
-              <p>Продуктовая команда для решения задач бизнеса. Мы используем современные технологии и Agile, чтобы обеспечить прозрачность и эффективность.</p>
-              <a src="#" class="btn btn_new">
-                <span class="button__text">Смотреть проекты</span>
-              </a>
-            </div>
-            <div class="home_item_figurines">
-              <img src="{% static '/img/home/figurines_1.png' %}" alt="figurines"/>
-            </div>
-          </div>
-          <div class="home__flex_two">
-            <a class="home_item home_item__two">
-              <div class="home_item__wrapper">
-                <h4>Чем мы можем помочь?</h4>
-                <p>Web-sites & Web-app </p> <p>Telegram bots & Mini apps </p> <p>E-Commerce</p>
-                <p class="sub_headerXL">Разрабатываем</p>
-                <div class="home_item__icon">
-                  <svg width="21.822266" height="21.818359" viewBox="0 0 21.8223 21.8184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <defs/>
-                    <path id="Линия 5" d="M1 20.8L20.82 1.02M1.02 1L20.82 1.02L20.8 20.81" stroke="#262626" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                  </svg> 
-                </div>
-              </div>
-              <div class="home_item_figurines">
-                <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
-              </div>
-            </a>
-            <div class="home__flex_three">
-              <a class="home_item home_item__three">
-                <div class="home_item__wrapper">
-                  <h4>DISCOVER <br>
-                    OUR HISTORY</h4>
-                  <p class="sub_headerXL">About us</p>
-                  <div class="home_item__icon">
-                    <svg width="21.892578" height="21.750000" viewBox="0 0 21.8926 21.75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <defs/>
-                      <path id="Линия 4" d="M1 20.73L20.88 1.01M1.02 0.99L20.88 1.01L20.87 20.75" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                    </svg>
-                  </div>
-              </div>
-                <div class="home_item_figurines">
-                  <img src="{% static '/img/home/figurines_3.png' %}" alt="figurines"/>
-                </div>
-              </a>
-              <a class="home_item home_item__four">
-                <div class="home_item__wrapper">
-                  <h4>HAVE SOME <br>
-                    QUESTIONS?</h4>
-                  <p class="sub_headerXL">Contact us</p>
-                  <div class="home_item__icon">
-                    <svg width="30.025391" height="30.060547" viewBox="0 0 30.0254 30.0605" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <defs/>
-                      <path id="Форма 10" d="M15.25 15.73L1 13.34L29.02 1.03L17.69 29.02L15.25 15.73L29.02 1.03" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-                <div class="home_item_figurines">
-                  <img src="{% static '/img/home/figurines_4.png' %}" alt="figurines"/>
-                </div>
-              </a>
-            </div>
-          </div>
-          <a class="home_item home_item__five">
-            <div class="home_item__wrapper">
-              <h4>Чем мы можем помочь?</h4>
-              <p>Web-sites & Web-app </p> <p>Telegram bots & Mini apps </p> <p>E-Commerce</p>
-              <p class="sub_headerXL">Разрабатываем</p>
+              <h4>DISCOVER <br>
+                OUR HISTORY</h4>
+              <p class="sub_headerXL">About us</p>
               <div class="home_item__icon">
-                <svg width="21.822266" height="21.818359" viewBox="0 0 21.8223 21.8184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg width="21.892578" height="21.750000" viewBox="0 0 21.8926 21.75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <defs/>
-                  <path id="Линия 5" d="M1 20.8L20.82 1.02M1.02 1L20.82 1.02L20.8 20.81" stroke="#262626" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                </svg> 
+                  <path id="Линия 4" d="M1 20.73L20.88 1.01M1.02 0.99L20.88 1.01L20.87 20.75" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
               </div>
             </div>
             <div class="home_item_figurines">
-              <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
+              <img src="{% static '/img/home/figurines_3.png' %}" alt="figurines"/>
+            </div>
+          </a>
+          <a href="/contacts/" class="home_item home_item__four">
+            <div class="home_item__wrapper">
+              <h4>HAVE SOME <br>
+                QUESTIONS?</h4>
+              <p class="sub_headerXL">Contact us</p>
+              <div class="home_item__icon">
+                <svg width="30.025391" height="30.060547" viewBox="0 0 30.0254 30.0605" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <defs/>
+                  <path id="Форма 10" d="M15.25 15.73L1 13.34L29.02 1.03L17.69 29.02L15.25 15.73L29.02 1.03" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="home_item_figurines">
+              <img src="{% static '/img/home/figurines_4.png' %}" alt="figurines"/>
             </div>
           </a>
         </div>
       </div>
-    </section>
-    <section class="stack_scroll" data-scroll-section>
-      <div class="container stack_scroll__container">
-        <div class="stack_scroll__block">
-          <p class="body_long"> Используем технологический стек один из лучших на рынке.</p>
-          <ul class="stack_scroll__list ">
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/JS.png' %}"  alt="icon"/>
-                </div>
-                <p class="body_long">JavaScript</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/TS.png' %}"  alt="icon"/>
-                </div>
-                <p class="body_long">TypeScript</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/Python.png' %}" alt="icon"/>
-                </div>
-                <p class="body_long">Python</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/React.png' %}" alt="icon"/>
-                </div>
-                <p class="body_long">React</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/Vue.png' %}" alt="icon"/>
-                </div>
-                <p class="body_long">Vue</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/Next.png' %}" alt="icon"/>
-                </div>
-                <p class="body_long">Next</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/Vite.png' %}" alt="icon"/>
-                </div>
-                <p class="body_long">Vite</p>
-              </div>
-            </li>
-            <li class="stack_scroll__item">
-              <div class="stack_scroll__link">
-                <div class="stack_scroll__icon">
-                  <img src="{% static '/img/stack/Postgres.png' %}" alt="icon"/>
-                </div>
-                <p class="body_long">Postgres</p>
-              </div>
-            </li>
+      <a class="home_item home_item__five">
+        <div class="home_item__wrapper">
+          <h4>Чем мы можем помочь?</h4>
+          <p>Web-sites & Web-app </p> <p>Telegram bots & Mini apps </p> <p>E-Commerce</p>
+          <p class="sub_headerXL">Разрабатываем</p>
+          <div class="home_item__icon">
+            <svg width="21.822266" height="21.818359" viewBox="0 0 21.8223 21.8184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs/>
+              <path id="Линия 5" d="M1 20.8L20.82 1.02M1.02 1L20.82 1.02L20.8 20.81" stroke="#262626" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg> 
+          </div>
+        </div>
+        <div class="home_item_figurines">
+          <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="stack_scroll" data-scroll-section>
+  <div class="container stack_scroll__container">
+    <div class="stack_scroll__block">
+      <p class="body_long"> Используем технологический стек один из лучших на рынке.</p>
+      <ul class="stack_scroll__list ">
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/JS.png' %}"  alt="icon"/>
+            </div>
+            <p class="body_long">JavaScript</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/TS.png' %}"  alt="icon"/>
+            </div>
+            <p class="body_long">TypeScript</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/Python.png' %}" alt="icon"/>
+            </div>
+            <p class="body_long">Python</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/React.png' %}" alt="icon"/>
+            </div>
+            <p class="body_long">React</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/Vue.png' %}" alt="icon"/>
+            </div>
+            <p class="body_long">Vue</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/Next.png' %}" alt="icon"/>
+            </div>
+            <p class="body_long">Next</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/Vite.png' %}" alt="icon"/>
+            </div>
+            <p class="body_long">Vite</p>
+          </div>
+        </li>
+        <li class="stack_scroll__item">
+          <div class="stack_scroll__link">
+            <div class="stack_scroll__icon">
+              <img src="{% static '/img/stack/Postgres.png' %}" alt="icon"/>
+            </div>
+            <p class="body_long">Postgres</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- <section class="digital" data-scroll-section>
+  <div id="digital__square" class="digital__square"></div>
+  <div class="container digital__container">
+    <ul class="digital_social_list" data-scroll data-scroll-speed="0">
+      <li>
+        <a href="https://t.me/anyera" target="_blank" class="digital_social_link">
+          <svg class="icon__tg" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4808 0.691701C15.6868 0.605021 15.9122 0.575131 16.1336 0.605131C16.355 0.635131 16.5643 0.723921 16.7397 0.862271C16.9152 1.00062 17.0503 1.18346 17.1311 1.39177C17.2119 1.60007 17.2354 1.82623 17.1992 2.0467L15.3092 13.5108C15.1258 14.6167 13.9125 15.2508 12.8983 14.7C12.05 14.2392 10.79 13.5292 9.65669 12.7883C9.08999 12.4175 7.35414 11.23 7.56748 10.385C7.75081 9.66253 10.6675 6.94753 12.3342 5.33336C12.9883 4.6992 12.69 4.33336 11.9175 4.9167C9.99829 6.36503 6.91914 8.56753 5.90081 9.18753C5.00248 9.73423 4.53414 9.82753 3.97414 9.73423C2.95248 9.56423 2.00498 9.30083 1.23164 8.98003C0.18664 8.54673 0.23748 7.11003 1.23081 6.6917L15.4808 0.691701Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://vk.com/anyera" target="_blank" class="digital_social_link">
+          <svg class="icon__bn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.3333 10C18.3347 11.0976 18.1186 12.1847 17.6974 13.1983C17.2763 14.2119 16.6584 15.132 15.8796 15.9054C15.1071 16.6765 14.1902 17.2879 13.1814 17.7045C12.1725 18.1211 11.0915 18.3347 10 18.3333C5.39752 18.3333 1.66669 14.6025 1.66669 10C1.66377 7.86326 2.48455 5.80759 3.95835 4.26044C4.736 3.43986 5.6729 2.78658 6.71174 2.3406C7.75058 1.89461 8.8695 1.6653 10 1.66669C11.0915 1.66528 12.1725 1.87897 13.1814 2.29557C14.1902 2.71217 15.1071 3.32349 15.8796 4.09461M18.3333 10C18.3347 8.90239 18.1186 7.81537 17.6974 6.80175C17.2763 5.78814 16.6584 4.86803 15.8796 4.09461M18.3333 10C17.1175 10 13.7634 9.54169 10.7613 10.8596C7.5001 12.2917 5.13885 14.5129 4.10968 15.8946M18.3333 10C18.3333 11.0258 18.1479 12.0088 17.8083 12.9167M15.8796 4.09461C15.1458 3.36345 14.2823 2.77525 13.3333 2.36002M6.87497 2.27252C8.17914 3.47627 11.025 6.54086 12.0833 9.58336C13.1417 12.6258 13.5333 16.3667 13.775 17.4313M1.73097 8.95836C3.30514 9.05336 7.47222 9.13877 10.1389 8.00002C12.8056 6.86127 15.1002 4.76669 15.8873 4.10211M2.2918 13.1721C3.0261 14.9495 4.35043 16.4197 6.0418 17.335" stroke="currentColor" stroke-width="1.67111" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.behance.net/anyera" target="_blank" class="digital_social_link">
+          <svg class="icon__vk" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8022 8.29802C17.8022 8.29802 19.4192 9.89502 19.8192 10.634C19.827 10.6447 19.833 10.6565 19.8372 10.669C20.0002 10.942 20.0402 11.156 19.9602 11.314C19.8252 11.575 19.3682 11.706 19.2132 11.717H16.3552C16.1562 11.717 15.7422 11.665 15.2382 11.317C14.8532 11.048 14.4702 10.605 14.0992 10.172C13.5452 9.52902 13.0662 8.97102 12.5812 8.97102C12.5199 8.97092 12.4591 8.98102 12.4012 9.00102C12.0342 9.11702 11.5682 9.64002 11.5682 11.033C11.5682 11.469 11.2242 11.717 10.9832 11.717H9.67415C9.22815 11.717 6.90615 11.561 4.84715 9.39002C2.32415 6.73202 0.0581513 1.40002 0.0361513 1.35302C-0.104849 1.00802 0.191151 0.82002 0.511151 0.82002H3.39715C3.78415 0.82002 3.91015 1.05402 3.99815 1.26402C4.10015 1.50502 4.47815 2.46902 5.09815 3.55202C6.10215 5.31402 6.71915 6.03102 7.21215 6.03102C7.30477 6.03132 7.39583 6.00712 7.47615 5.96102C8.12015 5.60702 8.00015 3.30702 7.97015 2.83302C7.97015 2.74102 7.96915 1.80602 7.63915 1.35402C7.40315 1.03002 7.00115 0.90402 6.75815 0.85802C6.82315 0.76402 6.96115 0.62002 7.13815 0.53502C7.57915 0.31502 8.37615 0.28302 9.16715 0.28302H9.60615C10.4642 0.29502 10.6862 0.35002 10.9982 0.42902C11.6262 0.57902 11.6382 0.98602 11.5832 2.37202C11.5672 2.76802 11.5502 3.21402 11.5502 3.73902C11.5502 3.85102 11.5452 3.97602 11.5452 4.10302C11.5262 4.81402 11.5012 5.61502 12.0032 5.94402C12.0683 5.98458 12.1435 6.00602 12.2202 6.00602C12.3942 6.00602 12.9152 6.00602 14.3282 3.58102C14.9482 2.51002 15.4282 1.24702 15.4612 1.15202C15.4892 1.09902 15.5732 0.95002 15.6752 0.89002C15.7478 0.85142 15.829 0.83213 15.9112 0.83402H19.3062C19.6762 0.83402 19.9272 0.89002 19.9762 1.03002C20.0582 1.25702 19.9602 1.95002 18.4102 4.04602C18.1492 4.39502 17.9202 4.69702 17.7192 4.96102C16.3142 6.80502 16.3142 6.89802 17.8022 8.29802Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank" class="digital_social_link">
+          <svg class="icon__be" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.07206 6.301C8.07206 6.301 9.96406 6.154 9.96406 3.842C9.96406 1.527 8.41606 0.401001 6.45406 0.401001H6.10352e-05V13.327H6.45406C6.45406 13.327 10.3951 13.456 10.3951 9.511C10.3941 9.51 10.5661 6.301 8.07206 6.301ZM2.84406 2.697H6.45406C6.45406 2.697 7.33206 2.697 7.33206 4.041C7.33206 5.387 6.81606 5.582 6.23006 5.582H2.84406V2.697ZM6.27106 11.029H2.84406V7.574H6.45406C6.45406 7.574 7.76206 7.556 7.76206 9.349C7.76206 10.861 6.78506 11.018 6.27106 11.029ZM15.6491 3.688C10.8781 3.688 10.8821 8.655 10.8821 8.655C10.8821 8.655 10.5561 13.596 15.6491 13.596C15.6491 13.596 19.8921 13.85 19.8921 10.159H17.7101C17.7101 10.159 17.7821 11.55 15.7221 11.55C15.7221 11.55 13.5381 11.702 13.5381 9.3H19.9611C19.9621 9.299 20.6701 3.688 15.6491 3.688ZM17.5901 7.574H13.5161C13.5161 7.574 13.7821 5.582 15.6981 5.582C17.6141 5.582 17.5901 7.574 17.5901 7.574ZM18.0971 1.16H12.9801V2.754H18.0971V1.16Z" fill="currentColor"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="digital__info" data-scroll data-scroll-speed="0">
+      <h1 class="digital__head">DIGITAL &amp; <br>DESIGN</h1>
+      <p class="digital__desc">
+        Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации.
+      </p>
+    </div>
+  </div>
+  <div data-scroll data-scroll-speed="0">
+    <div class="accredited__flex">
+      <ul class="accredited__list">
+        <li class="accredited__item">
+          <h4 class="accredited__head">IT-Аккредитованы</h4>
+          <p class="accredited__desc">Мы успешно прошли аккредитацию Министерства цифрового развития Российской сертификации по новым требованиям 2023 года.</p>
+        </li>
+        <li class="accredited__item">
+          <h4 class="accredited__head">Партнер 1С-Битрикс</h4>
+          <p class="accredited__desc">Несмотря на небольшой срок существования нашей компании мы уже сертифицированный партнер компании Битрикс</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>-->
+<!-- <section class="showreel" data-scroll-section data-persistent data-scroll-section-inview>
+  <div class="container showreel__container">
+    <div class="showreel__inview inview" data-scroll data-scroll-repeat>
+      <div class="showreel__target inview__target" id="showreel__target"></div>
+      <button class="showreel__button inview__flex" data-scroll data-scroll-sticky data-scroll-target="#showreel__target">
+        <div class="showreel__block inview__block">
+          <img src="{% static 'img/main/showreel.webp' %}" alt="">
+        </div>
+      </button>
+    </div>
+  </div>
+</section> -->
+<!-- <section class="expertise" data-scroll-section>
+  <div class="expertise__border"></div>
+  <div class="container expertise__container">
+    <div class="expertise__block">
+      <div class="expertise__left">
+        <button class="expertise__button">
+          <h4 class="expertise__heading">Аналитика</h4>
+          <div class="btn__arrow expertise__btn">
+            <div class="btn__side btn__side_hover">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="btn__side btn__side_default">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div class="expertise__panel">
+          <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
+          <br>
+          <b>В нашем арсенале:</b>
+          <ul>
+            <li>· Продуктовая и маркетинговая аналитика</li>
+            <li>· UX - исследование</li>
+            <li>· Анализ конкуренции и метрик</li>
+          </ul>
+        </div>
+        <button class="expertise__button">
+          <h4 class="expertise__heading">Цифровой дизайн</h4>
+          <div class="btn__arrow expertise__btn">
+            <div class="btn__side btn__side_hover">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="btn__side btn__side_default">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div class="expertise__panel">
+          <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
+          <br>
+          <b>В нашем арсенале:</b>
+          <ul>
+            <li>· Продуктовая и маркетинговая аналитика</li>
+            <li>· UX - исследование</li>
+            <li>· Анализ конкуренции и метрик</li>
+          </ul>
+        </div>
+        <button class="expertise__button">
+          <h4 class="expertise__heading">Веб-разработка</h4>
+          <div class="btn__arrow expertise__btn">
+            <div class="btn__side btn__side_hover">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="btn__side btn__side_default">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div class="expertise__panel">
+          <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
+          <br>
+          <b>В нашем арсенале:</b>
+          <ul>
+            <li>· Продуктовая и маркетинговая аналитика</li>
+            <li>· UX - исследование</li>
+            <li>· Анализ конкуренции и метрик</li>
+          </ul>
+        </div>
+        <button class="expertise__button">
+          <h4 class="expertise__heading">Поддержка</h4>
+          <div class="btn__arrow expertise__btn">
+            <div class="btn__side btn__side_hover">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="btn__side btn__side_default">
+              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <div class="expertise__panel">
+          <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
+          <br>
+          <b>В нашем арсенале:</b>
+          <ul>
+            <li>· Продуктовая и маркетинговая аналитика</li>
+            <li>· UX - исследование</li>
+            <li>· Анализ конкуренции и метрик</li>
           </ul>
         </div>
       </div>
-    </section>
-    <!-- <section class="digital" data-scroll-section>
-      <div id="digital__square" class="digital__square"></div>
-      <div class="container digital__container">
-        <ul class="digital_social_list" data-scroll data-scroll-speed="0">
-          <li>
-            <a href="https://t.me/anyera" target="_blank" class="digital_social_link">
-              <svg class="icon__tg" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4808 0.691701C15.6868 0.605021 15.9122 0.575131 16.1336 0.605131C16.355 0.635131 16.5643 0.723921 16.7397 0.862271C16.9152 1.00062 17.0503 1.18346 17.1311 1.39177C17.2119 1.60007 17.2354 1.82623 17.1992 2.0467L15.3092 13.5108C15.1258 14.6167 13.9125 15.2508 12.8983 14.7C12.05 14.2392 10.79 13.5292 9.65669 12.7883C9.08999 12.4175 7.35414 11.23 7.56748 10.385C7.75081 9.66253 10.6675 6.94753 12.3342 5.33336C12.9883 4.6992 12.69 4.33336 11.9175 4.9167C9.99829 6.36503 6.91914 8.56753 5.90081 9.18753C5.00248 9.73423 4.53414 9.82753 3.97414 9.73423C2.95248 9.56423 2.00498 9.30083 1.23164 8.98003C0.18664 8.54673 0.23748 7.11003 1.23081 6.6917L15.4808 0.691701Z" fill="currentColor"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://vk.com/anyera" target="_blank" class="digital_social_link">
-              <svg class="icon__bn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.3333 10C18.3347 11.0976 18.1186 12.1847 17.6974 13.1983C17.2763 14.2119 16.6584 15.132 15.8796 15.9054C15.1071 16.6765 14.1902 17.2879 13.1814 17.7045C12.1725 18.1211 11.0915 18.3347 10 18.3333C5.39752 18.3333 1.66669 14.6025 1.66669 10C1.66377 7.86326 2.48455 5.80759 3.95835 4.26044C4.736 3.43986 5.6729 2.78658 6.71174 2.3406C7.75058 1.89461 8.8695 1.6653 10 1.66669C11.0915 1.66528 12.1725 1.87897 13.1814 2.29557C14.1902 2.71217 15.1071 3.32349 15.8796 4.09461M18.3333 10C18.3347 8.90239 18.1186 7.81537 17.6974 6.80175C17.2763 5.78814 16.6584 4.86803 15.8796 4.09461M18.3333 10C17.1175 10 13.7634 9.54169 10.7613 10.8596C7.5001 12.2917 5.13885 14.5129 4.10968 15.8946M18.3333 10C18.3333 11.0258 18.1479 12.0088 17.8083 12.9167M15.8796 4.09461C15.1458 3.36345 14.2823 2.77525 13.3333 2.36002M6.87497 2.27252C8.17914 3.47627 11.025 6.54086 12.0833 9.58336C13.1417 12.6258 13.5333 16.3667 13.775 17.4313M1.73097 8.95836C3.30514 9.05336 7.47222 9.13877 10.1389 8.00002C12.8056 6.86127 15.1002 4.76669 15.8873 4.10211M2.2918 13.1721C3.0261 14.9495 4.35043 16.4197 6.0418 17.335" stroke="currentColor" stroke-width="1.67111" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.behance.net/anyera" target="_blank" class="digital_social_link">
-              <svg class="icon__vk" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8022 8.29802C17.8022 8.29802 19.4192 9.89502 19.8192 10.634C19.827 10.6447 19.833 10.6565 19.8372 10.669C20.0002 10.942 20.0402 11.156 19.9602 11.314C19.8252 11.575 19.3682 11.706 19.2132 11.717H16.3552C16.1562 11.717 15.7422 11.665 15.2382 11.317C14.8532 11.048 14.4702 10.605 14.0992 10.172C13.5452 9.52902 13.0662 8.97102 12.5812 8.97102C12.5199 8.97092 12.4591 8.98102 12.4012 9.00102C12.0342 9.11702 11.5682 9.64002 11.5682 11.033C11.5682 11.469 11.2242 11.717 10.9832 11.717H9.67415C9.22815 11.717 6.90615 11.561 4.84715 9.39002C2.32415 6.73202 0.0581513 1.40002 0.0361513 1.35302C-0.104849 1.00802 0.191151 0.82002 0.511151 0.82002H3.39715C3.78415 0.82002 3.91015 1.05402 3.99815 1.26402C4.10015 1.50502 4.47815 2.46902 5.09815 3.55202C6.10215 5.31402 6.71915 6.03102 7.21215 6.03102C7.30477 6.03132 7.39583 6.00712 7.47615 5.96102C8.12015 5.60702 8.00015 3.30702 7.97015 2.83302C7.97015 2.74102 7.96915 1.80602 7.63915 1.35402C7.40315 1.03002 7.00115 0.90402 6.75815 0.85802C6.82315 0.76402 6.96115 0.62002 7.13815 0.53502C7.57915 0.31502 8.37615 0.28302 9.16715 0.28302H9.60615C10.4642 0.29502 10.6862 0.35002 10.9982 0.42902C11.6262 0.57902 11.6382 0.98602 11.5832 2.37202C11.5672 2.76802 11.5502 3.21402 11.5502 3.73902C11.5502 3.85102 11.5452 3.97602 11.5452 4.10302C11.5262 4.81402 11.5012 5.61502 12.0032 5.94402C12.0683 5.98458 12.1435 6.00602 12.2202 6.00602C12.3942 6.00602 12.9152 6.00602 14.3282 3.58102C14.9482 2.51002 15.4282 1.24702 15.4612 1.15202C15.4892 1.09902 15.5732 0.95002 15.6752 0.89002C15.7478 0.85142 15.829 0.83213 15.9112 0.83402H19.3062C19.6762 0.83402 19.9272 0.89002 19.9762 1.03002C20.0582 1.25702 19.9602 1.95002 18.4102 4.04602C18.1492 4.39502 17.9202 4.69702 17.7192 4.96102C16.3142 6.80502 16.3142 6.89802 17.8022 8.29802Z" fill="currentColor"/>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank" class="digital_social_link">
-              <svg class="icon__be" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8.07206 6.301C8.07206 6.301 9.96406 6.154 9.96406 3.842C9.96406 1.527 8.41606 0.401001 6.45406 0.401001H6.10352e-05V13.327H6.45406C6.45406 13.327 10.3951 13.456 10.3951 9.511C10.3941 9.51 10.5661 6.301 8.07206 6.301ZM2.84406 2.697H6.45406C6.45406 2.697 7.33206 2.697 7.33206 4.041C7.33206 5.387 6.81606 5.582 6.23006 5.582H2.84406V2.697ZM6.27106 11.029H2.84406V7.574H6.45406C6.45406 7.574 7.76206 7.556 7.76206 9.349C7.76206 10.861 6.78506 11.018 6.27106 11.029ZM15.6491 3.688C10.8781 3.688 10.8821 8.655 10.8821 8.655C10.8821 8.655 10.5561 13.596 15.6491 13.596C15.6491 13.596 19.8921 13.85 19.8921 10.159H17.7101C17.7101 10.159 17.7821 11.55 15.7221 11.55C15.7221 11.55 13.5381 11.702 13.5381 9.3H19.9611C19.9621 9.299 20.6701 3.688 15.6491 3.688ZM17.5901 7.574H13.5161C13.5161 7.574 13.7821 5.582 15.6981 5.582C17.6141 5.582 17.5901 7.574 17.5901 7.574ZM18.0971 1.16H12.9801V2.754H18.0971V1.16Z" fill="currentColor"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <div class="digital__info" data-scroll data-scroll-speed="0">
-          <h1 class="digital__head">DIGITAL &amp; <br>DESIGN</h1>
-          <p class="digital__desc">
-            Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации.
-          </p>
+      <div class="expertise__right">
+        <div class="expertise__flex">
+          <h2 class="expertise__head">ЭКСПЕРТИЗА</h2>
+          <p class="expertise__desc">Мы разрабатываем как Low-code решения, так и самописные сложные проекты. Придерживаемся современного и функционального дизайна который будет актуален много лет.</p>
+        </div>
+        <p class="expertise__arrow">
+          <span>
+            <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5L11 4.5V3.5L1 3.5V4.5Z" fill="currentColor"/>
+            </svg>
+          </span>
+          Наши компетенции
+        </p>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="projects parallax" data-scroll-section>
+  <div class="projects__block">
+    <div class="container projects__container">
+      <div class="projects__flex">
+        <div class="projects__top">
+          <h3 class="projects__head">ПРОЕКТЫ</h3>
+          <p class="projects__desc">Мы реализуем как свои собственные проекты, так и помогаем стартапам выйти на рынок. Раньше мы позиционировали себя как веб-студия, но сейчас сфокусировались на том, что нам действительно интересно — приложения и сервисы.              </p>
+        </div>
+        <div class="projects__right_btn"> 
+          <a href="/projects/" class="link_arrow btn btn_new_two"> 
+              <span class="button__text">Больше проектов</span>
+          </a>
         </div>
       </div>
-      <div data-scroll data-scroll-speed="0">
-        <div class="accredited__flex">
-          <ul class="accredited__list">
-            <li class="accredited__item">
-              <h4 class="accredited__head">IT-Аккредитованы</h4>
-              <p class="accredited__desc">Мы успешно прошли аккредитацию Министерства цифрового развития Российской сертификации по новым требованиям 2023 года.</p>
-            </li>
-            <li class="accredited__item">
-              <h4 class="accredited__head">Партнер 1С-Битрикс</h4>
-              <p class="accredited__desc">Несмотря на небольшой срок существования нашей компании мы уже сертифицированный партнер компании Битрикс</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>-->
-    <!-- <section class="showreel" data-scroll-section data-persistent data-scroll-section-inview>
-      <div class="container showreel__container">
-        <div class="showreel__inview inview" data-scroll data-scroll-repeat>
-          <div class="showreel__target inview__target" id="showreel__target"></div>
-          <button class="showreel__button inview__flex" data-scroll data-scroll-sticky data-scroll-target="#showreel__target">
-            <div class="showreel__block inview__block">
-              <img src="{% static 'img/main/showreel.webp' %}" alt="">
-            </div>
-          </button>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="expertise" data-scroll-section>
-      <div class="expertise__border"></div>
-      <div class="container expertise__container">
-        <div class="expertise__block">
-          <div class="expertise__left">
-            <button class="expertise__button">
-              <h4 class="expertise__heading">Аналитика</h4>
-              <div class="btn__arrow expertise__btn">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <div class="expertise__panel">
-              <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
-              <br>
-              <b>В нашем арсенале:</b>
-              <ul>
-                <li>· Продуктовая и маркетинговая аналитика</li>
-                <li>· UX - исследование</li>
-                <li>· Анализ конкуренции и метрик</li>
-              </ul>
-            </div>
-            <button class="expertise__button">
-              <h4 class="expertise__heading">Цифровой дизайн</h4>
-              <div class="btn__arrow expertise__btn">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <div class="expertise__panel">
-              <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
-              <br>
-              <b>В нашем арсенале:</b>
-              <ul>
-                <li>· Продуктовая и маркетинговая аналитика</li>
-                <li>· UX - исследование</li>
-                <li>· Анализ конкуренции и метрик</li>
-              </ul>
-            </div>
-            <button class="expertise__button">
-              <h4 class="expertise__heading">Веб-разработка</h4>
-              <div class="btn__arrow expertise__btn">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <div class="expertise__panel">
-              <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
-              <br>
-              <b>В нашем арсенале:</b>
-              <ul>
-                <li>· Продуктовая и маркетинговая аналитика</li>
-                <li>· UX - исследование</li>
-                <li>· Анализ конкуренции и метрик</li>
-              </ul>
-            </div>
-            <button class="expertise__button">
-              <h4 class="expertise__heading">Поддержка</h4>
-              <div class="btn__arrow expertise__btn">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </button>
-            <div class="expertise__panel">
-              <p>Предпочитаем обоснованный дизайн, функциональный и приносящий пользу своим владельцам. Поэтому проводим исследования пользовательского опыта и продукта, чтобы полностью убедиться в рентабельности проекта</p>
-              <br>
-              <b>В нашем арсенале:</b>
-              <ul>
-                <li>· Продуктовая и маркетинговая аналитика</li>
-                <li>· UX - исследование</li>
-                <li>· Анализ конкуренции и метрик</li>
-              </ul>
-            </div>
-          </div>
-          <div class="expertise__right">
-            <div class="expertise__flex">
-              <h2 class="expertise__head">ЭКСПЕРТИЗА</h2>
-              <p class="expertise__desc">Мы разрабатываем как Low-code решения, так и самописные сложные проекты. Придерживаемся современного и функционального дизайна который будет актуален много лет.</p>
-            </div>
-            <p class="expertise__arrow">
-              <span>
-                <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.646447 3.64645C0.451184 3.84171 0.451184 4.15829 0.646447 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646447 3.64645ZM1 4.5L11 4.5V3.5L1 3.5V4.5Z" fill="currentColor"/>
-                </svg>
-              </span>
-              Наши компетенции
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <section class="projects parallax" data-scroll-section>
-      <div class="projects__block">
-        <div class="container projects__container">
-          <div class="projects__flex">
-            <div class="projects__top">
-              <h3 class="projects__head">ПРОЕКТЫ</h3>
-              <p class="projects__desc">Мы реализуем как свои собственные проекты, так и помогаем стартапам выйти на рынок. Раньше мы позиционировали себя как веб-студия, но сейчас сфокусировались на том, что нам действительно интересно — приложения и сервисы.              </p>
-            </div>
-            <div class="projects__right_btn"> 
-              <a href="/projects/" class="link_arrow btn btn_new_two"> 
-                  <span class="button__text">Больше проектов</span>
-              </a>
-            </div>
-          </div>
-          <ul class="projects__list">
-            {% for project in projects %}
-              <li class="projects__item">
-                <a href="/projects/{{ project.id }}/" class="projects__link">
-                  <div class="projects__image">
-                    <img src="/media/{{ project.intro_image }}" alt="">
-                    <div class="btn__arrow projects__arrow">
-                      <div class="btn__side btn__side_hover">
-                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                        </svg>
-                      </div>
-                      <div class="btn__side btn__side_default">
-                        <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                        </svg>
-                      </div>
-                    </div>
+      <ul class="projects__list">
+        {% for project in projects %}
+          <li class="projects__item">
+            <a href="/projects/{{ project.id }}/" class="projects__link">
+              <div class="projects__image">
+                <img src="/media/{{ project.intro_image }}" alt="">
+                <div class="btn__arrow projects__arrow">
+                  <div class="btn__side btn__side_hover">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                    </svg>
                   </div>
-                  <div class="projects__info">
-                    <p class="projects__description">{{ project.name }}</p>
-                    <h4 class="projects__heading">{{ project.intro_text }}</h4>
-                    <ul class="projects_tags">
-                      {% for service in project.services.all %} 
-                        <li class="projects_tags__item">{{ service.name }}</li>
-                      {% endfor %}
-                    </ul>
+                  <div class="btn__side btn__side_default">
+                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="projects__info">
+                <p class="projects__description">{{ project.name }}</p>
+                <h4 class="projects__heading">{{ project.intro_text }}</h4>
+                <ul class="projects_tags">
+                  {% for service in project.services.all %} 
+                    <li class="projects_tags__item">{{ service.name }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="articles" data-scroll-section>
+  <div class="container articles__container">
+    <div class="articles__block">
+      <div class="projects__flex">
+        <div class="articles__top">
+          <h3 class="articles__head">Статьи</h3>
+          <p class="projects__desc">Здесь вы найдёте актуальную информацию о последних тенденциях в мире digital, советы по продвижению бизнеса в интернете, а также интересные материалы о развитии технологий и их влиянии на нашу жизнь.</p>
+        </div>  
+        <div class="projects__right_btn"> 
+          <a href="/articles/" class="btn btn_new_two articles__project">
+            <span class="button__text">Подробнее</span>
+          </a>
+        </div>
+      </div>
+      <div class="articles__slider">
+        <div class="articles__swiper swiper">
+          <ul class="articles__list swiper-wrapper">
+            {% for article in articles %}
+              <li class="articles__item swiper-slide">
+                <a href="/article/{{ article.id }}/" class="articles__link">
+                  <div class="articles__image">
+                    <img src="/media/{{ article.preview_img }}" alt="">
+                    <span class="articles__date">{{ article.created_at }}</span>
+                  </div>
+                  <div class="articles__info">
+                    <h4 class="articles__head">{{ article.title }}</h4>
+                    <p class="articles__desc">{{ article.preview }}</p>
                   </div>
                 </a>
               </li>
             {% endfor %}
           </ul>
         </div>
-      </div>
-    </section>
-    <section class="articles" data-scroll-section>
-      <div class="container articles__container">
-        <div class="articles__block">
-          <div class="projects__flex">
-            <div class="articles__top">
-              <h3 class="articles__head">Статьи</h3>
-              <p class="projects__desc">Здесь вы найдёте актуальную информацию о последних тенденциях в мире digital, советы по продвижению бизнеса в интернете, а также интересные материалы о развитии технологий и их влиянии на нашу жизнь.</p>
-            </div>  
-            <div class="projects__right_btn"> 
-              <a href="/articles/" class="btn btn_new_two articles__project">
-                <span class="button__text">Подробнее</span>
-              </a>
+        <div class="swiper-button-next articles__next">
+          <div class="btn__arrow">
+            <div class="btn__side btn__side_hover">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
+              </svg>
             </div>
-          </div>
-          <div class="articles__slider">
-            <div class="articles__swiper swiper">
-              <ul class="articles__list swiper-wrapper">
-                {% for article in articles %}
-                  <li class="articles__item swiper-slide">
-                    <a href="/article/{{ article.id }}/" class="articles__link">
-                      <div class="articles__image">
-                        <img src="/media/{{ article.preview_img }}" alt="">
-                        <span class="articles__date">{{ article.created_at }}</span>
-                      </div>
-                      <div class="articles__info">
-                        <h4 class="articles__head">{{ article.title }}</h4>
-                        <p class="articles__desc">{{ article.preview }}</p>
-                      </div>
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="swiper-button-next articles__next">
-              <div class="btn__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-prev articles__prev">
-              <div class="btn__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
-                  </svg>
-                </div>
-              </div>
+            <div class="btn__side btn__side_default">
+              <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
+              </svg>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <footer class="footer" data-scroll-section>
-      <div class="footer__border">
-        <div class="container footer__container">
-          <div class="footer__block">
-            <div class="footer__head display_footer animate">У вас есть идея для проекта?</div>
-            <div class="footer__briefing animate">
-              <p class="footer__briefing_text rubik" >Заполните наш брифинг, и мы сможем составить для вас предварительное коммерческое предложение</p>
-              <div class="footer__briefing_btn btn btn_new">Заполнить брифинг</div>
+        <div class="swiper-button-prev articles__prev">
+          <div class="btn__arrow">
+            <div class="btn__side btn__side_hover">
+              <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
+              </svg>
             </div>
-            <div class="footer__flex">
-              <div class="footer__left">
-                <div class="footer__mail">
-                  <p class="footer__mail_info rubik">Write us:</p>
-                  <a href="mailto:hello@anyera.ru" class="footer__mail_send">
-                    <p class="header__nav_contact_head title_three text__verybig">
-                      <span class="text__rotate">hello@anyera.ru</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="footer__bottom">
-                  <p>ИНН/КПП:6319260879/631901001 <br>ОГРН:1236300014807</p>
-                </div>
-                <div class="footer__bottom footer__policy">
-                  <p>Privacy Policy</p>
-                </div>
-                <p class="footer__copyright">
-                  © <span class="footer__year"></span> ООО “ЭНИЕРА” 2024г.
-                </p>
-              </div>
-              <div class="footer__center">
-                <div class="footer__mail">
-                  <p class="footer__mail_info rubik">Phone number:</p>
-                  <a href="tel:+79270030100" class="footer__contact_tel">
-                    <p class="header__nav_contact_head title_three text text__big">
-                      <span class="text__rotate">8 927 003 01 00</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="footer__bottom footer__policy">
-                  <p>Privacy Policy</p>
-                </div>
-              </div>
-              <div class="footer__right">
-                <div class="footer__mail">
-                  <p class="footer__mail_info rubik">Adress:</p>
-                  <p class="footer__contact_info">443122, Россия, Самарская обл., <br>Самара, Георгия Димитрова, д 81</p>
-                </div>
-                
-                <ul class="footer__social">
-                  <li>
-                    <a href="https://t.me/anyera" target="_blank" class="footer__social_link">
-                      <svg width="22.486328" height="18.972656" viewBox="0 0 22.4863 18.9727" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <path id="path" d="M21.73 1.97C21.68 2.73 21.19 5.38 20.81 8.25L19.51 16.74C19.51 16.74 19.4 17.98 18.43 18.2C17.45 18.41 16 17.44 15.73 17.22C15.51 17.06 11.68 14.62 10.34 13.43C9.96 13.1 10.39 11.7 10.39 11.7L16.06 6.29C16.71 5.64 17.36 4.13 14.66 5.97L7.1 11.1C7.1 11.1 6.24 11.64 4.62 11.15L1.11 10.07C1.11 10.07 -0.18 9.25 2.03 8.44C7.43 5.91 14.07 3.32 19.95 0.89C19.95 0.89 21.9 0.13 21.73 1.97Z" fill="currentColor" stroke-opacity="1.000000" stroke-width="1.476045"/>
-                      </svg>
-                      
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://vk.com/anyera" target="_blank" class="footer__social_link">
-                      <svg class="icon__vk" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8022 8.29802C17.8022 8.29802 19.4192 9.89502 19.8192 10.634C19.827 10.6447 19.833 10.6565 19.8372 10.669C20.0002 10.942 20.0402 11.156 19.9602 11.314C19.8252 11.575 19.3682 11.706 19.2132 11.717H16.3552C16.1562 11.717 15.7422 11.665 15.2382 11.317C14.8532 11.048 14.4702 10.605 14.0992 10.172C13.5452 9.52902 13.0662 8.97102 12.5812 8.97102C12.5199 8.97092 12.4591 8.98102 12.4012 9.00102C12.0342 9.11702 11.5682 9.64002 11.5682 11.033C11.5682 11.469 11.2242 11.717 10.9832 11.717H9.67415C9.22815 11.717 6.90615 11.561 4.84715 9.39002C2.32415 6.73202 0.0581513 1.40002 0.0361513 1.35302C-0.104849 1.00802 0.191151 0.82002 0.511151 0.82002H3.39715C3.78415 0.82002 3.91015 1.05402 3.99815 1.26402C4.10015 1.50502 4.47815 2.46902 5.09815 3.55202C6.10215 5.31402 6.71915 6.03102 7.21215 6.03102C7.30477 6.03132 7.39583 6.00712 7.47615 5.96102C8.12015 5.60702 8.00015 3.30702 7.97015 2.83302C7.97015 2.74102 7.96915 1.80602 7.63915 1.35402C7.40315 1.03002 7.00115 0.90402 6.75815 0.85802C6.82315 0.76402 6.96115 0.62002 7.13815 0.53502C7.57915 0.31502 8.37615 0.28302 9.16715 0.28302H9.60615C10.4642 0.29502 10.6862 0.35002 10.9982 0.42902C11.6262 0.57902 11.6382 0.98602 11.5832 2.37202C11.5672 2.76802 11.5502 3.21402 11.5502 3.73902C11.5502 3.85102 11.5452 3.97602 11.5452 4.10302C11.5262 4.81402 11.5012 5.61502 12.0032 5.94402C12.0683 5.98458 12.1435 6.00602 12.2202 6.00602C12.3942 6.00602 12.9152 6.00602 14.3282 3.58102C14.9482 2.51002 15.4282 1.24702 15.4612 1.15202C15.4892 1.09902 15.5732 0.95002 15.6752 0.89002C15.7478 0.85142 15.829 0.83213 15.9112 0.83402H19.3062C19.6762 0.83402 19.9272 0.89002 19.9762 1.03002C20.0582 1.25702 19.9602 1.95002 18.4102 4.04602C18.1492 4.39502 17.9202 4.69702 17.7192 4.96102C16.3142 6.80502 16.3142 6.89802 17.8022 8.29802Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.behance.net/anyera" target="_blank" class="footer__social_link">
-                      <svg class="icon__be" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8.07206 6.301C8.07206 6.301 9.96406 6.154 9.96406 3.842C9.96406 1.527 8.41606 0.401001 6.45406 0.401001H6.10352e-05V13.327H6.45406C6.45406 13.327 10.3951 13.456 10.3951 9.511C10.3941 9.51 10.5661 6.301 8.07206 6.301ZM2.84406 2.697H6.45406C6.45406 2.697 7.33206 2.697 7.33206 4.041C7.33206 5.387 6.81606 5.582 6.23006 5.582H2.84406V2.697ZM6.27106 11.029H2.84406V7.574H6.45406C6.45406 7.574 7.76206 7.556 7.76206 9.349C7.76206 10.861 6.78506 11.018 6.27106 11.029ZM15.6491 3.688C10.8781 3.688 10.8821 8.655 10.8821 8.655C10.8821 8.655 10.5561 13.596 15.6491 13.596C15.6491 13.596 19.8921 13.85 19.8921 10.159H17.7101C17.7101 10.159 17.7821 11.55 15.7221 11.55C15.7221 11.55 13.5381 11.702 13.5381 9.3H19.9611C19.9621 9.299 20.6701 3.688 15.6491 3.688ZM17.5901 7.574H13.5161C13.5161 7.574 13.7821 5.582 15.6981 5.582C17.6141 5.582 17.5901 7.574 17.5901 7.574ZM18.0971 1.16H12.9801V2.754H18.0971V1.16Z" fill="currentColor"></path>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-
-                <div class="footer__right_bottom">
-                  <div class="footer__bottom">
-                    <p>ИНН/КПП:6319260879/631901001 <br>ОГРН:1236300014807</p>
-                  </div>
-                  <p class="footer__copyright">
-                    © <span class="footer__year"></span> ООО “ЭНИЕРА” 2024г.
-                  </p>
-                  <div class="footer__bottom footer__policy">
-                    <p>Privacy Policy</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-
-
-          </div>
-        </div>
-      </div>
-    </footer>
-  </main>
-  <div class="header__nav">
-    <div class="header__nav_scroll" data-scrollbar>
-      <div class="header__nav_block">
-        <div class="container header__nav_container">
-          <div class="header__nav_flex">
-            <ul class="header__nav_list">
-              <li class="header__nav_item">
-                <a href="services.html" class="header__nav_link">
-                  <h3 class="text text__big"><span class="text__rotate">Услуги</span></h3>
-                  <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.959557 0.792893C1.35008 0.402369 1.98325 0.402369 2.37377 0.792893L10.3738 8.79289C10.7643 9.18342 10.7643 9.81658 10.3738 10.2071L2.37377 18.2071C1.98325 18.5976 1.35008 18.5976 0.959557 18.2071C0.569033 17.8166 0.569033 17.1834 0.959557 16.7929L8.25245 9.5L0.959557 2.20711C0.569033 1.81658 0.569033 1.18342 0.959557 0.792893Z" fill="currentColor"/>
-                  </svg>
-                </a>
-                <ul class="header__subnav_list">
-                  <li class="header__subnav_item"><a href="#" class="header__subnav_link">Аналитика</a></li>
-                  <li class="header__subnav_item"><a href="#" class="header__subnav_link">Дизайн</a></li>
-                  <li class="header__subnav_item"><a href="#" class="header__subnav_link">Веб-разработка</a></li>
-                  <li class="header__subnav_item"><a href="#" class="header__subnav_link">Поддержка и развитие</a></li>
-                  <li class="header__subnav_item"><a href="#" class="header__subnav_link">Автоматизация</a></li>
-                  <li class="header__subnav_item"><a href="price.html" class="header__subnav_link">Прайс-лист</a></li>
-                </ul>
-              </li>
-              <li class="header__nav_item">
-                <a href="#" class="header__nav_link">
-                  <h3 class="text text__big"><span class="text__rotate">О компании</span></h3>
-                  <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.959557 0.792893C1.35008 0.402369 1.98325 0.402369 2.37377 0.792893L10.3738 8.79289C10.7643 9.18342 10.7643 9.81658 10.3738 10.2071L2.37377 18.2071C1.98325 18.5976 1.35008 18.5976 0.959557 18.2071C0.569033 17.8166 0.569033 17.1834 0.959557 16.7929L8.25245 9.5L0.959557 2.20711C0.569033 1.81658 0.569033 1.18342 0.959557 0.792893Z" fill="currentColor"/>
-                  </svg>
-                </a>
-                <ul class="header__subnav_list">
-                  <li class="header__subnav_item"><a href="team.html" class="header__subnav_link">Команда</a></li>
-                  <li class="header__subnav_item"><a href="certificates.html" class="header__subnav_link">Сертификаты</a></li>
-                  <li class="header__subnav_item"><a href="competencies.html" class="header__subnav_link">Компетенции партнера 1С-Битрикс</a></li>
-                </ul>
-              </li>
-              <li class="header__nav_item">
-                <a href="projects.html" class="header__nav_link">
-                  <h3 class="text text__big"><span class="text__rotate">Проекты</span></h3>
-                </a>
-              </li>
-              <li class="header__nav_item">
-                <a href="career.html" class="header__nav_link">
-                  <h3 class="text text__big"><span class="text__rotate">Карьера</span></h3>
-                </a>
-              </li>
-              <li class="header__nav_item">
-                <a href="contacts.html" class="header__nav_link">
-                  <h3 class="text text__big"><span class="text__rotate">Контакты</span></h3>
-                </a>
-              </li>
-              <li class="header__nav_item">
-                <a href="articles.html" class="header__nav_link">
-                  <h3 class="text text__big"><span class="text__rotate">Медиа</span></h3>
-                </a>
-              </li>
-            </ul>
-            <div class="header__nav__contact">
-              <ul class="header__nav__contact_list">
-                <li class="header__nav_contact_item">
-                  <p class="header__nav_contact_desc">Сall us by number:</p>
-                  <a href="tel:+79270030100" class="header__nav_contact_link">
-                    <h6 class="header__nav_contact_head text text__big">
-                      <span class="text__rotate">8 927 003 01 00</span>
-                    </h6>
-                  </a>
-                </li>
-                <li class="header__nav_contact_item">
-                  <p class="header__nav_contact_desc">Write to our mail:</p>
-                  <a href="mailto:hello@anyera.ru" class="header__nav_contact_link">
-                    <h6 class="header__nav_contact_head text text__big">
-                      <span class="text__rotate">hello@anyera.ru</span>
-                    </h6>
-                  </a>
-                </li>
-              </ul>
-              <div class="header__nav_buttons">
-                <button class="btn button__project_two">
-                  <span class="button__text">ОБСУДИТЬ ПРОЕКТ</span>
-                  <span class="button__hover"></span>
-                </button>
-                <a href="briefing.html" class="btn button__briefing_two">
-                  <span class="button__text">БРИФИНГ</span>
-                  <span class="button__hover"></span>
-                </a>
-                <!-- <a href="" class="btn button__feedback_two">
-                  <span class="button__text">КАЛЬКУЛЯТОР</span>
-                  <span class="button__hover"></span>
-                </a> -->
-              </div>
-              <ul class="header__nav_bottom_social" data-scroll data-scroll-speed="0">
-                <li>
-                  <a href="https://t.me/anyera" target="_blank" class="header__nav_bottom_link">
-                    <svg class="icon__tg" width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4808 0.691701C15.6868 0.605021 15.9122 0.575131 16.1336 0.605131C16.355 0.635131 16.5643 0.723921 16.7397 0.862271C16.9152 1.00062 17.0503 1.18346 17.1311 1.39177C17.2119 1.60007 17.2354 1.82623 17.1992 2.0467L15.3092 13.5108C15.1258 14.6167 13.9125 15.2508 12.8983 14.7C12.05 14.2392 10.79 13.5292 9.65669 12.7883C9.08999 12.4175 7.35414 11.23 7.56748 10.385C7.75081 9.66253 10.6675 6.94753 12.3342 5.33336C12.9883 4.6992 12.69 4.33336 11.9175 4.9167C9.99829 6.36503 6.91914 8.56753 5.90081 9.18753C5.00248 9.73423 4.53414 9.82753 3.97414 9.73423C2.95248 9.56423 2.00498 9.30083 1.23164 8.98003C0.18664 8.54673 0.23748 7.11003 1.23081 6.6917L15.4808 0.691701Z" fill="currentColor"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://vk.com/anyera" target="_blank" class="header__nav_bottom_link">
-                    <svg class="icon__bn" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.3333 10C18.3347 11.0976 18.1186 12.1847 17.6974 13.1983C17.2763 14.2119 16.6584 15.132 15.8796 15.9054C15.1071 16.6765 14.1902 17.2879 13.1814 17.7045C12.1725 18.1211 11.0915 18.3347 10 18.3333C5.39752 18.3333 1.66669 14.6025 1.66669 10C1.66377 7.86326 2.48455 5.80759 3.95835 4.26044C4.736 3.43986 5.6729 2.78658 6.71174 2.3406C7.75058 1.89461 8.8695 1.6653 10 1.66669C11.0915 1.66528 12.1725 1.87897 13.1814 2.29557C14.1902 2.71217 15.1071 3.32349 15.8796 4.09461M18.3333 10C18.3347 8.90239 18.1186 7.81537 17.6974 6.80175C17.2763 5.78814 16.6584 4.86803 15.8796 4.09461M18.3333 10C17.1175 10 13.7634 9.54169 10.7613 10.8596C7.5001 12.2917 5.13885 14.5129 4.10968 15.8946M18.3333 10C18.3333 11.0258 18.1479 12.0088 17.8083 12.9167M15.8796 4.09461C15.1458 3.36345 14.2823 2.77525 13.3333 2.36002M6.87497 2.27252C8.17914 3.47627 11.025 6.54086 12.0833 9.58336C13.1417 12.6258 13.5333 16.3667 13.775 17.4313M1.73097 8.95836C3.30514 9.05336 7.47222 9.13877 10.1389 8.00002C12.8056 6.86127 15.1002 4.76669 15.8873 4.10211M2.2918 13.1721C3.0261 14.9495 4.35043 16.4197 6.0418 17.335" stroke="currentColor" stroke-width="1.67111" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.behance.net/anyera" target="_blank" class="header__nav_bottom_link">
-                    <svg class="icon__vk" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.8022 8.29802C17.8022 8.29802 19.4192 9.89502 19.8192 10.634C19.827 10.6447 19.833 10.6565 19.8372 10.669C20.0002 10.942 20.0402 11.156 19.9602 11.314C19.8252 11.575 19.3682 11.706 19.2132 11.717H16.3552C16.1562 11.717 15.7422 11.665 15.2382 11.317C14.8532 11.048 14.4702 10.605 14.0992 10.172C13.5452 9.52902 13.0662 8.97102 12.5812 8.97102C12.5199 8.97092 12.4591 8.98102 12.4012 9.00102C12.0342 9.11702 11.5682 9.64002 11.5682 11.033C11.5682 11.469 11.2242 11.717 10.9832 11.717H9.67415C9.22815 11.717 6.90615 11.561 4.84715 9.39002C2.32415 6.73202 0.0581513 1.40002 0.0361513 1.35302C-0.104849 1.00802 0.191151 0.82002 0.511151 0.82002H3.39715C3.78415 0.82002 3.91015 1.05402 3.99815 1.26402C4.10015 1.50502 4.47815 2.46902 5.09815 3.55202C6.10215 5.31402 6.71915 6.03102 7.21215 6.03102C7.30477 6.03132 7.39583 6.00712 7.47615 5.96102C8.12015 5.60702 8.00015 3.30702 7.97015 2.83302C7.97015 2.74102 7.96915 1.80602 7.63915 1.35402C7.40315 1.03002 7.00115 0.90402 6.75815 0.85802C6.82315 0.76402 6.96115 0.62002 7.13815 0.53502C7.57915 0.31502 8.37615 0.28302 9.16715 0.28302H9.60615C10.4642 0.29502 10.6862 0.35002 10.9982 0.42902C11.6262 0.57902 11.6382 0.98602 11.5832 2.37202C11.5672 2.76802 11.5502 3.21402 11.5502 3.73902C11.5502 3.85102 11.5452 3.97602 11.5452 4.10302C11.5262 4.81402 11.5012 5.61502 12.0032 5.94402C12.0683 5.98458 12.1435 6.00602 12.2202 6.00602C12.3942 6.00602 12.9152 6.00602 14.3282 3.58102C14.9482 2.51002 15.4282 1.24702 15.4612 1.15202C15.4892 1.09902 15.5732 0.95002 15.6752 0.89002C15.7478 0.85142 15.829 0.83213 15.9112 0.83402H19.3062C19.6762 0.83402 19.9272 0.89002 19.9762 1.03002C20.0582 1.25702 19.9602 1.95002 18.4102 4.04602C18.1492 4.39502 17.9202 4.69702 17.7192 4.96102C16.3142 6.80502 16.3142 6.89802 17.8022 8.29802Z" fill="currentColor"/>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank" class="header__nav_bottom_link">
-                    <svg class="icon__be" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.07206 6.301C8.07206 6.301 9.96406 6.154 9.96406 3.842C9.96406 1.527 8.41606 0.401001 6.45406 0.401001H6.10352e-05V13.327H6.45406C6.45406 13.327 10.3951 13.456 10.3951 9.511C10.3941 9.51 10.5661 6.301 8.07206 6.301ZM2.84406 2.697H6.45406C6.45406 2.697 7.33206 2.697 7.33206 4.041C7.33206 5.387 6.81606 5.582 6.23006 5.582H2.84406V2.697ZM6.27106 11.029H2.84406V7.574H6.45406C6.45406 7.574 7.76206 7.556 7.76206 9.349C7.76206 10.861 6.78506 11.018 6.27106 11.029ZM15.6491 3.688C10.8781 3.688 10.8821 8.655 10.8821 8.655C10.8821 8.655 10.5561 13.596 15.6491 13.596C15.6491 13.596 19.8921 13.85 19.8921 10.159H17.7101C17.7101 10.159 17.7821 11.55 15.7221 11.55C15.7221 11.55 13.5381 11.702 13.5381 9.3H19.9611C19.9621 9.299 20.6701 3.688 15.6491 3.688ZM17.5901 7.574H13.5161C13.5161 7.574 13.7821 5.582 15.6981 5.582C17.6141 5.582 17.5901 7.574 17.5901 7.574ZM18.0971 1.16H12.9801V2.754H18.0971V1.16Z" fill="currentColor"/>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="header__nav_bottom">
-            <div class="header__nav_bottom-item header__set">
-              <div class="header__set_block">
-                <div class="header__set_mode" data-clr-mode-active="">
-                  <button class="header__set_mode_btn" data-clr-mode="dark">
-                    <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.4896 4.92516L15.8542 7.02412L16.8021 10.3348L14.0625 8.37654L11.323 10.3348L12.2709 7.02412L9.63546 4.92516L12.9584 4.82778L14.0625 1.58197L15.1667 4.82778L18.4896 4.92516ZM22.1355 12.4013L20.4271 13.7538L21.0417 15.896L19.2709 14.6301L17.5 15.896L18.1146 13.7538L16.4063 12.4013L18.5521 12.3472L19.2709 10.2375L19.9896 12.3472L22.1355 12.4013ZM19.7605 17.7569C20.625 17.6704 21.5521 18.9471 21 19.7585C20.6667 20.2454 20.3125 20.6998 19.875 21.1326C15.8021 25.3846 9.20837 25.3846 5.14587 21.1326C1.07296 16.913 1.07296 10.0535 5.14587 5.83398C5.56254 5.40121 6.00004 5.01171 6.46879 4.66549C7.25004 4.09207 8.47921 5.05499 8.39587 5.953C8.11462 9.04734 9.11462 12.2607 11.4063 14.6301C13.6875 17.0104 16.7709 18.0491 19.7605 17.7569ZM18.0521 19.9425C15.1042 19.7693 12.1875 18.5035 9.92712 16.1881C7.66671 13.8187 6.45837 10.7784 6.29171 7.72738C3.36462 11.1247 3.47921 16.3396 6.61462 19.6071C9.76046 22.8637 14.7813 22.9827 18.0521 19.9425Z" fill="currentColor"/>
-                    </svg>
-                  </button>
-                  <button class="header__set_mode_name"></button>
-                  <button class="header__set_mode_btn" data-clr-mode="light">
-                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M3.84091 20.3854L5.36644 21.8541L7.31393 19.9895L5.77758 18.5104M12.9833 6.74996C9.40207 6.74996 6.49166 9.55204 6.49166 13C6.49166 16.4479 9.40207 19.25 12.9833 19.25C16.5645 19.25 19.4749 16.4479 19.4749 13C19.4749 9.54163 16.5645 6.74996 12.9833 6.74996ZM21.6388 14.0416H24.8846V11.9583H21.6388M18.6526 19.9895L20.6001 21.8541L22.1257 20.3854L20.189 18.5104M22.1257 5.70829L20.6001 4.24996L18.6526 6.11454L20.189 7.59371M14.0652 1.54163H11.9013V4.66663H14.0652M7.31393 6.11454L5.36644 4.24996L3.84091 5.70829L5.77758 7.59371L7.31393 6.11454ZM1.08197 14.0416H4.32778V11.9583H1.08197M14.0652 21.3333H11.9013V24.4583H14.0652" fill="currentColor"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="header__set_language">
-                <div class="header__set_language_icon active">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 21 21" fill="none">
-                    <path d="M10.5 20.9166C9.07637 20.9166 7.73088 20.643 6.46352 20.0958C5.19616 19.5485 4.08922 18.802 3.14269 17.8562C2.19686 16.9103 1.45033 15.8037 0.903106 14.5364C0.355884 13.269 0.0826199 11.9235 0.0833143 10.4999C0.0833143 9.05895 0.356925 7.70895 0.904148 6.44992C1.45137 5.19089 2.1979 4.08881 3.14373 3.14367C4.08956 2.19714 5.19581 1.45061 6.46248 0.904085C7.72915 0.357558 9.07498 0.0839464 10.5 0.083252C11.941 0.083252 13.291 0.356863 14.55 0.904085C15.809 1.45131 16.9111 2.19784 17.8562 3.14367C18.8028 4.0895 19.5493 5.19193 20.0958 6.45096C20.6423 7.70999 20.916 9.05964 20.9166 10.4999C20.9166 11.9235 20.643 13.269 20.0958 14.5364C19.5486 15.8037 18.8021 16.9107 17.8562 17.8572C16.9104 18.803 15.808 19.5496 14.5489 20.0968C13.2899 20.644 11.9403 20.9173 10.5 20.9166ZM10.5 18.7812C10.9514 18.1562 11.342 17.5051 11.6719 16.828C12.0017 16.151 12.2708 15.4305 12.4791 14.6666H8.52081C8.72915 15.4305 8.99824 16.151 9.3281 16.828C9.65797 17.5051 10.0486 18.1562 10.5 18.7812ZM7.79165 18.3645C7.47915 17.7916 7.20554 17.1968 6.97081 16.5801C6.73609 15.9635 6.54095 15.3256 6.3854 14.6666H3.31248C3.81595 15.5346 4.44547 16.2898 5.20102 16.9322C5.95658 17.5746 6.82012 18.052 7.79165 18.3645ZM13.2083 18.3645C14.1805 18.052 15.0444 17.5746 15.8 16.9322C16.5555 16.2898 17.1847 15.5346 17.6875 14.6666H14.6146C14.4583 15.3263 14.2632 15.9645 14.0291 16.5812C13.7951 17.1978 13.5215 17.7923 13.2083 18.3645ZM2.42706 12.5833H5.96873C5.91665 12.236 5.87741 11.893 5.85102 11.5541C5.82463 11.2152 5.81179 10.8638 5.81248 10.4999C5.81248 10.1353 5.82568 9.78395 5.85206 9.44575C5.87845 9.10756 5.91734 8.7645 5.96873 8.41658H2.42706C2.34026 8.76381 2.27498 9.10686 2.23123 9.44575C2.18748 9.78464 2.16595 10.136 2.16665 10.4999C2.16665 10.8645 2.18852 11.2159 2.23227 11.5541C2.27602 11.8923 2.34095 12.2353 2.42706 12.5833ZM8.05206 12.5833H12.9479C13 12.236 13.0392 11.893 13.0656 11.5541C13.092 11.2152 13.1048 10.8638 13.1041 10.4999C13.1041 10.1353 13.091 9.78395 13.0646 9.44575C13.0382 9.10756 12.9993 8.7645 12.9479 8.41658H8.05206C7.99998 8.76381 7.96074 9.10686 7.93436 9.44575C7.90797 9.78464 7.89512 10.136 7.89581 10.4999C7.89581 10.8645 7.90901 11.2159 7.9354 11.5541C7.96179 11.8923 8.00067 12.2353 8.05206 12.5833ZM15.0312 12.5833H18.5729C18.6597 12.236 18.725 11.893 18.7687 11.5541C18.8125 11.2152 18.834 10.8638 18.8333 10.4999C18.8333 10.1353 18.8114 9.78395 18.7677 9.44575C18.7239 9.10756 18.659 8.7645 18.5729 8.41658H15.0312C15.0833 8.76381 15.1225 9.10686 15.1489 9.44575C15.1753 9.78464 15.1882 10.136 15.1875 10.4999C15.1875 10.8645 15.1743 11.2159 15.1479 11.5541C15.1215 11.8923 15.0826 12.2353 15.0312 12.5833ZM14.6146 6.33325H17.6875C17.184 5.4652 16.5548 4.70999 15.8 4.06763C15.0451 3.42527 14.1812 2.94783 13.2083 2.63533C13.5208 3.20825 13.7944 3.80304 14.0291 4.41971C14.2639 5.03638 14.459 5.67422 14.6146 6.33325ZM8.52081 6.33325H12.4791C12.2708 5.56936 12.0017 4.84888 11.6719 4.17179C11.342 3.49471 10.9514 2.84367 10.5 2.21867C10.0486 2.84367 9.65797 3.49471 9.3281 4.17179C8.99824 4.84888 8.72915 5.56936 8.52081 6.33325ZM3.31248 6.33325H6.3854C6.54165 5.67353 6.73713 5.03534 6.97186 4.41867C7.20658 3.802 7.47984 3.20756 7.79165 2.63533C6.81943 2.94783 5.95554 3.42527 5.19998 4.06763C4.44443 4.70999 3.81526 5.4652 3.31248 6.33325Z" fill="currentColor"/>
-                  </svg>
-                  <p>Выбрать язык</p>
-                </div>
-                <div class="header__set_language_control">
-                  <button class="header__set_language_btn active"><p class="text">RU</p></button>
-                  <button class="header__set_language_btn"><p class="text">ENG</p></button>
-                  <button class="header__set_language_btn"><p class="text">CHN</p></button>
-                </div>
-                <a href="#" class="header__login">
-                  <div class="header__login_image">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 10C13.933 10 15.5 8.433 15.5 6.5C15.5 4.56701 13.933 3 12 3C10.067 3 8.5 4.56701 8.5 6.5C8.5 8.433 10.067 10 12 10Z" fill="currentColor"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 6.5C7.75 4.15279 9.65279 2.25 12 2.25C14.3472 2.25 16.25 4.15279 16.25 6.5C16.25 8.84721 14.3472 10.75 12 10.75C9.65279 10.75 7.75 8.84721 7.75 6.5ZM12 3.75C10.4812 3.75 9.25 4.98122 9.25 6.5C9.25 8.01879 10.4812 9.25 12 9.25C13.5188 9.25 14.75 8.01879 14.75 6.5C14.75 4.98122 13.5188 3.75 12 3.75Z" fill="currentColor"/>
-                      <path d="M3 20.4V21H21V20.4C21 18.1598 21 17.0397 20.5641 16.184C20.1806 15.4314 19.5686 14.8195 18.816 14.436C17.9603 14 16.8402 14 14.6 14H9.4C7.1598 14 6.0397 14 5.18405 14.436C4.43139 14.8195 3.81947 15.4314 3.43598 16.184C3 17.0397 3 18.1598 3 20.4Z" fill="currentColor"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.367 13.25H14.633C15.7251 13.25 16.5906 13.25 17.2883 13.307C18.0016 13.3653 18.6053 13.4869 19.1564 13.7677C20.0502 14.2231 20.7769 14.9498 21.2323 15.8436C21.5131 16.3947 21.6347 16.9984 21.693 17.7117C21.75 18.4094 21.75 19.2748 21.75 20.367V21C21.75 21.4142 21.4142 21.75 21 21.75H3C2.58579 21.75 2.25 21.4142 2.25 21L2.25 20.367C2.24999 19.2749 2.24999 18.4094 2.30699 17.7117C2.36527 16.9984 2.48688 16.3947 2.76772 15.8436C3.22311 14.9498 3.94977 14.2231 4.84356 13.7677C5.39473 13.4869 5.99836 13.3653 6.71175 13.307C7.40937 13.25 8.27486 13.25 9.367 13.25ZM5.52453 15.1042C4.913 15.4158 4.41582 15.913 4.10423 16.5245C3.94909 16.829 3.85271 17.2133 3.80201 17.8339C3.75288 18.4351 3.75015 19.1959 3.75001 20.25H20.25C20.2498 19.1959 20.2471 18.4351 20.198 17.8339C20.1473 17.2133 20.0509 16.829 19.8958 16.5245C19.5842 15.913 19.087 15.4158 18.4755 15.1042M5.52453 15.1042C5.829 14.9491 6.21327 14.8527 6.83389 14.802C7.46327 14.7506 8.26752 14.75 9.4 14.75H14.6C15.7325 14.75 16.5367 14.7506 17.1661 14.802C17.7867 14.8527 18.171 14.9491 18.4755 15.1042" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <p class="header__login_name">Вход</p>
-                </a>
-              </div>
+            <div class="btn__side btn__side_default">
+              <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
+              </svg>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="header__consultation">
-    <div class="header__consultation_scroll" data-scrollbar>
-      <div class="container header__consultation_container">
-        <div class="header__consultation_blocks">
-          <div class="header__consultation_block">
-            <div class="header__consultation_info">
-              <div class="header__consultation_say">
-                <h2 class="header__consultation_head">РАССКАЖИТЕ О ВАШЕМ ПРОЕКТЕ</h2>
-                <p class="header__consultation_desc">Опишите свою задачу и мы свяжемся с вами в ближайшее рабочее время.</p>
-              </div>
-              <div class="header__consultation_contacts"><p class="header__consultation_description">Вы всегда можете написать нам на почту <a class="text" href="mailto://career@anyera.ru"><span class="text__rotate">career@anyera.ru</span></a> и задать любые интересующие вопросы</p></div>
-            </div>
-            <div class="form__successfully header__forms_form" id="form__successfully_form">
-              <div class="form__successfully_image">
-                <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M226.83 74.8303L98.8298 202.83C98.4583 203.202 98.0171 203.497 97.5315 203.699C97.046 203.9 96.5254 204.003 95.9998 204.003C95.4741 204.003 94.9536 203.9 94.468 203.699C93.9824 203.497 93.5413 203.202 93.1698 202.83L37.1698 146.83C36.4192 146.08 35.9976 145.062 35.9976 144C35.9976 142.939 36.4192 141.921 37.1698 141.17C37.9203 140.42 38.9383 139.998 39.9998 139.998C41.0612 139.998 42.0792 140.42 42.8298 141.17L95.9998 194.34L221.17 69.1703C221.92 68.4197 222.938 67.998 224 67.998C225.061 67.998 226.079 68.4197 226.83 69.1703C227.58 69.9208 228.002 70.9388 228.002 72.0003C228.002 73.0617 227.58 74.0797 226.83 74.8303Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <h4 class="form__successfully_head">Отправлено</h4>
-              <p class="form__successfully_desc">Форма заполнена и отправлена. Спасибо за обращение в ближайшее время мы свяжемся с вами</p>
-            </div>
-            <form id="form" class="header__forms_form">
-              <div class="header__forms_form_controls">
-                <div class="form__control">
-                  <input class="form__input" type="text" minl="4" maxl="40" id="username" />
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <label class="form__label" for="username">Как к вам обращаться? <span>*</span></label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите имя</small>
-                </div>
-                <div class="form__control">
-                  <input class="form__input" data-phone-pattern type="text" minl="17" maxl="17" id="phone" />
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <label class="form__label" for="phone">Номер для связи <span>*</span></label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите корректный телефон</small>
-                </div>
-                <p class="form__select_label">Способ связи</p>
-                <div class="form__select_box">
-                  <div class="form__select" data-select>
-                    <div class="form__select_selected_item" data-select-action data-select-open>
-                      <div class="form__select_selected-title" data-select-title>Выбрать</div>
-                      <svg class="form__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.05 6L1 1" stroke="currentColor"/>
-                      </svg>
-                    </div>
-                    <div class="form__select_list" data-select-list>
-                      <div class="form__select_list_item" data-select-action data-select-item>Позвонить</div>
-                      <div class="form__select_list_item" data-select-action data-select-item>Написать на почту</div>
-                      <div class="form__select_list_item" data-select-action data-select-item>Написать в телеграм</div>
-                    </div>
-                    <input class="form__select_input" type="text" id="сommunication" data-select-input>
-                    <span class="form__select_bar"></span>
-                    <span class="form__select_border"></span>
-                  </div>
-                </div>
-                <p class="form__select_label">Бюджет проекта</p>
-                <div class="form__select_box">
-                  <div class="form__select" data-select>
-                    <div class="form__select_selected_item" data-select-action data-select-open>
-                      <div class="form__select_selected-title" data-select-title>Выбрать</div>
-                      <svg class="form__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.05 6L1 1" stroke="currentColor"/>
-                      </svg>
-                    </div>
-                    <div class="form__select_list" data-select-list>
-                      <div class="form__select_list_item" data-select-action data-select-item>от 100 до 200</div>
-                      <div class="form__select_list_item" data-select-action data-select-item>от 200 до 800</div>
-                      <div class="form__select_list_item" data-select-action data-select-item>от 800 до 2 млн</div>
-                      <div class="form__select_list_item" data-select-action data-select-item>от 2 млн</div>
-                    </div>
-                    <input class="form__select_input" type="text" id="price" data-select-input>
-                    <span class="form__select_bar"></span>
-                    <span class="form__select_border"></span>
-                  </div>
-                </div>
-                <div class="form__control">
-                  <textarea class="form__input" type="text" minl="4" maxl="300" id="text"></textarea>
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <span class="form__pencil">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.99376 2.1613L10.8391 5.00662M7.99376 2.1613L1.98697 8.16808C1.57655 8.57851 1.31031 9.11098 1.22822 9.68558L1.00692 11.2347C0.94369 11.6773 1.32307 12.0567 1.76567 11.9935L3.31479 11.7722C3.88939 11.6901 4.42186 11.4238 4.83229 11.0134L10.8391 5.00662M7.99376 2.1613L8.74047 1.41459C9.52152 0.63354 10.7963 0.641985 11.5773 1.42303C12.3584 2.20408 12.3668 3.47886 11.5858 4.25991L10.8391 5.00662" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span class="form__close">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 11L6.00001 6M6.00001 6L11 1.00001M6.00001 6L1 1M6.00001 6L11 11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <label class="form__label" for="text">Опишите проект <span>*</span></label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите описание проекта</small>
-                </div>
-                <div class="form__control">
-                  <input class="form__input" type="text" minl="0" maxl="40" name="promocode" id="promocode" />
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <label class="form__label" for="promocode">Промокод</label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите промокод</small>
-                </div>
-              </div>
-              <div class="header__form_bottom">
-                <label class="form__policy">
-                  <input class="form__policy_input" type="checkbox" checked>
-                  <span class="form__policy_check">
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1.3335 3.73301L4.8335 7.33301L10.6668 1.33301" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span>Я даю свое согласие на <a href="policy.html" class="text text__middle"><span>обработку персональных данных</span></a>.</span>
-                </label>
-                <div class="btn btn__input header__form_button">
-                  <input type="submit" name="submit" value="Отправить" class="button__text">
-                  <span class="button__hover"></span>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="showreel__modal">
-    <div class="showreel__modal_inner">
-      <div class="showreel__video_responsive">
-        <img src="img/main/showreel.webp" alt="">
-      </div>
-      <button class="button__close showreel__modal_close" aria-label="Закрыть видео">
-        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M1 21.3241L21.3241 1M1.42335 1L21.7475 21.3241" stroke="currentColor"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div class="feedback_popup">
-    <div class="feedback_popup__scroll" data-scrollbar>
-      <div class="container feedback_popup__container">
-        <button class="feedback_popup__close" aria-label="Закрыть меню">
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 21.3241L21.3241 1M1.42335 1L21.7475 21.3241" stroke="currentColor"></path>
-          </svg>
-        </button>
-        <div class="feedback_popup__blocks">
-          <div class="feedback_popup__block">
-            <div class="form__successfully" id="form__successfully_form__feedback">
-              <div class="form__successfully_image">
-                <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M226.83 74.8303L98.8298 202.83C98.4583 203.202 98.0171 203.497 97.5315 203.699C97.046 203.9 96.5254 204.003 95.9998 204.003C95.4741 204.003 94.9536 203.9 94.468 203.699C93.9824 203.497 93.5413 203.202 93.1698 202.83L37.1698 146.83C36.4192 146.08 35.9976 145.062 35.9976 144C35.9976 142.939 36.4192 141.921 37.1698 141.17C37.9203 140.42 38.9383 139.998 39.9998 139.998C41.0612 139.998 42.0792 140.42 42.8298 141.17L95.9998 194.34L221.17 69.1703C221.92 68.4197 222.938 67.998 224 67.998C225.061 67.998 226.079 68.4197 226.83 69.1703C227.58 69.9208 228.002 70.9388 228.002 72.0003C228.002 73.0617 227.58 74.0797 226.83 74.8303Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <h4 class="form__successfully_head">Отправлено</h4>
-              <p class="form__successfully_desc">Форма заполнена и отправлена. Спасибо за обращение в ближайшее время мы свяжемся с вами</p>
-            </div>
-            <form id="form__feedback" class="feedback_popup__forms_form">
-              <h4 class="feedback_popup__head">Обратная связь</h4>
-              <div class="header__forms_form_controls">
-                <div class="form__control">
-                  <input class="form__input" type="text" minl="4" maxl="40" id="feedback__username" />
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <label class="form__label" for="feedback__username">Имя <span>*</span></label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите имя</small>
-                </div>
-                <div class="form__control">
-                  <input class="form__input" data-phone-pattern type="text" minl="17" maxl="17" id="feedback__phone" />
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <label class="form__label" for="feedback__phone">Номер для связи <span>*</span></label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите корректный телефон</small>
-                </div>
-                <div class="form__control">
-                  <input class="form__input" type="text" minl="4" maxl="40" id="feedback__social" />
-                  <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
-                  <label class="form__label" for="feedback__social">Telegram</label>
-                  <span class="form__bar"></span>
-                  <span class="form__border"></span>
-                  <small class="form__error">Введите telegram</small>
-                </div>
-              </div>
-              <div class="feedback_popup__form_bottom">
-                <label class="form__policy">
-                  <input class="form__policy_input" type="checkbox" checked>
-                  <span class="form__policy_check">
-                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1.3335 3.73301L4.8335 7.33301L10.6668 1.33301" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </span>
-                  <span>Я даю свое согласие на <a href="policy.html" class="text text__middle"><span>обработку персональных данных</span></a>.</span>
-                </label>
-                <div class="btn btn__input feedback__form_button">
-                  <input type="submit" name="submit" value="Отправить" class="button__text">
-                  <span class="button__hover"></span>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-  document.addEventListener("DOMContentLoaded", (event) => {
-    //   document.body.classList.add('loaded_hiding');
-    //   document.querySelector('.preloader__top').style.top = "-50%";
-    //   document.querySelector('.preloader__bottom').style.top = "100%";
-    //   window.scrollTo(0,0);
-    //   window.setTimeout(function () {
-        document.body.classList.add('loaded');
-    //     document.body.classList.remove('loaded_hiding');
-    //     document.querySelector('.preloader').style.display = "none";
-    //   }, 500);
-  });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="{% static 'js/swiper.min.js' %}"></script>
-  <script src="{% static 'js/form.js' %}"></script>
-  <script src="{% static 'js/scroll.js' %}"></script>
-  <script src="{% static 'js/scrollbar.js' %}"></script>
-  <script src="{% static 'js/textarea.js' %}"></script>
-  <script src="{% static 'js/particles.min.js' %}"></script>
-  <script src="{% static 'js/main.js' %}"></script>
-</body>
-</html>
+</section>
+{% endblock %}
