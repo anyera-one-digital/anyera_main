@@ -1,9 +1,10 @@
 from rest_framework import mixins, viewsets
+from django.shortcuts import render
 from articles.models import Article
 from articles.serializers import ArticleSerializer, ArticleListSerializer
 
 def article_list(request):
-    articles = Article.objects.filter(is_visible=True)
+    articles = Article.objects.all()
     return render(request, 'articles.html', {'articles': articles})
 
 def article_detail(request, id):
