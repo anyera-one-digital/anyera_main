@@ -1,5 +1,5 @@
 from django.contrib import admin
-from articles.models import Article, ContentBlock
+from articles.models import Article, ContentBlock, Theme
 
 
 class ContentBlockInline(admin.TabularInline):
@@ -8,6 +8,10 @@ class ContentBlockInline(admin.TabularInline):
     fields = ('name', 'text', 'order')
     extra = 0
 
+@admin.register(Theme)
+class TypeAdmin(admin.ModelAdmin):
+    list_display = ("name",)
+    search_fields = ("name",)
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):

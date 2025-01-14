@@ -1,6 +1,19 @@
 from django.db import models
 from django.utils import timezone
 
+class Theme(models.Model):
+    name = models.CharField(
+        "Тема статьи",
+        max_length=200
+    )
+
+    class Meta:
+        verbose_name = 'Тема'
+        verbose_name_plural = 'Темы'
+
+    def __str__(self):
+        return self.name
+
 
 class Article(models.Model):
     title = models.CharField(
@@ -24,6 +37,11 @@ class Article(models.Model):
         "Дата создания",
         auto_now_add=True
     )
+    theme = models.ManyToManyField(
+        Theme,
+        verbose_name="Тема"
+    )
+
 
     class Meta:
         verbose_name = 'Статья'
