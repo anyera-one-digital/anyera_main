@@ -5767,7 +5767,6 @@ html.has-scroll-dragging {
   margin: 0 2px;
   gap: 40px;
   background-color: var(--bg);
-  border-bottom: 1px solid var(--border);
 }
 
 .team__bottom_info {
@@ -5935,7 +5934,6 @@ html.has-scroll-dragging {
   padding: 80px;
   margin: 0 2px;
   background-color: var(--bg);
-  border-bottom: 1px solid var(--border);
 }
 
 .team_clients__list {
@@ -6572,8 +6570,8 @@ html.has-scroll-dragging {
   position: relative;
   background-color: var(--bg);
   border-bottom: 1px solid var(--border);
-  -webkit-transition: 0.2s border-radius 0.1s linear, background-color 0.2s ease;
-  transition: 0.2s border-radius 0.1s linear, background-color 0.2s ease;
+  -webkit-transition: 0.3s border-radius 0.1s linear, background-color 0.3s ease;
+  transition: 0.3s border-radius 0.1s linear, background-color 0.3s ease;
 }
 
 .services__block:first-child .services__flex {
@@ -6590,8 +6588,6 @@ html.has-scroll-dragging {
   background-color: #262626;
   border-top: none;
   border-bottom: none;
-  -webkit-transition:  border-radius 0.1s linear, 0.2s background-color 0.2s ease;
-  transition:  border-radius 0.1s linear, 0.2s background-color 0.2s ease;
 }
 
 .services__left {
@@ -6628,9 +6624,9 @@ html.has-scroll-dragging {
   font-family: var(--title-font);
   font-weight: 400;
   font-size: 78px;
-  line-height: -1px;
   color: #D0D0D0;
-  transition: color 0.2s ;
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
 }
 
 .services__arrow {
@@ -6650,23 +6646,21 @@ html.has-scroll-dragging {
 .services__flex:hover .services__number ,
 .services__flex:hover .services__head{
   color: var(--bg);
-  -webkit-transition: color 0.2s linear;
-  transition: color 0.2s linear;
 }
+
 .services__flex:hover .services__arrow svg{
   transform: rotate(45deg);
-  -webkit-transition: transform 0.2s linear;
-  transition: transform 0.2s linear;
 }
+
 .services__arrow svg path {
   -webkit-transition: stroke 0.2s linear;
   transition: stroke 0.2s linear;
 }
+
 .services__flex:hover .services__arrow svg path{
   stroke: var(--bg);
-  -webkit-transition: stroke 0.2s linear;
-  transition: stroke 0.2s linear;
 }
+
 .services__img {
   position: absolute;
   right: 380px;
