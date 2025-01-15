@@ -4,14 +4,14 @@
 {% block content %}
 <section class="top" data-scroll-section id="top"></section>
 <section class="error_page" data-scroll-section>
-  <img src="img/main/404.webp" alt="">
-  <img src="img/main/404-dark.webp" alt="">
+  <img src="{% static 'img/main/404.webp' %}" alt="">
+  <img src="{% static 'img/main/404-dark.webp' %}" alt="">
   <div class="container error_page__container">
     <div class="error_page__block">
       <div class="error_page__flex">
         <h3 class="error_page__head">Что-то пошло не так</h3>
         <p class="error_page__desc">К сожалению, запрашиваемая страница не найдена. Возможно, вы перешли по ссылке, в которой была допущена ошибка, или ресурс был удален. Попробуйте перейти на главную</p>
-        <a href="index.html" class="btn error_page__button">
+        <a href="/" class="btn error_page__button">
           <span class="button__text">На главную</span>
           <span class="button__hover"></span>
         </a>
