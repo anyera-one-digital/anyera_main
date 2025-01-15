@@ -3,7 +3,7 @@
 
 {% block content %}
 <section class="project_top" data-scroll-section id="top" style="background: {{ project.color }}">
-  <img class="project_top__back" src="/media/{{ project.background_image }}" alt="">
+  <img class="project_top__back" src="" alt="">
   <div class="container project_top__container">
     <div id="project_top__star" class="project_top__star"></div>
     <div class="project_top__block">
@@ -50,267 +50,148 @@
     <div class="project_banner__target inview__target" id="project_banner__target"></div>
     <div class="project_banner__button inview__flex" data-scroll data-scroll-sticky data-scroll-target="#project_banner__target">
       <div class="project_banner__block inview__block">
-        <img src="img/project/project_1/project_banner.webp" alt="">
+        <img src="{% static 'img/project/project_1/project_banner.webp' %}" alt="">
       </div>
     </div>
   </div>
 </section>
-<section class="project_desktop" data-scroll-section>
-  <div class="container project_banner__container">
-    <div class="project_desktop__block">
-      <div class="project__info">
-        <div class="project__info_left">
-          <h4 class="project__head">Desktop версия</h4>
-        </div>
-        <div class="project__info_right">
-          <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container project_desktop__container">
-    <div class="project_desktop__slider">
-      <div class="project_desktop__img">
-        <img src="img/project/notebook.svg" alt="">
-      </div>
-      <div class="project_desktop__swiper swiper">
-        <ul class="project_desktop__list swiper-wrapper">
-          <li class="project_desktop__item swiper-slide">
-            <div class="project_desktop__image">
-              <img src="img/project/project_1/project_desktop_1.webp" alt="">
-            </div>
-          </li>
-          <li class="project_desktop__item swiper-slide">
-            <div class="project_desktop__image">
-              <img src="img/project/project_1/project_desktop_2.webp" alt="">
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="project_desktop__navigation">
-        <div class="swiper-pagination project_desktop__pagination"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="project_tab" data-scroll-section>
-
-  <div class="container project_banner__container">
-    <div class="project_tab__block">
-      <div class="project__info">
-        <div class="project__info_left">
-          <h4 class="project__head">Tablet версия</h4>
-        </div>
-        <div class="project__info_right">
-          <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+{% if desktop_sliders %}
+  <section class="project_desktop" data-scroll-section>
+    <div class="container project_banner__container">
+      <div class="project_desktop__block">
+        <div class="project__info">
+          <div class="project__info_left">
+            <h4 class="project__head">Desktop версия</h4>
+          </div>
+          <div class="project__info_right">
+            <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container project_tab__container">
-    <div class="project_tab__slider">
-      <div class="project_tab__img">
-        <img src="img/project/tab.svg" alt="">
-      </div>
-      <div class="project_tab__swiper swiper">
-        <ul class="project_tab__list swiper-wrapper">
-          <li class="project_tab__item swiper-slide">
-            <div class="project_tab__image">
-              <img src="img/project/project_1/project_tab_1.webp" alt="">
-            </div>
-          </li>
-          <li class="project_tab__item swiper-slide">
-            <div class="project_tab__image">
-              <img src="img/project/project_1/project_tab_2.webp" alt="">
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="project_tab__navigation">
-        <div class="swiper-pagination project_tab__pagination"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="project_phone" data-scroll-section>
-  <div class="container project_banner__container">
-    <div class="project_phone__block">
-      <div class="project__info">
-        <div class="project__info_left">
-          <h4 class="project__head">Mobile версия</h4>
+    <div class="container project_desktop__container">
+      <div class="project_desktop__slider">
+        <div class="project_desktop__img">
+          <img src="{% static 'img/project/notebook.svg' %}" alt="">
         </div>
-        <div class="project__info_right">
-          <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+        <div class="project_desktop__swiper swiper">
+          <ul class="project_desktop__list swiper-wrapper">
+            {% for image in desktop_sliders.images.all %}
+              <li class="project_desktop__item swiper-slide">
+                <div class="project_desktop__image">
+                  <img src="/media/{{ image.image }}" alt="">
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="project_desktop__navigation">
+          <div class="swiper-pagination project_desktop__pagination"></div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container project_phone__container">
-    <div class="project_phone_flex">
-      <div class="project_phone__swiper swiper">
-        <ul class="project_phone__list swiper-wrapper">
-          <li class="project_phone_item swiper-slide">
-            <img class="project_phone__img" src="img/project/phone.svg" alt="">
-            <div class="project_phone_block">
-              <img src="img/project/project_1/project_phone_1.webp" alt="">
-            </div>
-          </li>
-          <li class="project_phone_item swiper-slide">
-            <img class="project_phone__img" src="img/project/phone.svg" alt="">
-            <div class="project_phone_block">
-              <img src="img/project/project_1/project_phone_2.webp" alt="">
-            </div>
-          </li>
-          <li class="project_phone_item swiper-slide">
-            <img class="project_phone__img" src="img/project/phone.svg" alt="">
-            <div class="project_phone_block">
-              <img src="img/project/project_1/project_phone_3.webp" alt="">
-            </div>
-          </li>
-          <li class="project_phone_item swiper-slide">
-            <img class="project_phone__img" src="img/project/phone.svg" alt="">
-            <div class="project_phone_block">
-              <img src="img/project/project_1/project_phone_4.webp" alt="">
-            </div>
-          </li>
-          <li class="project_phone_item swiper-slide">
-            <img class="project_phone__img" src="img/project/phone.svg" alt="">
-            <div class="project_phone_block">
-              <img src="img/project/project_1/project_phone_5.webp" alt="">
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="project_present" data-scroll-section>
-  <div class="container project_banner__container">
-    <div class="project_present__block">
-      <div class="project__info">
-        <div class="project__info_left">
-          <h4 class="project__head">Tablet версия</h4>
-        </div>
-        <div class="project__info_right">
-          <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+  </section>
+{% endif %}
+{% if tablet_sliders %}
+  <section class="project_tab" data-scroll-section>
+    <div class="container project_banner__container">
+      <div class="project_tab__block">
+        <div class="project__info">
+          <div class="project__info_left">
+            <h4 class="project__head">Tablet версия</h4>
+          </div>
+          <div class="project__info_right">
+            <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="container project_present__container">
-    <div class="project_present__slider">
-      <div class="project_present__swiper swiper">
-        <ul class="project_present__list swiper-wrapper">
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_1.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_2.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_3.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_4.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_5.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_6.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_7.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_1.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_2.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_3.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_4.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_5.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_6.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_7.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_1.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_2.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_3.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_4.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_5.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_6.webp" alt="">
-            </div>
-          </li>
-          <li class="project_present__item swiper-slide">
-            <div class="project_present__image">
-              <img src="img/project/project_1/project_present_7.webp" alt="">
-            </div>
-          </li>
-        </ul>
+    <div class="container project_tab__container">
+      <div class="project_tab__slider">
+        <div class="project_tab__img">
+          <img src="{% static 'img/project/tab.svg' %}" alt="">
+        </div>
+        <div class="project_tab__swiper swiper">
+          <ul class="project_tab__list swiper-wrapper">
+            {% for image in tablet_sliders.images.all %}
+              <li class="project_tab__item swiper-slide">
+                <div class="project_tab__image">
+                  <img src="/media/{{ image.image }}" alt="">
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="project_tab__navigation">
+          <div class="swiper-pagination project_tab__pagination"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{% endif %}
+{% if mobile_sliders %}
+  <section class="project_phone" data-scroll-section>
+    <div class="container project_banner__container">
+      <div class="project_phone__block">
+        <div class="project__info">
+          <div class="project__info_left">
+            <h4 class="project__head">Mobile версия</h4>
+          </div>
+          <div class="project__info_right">
+            <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container project_phone__container">
+      <div class="project_phone_flex">
+        <div class="project_phone__swiper swiper">
+          <ul class="project_phone__list swiper-wrapper">
+            {% for image in mobile_sliders.images.all %}
+              <li class="project_phone_item swiper-slide">
+                <img class="project_phone__img" src="{% static 'img/project/phone.svg' %}" alt="">
+                <div class="project_phone_block">
+                  <img src="/media/{{ image.image }}" alt="">
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
+{% if presentation_sliders %}
+  <section class="project_present" data-scroll-section>
+    <div class="container project_banner__container">
+      <div class="project_present__block">
+        <div class="project__info">
+          <div class="project__info_left">
+            <h4 class="project__head">Tablet версия</h4>
+          </div>
+          <div class="project__info_right">
+            <p class="project__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a lacus vestibulum sed arcu. Suspendisse in est ante in nibh mauris cursus mattis molestie. Risus sed vulputate odio ut. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Hac habitasse platea dictumst vestibulum rhoncus. Ac turpis egestas integer eget. Auctor eu augue ut lectus arcu. Id consectetur purus ut faucibus. Justo laoreet sit amet cursus sit amet dictum sit. Ac odio tempor orci dapibus ultrices. Tempor orci eu lobortis elementum nibh tellus. Urna duis convallis convallis tellus id interdum velit laoreet</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container project_present__container">
+      <div class="project_present__slider">
+        <div class="project_present__swiper swiper">
+          <ul class="project_present__list swiper-wrapper">
+            {% for image in presentation_sliders.images.all %}
+              <li class="project_present__item swiper-slide">
+                <div class="project_present__image">
+                  <img src="/media/{{ image.image }}" alt="">
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endif %}
 <section class="projects projects__border" data-scroll-section>
   <div class="projects__block">
     <div class="container projects__swiper_container">
