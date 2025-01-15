@@ -24,9 +24,7 @@ class NewProjectViewSet(
         new_project = serializer.save()
 
         message = (
-            f"Способ связи: {new_project.communications}\n"
-            f"Telegram: {new_project.telegram_name if new_project.telegram_name else "Не указано"}\n"
-            f"Email: {new_project.email if new_project.email else "Не указано"}\n"
+            f"Email: {new_project.email}\n"
             f"Бюджет проекта: {new_project.budget}\n"
             f"Описание проекта: {new_project.project_descr}\n"
             f"Промокод: {new_project.promocode}\n"
@@ -43,7 +41,6 @@ class NewProjectViewSet(
             'fields': (
                 {
                     'NAME': new_project.fio,
-                    'PHONE': new_project.phone,
                     'UF_CRM_TEXTAREA': message,
                 }
             ),
@@ -56,7 +53,6 @@ class NewProjectViewSet(
         message = (
             f"Детали заявки 'Новый проект':\n\n"
             f"Как обращаться: {new_project.fio}\n"
-            f"Номер для связи: {new_project.phone}\n"
         ) + message
         recipient_list = ["NikSen09@mail.ru"]
 

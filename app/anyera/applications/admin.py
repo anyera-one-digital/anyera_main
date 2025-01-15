@@ -4,8 +4,8 @@ from applications.models import NewProject, Briefing
 
 @admin.register(NewProject)
 class NewProjectAdmin(admin.ModelAdmin):
-    list_display = ['fio', 'budget', 'phone']
-    search_fields = ['fio', 'budget', 'phone', 'project_descr']
+    list_display = ['fio', 'budget', 'email']
+    search_fields = ['fio', 'budget', 'email', 'project_descr']
 
 
 @admin.register(Briefing)
