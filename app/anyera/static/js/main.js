@@ -351,7 +351,6 @@ burger.addEventListener('click', function() {
       menuItemActive[i].children[1].classList.remove("active");
       menuItemActive[i].classList.remove("active");
     }
-    header.classList.remove("hidden");
     headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     scroll.stop();
@@ -370,7 +369,6 @@ burger_c.addEventListener('click', function() {
     document.body.style.height = "100vh";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    header.classList.add("hidden");
     headerlinks.classList.add("hidden");
     headerbuttons.classList.add("active");
     scroll.stop();
@@ -387,7 +385,6 @@ if(document.querySelector('.new_project_banner')) {
       document.body.style.height = "100vh";
       menu.classList.remove("active");
       burger.classList.remove("active");
-      header.classList.add("hidden");
       headerlinks.classList.add("hidden");
       headerbuttons.classList.add("active");
       scroll.stop();
@@ -405,7 +402,6 @@ if (contactssb) {
       document.body.style.height = "100vh";
       menu.classList.remove("active");
       burger.classList.remove("active");
-      header.classList.add("hidden");
       headerlinks.classList.add("hidden");
       headerbuttons.classList.add("active");
       scroll.stop();
@@ -422,7 +418,6 @@ burger_ctwo.addEventListener('click', function() {
     document.body.style.height = "100vh";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    header.classList.add("hidden");
     headerlinks.classList.add("hidden");
     headerbuttons.classList.add("active");
     scroll.stop();
@@ -437,7 +432,6 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
     header.classList.remove("active");
     document.body.style.overflow = null;
     document.body.style.height = null;
-    header.classList.remove("hidden");
     headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     scroll.start();
@@ -660,7 +654,6 @@ bodyoverlay.addEventListener('click', function() {
   if (bodyoverlay.classList.contains("active")) {
     bodyoverlay.classList.remove("active");
     header.classList.remove("active");
-    header.classList.remove("hidden");
     headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     menu.classList.remove("active");
@@ -1247,7 +1240,7 @@ const showreelmodal = document.querySelector('.showreel__modal');
 const showreelmodalClose = document.querySelector('.showreel__modal_close');
 const showreelvideor = document.querySelector('.showreel__video_responsive');
 window.onload = function(){
-  if(showreelvideor){
+  if(showreelvideor && document.querySelector('.showreel__block')){
     document.querySelector('.showreel__block').innerHTML = '<video poster="./local/templates/anyera.ru2023/img/main/showreel.webp " playsinline autoplay muted loop><source src="./local/templates/anyera.ru2023/img/main/IMG_1308.mov" type="video/mp4"></video>';
     showreelvideor.innerHTML = '<video id="showreel__video" poster="./local/templates/anyera.ru2023/img/main/showreel.webp " playsinline autoplay loop data-overlay="1" data-title="ANYERA"><source src="./local/templates/anyera.ru2023/img/main/IMG_1308.mov" type="video/mp4"></video>';
     setTimeout(function() {

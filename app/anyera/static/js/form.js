@@ -47,17 +47,21 @@ const form = document.getElementById('form');
 if(form) {
   const username = document.getElementById('username');
   const phone = document.getElementById('phone');
+  const email = document.getElementById('email');
   const text = document.getElementById('text');
   const price = document.getElementById('price');
-  const сommunication = document.getElementById('сommunication');
+  // const сommunication = document.getElementById('сommunication');
   const usernameMin = username.getAttribute('minl');
   const usernameMax = username.getAttribute('maxl');
-  const phoneMin = phone.getAttribute('minl');
-  const phoneMax = phone.getAttribute('maxl');
+  // const phoneMin = phone.getAttribute('minl');
+  // const phoneMax = phone.getAttribute('maxl');
+  const emailMin = email.getAttribute('minl');
+  const emailMax = email.getAttribute('maxl');
   const textMin = text.getAttribute('minl');
   const textMax = text.getAttribute('maxl');
   username.oninput = function(){this.value = this.value.substr(0, usernameMax);}
-  phone.oninput = function(){this.value = this.value.substr(0, phoneMax);}
+  // phone.oninput = function(){this.value = this.value.substr(0, phoneMax);}
+  email.oninput = function(){this.value = this.value.substr(0, emailMax);}
   text.oninput = function(){this.value = this.value.substr(0, textMax);}
   form.addEventListener('submit', e => {
     e.preventDefault();
@@ -65,21 +69,22 @@ if(form) {
   });
   function checkFormInputs() {
     const usernameValue = username.value.trim();
-    const phoneValue = phone.value.trim();
+    // const phoneValue = phone.value.trim();
+    const emailValue = email.value.trim();
     const textValue = text.value.trim();
     const priceValue = price.value.trim();
-    const сommunicationValue = сommunication.value.trim();
+    // const сommunicationValue = сommunication.value.trim();
     
     if(usernameValue !== '' && usernameValue.length >= usernameMin && usernameValue.length <= usernameMax) {
       setSuccessFor(username);
     } else {
       setErrorFor(username);
     }
-    if(phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax) {
-      setSuccessFor(phone);
-    } else {
-      setErrorFor(phone);
-    }
+    // if(phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax) {
+    //   setSuccessFor(phone);
+    // } else {
+    //   setErrorFor(phone);
+    // }
     if(textValue !== '' && textValue.length >= textMin && textValue.length <= textMax) {
       setSuccessFor(text);
     } else {
@@ -90,22 +95,34 @@ if(form) {
     } else {
       setSelectErrorFor(price);
     }
-    if(сommunicationValue !== '') {
-      setSelectSuccessFor(сommunication);
+    if(!isFormEmailValid(emailValue)) {
+      setErrorFor(email);
+    } else if (emailValue !== '' && emailValue.length >= emailMin && emailValue.length <= emailMax) {
+      setSuccessFor(email);
     } else {
-      setSelectErrorFor(сommunication);
+      setErrorFor(email);
     }
-    if(usernameValue !== '' && usernameValue.length >= usernameMin && usernameValue.length <= usernameMax && 
-    phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax && 
+    // if(сommunicationValue !== '') {
+    //   setSelectSuccessFor(сommunication);
+    // } else {
+    //   setSelectErrorFor(сommunication);
+    // }
+    if(!isFormEmailValid(emailValue)) {
+      setErrorFor(email);
+    } else if(usernameValue !== '' && usernameValue.length >= usernameMin && usernameValue.length <= usernameMax && 
+    // phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax && 
+    emailValue !== '' && emailValue.length >= emailMin && emailValue.length <= emailMax && 
     textValue !== '' && textValue.length >= textMin && textValue.length <= textMax &&
-    priceValue !== '' && сommunicationValue !== '') {
-      if(сommunicationValue == 'Позвонить') {
-        сommun = "call";
-      } else if (сommunicationValue == 'Написать на почту') {
-        сommun = "email";
-      } else {
-        сommun = "telegram";
-      }
+    priceValue !== ''
+    //  && сommunicationValue !== ''
+    ) {
+      // if(сommunicationValue == 'Позвонить') {
+      //   сommun = "call";
+      // } else if (сommunicationValue == 'Написать на почту') {
+      //   сommun = "email";
+      // } else {
+      //   сommun = "telegram";
+      // }
       form.classList.add("hidden");
       document.getElementById('form__successfully_form').classList.add("active");
       fetch('/api/v1/new_project/', {

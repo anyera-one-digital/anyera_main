@@ -1566,18 +1566,22 @@ html.has-scroll-dragging {
   display: flex;
   color: var(--text);
   opacity: 1;
+}
+
+.header__name,
+.header__name_svg {
   -webkit-transition: color 0.2s linear, opacity 0.1s linear 0.3s;
   transition: color 0.2s linear, opacity 0.1s linear 0.3s;
+}
+
+.header__name_svg {
+  fill: var(--bg);
 }
 
 .header__name svg {
   width: 165px;
   height: 30px;
   object-fit: contain;
-}
-
-.header__name svg path:nth-child(2) {
-  color: var(--purple);
 }
 
 .header__name svg path {
@@ -1654,8 +1658,8 @@ html.has-scroll-dragging {
 }
 
 .header__buttons.active {
-  /* width: 596px; */
-  width: 387px;
+  /* width: 387px; */
+  width: 238px;
 }
 
 .button__project {
@@ -2903,7 +2907,10 @@ html.has-scroll-dragging {
 }
 
 .footer__social li a svg {
-  color: #808080
+  width: 20px;
+  height: 20px;
+  color: #808080;
+  object-fit: contain;
 }
 
 .footer__right_bottom {
@@ -12664,3 +12671,7 @@ section.services {
   }
 }
 /* end 389px */
+
+.hidden {
+  display: none;
+}
