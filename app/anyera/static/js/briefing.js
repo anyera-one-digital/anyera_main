@@ -1036,37 +1036,37 @@ if(!briefing){} else {
       bsegmentValue.length >= bsegmentMin &&
       bsegmentValue.length <= bsegmentMax
     ) {
-      fetch('/ajax/sendMail.php', {
+      fetch('/api/v1/briefing/', {
         method: 'POST',
         body: JSON.stringify({
-          one: busernameValue,
-          two: bphoneValue,
-          three: bemailValue,
+          fio: busernameValue,
+          phone: bphoneValue,
+          email: bemailValue,
 
-          four: bbasictermsValue,
-          five: btargetValue,
-          six: bknowValue,
-          seven: baudienceValue,
-          eight: bchoiceValue,
+          project_descr: bbasictermsValue,
+          purpose: btargetValue,
+          main_info: bknowValue,
+          target_audience: baudienceValue,
+          advantages: bchoiceValue,
 
-          nine: blinkValue,
-          ten: btopicsValue,
-          eleven: bnotopicsValue,
-          twelve: bpriceValue,
-          thirteen: bimpressionValue,
-          fourteen: bimportantValue,
-          fifteen: blikeValue,
+          url_competitors: blinkValue,
+          url_same_like: btopicsValue,
+          url_same_dislike: bnotopicsValue,
+          price: bpriceValue,
+          repulsive_impression: bimpressionValue,
+          сriteria: bimportantValue,
+          target: blikeValue,
 
-          sixteen: bproblemsValue,
-          seventeen: btriggersValue,
-          eighteen: binfoballValue,
-          nineteen: bneedsValue,
-          twenty: bbarriersValue,
-          twentyone: bstriveValue,
+          problems: bproblemsValue,
+          triggers: btriggersValue,
+          info_pain: binfoballValue,
+          needs: bneedsValue,
+          barriers: bbarriersValue,
+          look_for: bstriveValue,
           
-          twentytwo: bdesignValue,
-          twentythree: bassociationsValue,
-          twentyfour: bsegmentValue
+          design: bdesignValue,
+          associations: bassociationsValue,
+          main_segment: bsegmentValue
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"

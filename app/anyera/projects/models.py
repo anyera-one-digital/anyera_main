@@ -143,12 +143,50 @@ class Project(models.Model):
         return self.name
 
 
-class DescriptionBlock(models.Model):
+# class DescriptionBlock(models.Model):
+#     project = models.ForeignKey(
+#         Project,
+#         on_delete=models.CASCADE,
+#         related_name="description_blocks",
+#         verbose_name="Проект"
+#     )
+#     title = models.CharField(
+#         "Заголовок блока",
+#         max_length=200,
+#         blank=True,
+#         null=True
+#     )
+#     text = RichTextField(
+#         "Текст блока"
+#     )
+#     order = models.PositiveSmallIntegerField(
+#         "Положение"
+#     )
+
+#     class Meta:
+#         verbose_name = 'Блок описания'
+#         verbose_name_plural = 'Блоки описания'
+#         unique_together = ["project", "order", ]
+
+
+class Block(models.Model):
+    class Type(models.TextChoices):
+        MAIN = "main", "Основной"
+        MOBILE = "mobile", "Мобильная версия"
+        DESKTOP = "desktop", "Компьютерная версия"
+        TABLET = "tablet", "Планшетная версия"
+        PRESENTATION = "presentation", "Презентация"
+
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,
-        related_name="description_blocks",
+        related_name="blocks",
         verbose_name="Проект"
+    )
+    type = models.CharField(
+        "Тип слайдера",
+        max_length=50,
+        choices=Type.choices
     )
     title = models.CharField(
         "Заголовок блока",
@@ -159,38 +197,10 @@ class DescriptionBlock(models.Model):
     text = RichTextField(
         "Текст блока"
     )
-    order = models.PositiveSmallIntegerField(
-        "Положение"
-    )
 
     class Meta:
-        verbose_name = 'Блок описания'
-        verbose_name_plural = 'Блоки описания'
-        unique_together = ["project", "order", ]
-
-
-class Slider(models.Model):
-    class SliderType(models.TextChoices):
-        MOBILE = "mobile", "Мобильная версия"
-        DESKTOP = "desktop", "Компьютерная версия"
-        TABLET = "tablet", "Планшетная версия"
-        PRESENTATION = "presentation", "Презентация"
-
-    project = models.ForeignKey(
-        Project,
-        on_delete=models.CASCADE,
-        related_name="sliders",
-        verbose_name="Проект"
-    )
-    type = models.CharField(
-        "Тип слайдера",
-        max_length=50,
-        choices=SliderType.choices
-    )
-
-    class Meta:
-        verbose_name = 'Слайдер'
-        verbose_name_plural = 'Слайдеры'
+        verbose_name = 'Блок'
+        verbose_name_plural = 'Блоки'
         unique_together = ["project", "type", ]
 
     def __str__(self):
@@ -198,8 +208,8 @@ class Slider(models.Model):
 
 
 class SliderImage(models.Model):
-    slider = models.ForeignKey(
-        Slider,
+    block = models.ForeignKey(
+        Block,
         on_delete=models.CASCADE,
         related_name="images",
         verbose_name="Слайдер"
@@ -215,4 +225,4 @@ class SliderImage(models.Model):
     class Meta:
         verbose_name = 'Картинка слайдера'
         verbose_name_plural = 'Картинки слайдера'
-        unique_together = ["slider", "order", ]
+        unique_together = ["block", "order", ]

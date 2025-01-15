@@ -147,11 +147,11 @@ class Briefing(models.Model):
         max_length=300
     )
     design = models.TextField(
-        "Впечатление",
+        "Дизайн",
         max_length=300
     )
     associations = models.TextField(
-        "Дизайн",
+        "Впечатление",
         max_length=300
     )
     main_segment = models.TextField(

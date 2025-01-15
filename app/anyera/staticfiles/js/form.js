@@ -99,16 +99,23 @@ if(form) {
     phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax && 
     textValue !== '' && textValue.length >= textMin && textValue.length <= textMax &&
     priceValue !== '' && сommunicationValue !== '') {
+      if(сommunicationValue == 'Позвонить') {
+        сommun = "call";
+      } else if (сommunicationValue == 'Написать на почту') {
+        сommun = "email";
+      } else {
+        сommun = "telegram";
+      }
       form.classList.add("hidden");
       document.getElementById('form__successfully_form').classList.add("active");
-      fetch('/ajax/sendMail.php', {
+      fetch('/api/v1/new_project/', {
         method: 'POST',
         body: JSON.stringify({
-          one: usernameValue,
-          two: phoneValue,
-          three: textValue,
-          four: priceValue,
-          five: сommunicationValue
+          fio: usernameValue,
+          phone: phoneValue,
+          project_descr: textValue,
+          budget: priceValue,
+          communications: сommun
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"

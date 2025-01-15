@@ -6,8 +6,8 @@ from projects.models import (
     Industry,
     Type,
     Service,
-    DescriptionBlock,
-    Slider,
+    # DescriptionBlock,
+    Block,
     SliderImage
 )
 
@@ -26,13 +26,8 @@ class TypeAdmin(admin.ModelAdmin):
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ("name",)
+    list_display = ("name", )
     search_fields = ("name",)
-
-
-class DescriptionBlockInline(admin.TabularInline):
-    model = DescriptionBlock
-    extra = 1
 
 
 class SliderImageInline(admin.TabularInline):
@@ -40,19 +35,19 @@ class SliderImageInline(admin.TabularInline):
     extra = 1
 
 
-class SliderInline(admin.TabularInline):
-    model = Slider
+class BlockInline(admin.TabularInline):
+    model = Block
     extra = 1
-    fields = ("type", "edit_slider_link")
-    readonly_fields = ("edit_slider_link",)
+    fields = ("type", "title", "text", "edit_block_link")
+    readonly_fields = ("edit_block_link",)
 
-    def edit_slider_link(self, obj):
+    def edit_block_link(self, obj):
         if obj.pk:
-            url = reverse("admin:projects_slider_change", args=[obj.pk])
+            url = reverse("admin:projects_block_change", args=[obj.pk])
             return format_html(f'<a href="{url}" class="button">Изменить</a>')
         return "Слайдер еще не сохранен"
 
-    edit_slider_link.short_description = "Изменить"
+    edit_block_link.short_description = "Изменить"
 
 
 @admin.register(Project)
@@ -60,11 +55,11 @@ class ProjectAdmin(admin.ModelAdmin):
     list_display = ("name", "type", "is_visible")
     search_fields = ("name", )
     filter_horizontal = ("industries", "services", "other_projects")
-    inlines = [DescriptionBlockInline, SliderInline]
+    inlines = [BlockInline]
 
 
-@admin.register(Slider)
-class SliderAdmin(admin.ModelAdmin):
+@admin.register(Block)
+class BlockAdmin(admin.ModelAdmin):
     list_display = ("project", "type")
     list_filter = ("project",)
     search_fields = ("project__name",)

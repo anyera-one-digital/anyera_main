@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from projects.models import (
-    Project, DescriptionBlock, Slider, SliderImage, Industry, Type, Service
+    Project, Block, SliderImage, Industry, Type, Service
 )
 
 
@@ -25,13 +25,6 @@ class ServiceSerializer(serializers.ModelSerializer):
         fields = ['name']
 
 
-class DescriptionBlockSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = DescriptionBlock
-        fields = ['order', 'title', 'text']
-
-
 class SliderImageSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -39,12 +32,12 @@ class SliderImageSerializer(serializers.ModelSerializer):
         fields = ['order', 'image']
 
 
-class SliderSerializer(serializers.ModelSerializer):
+class BlockSerializer(serializers.ModelSerializer):
 
     images = SliderImageSerializer(many=True)
 
     class Meta:
-        model = Slider
+        model = Block
         fields = ['type', 'images']
 
 
@@ -59,8 +52,7 @@ class ProjectsListSerializer(serializers.ModelSerializer):
 
 class ProjectSerializer(serializers.ModelSerializer):
 
-    content_blocks = serializers.SerializerMethodField()
-    sliders = SliderSerializer(many=True)
+    sliders = BlockSerializer(many=True)
     services = ServiceSerializer(many=True)
     industries = IndustrySerializer(many=True)
     type = serializers.CharField(source='type.name')
@@ -69,9 +61,3 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = '__all__'
-
-    def get_content_blocks(self, obj):
-        blocks = DescriptionBlock.objects.filter(
-            project=obj
-        ).order_by('order')
-        return DescriptionBlockSerializer(blocks, many=True).data
