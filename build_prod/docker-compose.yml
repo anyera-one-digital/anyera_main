@@ -5,20 +5,20 @@ services:
     image: nginx:latest
     restart: unless-stopped
     volumes:
-      - ./nginx/nginx.dev.conf:/etc/nginx/conf.d/default.conf
-      - ./nginx/static:/app/static
-      - ./app/anyera/staticfiles:/app/staticfiles
-      - ./front:/app/dist
+      - ../nginx/nginx.dev.conf:/etc/nginx/conf.d/default.conf
+      - ../nginx/static:/app/static
+      - ../app/anyera/staticfiles:/app/staticfiles
+      - ../front:/app/dist
       - media:/app/media
     ports:
-      - "8083:80"
+      - "9000:80"
     depends_on:
       - app
       - db
 
   db:
     image: postgres:14.8-alpine3.18
-    env_file: app/.env
+    env_file: ../app/.env
     volumes:
       - postgres_data:/var/lib/postgresql/data
     expose:
@@ -32,28 +32,19 @@ services:
     restart: unless-stopped
 
   app:
-    env_file: app/.env
+    env_file: ../app/.env
     build:
-      context: "."
+      context: ".."
       dockerfile: "./app/Dockerfile"
     volumes:
-      - "./app/anyera:/app"
+      - "../app/anyera:/app"
       - media:/app/media
-    command: "top -d1"
+    command: "gunicorn anyera.wsgi:application --bind 0.0.0.0:8000 --log-level=debug --access-logfile - --error-logfile -"
     expose:
       - 8000
     restart: unless-stopped
-
-  # front:
-  #   env_file: app/.env
-  #   build:
-  #     context: "."
-  #     dockerfile: "./front/Dockerfile"
-  #   command: "top -d1"
-  #   volumes:
-  #     - "./front/anyera:/app"
-  #   expose:
-  #     - 8000
+    depends_on:
+      - db
 
 volumes:
   postgres_data:
