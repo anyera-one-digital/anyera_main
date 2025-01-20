@@ -1,4 +1,4 @@
-# anyera_main
+# anyera_main.
 
 docker compose down
 docker compose up --build  -d
@@ -12,4 +12,4 @@ python3 manage.py createsuperuser
 python3 manage.py collectstatic
 
 ps aux
-kill -9 
+kill -9
