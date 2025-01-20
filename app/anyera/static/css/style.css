@@ -2955,10 +2955,6 @@ html.has-scroll-dragging {
   text-transform: uppercase;
 }
 
-.footer__bottom p {
-  padding: 20px 0 2px;
-}
-
 .footer__privacy {
   position: absolute;
   left: 50%;
