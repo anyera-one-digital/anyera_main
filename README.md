@@ -1,4 +1,4 @@
-# anyera_main.
+# anyera_main
 
 docker compose down
 docker compose up --build  -d
