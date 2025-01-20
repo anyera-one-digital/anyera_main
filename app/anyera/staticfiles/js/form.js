@@ -47,20 +47,24 @@ const form = document.getElementById('form');
 if(form) {
   const username = document.getElementById('username');
   const phone = document.getElementById('phone');
+  const company = document.getElementById('company');
   const email = document.getElementById('email');
   const text = document.getElementById('text');
   const price = document.getElementById('price');
   // const сommunication = document.getElementById('сommunication');
   const usernameMin = username.getAttribute('minl');
   const usernameMax = username.getAttribute('maxl');
-  // const phoneMin = phone.getAttribute('minl');
-  // const phoneMax = phone.getAttribute('maxl');
+  const phoneMin = phone.getAttribute('minl');
+  const phoneMax = phone.getAttribute('maxl');
+  const companyMin = company.getAttribute('minl');
+  const companyMax = company.getAttribute('maxl');
   const emailMin = email.getAttribute('minl');
   const emailMax = email.getAttribute('maxl');
   const textMin = text.getAttribute('minl');
   const textMax = text.getAttribute('maxl');
   username.oninput = function(){this.value = this.value.substr(0, usernameMax);}
-  // phone.oninput = function(){this.value = this.value.substr(0, phoneMax);}
+  phone.oninput = function(){this.value = this.value.substr(0, phoneMax);}
+  company.oninput = function(){this.value = this.value.substr(0, companyMax);}
   email.oninput = function(){this.value = this.value.substr(0, emailMax);}
   text.oninput = function(){this.value = this.value.substr(0, textMax);}
   form.addEventListener('submit', e => {
@@ -69,7 +73,8 @@ if(form) {
   });
   function checkFormInputs() {
     const usernameValue = username.value.trim();
-    // const phoneValue = phone.value.trim();
+    const phoneValue = phone.value.trim();
+    const companyValue = company.value.trim();
     const emailValue = email.value.trim();
     const textValue = text.value.trim();
     const priceValue = price.value.trim();
@@ -132,7 +137,9 @@ if(form) {
           phone: phoneValue,
           project_descr: textValue,
           budget: priceValue,
-          communications: сommun
+          communications: сommun,
+          company: companyValue,
+          phone: phoneValue
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
