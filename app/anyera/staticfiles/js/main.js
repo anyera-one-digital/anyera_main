@@ -632,27 +632,31 @@ if(generationpopup) {
 if(document.querySelector(".form__checks_type")){
   const fcitype = [...document.querySelectorAll('.form__checks_type .form__check_input')];
   const fchecktype = document.querySelectorAll('.form__checks_type .form__check');
+  const formtype = document.getElementById('form__type');
 
   fcitype.forEach(input => input.addEventListener('input', function(event) {
     if (event.target.checked) {
       for(var i = 0;i < fchecktype.length; i++) {fchecktype[i].classList.remove('active');}
       event.target.closest('.form__check').classList.add('active');
-      if(document.getElementById('form__type')) {
-        document.getElementById('form__type').value = event.target.previousElementSibling.previousElementSibling.innerText;
-      }
+    }
+    if(formtype) {
+      console.log(event.target.previousElementSibling.previousElementSibling.value);
+      formtype.value = event.target.previousElementSibling.previousElementSibling.innerText;
     }
   }))
 }
 if(document.querySelector(".form__checks_sum")){
   const fcisum = [...document.querySelectorAll('.form__checks_sum .form__check_input')];
   const fchecksum = document.querySelectorAll('.form__checks_sum .form__check');
+  const formsum = document.getElementById('form__sum');
 
   fcisum.forEach(input => input.addEventListener('input', function(event) {
     if (event.target.checked) {
       for(var i = 0;i < fchecksum.length; i++) {fchecksum[i].classList.remove('active');}
       event.target.closest('.form__check').classList.add('active');
-      if(document.getElementById('form__sum')) {
-        document.getElementById('form__sum').value = event.target.previousElementSibling.previousElementSibling.innerText;
+      if(formsum) {
+        console.log(event.target.previousElementSibling.previousElementSibling.innerText);
+        formsum.value = event.target.previousElementSibling.previousElementSibling.innerText;
       }
     }
   }))

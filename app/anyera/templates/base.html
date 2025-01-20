@@ -433,7 +433,7 @@
                     <small class="form__error">Введите корректный e-mail</small>
                   </div>
                   <div class="form__control">
-                    <input class="form__input" type="text" minl="4" maxl="40" id="phone" />
+                    <input class="form__input" data-phone-pattern type="text" minl="4" maxl="40" id="phone" />
                     <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
                     <label class="form__label" for="phone">Номер для связи (не обязательно)</label>
                     <span class="form__bar"></span>
@@ -460,7 +460,30 @@
                     <span class="form__select_border"></span>
                   </div>
                 </div> -->
-                <p class="form__select_label">Бюджет проекта</p>
+                <div class="form__checks_flex">
+                  <h4 class="form__select_label">Какой продукт вам нужен?</h4>
+                  <div class="form__checks form__checks_type">
+                    <input class="form__type hidden" value="Telegram Mini App" id="form__type" name="form__type" type="text">
+                    <label class="btn checkbox form__check active"><span class="button__text">Telegram Mini App</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio" checked></label>
+                    <label class="btn checkbox form__check"><span class="button__text">Web-App</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">E-Commerce</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">Corporation Enterprise</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">Корпоративный портал</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">Телеграм бот</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">UI/UX дизайн</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="type" type="radio"></label>
+                  </div>
+                </div>
+                <div class="form__checks_flex">
+                  <h4 class="form__select_label">Бюджет</h4>
+                  <div class="form__checks form__checks_sum">
+                    <input class="form__sum hidden" value="от 1 млн до 2млн" id="form__sum" name="form__sum" type="text">
+                    <label class="btn checkbox form__check active"><span class="button__text">от 1 млн до 2млн</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="sum" type="radio" checked></label>
+                    <label class="btn checkbox form__check"><span class="button__text">от 2 млн до 4 млн</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="sum" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">от 5 до 10млн</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="sum" type="radio"></label>
+                    <label class="btn checkbox form__check"><span class="button__text">от 10 млн</span><span class="button__hover"></span><input class="checkbox__input form__check_input" name="sum" type="radio"></label>
+                  </div>
+                </div>
+                <!-- <p class="form__select_label">Бюджет проекта</p>
                 <div class="form__select_box">
                   <div class="form__select" data-select>
                     <div class="form__select_selected_item" data-select-action data-select-open>
@@ -479,7 +502,7 @@
                     <span class="form__select_bar"></span>
                     <span class="form__select_border"></span>
                   </div>
-                </div>
+                </div> -->
                 <div class="form__control">
                   <textarea class="form__input" type="text" minl="4" maxl="300" id="text"></textarea>
                   <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>

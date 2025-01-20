@@ -52,6 +52,8 @@ if(form) {
   const text = document.getElementById('text');
   const price = document.getElementById('price');
   // const сommunication = document.getElementById('сommunication');
+  const formsum = document.getElementById('form__sum');
+  const formtype = document.getElementById('form__type');
   const usernameMin = username.getAttribute('minl');
   const usernameMax = username.getAttribute('maxl');
   const phoneMin = phone.getAttribute('minl');
@@ -78,6 +80,8 @@ if(form) {
     const emailValue = email.value.trim();
     const textValue = text.value.trim();
     const priceValue = price.value.trim();
+    const formsumValue = formsum.value.trim();
+    const formtypeValue = formtype.value.trim();
     // const сommunicationValue = сommunication.value.trim();
     
     if(usernameValue !== '' && usernameValue.length >= usernameMin && usernameValue.length <= usernameMax) {
@@ -139,7 +143,9 @@ if(form) {
           budget: priceValue,
           communications: сommun,
           company: companyValue,
-          phone: phoneValue
+          phone: phoneValue,
+          formsum: formsumValue,
+          formtype: formtypeValue
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
