@@ -4606,6 +4606,7 @@ html.has-scroll-dragging {
 .projects__filter_label {
   height: 35px;
   padding: 0 20px;
+  border-radius: 16px;
 }
 
 .projects__head {
