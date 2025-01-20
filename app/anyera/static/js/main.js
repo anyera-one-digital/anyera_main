@@ -686,17 +686,19 @@ bodyoverlay.addEventListener('click', function() {
 // button language
 const headerlangbutton = document.querySelector('.header__set_language_icon');
 const headerlang = document.querySelector('.header__set_language_control');
-headerlangbutton.addEventListener('click', function() {
-  if (headerlang.classList.contains("active")) {
-    headerlang.classList.remove("active");
-    headerlangbutton.classList.add("active");
-    headerlang.style.maxWidth = null;
-  } else {
-    headerlang.classList.add("active");
-    headerlangbutton.classList.remove("active");
-    headerlang.style.maxWidth = headerlang.scrollWidth + "px";
-  }
-})
+if(headerlangbutton){
+  headerlangbutton.addEventListener('click', function() {
+    if (headerlang.classList.contains("active")) {
+      headerlang.classList.remove("active");
+      headerlangbutton.classList.add("active");
+      headerlang.style.maxWidth = null;
+    } else {
+      headerlang.classList.add("active");
+      headerlangbutton.classList.remove("active");
+      headerlang.style.maxWidth = headerlang.scrollWidth + "px";
+    }
+  })
+}
 // end language
 
 // start text rotate
