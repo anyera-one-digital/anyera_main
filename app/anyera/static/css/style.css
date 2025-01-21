@@ -17,7 +17,7 @@
   --button-gray: #f0f0f0;
   --border: #dfdfdf;
   --orange: #e7b85c;
-  --purple: #544BE0;
+  --purple: #545CFF;
   --error: #d91717;
   --green: #0fe397;
 
@@ -27,8 +27,8 @@
   --disabled: #C0C4CC;
   --grey-light: #F4F4F5;
   --primary-light: #FFFFFF;
-  --violet-dark: #3B33C5;
-  --primary-violet: #544BE0;
+  --violet-dark: #545CFF;
+  --primary-violet: #545CFF;
   --violet: #6D66E4;
 }
 
@@ -1663,7 +1663,6 @@ html.has-scroll-dragging {
   width: 173px;
   align-items: center;
   gap: 25px;
-  background-color: var(--bg);
   -webkit-transition: -webkit-transform 0.3s linear, width 0.3s linear;
   transition: transform 0.3s linear, width 0.3s linear;
   position: relative;
