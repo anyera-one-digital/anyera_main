@@ -15,10 +15,13 @@
           </ul>
           <h1 class="project_top__desc_new">Заголовок H1</h1>
           <p class="project_top__desc_new">{{ article.preview }}</p>
-          <h4 class="project_top__head_new">
-            {% for theme in article.theme.all %} 
-            #{{ theme }}
-            {% endfor %}</h4>
+          <div class="project_top__info_flex">
+            <div class="project_top__info_tags">
+              {% for theme in article.theme.all %} 
+              <p class="project_top__info_tag">#{{ theme }}</p>
+              {% endfor %}
+            </div>
+          </div>
         </div>
       </div>
       <div class="project_top__image">
