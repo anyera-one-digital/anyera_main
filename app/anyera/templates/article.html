@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block content %}
-<section class="project_top project_top__shadow" data-scroll-section id="top" style="background-image: url('/media/{{ article.element_img }}');">
+<section class="project_top" data-scroll-section id="top">
   <div class="container project_top__container">
+    <div id="project_top__star" class="project_top__star"></div>
     <div class="project_top__block">
       <div class="project_top__info">
         <div class="project_top__info_block">
@@ -12,12 +13,15 @@
             <li class="breadcrumbs__item"><a href="/articles/" class="breadcrumbs__link text">Статьи</a></li>
             <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link text">{{ article.title }}</a></li>
           </ul>
-          <h1 class="project_top__desc">{{ article.preview }}</h1>
-          <h4 class="project_top__head">
+          <h1 class="project_top__desc_new">{{ article.preview }}</h1>
+          <h4 class="project_top__head_new">
             {% for theme in article.theme.all %} 
             #{{ theme }}
             {% endfor %}</h4>
         </div>
+      </div>
+      <div class="project_top__image">
+        <img src="/media/{{ article.element_img }}" alt="">
       </div>
     </div>
   </div>

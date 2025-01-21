@@ -5150,6 +5150,13 @@ html.has-scroll-dragging {
   color: var(--black);
 }
 
+.project_top__desc_new,
+.project_top__head_new,
+.project_top__info_desc_new,
+.project_top__info_tag_new {
+  color: var(--text);
+}
+
 .project_top__info_desc::before {
   background-color: var(--black);
 }
