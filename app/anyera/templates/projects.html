@@ -19,7 +19,7 @@
               </button>
               <ul class="projects__filter_sublist">
                 {% for industry in industries %}
-                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ industry.name }}<small>{{ industry.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ industry.name }}<small>{{ industry.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox" value="{{ industry.id }}"></label></li>
                 {% endfor %}
               </ul>
             </li>
@@ -29,7 +29,7 @@
               </button>
               <ul class="projects__filter_sublist">
                 {% for type in types %}
-                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ type.name }}<small>{{ type.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ type.name }}<small>{{ type.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox" value="{{ type.id }}"></label></li>
                 {% endfor %}
               </ul>
             </li>
@@ -39,7 +39,7 @@
               </button>
               <ul class="projects__filter_sublist">
                 {% for service in services %}
-                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ service.name }}<small>{{ service.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ service.name }}<small>{{ service.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox" value="{{ service.id }}"></label></li>
                 {% endfor %}
               </ul>
             </li>
