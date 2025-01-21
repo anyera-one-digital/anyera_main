@@ -10,13 +10,9 @@
       <p class="articles_page__desc">Рассказываем о digital-трендах и о мире цифровизации. Делимся личным опытом и кейсами.</p>
       <div class="articles_page__checks">
         <label class="btn checkbox articles_page__check active"><span class="button__text">Все статьи</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" checked=""></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">Разработка</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">Дизайн</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">Аналитика</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">Маркетинг</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">Бизнес</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">E-commerce</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
-        <label class="btn checkbox articles_page__check"><span class="button__text">Новости</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio"></label>
+        {% for theme in themes %}
+        <label class="btn checkbox articles_page__check"><span class="button__text">{{ theme.name }}</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" value="{{ theme.id }}"></label>
+        {% endfor %}
       </div>
     </div>
     <div class="articles_page__divider"></div>
