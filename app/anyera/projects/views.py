@@ -33,9 +33,7 @@ def project_list(request):
         .filter(project_count__gt=0)
     )
     services_count = services.count()
-    
 
-    print(industries, industries[0].project_count)
     return render(request, 'projects.html', {
         'projects': projects,
         'industries_count': industries_count,
