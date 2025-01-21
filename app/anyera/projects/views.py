@@ -1,8 +1,9 @@
 from rest_framework import mixins, viewsets
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
+from django.db.models import Count
 from django_filters.rest_framework import DjangoFilterBackend
-from projects.models import Project, Block
+from projects.models import Project, Block, Industry, Type, Service
 from projects.serializers import ProjectSerializer, ProjectsListSerializer
 from projects.filters import ProjectFilter
 
@@ -14,7 +15,36 @@ def get_object_or_none(model, **kwargs):
 
 def project_list(request):
     projects = Project.objects.filter(is_visible=True)
-    return render(request, 'projects.html', {'projects': projects})
+
+    industries = (
+        Industry.objects.annotate(project_count=Count('project'))
+        .filter(project_count__gt=0)
+    )
+    industries_count = industries.count()
+
+    types = (
+        Type.objects.annotate(project_count=Count('project'))
+        .filter(project_count__gt=0)
+    )
+    types_count = types.count()
+
+    services = (
+        Service.objects.annotate(project_count=Count('project'))
+        .filter(project_count__gt=0)
+    )
+    services_count = services.count()
+    
+
+    print(industries, industries[0].project_count)
+    return render(request, 'projects.html', {
+        'projects': projects,
+        'industries_count': industries_count,
+        'industries': industries,
+        'types_count': types_count,
+        'types': types,
+        'services_count': services_count,
+        'services': services,
+    })
 
 def project_detail(request, id):
     project = Project.objects.get(id=id)

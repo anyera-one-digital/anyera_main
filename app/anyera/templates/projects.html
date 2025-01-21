@@ -14,70 +14,33 @@
         <div class="projects__filter">
           <ul class="projects__filter_list">
             <li class="projects__filter_item">
-              <button class="projects__filter_button"><p>Отрасли<small>7</small></p>
+              <button class="projects__filter_button"><p>Отрасли<small>{{ industries_count }}</small></p>
                 <span><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L8.95181 8.5L16 1.5" stroke="currentColor" stroke-width="2"></path></svg></span>
               </button>
               <ul class="projects__filter_sublist">
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">промышленность <small>24</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">транспорт и логистика<small>14</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">retail<small>13</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">металлургия<small>12</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">строительство и недвижимость<small>10</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">авто / мото<small>10</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">it<small>7</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">образование<small>6</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">оборудование<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">медиа<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">авиа<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">консалтинг<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">финансы и страхование<small>3</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                {% for industry in industries %}
+                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ industry.name }}<small>{{ industry.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                {% endfor %}
               </ul>
             </li>
             <li class="projects__filter_item">
-              <button class="projects__filter_button"><p>Тип сайта<small>7</small></p>
+              <button class="projects__filter_button"><p>Тип сайта<small>{{ types_count }}</small></p>
                 <span><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L8.95181 8.5L16 1.5" stroke="currentColor" stroke-width="2"></path></svg></span>
               </button>
               <ul class="projects__filter_sublist">
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">сайт<small>39</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">корпоративный сайт<small>34</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">каталог и витрина<small>16</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">сервис<small>14</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">промо-сайт<small>10</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">портал<small>9</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">продуктовые сайты<small>6</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">e-commerce<small>5</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">crm<small>5</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">система сайтов<small>3</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">карьерные сайты<small>2</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">лендинги<small>2</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">интернет-магазин<small>1</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">энтерпрайз-решения<small>1</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                {% for type in types %}
+                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ type.name }}<small>{{ type.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                {% endfor %}
               </ul>
             </li>
             <li class="projects__filter_item">
-              <button class="projects__filter_button"><p>Услуги<small>7</small></p>
+              <button class="projects__filter_button"><p>Услуги<small>{{ services_count }}</small></p>
                 <span><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L8.95181 8.5L16 1.5" stroke="currentColor" stroke-width="2"></path></svg></span>
               </button>
               <ul class="projects__filter_sublist">
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">сайты<small>70</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">ux/ui дизайн<small>66</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">аналитика<small>59</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">ux-аналитика<small>57</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">дизайн<small>48</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">корпоративные сайты<small>31</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">каталоги и витрины<small>15</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">no-code<small>11</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">промо-сайты<small>10</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">сервисы<small>10</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">порталы<small>9</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">seo-продвижение<small>8</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">автоматизация<small>6</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">техническая поддержка<small>6</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">e-commerce<small>5</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">контент-поддержка<small>5</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">дизайн-системы<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">3d<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
-                <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">3d-визуализация<small>4</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                {% for service in services %}
+                  <li class="projects__filter_subitem"><label class="btn projects__filter_label"><span class="button__text button__count">{{ service.name }}<small>{{ service.project_count }}</small></span><span class="button__hover"></span><input class="projects__filter_check" type="checkbox"></label></li>
+                {% endfor %}
               </ul>
             </li>
           </ul>
