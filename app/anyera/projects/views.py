@@ -1,8 +1,10 @@
 from rest_framework import mixins, viewsets
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
+from django_filters.rest_framework import DjangoFilterBackend
 from projects.models import Project, Block
 from projects.serializers import ProjectSerializer, ProjectsListSerializer
+from projects.filters import ProjectFilter
 
 def get_object_or_none(model, **kwargs):
     try:
@@ -67,6 +69,8 @@ class ProjectViewSet(
 
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
+    filter_backends = [DjangoFilterBackend]
+    filterset_class = ProjectFilter
 
     def get_serializer_class(self):
         if self.action == "retrieve":
