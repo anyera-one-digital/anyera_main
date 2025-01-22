@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.text import slugify
 
 class Theme(models.Model):
     name = models.CharField(
@@ -19,6 +20,12 @@ class Article(models.Model):
     title = models.CharField(
         "Название",
         max_length=200
+    )
+    code = models.SlugField(
+        "Символьный код",
+        max_length=200,
+        unique=True, 
+        blank=True
     )
     preview = models.TextField(
         "Превью текст",
@@ -42,6 +49,10 @@ class Article(models.Model):
         verbose_name="Тема"
     )
 
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.code = slugify(self.title)
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Статья'

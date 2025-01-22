@@ -21,7 +21,7 @@
     <ul class="articles_page__list">
       {% for article in articles %}
       <li class="articles_page__item">
-        <a href="/articles/{{ article.id }}" class="articles_page__link">
+        <a href="/articles/{{ article.code }}" class="articles_page__link">
           <div class="articles_page__image">
             <img src="/media/{{ article.preview_img }}" alt="">
             <div class="btn__arrow articles_page__arrow">

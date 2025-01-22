@@ -14,10 +14,10 @@ def article_list(request):
     )
     return render(request, 'articles.html', {'articles': articles, 'themes': themes})
 
-def article_detail(request, id):
-    article = Article.objects.get(id=id)
+def article_detail(request, code):
+    article = Article.objects.get(code=code)
     blocks = ContentBlock.objects.filter(article=article)
-    other_articles = Article.objects.exclude(id=id)
+    other_articles = Article.objects.exclude(code=code)
     return render(request, 'article.html', {'article': article, 'blocks' : blocks, "other_articles" : other_articles})
 
 

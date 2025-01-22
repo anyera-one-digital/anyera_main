@@ -18,3 +18,4 @@ class ArticleAdmin(admin.ModelAdmin):
     inlines = [ContentBlockInline]
     list_display = ['title', 'preview', 'created_at']
     search_fields = ['title']
+    prepopulated_fields = {'code': ('title',)}
