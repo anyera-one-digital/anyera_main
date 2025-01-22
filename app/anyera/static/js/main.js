@@ -6,7 +6,6 @@ var is_firefox = typeof window.InstallTrigger !== 'undefined';
 var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 var is_yandex = navigator.userAgent.search(/YaBrowser/) > 0;
 
-alert(browser);
 // start right mouse
 // document.oncontextmenu = cmenu; function cmenu() { return false; }
 // function preventSelection(element){
@@ -61,8 +60,8 @@ appHeight();
 if(is_yandex) {
   scroll = new LocomotiveScroll({ el: document.querySelector('[data-scroll-container]'), smooth: false})
 } else {
-  scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth:true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 2.7,mobile: {breakpoint: 0,smooth: false,inertia: 0,},tablet: {breakpoint: 0,smooth: false,inertia: 2.7,},smartphone: {breakpoint: 0,smooth: false,inertia: 2.7,}})
-  // scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
+  scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
+  new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
 }
 
 const hn_scroll = document.querySelector('.header__nav_scroll');

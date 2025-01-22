@@ -1,3 +1,11 @@
+var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+var is_explorer= typeof document !== 'undefined' && !!document.documentMode && !is_Edge;
+var is_firefox = typeof window.InstallTrigger !== 'undefined';
+var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+var is_yandex = navigator.userAgent.search(/YaBrowser/) > 0;
+
 // start right mouse
 // document.oncontextmenu = cmenu; function cmenu() { return false; }
 // function preventSelection(element){
@@ -46,8 +54,15 @@ appHeight();
 
 // start scroll
 // scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth:true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,lerp:0.05,mobile: {breakpoint: 0,smooth: true,inertia: 1,},tablet: {breakpoint: 0,smooth: true,inertia: 1,},smartphone: {breakpoint: 0,smooth: true,inertia: 1,}})
-scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
-new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
+// scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
+// new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
+
+if(is_yandex || is_chrome) {
+  scroll = new LocomotiveScroll({ el: document.querySelector('[data-scroll-container]'), smooth: false})
+} else {
+  scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
+  new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
+}
 
 const hn_scroll = document.querySelector('.header__nav_scroll');
 const hc_scroll = document.querySelector('.header__consultation_scroll');
@@ -632,31 +647,27 @@ if(generationpopup) {
 if(document.querySelector(".form__checks_type")){
   const fcitype = [...document.querySelectorAll('.form__checks_type .form__check_input')];
   const fchecktype = document.querySelectorAll('.form__checks_type .form__check');
-  const formtype = document.getElementById('form__type');
 
   fcitype.forEach(input => input.addEventListener('input', function(event) {
     if (event.target.checked) {
       for(var i = 0;i < fchecktype.length; i++) {fchecktype[i].classList.remove('active');}
       event.target.closest('.form__check').classList.add('active');
-    }
-    if(formtype) {
-      console.log(event.target.previousElementSibling.previousElementSibling.value);
-      formtype.value = event.target.previousElementSibling.previousElementSibling.innerText;
+      if(document.getElementById('form__type')) {
+        document.getElementById('form__type').value = event.target.previousElementSibling.previousElementSibling.innerText;
+      }
     }
   }))
 }
 if(document.querySelector(".form__checks_sum")){
   const fcisum = [...document.querySelectorAll('.form__checks_sum .form__check_input')];
   const fchecksum = document.querySelectorAll('.form__checks_sum .form__check');
-  const formsum = document.getElementById('form__sum');
 
   fcisum.forEach(input => input.addEventListener('input', function(event) {
     if (event.target.checked) {
       for(var i = 0;i < fchecksum.length; i++) {fchecksum[i].classList.remove('active');}
       event.target.closest('.form__check').classList.add('active');
-      if(formsum) {
-        console.log(event.target.previousElementSibling.previousElementSibling.innerText);
-        formsum.value = event.target.previousElementSibling.previousElementSibling.innerText;
+      if(document.getElementById('form__sum')) {
+        document.getElementById('form__sum').value = event.target.previousElementSibling.previousElementSibling.innerText;
       }
     }
   }))
