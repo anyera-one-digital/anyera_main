@@ -21,12 +21,12 @@ class Article(models.Model):
         "Название",
         max_length=200
     )
-    code = models.SlugField(
-        "Символьный код",
-        max_length=200,
-        unique=True, 
-        blank=True
-    )
+    # code = models.SlugField(
+    #     "Символьный код",
+    #     max_length=200,
+    #     unique=True, 
+    #     blank=True
+    # )
     preview = models.TextField(
         "Превью текст",
         max_length=200,
@@ -49,10 +49,10 @@ class Article(models.Model):
         verbose_name="Тема"
     )
 
-    def save(self, *args, **kwargs):
-        if not self.id:
-            self.code = slugify(self.title)
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     if not self.id:
+    #         self.code = slugify(self.title)
+    #     super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = 'Статья'
