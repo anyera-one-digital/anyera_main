@@ -57,7 +57,7 @@ appHeight();
 // scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
 // new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
 
-if(is_yandex || is_chrome) {
+if(is_yandex) {
   scroll = new LocomotiveScroll({ el: document.querySelector('[data-scroll-container]'), smooth: false})
 } else {
   scroll = new LocomotiveScroll({el: document.querySelector('[data-scroll-container]'),smooth: true,getDirection: true,scrollFromAnywhere: true,breakpoint: 0,inertia: 0,tablet: {breakpoint: 0,smooth: false,inertia: 0,}})
