@@ -64,6 +64,7 @@ if(is_yandex) {
   new ResizeObserver(() => scroll.update()).observe(document.querySelector("[data-scroll-container]"));
 }
 
+
 const hn_scroll = document.querySelector('.header__nav_scroll');
 const hc_scroll = document.querySelector('.header__consultation_scroll');
 const cp_scroll = document.querySelector('.career_popup__scroll');
