@@ -13,17 +13,17 @@
           <h4 class="project_top__desc">{{ project.intro_text }}</h4>
           <div class="project_top__info_flex">
             <p class="project_top__info_desc">{{ project.additional_intro_field }}</p>
-              <div class="project_top__info_tags">
-                {% for service in project.services.all %} 
-                    <p class="project_top__info_tag">#{{ service }}</p>
-                {% endfor %}
-              </div>
+            <a href="{{ project.link }}" target="_blank" class="btn btn_new project_top__button">
+              <span class="button__text">Веб-сайт</span>
+              <span class="button__hover"></span>
+            </a>
           </div>
         </div>
-        <a href="{{ project.link }}" target="_blank" class="btn project_top__button">
-          <span class="button__text">Веб-сайт</span>
-          <span class="button__hover"></span>
-        </a>
+        <div class="project_top__info_tags">
+          {% for service in project.services.all %} 
+              <p class="project_top__info_tag">#{{ service }}</p>
+          {% endfor %}
+        </div>
       </div>
       <div class="project_top__image">
         <img src="/media/{{ project.element_image }}" alt="">

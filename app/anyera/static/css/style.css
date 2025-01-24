@@ -5100,11 +5100,11 @@ html.has-scroll-dragging {
 }
 
 .project_top__info .btn .button__text {
-  color: var(--black);
+  /* color: var(--black); */
 }
 
 .project_top__info .btn:hover .button__text {
-  color: var(--white);
+  /* color: var(--white); */
 }
 
 .project_top__info.project_top__white .btn .button__text {
@@ -5152,15 +5152,19 @@ html.has-scroll-dragging {
 .project_top__desc,
 .project_top__head,
 .project_top__info_desc,
-.project_top__info_tag {
-  color: var(--black);
-}
-
+.project_top__info_tag,
 .project_top__desc_new,
 .project_top__head_new,
 .project_top__info_desc_new,
 .project_top__info_tag_new {
-  color: var(--text);
+  color: var(--black);
+}
+
+.project_top__info_tag {
+  padding: 15px;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  border-radius: 24px;
 }
 
 .project_top__info_desc::before {
