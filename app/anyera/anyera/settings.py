@@ -10,7 +10,7 @@ SECRET_KEY = "django-insecure-s8x5@g8%ad_m&kd!+=3wbh!5$ndd@4b+_a65&d@%z5hw3^x&3*
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = ["*"]
 
