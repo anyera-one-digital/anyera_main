@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
+from ckeditor.fields import RichTextField
 
 class Theme(models.Model):
     name = models.CharField(
@@ -67,7 +68,7 @@ class ContentBlock(models.Model):
         "Название блока",
         max_length=200
     )
-    text = models.TextField("Текст блока")
+    text = RichTextField("Текст блока")
     article = models.ForeignKey(
         Article,
         on_delete=models.CASCADE,

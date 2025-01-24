@@ -36,12 +36,12 @@ class ServiceAdmin(ModelAdmin):
 
 class SliderImageInline(TabularInline):
     model = SliderImage
-    extra = 1
+    extra = 0
 
 
 class BlockInline(TabularInline):
     model = Block
-    extra = 1
+    extra = 0
     fields = ("type", "title", "text", "edit_block_link")
     readonly_fields = ("edit_block_link",)
 
