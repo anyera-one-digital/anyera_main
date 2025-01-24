@@ -164,5 +164,5 @@ EMAIL_ADMIN = EMAIL_HOST_USER
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8083", "http://92.53.127.219"]
+CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8083", "http://92.53.127.219", "https://anyera.one/", "http://anyera.one/"]
 CORS_ALLOW_CREDENTIALS = True
