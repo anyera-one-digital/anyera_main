@@ -758,8 +758,8 @@ section {
 }
 
 .text__middle {
-  -webkit-transform: translateY(1px);
-  transform: translateY(1px);
+  -webkit-transform: translateY(1.5px);
+  transform: translateY(1.5px);
   -webkit-transition: height 0.2s linear;
   transition: height 0.2s linear;
 }
