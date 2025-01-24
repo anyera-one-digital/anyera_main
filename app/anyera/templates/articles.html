@@ -18,33 +18,20 @@
     <div class="articles_page__divider"></div>
   </div>
   <div class="container articles_page__list_container">
-    <ul class="articles_page__list">
+    <ul class="articles__list articles__list_new">
       {% for article in articles %}
-      <li class="articles_page__item">
-        <a href="/articles/{{ article.code }}" class="articles_page__link">
-          <div class="articles_page__image">
+      <li class="articles__item animate">
+        <a href="/articles/{{ article.code }}" class="articles__link">
+          <div class="articles__image">
             <img src="/media/{{ article.preview_img }}" alt="">
-            <div class="btn__arrow articles_page__arrow">
-              <div class="btn__side btn__side_hover">
-                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                </svg>
-              </div>
-              <div class="btn__side btn__side_default">
-                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                </svg>
-              </div>
-            </div>
           </div>
-          <div class="articles_page__info">
-            <p class="articles_page__heading">{{ article.title }}</p>
-            <p class="articles_page__description">
+          <div class="articles__info">
+            <h4 class="articles__head">{{ article.title }}</h4>
+            <p class="articles__desc">
               {% for theme in article.theme.all %} 
               {{ theme }}
               {% endfor %}
             </p>
-
           </div>
         </a>
       </li>

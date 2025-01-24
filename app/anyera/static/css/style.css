@@ -5622,6 +5622,10 @@ html.has-scroll-dragging {
   display: flex;
 }
 
+.articles__list_new {
+  flex-wrap: wrap;
+}
+
 .articles__flex .articles__list {
   flex-wrap: wrap;
   gap: 40px;
@@ -10411,6 +10415,9 @@ section.services {
   }
   .header__links {
     display: none;
+  }
+  .header__burger {
+    display: flex;
   }
   .main__border {
     width: calc(100% - 60px);
