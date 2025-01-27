@@ -50,8 +50,6 @@ if(form) {
   const company = document.getElementById('company');
   const email = document.getElementById('email');
   const text = document.getElementById('text');
-  const price = document.getElementById('price');
-  // const сommunication = document.getElementById('сommunication');
   const formsum = document.getElementById('form__sum');
   const formtype = document.getElementById('form__type');
   const usernameMin = username.getAttribute('minl');
@@ -79,7 +77,6 @@ if(form) {
     const companyValue = company.value.trim();
     const emailValue = email.value.trim();
     const textValue = text.value.trim();
-    const priceValue = price.value.trim();
     const formsumValue = formsum.value.trim();
     const formtypeValue = formtype.value.trim();
     // const сommunicationValue = сommunication.value.trim();
@@ -89,20 +86,10 @@ if(form) {
     } else {
       setErrorFor(username);
     }
-    // if(phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax) {
-    //   setSuccessFor(phone);
-    // } else {
-    //   setErrorFor(phone);
-    // }
     if(textValue !== '' && textValue.length >= textMin && textValue.length <= textMax) {
       setSuccessFor(text);
     } else {
       setErrorFor(text);
-    }
-    if(priceValue !== '') {
-      setSelectSuccessFor(price);
-    } else {
-      setSelectErrorFor(price);
     }
     if(!isFormEmailValid(emailValue)) {
       setErrorFor(email);
@@ -111,18 +98,11 @@ if(form) {
     } else {
       setErrorFor(email);
     }
-    // if(сommunicationValue !== '') {
-    //   setSelectSuccessFor(сommunication);
-    // } else {
-    //   setSelectErrorFor(сommunication);
-    // }
     if(!isFormEmailValid(emailValue)) {
       setErrorFor(email);
     } else if(usernameValue !== '' && usernameValue.length >= usernameMin && usernameValue.length <= usernameMax && 
-    // phoneValue !== '' && phoneValue.length >= phoneMin && phoneValue.length <= phoneMax && 
     emailValue !== '' && emailValue.length >= emailMin && emailValue.length <= emailMax && 
-    textValue !== '' && textValue.length >= textMin && textValue.length <= textMax &&
-    priceValue !== ''
+    textValue !== '' && textValue.length >= textMin && textValue.length <= textMax
     //  && сommunicationValue !== ''
     ) {
       // if(сommunicationValue == 'Позвонить') {
@@ -140,8 +120,6 @@ if(form) {
           fio: usernameValue,
           phone: phoneValue,
           project_descr: textValue,
-          budget: priceValue,
-          communications: сommun,
           company: companyValue,
           phone: phoneValue,
           formsum: formsumValue,

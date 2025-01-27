@@ -912,7 +912,10 @@ section {
 }
 
 .btn_new .button__text {
-  color: var(--white)
+  color: var(--white);
+  background: transparent;
+  outline: none;
+  border: 0;
 }
 
 .button__text svg {
