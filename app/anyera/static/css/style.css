@@ -5631,6 +5631,7 @@ html.has-scroll-dragging {
 
 .articles__list_new {
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .articles__flex .articles__list {
@@ -11559,6 +11560,12 @@ section.services {
   .articles__item {
     width: 235px;
   }
+  .articles__list_new .articles__item {
+    width: calc(50% - 20px);
+  }
+  .articles__list_new {
+    gap: 30px;
+  }
   .accredited__flex {
     border-top: none;
   }
@@ -12235,9 +12242,18 @@ section.services {
     top: -41px;
     right: 80px;
   }
+
   .expertise__block {
     flex-direction: column-reverse;
   }
+  
+  .articles__list_new .articles__item {
+    width: calc(50% - 10px);
+  }
+  .articles__list_new {
+    gap: 20px;
+  }
+
   .footer__block {
     margin: 0 20px;
   }
