@@ -38,10 +38,40 @@
       {% endfor %}
     </ul>
     <div class="articles_page__bogttom">
-      <button class="btn btn_new articles_page__button">
-        <span class="button__text">Показать еще</span>
-      </button>
+      {% if page_obj.has_next %}
+        <button class="btn btn_new articles_page__button" id="load-more-btn">
+          <span class="button__text">Показать еще</span>
+        </button>
+      {% endif %}
     </div>
   </div>
 </section>
+
+<script>
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  let nextPage = 1;
+  const totalPages = {{ total_pages }};
+  loadMoreBtn.addEventListener('click', function() {
+    if (totalPages > nextPage) {
+      nextPage = nextPage + 1;
+    } else {
+      loadMoreBtn.style.display = 'none';
+      return;
+    }
+
+    fetch(`/articles/?page=${nextPage}`)
+      .then(response => response.text())
+      .then(data => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const newArticles = doc.querySelector('.articles__list_new').innerHTML;
+        const articlesList = document.querySelector('.articles__list');
+        articlesList.innerHTML += newArticles;
+        
+        if (!doc.querySelector('#load-more-btn')) {
+          loadMoreBtn.style.display = 'none';
+        }
+      });
+  });
+</script>
 {% endblock %}
