@@ -1,8 +1,11 @@
 from pathlib import Path
 from datetime import timedelta
 import os
-env = os.environ
+from django.urls import reverse_lazy
+from django.templatetags.static import static
 
+
+env = os.environ
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -166,3 +169,84 @@ EMAIL_ADMIN = EMAIL_HOST_USER
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = ["http://127.0.0.1:8083", "http://92.53.127.219", "https://anyera.one", "http://anyera.one"]
 CORS_ALLOW_CREDENTIALS = True
+
+UNFOLD = {
+    "SITE_TITLE": "ANYERA",
+    "SITE_LOGO": {
+        "light": lambda request: static("img/Logo.svg"),
+        "dark": lambda request: static("img/favicon.ico"),
+    },
+    "SITE_FAVICONS": [
+        {
+            "rel": "icon",
+            "sizes": "32x32",
+            "type": "image/ico",
+            "href": lambda request: static("img/favicon.ico"),
+        },
+    ],
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": True,
+        "navigation": [
+            {
+                "title": "Основное",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Dashboard",
+                        "icon": "dashboard",
+                        "link": reverse_lazy("admin:index"),
+                        "badge": "3",
+                        "permission": lambda request: request.user.is_superuser,
+                    },
+                ],
+            },
+            {
+                "title": "Проекты",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Проекты",
+                        "icon": "devices",
+                        "link": reverse_lazy("admin:projects_project_changelist"),
+                    },
+                    {
+                        "title": "Отрасли",
+                        "icon": "drag_indicator",
+                        "link": reverse_lazy("admin:projects_industry_changelist"),
+                    },
+                    {
+                        "title": "Типы",
+                        "icon": "drag_indicator",
+                        "link": reverse_lazy("admin:projects_type_changelist"),
+                    },
+                    {
+                        "title": "Услуги",
+                        "icon": "drag_indicator",
+                        "link": reverse_lazy("admin:projects_service_changelist"),
+                    },
+
+                ],
+            },
+            {
+                "title": "Статьи",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Статьи",
+                        "icon": "article",
+                        "link": reverse_lazy("admin:articles_article_changelist"),
+                    },
+                    {
+                        "title": "Темы",
+                        "icon": "drag_indicator",
+                        "link": reverse_lazy("admin:articles_theme_changelist"),
+                    },
+                ],
+            },
+        ],
+    },
+}

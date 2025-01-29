@@ -46,7 +46,7 @@
        {% for block in blocks.all %} 
         <div class="article__info_flex" id="article_{{ block.order }}">
           <h3 class="article__head">{{ block.name }}</h3>
-          <p class="article__desc">{{ block.text }}</p>
+          <p class="article__desc">{{ block.text|safe }}</p>
           <img class="article__image" src="img/articles/article_2.webp" alt="">
         </div>
         {% endfor %}

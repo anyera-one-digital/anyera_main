@@ -59,6 +59,8 @@ class ProjectAdmin(ModelAdmin):
     compressed_fields = True
     list_display = ("name", "type", "is_visible")
     search_fields = ("name", )
+    list_filter = ("type", "industries", "services")
+    list_filter_submit = True
     filter_horizontal = ("industries", "services", "other_projects")
     inlines = [BlockInline]
 
