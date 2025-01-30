@@ -11479,11 +11479,12 @@ section.services {
   }
   .project__info {
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
   }
   .project__info_left,
   .project__info_right {
     width: 100%;
+    gap: 10px;
   }
   .project_desktop__slider {
     padding: 40px 20px 70px;
