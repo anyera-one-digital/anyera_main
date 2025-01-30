@@ -39,16 +39,9 @@ class ServiceAdmin(ModelAdmin):
 class BlockInline(TabularInline):
     model = Block
     extra = 0
+    classes = ['collapse']
     fields = ("title", "text", "image", "order")
-    # readonly_fields = ("edit_block_link",)
-
-    # def edit_block_link(self, obj):
-    #     if obj.pk:
-    #         url = reverse("admin:projects_block_change", args=[obj.pk])
-    #         return format_html(f'<a href="{url}" class="button">Изменить</a>')
-    #     return "Слайдер еще не сохранен"
-
-    # edit_block_link.short_description = "Изменить"
+    hide_title = True
 
 
 @admin.register(Project)
