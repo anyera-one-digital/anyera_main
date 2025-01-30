@@ -174,7 +174,7 @@ UNFOLD = {
     "SITE_TITLE": "ANYERA",
     "SITE_LOGO": {
         "light": lambda request: static("img/Logo.svg"),
-        "dark": lambda request: static("img/favicon.ico"),
+        "dark": lambda request: static("img/logo-dark-admin.svg"),
     },
     "SITE_FAVICONS": [
         {
