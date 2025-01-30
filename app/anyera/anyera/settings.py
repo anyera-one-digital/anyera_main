@@ -198,7 +198,11 @@ UNFOLD = {
                         "icon": "dashboard",
                         "link": reverse_lazy("admin:index"),
                         "badge": "3",
-                        "permission": lambda request: request.user.is_superuser,
+                    },
+                    {
+                        "title": "SEO",
+                        "icon": "search",
+                        "link": reverse_lazy("admin:pages_seo_changelist"),
                     },
                 ],
             },

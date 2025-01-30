@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anyera</title>
+  <title>{{ seo.title|default:"Anyera Digital & Design | Веб-разработка и дизайн" }}</title>
   <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="72x72">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" sizes="76x76">
@@ -24,6 +24,8 @@
   <link rel="stylesheet" href="{% static 'css/reset.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <script>window.console = window.console || function(t) {};</script>
+  <meta name="keywords" content="{{ seo.keywords|default:'Веб-разработка, Программирование, Дизайн веб-сайтов, Разработка приложений, Фронтенд, Бэкенд, Технологии веб-разработки, Мобильные приложения, UX/UI дизайн, Оптимизация сайтов, Интернет-магазины, Адаптивный дизайн, SEO оптимизация, JavaScript, HTML/CSS, PHP, Веб-дизайн, Создание интернет-ресурсов, Программирование под ключ, Адаптивный веб-дизайн, Frontend разработка, Backend программирование, Разработка кроссплатформенных приложений, Мобильная разработка, Продвижение сайтов, Контент-менеджмент, Тестирование и отладка, Разработка API, Разработка CRM систем, Верстка сайтов, Интерактивный дизайн, Интерфейс разработки, Администрирование сайтов, Мобильное приложение на заказ, Облачные технологии, Веб-сервисы, Многопользовательские приложения, Интеграция API, Аналитика веб-трафика, Разработка адаптивных шаблонов, Кастомизация CMS систем, Техническая поддержка, Автоматизация бизнес-процессов, создать сайт в Самаре, разработка сайта в Самаре' }}">
+  <meta name="description" content="{{ seo.description|default:'Разрабатываем функциональные веб-сайты и цифровой дизайн которые приносят пользу' }}" />
   <meta name="yandex-verification" content="5882053fb35a697b" />
 
   <!-- Yandex.Metrika counter -->

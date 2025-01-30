@@ -6,6 +6,7 @@ from articles.models import Article, ContentBlock, Theme
 from articles.serializers import ArticleSerializer, ArticleListSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from articles.filters import ArticleFilter
+from pages.models import SEO, ArticleSEO
 
 def article_list(request):
     articles = Article.objects.all()
@@ -18,21 +19,26 @@ def article_list(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
+    seo = SEO.objects.filter(type=SEO.SEOType.ARTICLE).first()
+
     return render(request, 'articles.html', {
         'articles': page_obj.object_list,
         'themes': themes,
         'page_obj': page_obj,
-        'total_pages': paginator.num_pages
+        'total_pages': paginator.num_pages,
+        'seo': seo
     })
 
 def article_detail(request, code):
     article = Article.objects.get(code=code)
     blocks = ContentBlock.objects.filter(article=article)
     other_articles = Article.objects.exclude(code=code)
+    seo = ArticleSEO.objects.filter(article=article).first()
     return render(request, 'article.html', {
         'article': article,
         'blocks' : blocks,
-        "other_articles" : other_articles
+        'other_articles' : other_articles,
+        'seo': seo
     })
 
 

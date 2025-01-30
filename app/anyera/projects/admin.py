@@ -13,6 +13,7 @@ from projects.models import (
     Block,
     SliderImage
 )
+from pages.admin import ProjectSEOInline
 
 
 @admin.register(Industry)
@@ -52,6 +53,6 @@ class ProjectAdmin(ModelAdmin):
     list_filter = ("type", "industries", "services")
     list_filter_submit = True
     filter_horizontal = ("industries", "services", "other_projects")
-    inlines = [BlockInline]
+    inlines = [BlockInline, ProjectSEOInline]
     exclude = ['select_on_main', 'banner_image', 'laptop_image', 
                'background_image', ]
