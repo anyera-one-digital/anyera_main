@@ -30,23 +30,28 @@
     </div>
   </div>
 </section>
-{% if main_block %}
+{% if blocks %}
   <section class="project_banner" data-scroll-section>
     <div class="container project_banner__container">
       <div class="project_banner__block">
-        <div class="project__info">
-          <div class="project__info_left">
-            <h4 class="project__head">{{ main_block.title }}</h4>
+        {% for block in blocks %}
+          <div class="project__info">
+            <div class="project__info_left">
+              <h4 class="project__head">
+                {% if block.title %}{{ block.title }}{% endif %}
+              </h4>
+            </div>
+            <div class="project__info_right">
+              <p class="project__desc">{{ block.text|safe }}</p>
+              <img src="/media/{{ block.image }}" alt="">
+            </div>
           </div>
-          <div class="project__info_right">
-            <p class="project__desc">{{ main_block.text|safe }}</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
 {% endif %}
-<section class="project_banner" data-scroll-section data-persistent data-scroll-section-inview>
+<!-- <section class="project_banner" data-scroll-section data-persistent data-scroll-section-inview>
   <div class="project_banner__inview inview" data-scroll data-scroll-repeat>
     <div class="project_banner__target inview__target" id="project_banner__target"></div>
     <div class="project_banner__button inview__flex" data-scroll data-scroll-sticky data-scroll-target="#project_banner__target">
@@ -192,7 +197,7 @@
       </div>
     </div>
   </section>
-{% endif %}
+{% endif %} -->
 <section class="projects projects__border" data-scroll-section>
   <div class="projects__block">
     <div class="container projects__swiper_container">

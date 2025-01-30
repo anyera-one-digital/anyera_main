@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.core.exceptions import ValidationError
+from django.forms.models import BaseInlineFormSet
 from django.utils.html import format_html
 from django.urls import reverse
 from unfold.admin import ModelAdmin, TabularInline
@@ -34,24 +36,19 @@ class ServiceAdmin(ModelAdmin):
     search_fields = ("name",)
 
 
-class SliderImageInline(TabularInline):
-    model = SliderImage
-    extra = 0
-
-
 class BlockInline(TabularInline):
     model = Block
     extra = 0
-    fields = ("type", "title", "text", "edit_block_link")
-    readonly_fields = ("edit_block_link",)
+    fields = ("title", "text", "image", "order")
+    # readonly_fields = ("edit_block_link",)
 
-    def edit_block_link(self, obj):
-        if obj.pk:
-            url = reverse("admin:projects_block_change", args=[obj.pk])
-            return format_html(f'<a href="{url}" class="button">Изменить</a>')
-        return "Слайдер еще не сохранен"
+    # def edit_block_link(self, obj):
+    #     if obj.pk:
+    #         url = reverse("admin:projects_block_change", args=[obj.pk])
+    #         return format_html(f'<a href="{url}" class="button">Изменить</a>')
+    #     return "Слайдер еще не сохранен"
 
-    edit_block_link.short_description = "Изменить"
+    # edit_block_link.short_description = "Изменить"
 
 
 @admin.register(Project)
@@ -63,12 +60,5 @@ class ProjectAdmin(ModelAdmin):
     list_filter_submit = True
     filter_horizontal = ("industries", "services", "other_projects")
     inlines = [BlockInline]
-
-
-@admin.register(Block)
-class BlockAdmin(ModelAdmin):
-    compressed_fields = True
-    list_display = ("project", "type")
-    list_filter = ("project",)
-    search_fields = ("project__name",)
-    inlines = [SliderImageInline]
+    exclude = ['select_on_main', 'banner_image', 'laptop_image', 
+               'background_image', ]

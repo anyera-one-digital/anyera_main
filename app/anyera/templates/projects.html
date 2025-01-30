@@ -67,8 +67,8 @@
               </div>
             </div>
             <div class="projects__info">
-              <p class="projects__description">{{ project.name }}</p>
-              <h4 class="projects__heading">{{ project.intro_text }}</h4>
+              <h4 class="projects__heading">{{ project.name }}</h4>
+              <p class="projects__description">{{ project.intro_text }}</p>
               <ul class="projects_tags">
                 {% for service in project.services.all %} 
                   <li class="projects_tags__item">{{ service.name }}</li>

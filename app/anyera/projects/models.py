@@ -113,17 +113,6 @@ class Project(models.Model):
         "Выводить в общий список",
         default=False
     )
-    presentation_title = models.CharField(
-        "Заголовок презентации",
-        max_length=200,
-        blank=True,
-        null=True
-    )
-    presentation_text = models.TextField(
-        "Текст презентации",
-        blank=True,
-        null=True
-    )
     color = models.CharField(
         "Цвет",
         max_length=7,
@@ -170,23 +159,12 @@ class Project(models.Model):
 
 
 class Block(models.Model):
-    class Type(models.TextChoices):
-        MAIN = "main", "Основной"
-        MOBILE = "mobile", "Мобильная версия"
-        DESKTOP = "desktop", "Компьютерная версия"
-        TABLET = "tablet", "Планшетная версия"
-        PRESENTATION = "presentation", "Презентация"
 
     project = models.ForeignKey(
         Project,
         on_delete=models.CASCADE,
         related_name="blocks",
         verbose_name="Проект"
-    )
-    type = models.CharField(
-        "Тип слайдера",
-        max_length=50,
-        choices=Type.choices
     )
     title = models.CharField(
         "Заголовок блока",
@@ -195,16 +173,29 @@ class Block(models.Model):
         null=True
     )
     text = RichTextField(
-        "Текст блока"
+        "Текст блока",
+        blank=True,
+        null=True
     )
+    image = models.ImageField(
+        "Изображение блока",
+        upload_to="projects/images/",
+        blank=True,
+        null=True
+    )
+    order = models.PositiveSmallIntegerField(
+        "Положение"
+    )
+    
 
     class Meta:
         verbose_name = 'Блок'
         verbose_name_plural = 'Блоки'
-        unique_together = ["project", "type", ]
+        ordering = ["order"]
+        unique_together = ["project", "order", ]
 
     def __str__(self):
-        return f"{self.get_type_display()} ({self.project.name})"
+        return f"Блок №{self.order} ({self.project.name})"
 
 
 class SliderImage(models.Model):
