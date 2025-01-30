@@ -5281,6 +5281,12 @@ html.has-scroll-dragging {
   flex-wrap: wrap;
 }
 
+.project__info_right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .project__info_left {
   padding: 0 80px;
   gap: 20px 10px;
