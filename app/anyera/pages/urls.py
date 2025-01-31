@@ -1,72 +1,40 @@
 from django.urls import path
 from django.views.generic import TemplateView
-from pages.views import main_page
+from pages.views import main_page, SEOPageView
 from pages.models import SEO
 
 urlpatterns = [
     path('', main_page, name='main_page'),
-    path('contacts/',TemplateView.as_view(
+    path('contacts/',SEOPageView.as_view(
         template_name='contacts.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-                type=SEO.SEOType.CONTACTS
-            ).first()
-        }
+        seo_type=SEO.SEOType.CONTACTS
     ), name='contacts'),
-    path('policy/',TemplateView.as_view(
+    path('policy/',SEOPageView.as_view(
         template_name='policy.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.POLICY
-            ).first()
-        }
+        seo_type = SEO.SEOType.POLICY
     ), name='policy'),
-    path('certificates/',TemplateView.as_view(
+    path('certificates/',SEOPageView.as_view(
         template_name='certificates.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.CERTIFICATES
-            ).first()
-        }
+        seo_type=SEO.SEOType.CERTIFICATES
     ), name='certificates'),
-    path('team/',TemplateView.as_view(
+    path('team/',SEOPageView.as_view(
         template_name='team.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.TEAM
-            ).first()
-        }
+        seo_type=SEO.SEOType.TEAM
     ), name='team'),
-    path('price/',TemplateView.as_view(
+    path('price/',SEOPageView.as_view(
         template_name='price.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.PRICE
-            ).first()
-        }
+        seo_type=SEO.SEOType.PRICE
     ), name='price'),
-    path('briefing/',TemplateView.as_view(
+    path('briefing/',SEOPageView.as_view(
         template_name='briefing.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.BRIEFING
-            ).first()
-        }
+        seo_type=SEO.SEOType.BRIEFING
     ), name='briefing'),
-    path('competencies/',TemplateView.as_view(
+    path('competencies/',SEOPageView.as_view(
         template_name='competencies.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.COMPETENCIES
-            ).first()
-        }
+        seo_type=SEO.SEOType.COMPETENCIES
     ), name='competencies'),
-    path('services/',TemplateView.as_view(
+    path('services/',SEOPageView.as_view(
         template_name='services.html',
-        extra_context={
-            'seo': SEO.objects.filter(
-            type=SEO.SEOType.SERVICES
-            ).first()
-        }
+        seo_type=SEO.SEOType.SERVICES
     ), name='services'),
 ]
