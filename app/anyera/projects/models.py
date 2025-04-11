@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 from ckeditor.fields import RichTextField
 
 
@@ -130,6 +131,21 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+    def clean(self):
+        super().clean()
+        if self.is_visible:
+            qs = Project.objects.filter(is_visible=True)
+            if self.pk:
+                qs = qs.exclude(pk=self.pk)
+            if qs.count() >= 6:
+                raise ValidationError(
+                    "Можно установить флаг 'Выводить в общий список' максимум для 6 проектов."
+                )
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
 
 
 # class DescriptionBlock(models.Model):

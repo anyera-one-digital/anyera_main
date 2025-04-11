@@ -5,7 +5,7 @@ from articles.models import Article
 from pages.models import SEO
 
 def main_page(request):
-    projects = Project.objects.filter(select_on_main=True)
+    projects = Project.objects.filter(is_visible=True)
     articles = Article.objects.all()
     seo = SEO.objects.filter(type=SEO.SEOType.MAIN).first()
     return render(request, 'index.html', {
