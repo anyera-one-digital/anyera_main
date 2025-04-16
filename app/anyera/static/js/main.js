@@ -319,7 +319,6 @@ if(!year){} else {
 // start navbar
 const bodyoverlay = document.querySelector('.overlay');
 
-const headerlinks = document.querySelector('.header__links');
 const headerbuttons = document.querySelector('.header__buttons');
 
 const menu = document.querySelector('.header__nav');
@@ -367,7 +366,6 @@ burger.addEventListener('click', function() {
       menuItemActive[i].children[1].classList.remove("active");
       menuItemActive[i].classList.remove("active");
     }
-    headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     scroll.stop();
   }
@@ -385,7 +383,6 @@ burger_c.addEventListener('click', function() {
     document.body.style.height = "100vh";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    headerlinks.classList.add("hidden");
     headerbuttons.classList.add("active");
     scroll.stop();
   }
@@ -401,7 +398,6 @@ if(document.querySelector('.new_project_banner')) {
       document.body.style.height = "100vh";
       menu.classList.remove("active");
       burger.classList.remove("active");
-      headerlinks.classList.add("hidden");
       headerbuttons.classList.add("active");
       scroll.stop();
     }
@@ -418,7 +414,6 @@ if (contactssb) {
       document.body.style.height = "100vh";
       menu.classList.remove("active");
       burger.classList.remove("active");
-      headerlinks.classList.add("hidden");
       headerbuttons.classList.add("active");
       scroll.stop();
     }
@@ -434,7 +429,6 @@ burger_ctwo.addEventListener('click', function() {
     document.body.style.height = "100vh";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    headerlinks.classList.add("hidden");
     headerbuttons.classList.add("active");
     scroll.stop();
   }
@@ -448,7 +442,6 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
     header.classList.remove("active");
     document.body.style.overflow = null;
     document.body.style.height = null;
-    headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     scroll.start();
   }
@@ -680,7 +673,6 @@ bodyoverlay.addEventListener('click', function() {
   if (bodyoverlay.classList.contains("active")) {
     bodyoverlay.classList.remove("active");
     header.classList.remove("active");
-    headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     menu.classList.remove("active");
     burger.classList.remove("active");
@@ -702,7 +694,6 @@ bodyoverlay.addEventListener('click', function() {
       generationpopup.classList.remove("active");
       bodyoverlay.style.zIndex = null;
     }
-    headerlinks.classList.remove("hidden");
     headerbuttons.classList.remove("active");
     scroll.start();
   }
