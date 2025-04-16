@@ -22,10 +22,24 @@ class Type(models.Model):
         "Тип сайта",
         max_length=200
     )
+    description = models.TextField(
+        "Описание на главной"
+    )
+    select_on_main = models.BooleanField(
+        "Выводить в блоке на главной",
+        default=False
+    )
+    order_on_main = models.PositiveSmallIntegerField(
+        "Положение на главной",
+        unique=True,
+        blank=True,
+        null=True
+    )
 
     class Meta:
         verbose_name = 'Тип'
         verbose_name_plural = 'Типы'
+        ordering = ["order_on_main"]
 
     def __str__(self):
         return self.name
@@ -57,7 +71,7 @@ class Project(models.Model):
         default=""
     )
     select_on_main = models.BooleanField(
-        "Выводить в блоке на главной?",
+        "Выводить в блоке на главной",
         default=False
     )
     intro_text = models.TextField(
@@ -70,20 +84,21 @@ class Project(models.Model):
         null=True
     )
     intro_image = models.ImageField(
-        "Картинка в списке объектов",
+        "Изображение в списке объектов",
         upload_to="projects/images/"
     )
     background_image = models.ImageField(
-        "Картинка на фон",
+        "Изображение на фон",
         upload_to="projects/images/",
         blank=True,
         null=True
     )
     element_image = models.ImageField(
-        "Картинка в элементе",
+        "Главное изображение",
         upload_to="projects/images/",
         blank=True,
-        null=True
+        null=True,
+        help_text="На странице объекта, на баннере"
     )
     banner_image = models.ImageField(
         "Картинка на баннере",
@@ -103,7 +118,7 @@ class Project(models.Model):
     )
     type = models.ForeignKey(
         Type,
-        on_delete=models.CASCADE,
+        on_delete=models.PROTECT,
         verbose_name="Тип"
     )
     services = models.ManyToManyField(
@@ -134,13 +149,16 @@ class Project(models.Model):
 
     def clean(self):
         super().clean()
-        if self.is_visible:
-            qs = Project.objects.filter(is_visible=True)
+        if self.select_on_main:
+            qs = Project.objects.filter(
+                select_on_main=True,
+                type=self.type
+            )
             if self.pk:
                 qs = qs.exclude(pk=self.pk)
-            if qs.count() >= 6:
+            if qs.count() >= 2:
                 raise ValidationError(
-                    "Можно установить флаг 'Выводить в общий список' максимум для 6 проектов."
+                    f"Для типа '{self.type.name}' уже выбрано 2 проекта для главной страницы."
                 )
 
     def save(self, *args, **kwargs):

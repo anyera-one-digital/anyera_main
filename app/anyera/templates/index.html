@@ -422,199 +422,51 @@
   </div>
 </section> -->
 
-
-<section class="projects parallax" data-scroll-section>
-  <div class="projects__block">
-    <div class="container projects__container">
-      <div class="projects__flex">
-        <h3 class="projects__head">Products &amp; Services</h3>
-        <div class="projects__right">
-          <p class="projects__desc">Создаем цифровые сервисы с современным UI/UX дизайном от идеи до реализации.</p>
-          <button class="btn projects__button">
-            <span class="button__text">Подробнее</span>
-            <span class="button__hover"></span>
-          </button>
+{% for item in types_with_projects %}
+  <section class="projects parallax" data-scroll-section>
+    <div class="projects__block">
+      <div class="container projects__container">
+        <div class="projects__flex">
+          <h3 class="projects__head">{{ item.type.name }}</h3>
+          <div class="projects__right">
+            <p class="projects__desc">{{ item.type.description }}</p>
+            <button class="btn projects__button">
+              <span class="button__text">Подробнее</span>
+              <span class="button__hover"></span>
+            </button>
+          </div>
         </div>
+        <ul class="projects__list">
+          {% for project in item.projects %}
+            <li class="projects__item">
+              <a href="/projects/{{ project.id }}/" class="projects__link">
+                <div class="projects__image">
+                  <img src="/media/{{ project.intro_image }}" alt="">
+                  <div class="btn__arrow projects__arrow">
+                    <div class="btn__side btn__side_hover">
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                    <div class="btn__side btn__side_default">
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__info">
+                  <h4 class="projects__heading">{{ project.name }}</h4>
+                  <p class="projects__description">{{ project.intro_text }}</p>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
-      <ul class="projects__list">
-        <li class="projects__item">
-          <a href="project.html" class="projects__link">
-            <div class="projects__image">
-              <img src="{% static '/img/project/project_1/project_banner.webp' %}" alt="">
-              <div class="btn__arrow projects__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="projects__info">
-              <h4 class="projects__heading">Fin Fine</h4>
-              <p class="projects__description">Финансовый трекер</p>
-            </div>
-          </a>
-        </li>
-        <li class="projects__item">
-          <a href="project.html" class="projects__link">
-            <div class="projects__image">
-              <img src="{% static '/img/project/project_1/project_banner.webp' %}" alt="">
-              <div class="btn__arrow projects__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="projects__info">
-              <h4 class="projects__heading">Volleybox</h4>
-              <p class="projects__description">Сервис для волейбольного клуба</p>
-            </div>
-          </a>
-        </li>
-      </ul>
     </div>
-  </div>
-</section>
-<section class="projects parallax" data-scroll-section>
-  <div class="projects__block">
-    <div class="container projects__container">
-      <div class="projects__flex">
-        <h3 class="projects__head">eCommerce</h3>
-        <div class="projects__right">
-          <p class="projects__desc">Функциональные и удобные площадки для интернет-торговли рост продаж обязателен.</p>
-          <button class="btn projects__button">
-            <span class="button__text">Подробнее</span>
-            <span class="button__hover"></span>
-          </button>
-        </div>
-      </div>
-      <ul class="projects__list">
-        <li class="projects__item">
-          <a href="project.html" class="projects__link">
-            <div class="projects__image">
-              <img src="{% static 'img/project/project_1/project_banner.webp' %}" alt="">
-              <div class="btn__arrow projects__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="projects__info">
-              <h4 class="projects__heading">Feliksov Diamonds</h4>
-              <p class="projects__description">Интернет-каталог ювелирных изделий</p>
-            </div>
-          </a>
-        </li>
-        <li class="projects__item">
-          <a href="project.html" class="projects__link">
-            <div class="projects__image">
-              <img src="{% static 'img/project/project_1/project_banner.webp' %}" alt="">
-              <div class="btn__arrow projects__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="projects__info">
-              <h4 class="projects__heading">ArtHomeDecor</h4>
-              <p class="projects__description">Магазин мебели</p>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-<section class="projects parallax" data-scroll-section>
-  <div class="projects__block">
-    <div class="container projects__container">
-      <div class="projects__flex">
-        <h3 class="projects__head">Corporative Site</h3>
-        <div class="projects__right">
-          <p class="projects__desc">Создаем цифровые сервисы с современным UI/UX дизайном от идеи до реализации.</p>
-          <button class="btn projects__button">
-            <span class="button__text">Подробнее</span>
-            <span class="button__hover"></span>
-          </button>
-        </div>
-      </div>
-      <ul class="projects__list">
-        <li class="projects__item">
-          <a href="project.html" class="projects__link">
-            <div class="projects__image">
-              <img src="{% static 'img/project/project_1/project_banner.webp' %}" alt="">
-              <div class="btn__arrow projects__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="projects__info">
-              <h4 class="projects__heading">Агрочемпион</h4>
-              <p class="projects__description">Корпоративный сайт и каталог сельхоз техники</p>
-            </div>
-          </a>
-        </li>
-        <li class="projects__item">
-          <a href="project.html" class="projects__link">
-            <div class="projects__image">
-              <img src="{% static 'img/project/project_1/project_banner.webp' %}" alt="">
-              <div class="btn__arrow projects__arrow">
-                <div class="btn__side btn__side_hover">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-                <div class="btn__side btn__side_default">
-                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="projects__info">
-              <h4 class="projects__heading">АСО</h4>
-              <p class="projects__description">Аренда строительной опалубки</p>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
+{% endfor %}
 
 
 <!-- <section class="projects parallax" data-scroll-section>
@@ -685,7 +537,7 @@
           <ul class="articles__list swiper-wrapper">
             {% for article in articles %}
               <li class="articles__item swiper-slide">
-                <a href="/article/{{ article.id }}/" class="articles__link">
+                <a href="/articles/{{ article.code }}/" class="articles__link">
                   <div class="articles__image">
                     <img src="/media/{{ article.preview_img }}" alt="">
                     <span class="articles__date">{{ article.created_at }}</span>

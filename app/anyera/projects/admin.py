@@ -48,11 +48,10 @@ class BlockInline(TabularInline):
 @admin.register(Project)
 class ProjectAdmin(ModelAdmin):
     compressed_fields = True
-    list_display = ("name", "type", "is_visible")
+    list_display = ("name", "select_on_main", "is_visible")
     search_fields = ("name", )
     list_filter = ("type", "industries", "services")
     list_filter_submit = True
     filter_horizontal = ("industries", "services", "other_projects")
     inlines = [BlockInline, ProjectSEOInline]
-    exclude = ['select_on_main', 'banner_image', 'laptop_image', 
-               'background_image', ]
+    exclude = ['banner_image', 'laptop_image', 'background_image', ]

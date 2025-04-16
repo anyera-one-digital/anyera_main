@@ -198,84 +198,86 @@
     </div>
   </section>
 {% endif %} -->
-<section class="projects projects__border" data-scroll-section>
-  <div class="projects__block">
-    <div class="container projects__swiper_container">
-      <div class="projects__flex">
-        <h3 class="projects__head">Похожие кейсы</h3>
-        <div class="projects__right_btn">
-          <div class="projects__buttons">
-            <a href="/projects/" class="btn btn_new projects__button">
-              <span class="button__text">Все работы</span>
-            </a>
-            <div class="projects__navigation">
-              <div class="swiper-button-prev projects__prev">
-                <div class="btn__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
-                    </svg>
+{% if other_projects %}
+  <section class="projects projects__border" data-scroll-section>
+    <div class="projects__block">
+      <div class="container projects__swiper_container">
+        <div class="projects__flex">
+          <h3 class="projects__head">Похожие кейсы</h3>
+          <div class="projects__right_btn">
+            <div class="projects__buttons">
+              <a href="/projects/" class="btn btn_new projects__button">
+                <span class="button__text">Все работы</span>
+              </a>
+              <div class="projects__navigation">
+                <div class="swiper-button-prev projects__prev">
+                  <div class="btn__arrow">
+                    <div class="btn__side btn__side_hover">
+                      <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div class="btn__side btn__side_default">
+                      <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-button-next projects__next">
-                <div class="btn__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
-                    </svg>
+                <div class="swiper-button-next projects__next">
+                  <div class="btn__arrow">
+                    <div class="btn__side btn__side_hover">
+                      <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
+                      </svg>
+                    </div>
+                    <div class="btn__side btn__side_default">
+                      <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="projects__swiper swiper">
-        <ul class="projects__wrapper swiper-wrapper">
-          {% for other in other_projects %} 
-          <li class="projects__item swiper-slide">
-            <a href="/projects/{{ other.id }}/" class="projects__link">
-              <div class="projects__image">
-                <img src="/media/{{ other.intro_image }}" alt="">
-                <div class="btn__arrow projects__arrow">
-                  <div class="btn__side btn__side_hover">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
-                  </div>
-                  <div class="btn__side btn__side_default">
-                    <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-                    </svg>
+        <div class="projects__swiper swiper">
+          <ul class="projects__wrapper swiper-wrapper">
+            {% for other in other_projects %} 
+            <li class="projects__item swiper-slide">
+              <a href="/projects/{{ other.id }}/" class="projects__link">
+                <div class="projects__image">
+                  <img src="/media/{{ other.intro_image }}" alt="">
+                  <div class="btn__arrow projects__arrow">
+                    <div class="btn__side btn__side_hover">
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
+                    <div class="btn__side btn__side_default">
+                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="projects__info">
-                <p class="projects__description">{{ other.name }}</p>
-                <h4 class="projects__heading">{{ other.intro_text }}</h4>
-                <ul class="projects_tags">
-                  {% for service in other.services.all %} 
-                    <li class="projects_tags__item">{{ service.name }}</li>
-                  {% endfor %}
-                </ul>
-              </div>
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
+                <div class="projects__info">
+                  <p class="projects__description">{{ other.name }}</p>
+                  <h4 class="projects__heading">{{ other.intro_text }}</h4>
+                  <ul class="projects_tags">
+                    {% for service in other.services.all %} 
+                      <li class="projects_tags__item">{{ service.name }}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{% endif %}
 {% endblock %}

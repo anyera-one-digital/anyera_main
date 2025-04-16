@@ -44,7 +44,7 @@ def project_list(request):
 
 def project_detail(request, id):
     project = Project.objects.get(id=id)
-    other_projects = Project.objects.exclude(id=id)
+    other_projects = project.other_projects.all()
     blocks = Block.objects.filter(project=project)
     seo = ProjectSEO.objects.filter(project=project).first()
 
