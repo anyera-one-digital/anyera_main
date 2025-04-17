@@ -3077,17 +3077,33 @@ html.has-scroll-dragging {
   height: 100%; 
 }
 
-.hero__card:nth-child(1) {
-  background: var(--purple-blue);
+.hero__card:nth-child(1)::after {
+  content: "";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: var(--purple);
+  border-radius: 50%;
+  transform: translate(1%, 0%);
 }
 
 .hero__card:nth-child(2){
-  background-color: var(--liliac);
-  background: linear-gradient(180deg, var(--liliac), var(--dark-liliac) 100%);
+  background-color: rgb(179, 134, 253);
+  background: linear-gradient(180deg, rgb(179, 134, 253), rgb(121, 70, 206) 100%);
 }
 
 .hero__card:nth-child(3) {
-  background: var(--card-black);
+  background: rgb(38, 38, 38);
+}
+
+.hero__card:nth-child(2) .card_font_desc,
+.hero__card:nth-child(3) .card_font_desc,
+.hero__card:nth-child(2) .card_font_title,
+.hero__card:nth-child(3) .card_font_title {
+  color: var(--white);
 }
 
 .hero__card:nth-child(4){
@@ -3189,7 +3205,10 @@ html.has-scroll-dragging {
 }
 
 .hero__card_team img {
+  width: 60px;
+  height: 60px;
   position: absolute;
+  border-radius: 50%;
 }
 
 .hero__card_team img:nth-child(1) {
@@ -12213,6 +12232,9 @@ section.services {
   .btn {
     height: 40px;
     padding: 0 30px;
+  }
+  .footer__button_up {
+    padding: 0;
   }
   .btn__input {
     padding: 0;
