@@ -24,5 +24,6 @@ class ArticleAdmin(ModelAdmin):
     compressed_fields = True
     inlines = [ContentBlockInline, ArticleSEOInline]
     list_display = ['title', 'preview', 'created_at']
+    list_filter = ("theme", )
     search_fields = ['title']
     prepopulated_fields = {'code': ('title',)}

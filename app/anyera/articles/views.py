@@ -2,10 +2,11 @@ from rest_framework import mixins, viewsets
 from django.shortcuts import render
 from django.core.paginator import Paginator
 from django.db.models import Count
+from django_filters.rest_framework import DjangoFilterBackend
 from articles.models import Article, ContentBlock, Theme
 from articles.serializers import ArticleSerializer, ArticleListSerializer
-from django_filters.rest_framework import DjangoFilterBackend
 from articles.filters import ArticleFilter
+from articles.pagination import ArticlePagination
 from pages.models import SEO, ArticleSEO
 
 def article_list(request):
@@ -51,6 +52,7 @@ class ArticleViewSet(
     serializer_class = ArticleSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = ArticleFilter
+    pagination_class = ArticlePagination
 
     def get_serializer_class(self):
         if self.action == "retrieve":

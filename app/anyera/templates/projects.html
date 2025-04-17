@@ -11,7 +11,7 @@
           <h1 class="projects__head">ПРОЕКТЫ</h1>
           <p class="projects__desc">Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации.</p>
         </div>
-        <!-- <div class="projects__filter">
+        <div class="projects__filter">
           <ul class="projects__filter_list">
             <li class="projects__filter_item">
               <button class="projects__filter_button"><p>Отрасли<small>{{ industries_count }}</small></p>
@@ -45,7 +45,7 @@
             </li>
           </ul>
           <button class="projects__filter_clear"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.677238 12.1401C0.420219 12.3971 0.420219 12.8138 0.677238 13.0708C0.934257 13.3278 1.35097 13.3278 1.60799 13.0708L6.72705 7.95175L11.8461 13.0708C12.1031 13.3278 12.5198 13.3278 12.7769 13.0708C13.0339 12.8138 13.0339 12.3971 12.7769 12.1401L7.6578 7.021L12.777 1.90183C13.034 1.64481 13.034 1.2281 12.777 0.971084C12.5199 0.714065 12.1032 0.714066 11.8462 0.971085L6.72705 6.09025L1.60789 0.971091C1.35087 0.714072 0.934158 0.714072 0.677139 0.971091C0.42012 1.22811 0.42012 1.64482 0.677139 1.90184L5.7963 7.021L0.677238 12.1401Z" fill="currentColor"></path></svg>Очистить всё</button>
-        </div> -->
+        </div>
       </div>
       <ul class="projects__list">
         {% for project in projects %} 
@@ -82,4 +82,94 @@
     </div>
   </div>
 </section>
+{% endblock %}
+
+{% block script %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const checkboxes       = Array.from(document.querySelectorAll('.projects__filter_check'));
+  const projectList      = document.querySelector('.projects__list');
+  const filterClearButton = document.querySelector('.projects__filter_clear');
+
+  function buildParams() {
+    const params = new URLSearchParams();
+    checkboxes.forEach(cb => {
+      if (cb.checked) {
+        const label = cb.closest('ul').previousElementSibling.textContent;
+        let key = '';
+        if (label.includes('Отрасл')) key = 'industries';
+        if (label.includes('Тип'))    key = 'type';
+        if (label.includes('Услуг'))   key = 'services';
+        params.append(key, cb.value);
+      }
+    });
+    return params;
+  }
+
+  async function fetchProjects() {
+    const params = buildParams();
+    const url = `/api/v1/projects/?${params.toString()}`;
+    try {
+      const res = await fetch(url);
+      const json = await res.json();
+      const items = json.results || json;
+      renderProjects(items);
+    } catch (err) {
+      console.error('Ошибка при загрузке проектов:', err);
+    }
+  }
+
+  function renderProjects(projects) {
+    projectList.innerHTML = '';
+    if (!projects.length) {
+      projectList.innerHTML = '<li class="projects__item">Проекты не найдены</li>';
+      return;
+    }
+    projects.forEach(p => {
+      const li = document.createElement('li');
+      li.className = 'projects__item';
+      li.innerHTML = `
+        <a href="/projects/${p.id}/" class="projects__link">
+            <div class="projects__image">
+              <img src="${p.intro_image}" alt="">
+              <div class="btn__arrow projects__arrow">
+                <div class="btn__side btn__side_hover">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+                <div class="btn__side btn__side_default">
+                  <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="projects__info">
+              <h4 class="projects__heading">${p.name}</h4>
+              <p class="projects__description">${p.intro_text}</p>
+              <ul class="projects_tags">
+                ${p.services.map(s => `<li class="projects_tags__item">${s.name}</li>`).join('')}
+              </ul>
+            </div>
+          </a>`;
+      projectList.appendChild(li);
+      li.classList.add('animate');
+    });
+  }
+
+  checkboxes.forEach(cb =>
+    cb.addEventListener('change', fetchProjects)
+  );
+  filterClearButton.addEventListener('click', () => {
+    checkboxes.forEach(cb => { cb.checked = false; });
+    fetchProjects();
+  });
+
+  const anyChecked = checkboxes.some(cb => cb.checked);
+  if (anyChecked) {
+    fetchProjects();
+  }
+});
+</script>
 {% endblock %}
