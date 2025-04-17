@@ -3036,13 +3036,13 @@ html.has-scroll-dragging {
 
 .hero__info_about_us {
   color: var(--text-gray);
-  text-transform: uppercase;
 }
 
 .hero__info_head {
   max-width: 660px;
   padding-top: 23px;
   padding-bottom: 48px;
+  text-transform: uppercase;
 }
 
 .hero__info_head span {
@@ -3115,10 +3115,6 @@ html.has-scroll-dragging {
   font-weight: 300;
   font-size: 12px;
   line-height: 150%;
-}
-
-.hero__card_comment {
-  padding: 10px 0 0;
 }
 
 .hero__card:nth-child(1) .hero__card_number,
@@ -3233,7 +3229,8 @@ html.has-scroll-dragging {
 
 .hero__card_team {
   display: flex;
-  padding: 10px 0 0 16px;
+  height: 60px;
+  padding: 0 0 0 16px;
   align-items: center;
   position: relative;
 }
