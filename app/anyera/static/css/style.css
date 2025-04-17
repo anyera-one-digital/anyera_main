@@ -197,7 +197,8 @@ h5,
   color: var(--text);
 }
 
-h2, .title_two {
+h2,
+.title_two {
   font-family: var(--title-font);
   font-size: 36px;
   font-weight: 700;
@@ -205,7 +206,8 @@ h2, .title_two {
   color: var(--text);
 }
 
-h3, .title_three {
+h3,
+.title_three {
   font-family: var(--title-font);
   font-size: 39px;
   font-weight: 700;
@@ -3071,10 +3073,14 @@ html.has-scroll-dragging {
 }
 
 .hero__card_link {
-  text-decoration: none;  
   display: flex;
-  justify-content: space-between;
   height: 100%; 
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.hero__card:nth-child(1) .hero__card_link {
+  justify-content: flex-end;
 }
 
 .hero__card:nth-child(1)::after {
@@ -3099,10 +3105,21 @@ html.has-scroll-dragging {
   background: rgb(38, 38, 38);
 }
 
-.hero__card:nth-child(2) .card_font_desc,
-.hero__card:nth-child(3) .card_font_desc,
-.hero__card:nth-child(2) .card_font_title,
-.hero__card:nth-child(3) .card_font_title {
+.hero__card_desc {
+  font-family: "Rubik";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+}
+
+.hero__card:nth-child(1) .hero__card_number,
+.hero__card:nth-child(1) .hero__card_desc,
+.hero__card:nth-child(2) .hero__card_desc,
+.hero__card:nth-child(3) .hero__card_desc,
+.hero__card:nth-child(1) .hero__card_title,
+.hero__card:nth-child(2) .hero__card_title,
+.hero__card:nth-child(3) .hero__card_rubik,
+.hero__card:nth-child(3) .hero__card_title {
   color: var(--white);
 }
 
@@ -3119,12 +3136,15 @@ html.has-scroll-dragging {
 
 .hero__card_arrow {
   display: flex;
-  justify-content: center;
-  background-color: var(--white);
-  color: var(--transparent);
   width: 36px;
   height: 36px;
-  border-radius: 36px;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  color: var(--black);
+  background-color: var(--white);
   -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
@@ -3136,6 +3156,7 @@ html.has-scroll-dragging {
 
 .hero__card:nth-child(1)  .hero__card_figurines {
   top: -50px;
+  right: -70%;
   -webkit-transform:  scale(0.7);
   transform: scale(0.7);
   -webkit-transition: -webkit-transform 0.5s linear;
@@ -3187,8 +3208,13 @@ html.has-scroll-dragging {
 
 .hero__card_info {
   display: flex;
+  max-width: calc(100% - 50px);
   flex-direction: column;
   justify-content: space-between;
+}
+
+.hero__card:nth-child(1) .hero__card_info {
+  justify-content: flex-end;
 }
 
 .hero__card:nth-child(4)  {
@@ -9789,11 +9815,13 @@ section.services {
     font-size: 61px;
     line-height: 62px;
   }
-  h2, .title_two {
+  h2,
+  .title_two {
     font-size: 36px;
     line-height: 124%;
   }
-  h3, .title_three {
+  h3,
+  .title_three {
     font-size: 44px;
     line-height: -1px;
   }
@@ -10357,11 +10385,13 @@ section.services {
     font-size: 61px;
     line-height: 62px;
   }
-  h2, .title_two {
+  h2,
+  .title_two {
     font-size: 36px;
     line-height: 52px;
   }
-  h3, .title_three {
+  h3,
+  .title_three {
     font-size: 39px;
     line-height: 49px;
   }
