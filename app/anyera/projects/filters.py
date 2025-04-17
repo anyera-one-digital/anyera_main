@@ -8,9 +8,10 @@ class ProjectFilter(filters.FilterSet):
         to_field_name="id",
         label="Отрасли"
     )
-    type = filters.ModelChoiceFilter(
-        field_name="type",
+    type = filters.ModelMultipleChoiceFilter(
+        field_name="type__id",
         queryset=Type.objects.all(),
+        to_field_name="id",
         label="Тип"
     )
     services = filters.ModelMultipleChoiceFilter(
