@@ -3035,14 +3035,18 @@ html.has-scroll-dragging {
 }
 
 .hero__info_about_us {
-  color: var(--dark-purple);
-  text-align: left;
+  color: var(--text-gray);
+  text-transform: uppercase;
 }
 
 .hero__info_head {
+  max-width: 660px;
   padding-top: 23px;
   padding-bottom: 48px;
-  color: var(--almost-black);
+}
+
+.hero__info_head span {
+  color: var(--purple);
 }
 
 .hero__info_desc{
