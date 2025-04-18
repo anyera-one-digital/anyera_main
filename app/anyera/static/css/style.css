@@ -339,7 +339,7 @@ section {
 
 .container {
   width: 100%;
-  max-width: 1332px;
+  max-width: 1442px;
   padding: 0 55px;
   margin: 0 auto;
   position: relative;
@@ -5242,9 +5242,6 @@ html.has-scroll-dragging {
 /* start project */
 
 .project_top {
-  height: calc(var(--height) + 1px);
-  min-height: 600px;
-  max-height: 1024px;
   margin: 0 0 1px;
   background-size: cover;
   background-position: center top;
@@ -10469,6 +10466,7 @@ section.services {
     border-left: none;
   }
   .container {
+    max-width: 1392px;
     padding: 0 30px;
   }
   .header__nav_container {
@@ -11509,10 +11507,6 @@ section.services {
     flex-direction: column;
     padding: 110px 0 40px;
     gap: 20px;
-  }
-  .project_top {
-    height: 100%;
-    max-height: 100%;
   }
   .project_top__block {
     padding: 110px 0 80px;
