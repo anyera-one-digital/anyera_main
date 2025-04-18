@@ -3,92 +3,6 @@
 
 {% block content %}
 <section class="top" data-scroll-section id="top"></section>
-<!-- <section class="home" data-scroll-section>
-  <div class="container home__container">
-    <div class="home__flex_one">
-      <div class="home_item home_item__one">
-        <div class="home_item__wrapper">
-          <h2>IT партнер <br> в разработке <br> и поддержке <br> веб-сервисов</h2>
-          <p>Продуктовая команда для решения задач бизнеса. Мы используем современные технологии и Agile, чтобы обеспечить прозрачность и эффективность.</p>
-          <a href="/projects/" class="btn btn_new">
-            <span class="button__text">Смотреть проекты</span>
-          </a>
-        </div>
-        <div class="home_item_figurines">
-          <img src="{% static '/img/home/figurines_1.png' %}" alt="figurines"/>
-        </div>
-      </div>
-      <div class="home__flex_two">
-        <a href="/services/" class="home_item home_item__two">
-          <div class="home_item__wrapper">
-            <h4>Чем мы можем помочь?</h4>
-            <p>Web-sites & Web-app </p> <p>Telegram bots & Mini apps </p> <p>E-Commerce</p>
-            <p class="sub_headerXL">Разрабатываем</p>
-            <div class="home_item__icon">
-              <svg width="21.822266" height="21.818359" viewBox="0 0 21.8223 21.8184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs/>
-                <path id="Линия 5" d="M1 20.8L20.82 1.02M1.02 1L20.82 1.02L20.8 20.81" stroke="#262626" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg> 
-            </div>
-          </div>
-          <div class="home_item_figurines">
-            <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
-          </div>
-        </a>
-        <div class="home__flex_three">
-          <a href="/team/" class="home_item home_item__three">
-            <div class="home_item__wrapper">
-              <h4>DISCOVER <br>
-                OUR HISTORY</h4>
-              <p class="sub_headerXL">About us</p>
-              <div class="home_item__icon">
-                <svg width="21.892578" height="21.750000" viewBox="0 0 21.8926 21.75" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs/>
-                  <path id="Линия 4" d="M1 20.73L20.88 1.01M1.02 0.99L20.88 1.01L20.87 20.75" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-                </svg>
-              </div>
-            </div>
-            <div class="home_item_figurines">
-              <img src="{% static '/img/home/figurines_3.png' %}" alt="figurines"/>
-            </div>
-          </a>
-          <a href="/contacts/" class="home_item home_item__four">
-            <div class="home_item__wrapper">
-              <h4>HAVE SOME <br>
-                QUESTIONS?</h4>
-              <p class="sub_headerXL">Contact us</p>
-              <div class="home_item__icon">
-                <svg width="30.025391" height="30.060547" viewBox="0 0 30.0254 30.0605" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <defs/>
-                  <path id="Форма 10" d="M15.25 15.73L1 13.34L29.02 1.03L17.69 29.02L15.25 15.73L29.02 1.03" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </div>
-            <div class="home_item_figurines">
-              <img src="{% static '/img/home/figurines_4.png' %}" alt="figurines"/>
-            </div>
-          </a>
-        </div>
-      </div>
-      <a class="home_item home_item__five">
-        <div class="home_item__wrapper">
-          <h4>Чем мы можем помочь?</h4>
-          <p>Web-sites & Web-app </p> <p>Telegram bots & Mini apps </p> <p>E-Commerce</p>
-          <p class="sub_headerXL">Разрабатываем</p>
-          <div class="home_item__icon">
-            <svg width="21.822266" height="21.818359" viewBox="0 0 21.8223 21.8184" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs/>
-              <path id="Линия 5" d="M1 20.8L20.82 1.02M1.02 1L20.82 1.02L20.8 20.81" stroke="#262626" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-            </svg> 
-          </div>
-        </div>
-        <div class="home_item_figurines">
-          <img src="{% static '/img/home/figurines_2.png' %}" alt="figurines"/>
-        </div>
-      </a>
-    </div>
-  </div>
-</section> -->
 <section class="hero" data-scroll-section>
   <div class="container hero__container">
     <div class="hero__block">
@@ -107,7 +21,9 @@
               <br><br>                     
             </p>
             <div class="hero__info_buttons">
-              <a href="https://t.me/" class="hero__info_link">Связаться в Telegram</a>
+              <a href="https://t.me/" target="_blank" class="btn btn_new hero__info_link">
+                <span class="button__text">Связаться в Telegram</span>
+              </a>
               <button class="showreel__button">
                 Смотреть Showreel
               </button>
