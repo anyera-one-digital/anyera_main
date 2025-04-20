@@ -3,18 +3,34 @@
 
 {% block content %}
 <section class="top" data-scroll-section id="top"></section>
-<section class="articles_page" data-scroll-section>
-  <div class="container articles_page__container">
-    <div class="articles_page__block">
-      <h1 class="articles_page__head">МЕДИА</h1>
-      <p class="articles_page__desc">Рассказываем о digital-трендах и о мире цифровизации. Делимся личным опытом и кейсами.</p>
-      <div class="articles_page__checks">
-        <label class="btn checkbox articles_page__check active"><span class="button__text">Все статьи</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" value="" checked=""></label>
-        {% for theme in themes %}
-        <label class="btn checkbox articles_page__check"><span class="button__text">{{ theme.name }}</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" value="{{ theme.id }}"></label>
-        {% endfor %}
+<section class="services_top" data-scroll-section>
+  <div class="container services_top__container">
+    <div class="services_top__block">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link text">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="/articles/" class="breadcrumbs__link text">Медиа</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link text">{{ article.title }}</a></li>
+      </ul>
+      <div class="services_top__info">
+        <div class="services_top__left">
+          <p class="rubik">МЕДИА</p>
+        </div>
+        <div class="services_top__right">
+          <h1 class="services_top__head title_two">МЕДИА</h1>
+          <p class="services_top__desc">Рассказываем о digital-трендах и о мире цифровизации. Делимся личным опытом и кейсами.</p> 
+        </div>
+        <div class="articles_page__checks">
+          <label class="btn checkbox articles_page__check active"><span class="button__text">Все статьи</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" value="" checked=""></label>
+          {% for theme in themes %}
+          <label class="btn checkbox articles_page__check"><span class="button__text">{{ theme.name }}</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" value="{{ theme.id }}"></label>
+          {% endfor %}
+        </div>
       </div>
     </div>
+  </div>
+</section>
+<section class="articles_page" data-scroll-section>
+  <div class="container articles_page__container">
     <div class="articles_page__divider"></div>
   </div>
   <div class="container articles_page__list_container">

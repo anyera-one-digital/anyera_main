@@ -3,11 +3,23 @@
 
 {% block content %}
 <section class="top" data-scroll-section id="top"></section>
-<section class="team__top" data-scroll-section>
-  <div class="container team__top_container">
-    <div class="team__top_block">
-      <h1 class="team__top_head">КОМАНДА</h1>
-      <p class="team__top_desc">Мы - единомышленники, которые стремятся создавать уникальные и функциональные продукты на основе аналитики, данных из метрик и исследовании пользовательского опыта.</p>
+<section class="services_top" data-scroll-section>
+  <div class="container services_top__container">
+    <div class="services_top__block">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link text">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="/articles/" class="breadcrumbs__link text">Медиа</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link text">{{ article.title }}</a></li>
+      </ul>
+      <div class="services_top__info">
+        <div class="services_top__left">
+          <p class="rubik">КОМАНДА</p>
+        </div>
+        <div class="services_top__right">
+          <h1 class="services_top__head title_two">КОМАНДА</h1>
+          <p class="services_top__desc">Мы - единомышленники, которые стремятся создавать уникальные и функциональные продукты на основе аналитики, данных из метрик и исследовании пользовательского опыта.</p> 
+        </div>
+      </div>
     </div>
   </div>
 </section>

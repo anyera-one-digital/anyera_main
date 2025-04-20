@@ -3,14 +3,30 @@
 
 {% block content %}
 <section class="top" data-scroll-section id="top"></section>
+<section class="services_top" data-scroll-section>
+  <div class="container services_top__container">
+    <div class="services_top__block">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link text">Главная</a></li>
+        <li class="breadcrumbs__item"><a href="/articles/" class="breadcrumbs__link text">Медиа</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link text">{{ article.title }}</a></li>
+      </ul>
+      <div class="services_top__info">
+        <div class="services_top__left">
+          <p class="rubik">ПРОЕКТЫ</p>
+        </div>
+        <div class="services_top__right">
+          <h1 class="services_top__head title_two">ПРОЕКТЫ</h1>
+          <p class="services_top__desc">Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации.</p> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="projects parallax" data-scroll-section>
   <div class="projects__all_block">
     <div class="container projects__container">
       <div class="projects__all_flex">
-        <div class="projects__top">
-          <h1 class="projects__head">ПРОЕКТЫ</h1>
-          <p class="projects__desc">Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации.</p>
-        </div>
         <div class="projects__filter">
           <ul class="projects__filter_list">
             <li class="projects__filter_item">
