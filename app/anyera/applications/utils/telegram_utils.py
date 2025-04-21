@@ -17,7 +17,10 @@ def send_telegram_message(
         'parse_mode': 'Markdown',
     }
 
+    print('6')
     response = requests.post(telegram_api_url, data=payload)
+
+    print('7')
     
     if response.status_code != 200:
         print(f"Ошибка отправки сообщения: {response.status_code}, {response.text}")
