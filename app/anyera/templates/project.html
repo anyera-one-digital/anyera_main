@@ -36,14 +36,16 @@
       <div class="project_banner__block">
         {% for block in blocks %}
           <div class="project__info">
-            <div class="project__info_left">
-              <h4 class="project__head">
-                {% if block.title %}{{ block.title }}{% endif %}
-              </h4>
-            </div>
-            <div class="project__info_right">
-              <p class="project__desc">{{ block.text|safe }}</p>
-              <img src="/media/{{ block.image }}" alt="">
+            <div class="project__info_flex">
+              <div class="project__info_top">
+                <h4 class="project__head">
+                  {% if block.title %}{{ block.title }}{% endif %}
+                </h4>
+                <p class="project__desc">{{ block.text|safe }}</p>
+              </div>
+              <div class="project__info_bottom">
+                <img src="/media/{{ block.image }}" alt="">
+              </div>
             </div>
           </div>
         {% endfor %}
@@ -51,153 +53,6 @@
     </div>
   </section>
 {% endif %}
-<!-- <section class="project_banner" data-scroll-section data-persistent data-scroll-section-inview>
-  <div class="project_banner__inview inview" data-scroll data-scroll-repeat>
-    <div class="project_banner__target inview__target" id="project_banner__target"></div>
-    <div class="project_banner__button inview__flex" data-scroll data-scroll-sticky data-scroll-target="#project_banner__target">
-      <div class="project_banner__block inview__block">
-        <img src="/media/{{ project.background_image }}" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-{% if desktop_block %}
-  <section class="project_desktop" data-scroll-section>
-    <div class="container project_banner__container">
-      <div class="project_desktop__block">
-        <div class="project__info">
-          <div class="project__info_left">
-            <h4 class="project__head">{{ desktop_block.title }}</h4>
-          </div>
-          <div class="project__info_right">
-            <p class="project__desc">{{ desktop_block.text|safe }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container project_desktop__container">
-      <div class="project_desktop__slider">
-        <div class="project_desktop__img">
-          <img src="{% static 'img/project/notebook.svg' %}" alt="">
-        </div>
-        <div class="project_desktop__swiper swiper">
-          <ul class="project_desktop__list swiper-wrapper">
-            {% for image in desktop_block.images.all %}
-              <li class="project_desktop__item swiper-slide">
-                <div class="project_desktop__image">
-                  <img src="/media/{{ image.image }}" alt="">
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="project_desktop__navigation">
-          <div class="swiper-pagination project_desktop__pagination"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
-{% if tablet_block %}
-  <section class="project_tab" data-scroll-section>
-    <div class="container project_banner__container">
-      <div class="project_tab__block">
-        <div class="project__info">
-          <div class="project__info_left">
-            <h4 class="project__head">{{ tablet_block.title }}</h4>
-          </div>
-          <div class="project__info_right">
-            <p class="project__desc">{{ tablet_block.text|safe }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container project_tab__container">
-      <div class="project_tab__slider">
-        <div class="project_tab__img">
-          <img src="{% static 'img/project/tab.svg' %}" alt="">
-        </div>
-        <div class="project_tab__swiper swiper">
-          <ul class="project_tab__list swiper-wrapper">
-            {% for image in tablet_block.images.all %}
-              <li class="project_tab__item swiper-slide">
-                <div class="project_tab__image">
-                  <img src="/media/{{ image.image }}" alt="">
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <div class="project_tab__navigation">
-          <div class="swiper-pagination project_tab__pagination"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
-{% if mobile_block %}
-  <section class="project_phone" data-scroll-section>
-    <div class="container project_banner__container">
-      <div class="project_phone__block">
-        <div class="project__info">
-          <div class="project__info_left">
-            <h4 class="project__head">{{ mobile_block.title }}</h4>
-          </div>
-          <div class="project__info_right">
-            <p class="project__desc">{{ mobile_block.text|safe }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container project_phone__container">
-      <div class="project_phone_flex">
-        <div class="project_phone__swiper swiper">
-          <ul class="project_phone__list swiper-wrapper">
-            {% for image in mobile_block.images.all %}
-              <li class="project_phone_item swiper-slide">
-                <img class="project_phone__img" src="{% static 'img/project/phone.svg' %}" alt="">
-                <div class="project_phone_block">
-                  <img src="/media/{{ image.image }}" alt="">
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %}
-{% if presentation_block %}
-  <section class="project_present" data-scroll-section>
-    <div class="container project_banner__container">
-      <div class="project_present__block">
-        <div class="project__info">
-          <div class="project__info_left">
-            <h4 class="project__head">{{ presentation_block.title }}</h4>
-          </div>
-          <div class="project__info_right">
-            <p class="project__desc">{{ presentation_block.text|safe }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container project_present__container">
-      <div class="project_present__slider">
-        <div class="project_present__swiper swiper">
-          <ul class="project_present__list swiper-wrapper">
-            {% for image in presentation_block.images.all %}
-              <li class="project_present__item swiper-slide">
-                <div class="project_present__image">
-                  <img src="/media/{{ image.image }}" alt="">
-                </div>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-{% endif %} -->
 {% if other_projects %}
   <section class="projects projects__border" data-scroll-section>
     <div class="projects__block">
