@@ -9,6 +9,7 @@ from applications.serializers import (
     BriefingSerializer,
     FeedbackSerializer
 )
+from applications.utils.telegram_utils import send_telegram_message
 
 
 class NewProjectViewSet(
@@ -24,14 +25,17 @@ class NewProjectViewSet(
         new_project = serializer.save()
 
         message = (
+            f"Название компании: {new_project.company_name if new_project.company_name else "Не указано"}\n"
             f"Email: {new_project.email}\n"
+            f"Телефон: {new_project.phone if new_project.phone else "Не указано"}\n"
+            f"Тип продукта: {new_project.type_of_product}\n"
             f"Бюджет проекта: {new_project.budget}\n"
             f"Описание проекта: {new_project.project_descr}\n"
-            f"Промокод: {new_project.promocode}\n"
+            f"Промокод: {new_project.promocode if new_project.promocode else "Не указано"}\n"
         )
 
         self.send_to_bitrix24(message, new_project)
-        self.send_email_notification(message, new_project)
+        self.send_notifications(message, new_project)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -48,15 +52,16 @@ class NewProjectViewSet(
         }
         requests.post(url, json=payload)
 
-    def send_email_notification(self, message, new_project):
+    def send_notifications(self, message, new_project):
         subject = "Заявка на новый проект"
         message = (
             f"Детали заявки 'Новый проект':\n\n"
             f"Как обращаться: {new_project.fio}\n"
         ) + message
-        recipient_list = ["NikSen09@mail.ru"]
+        recipient_list = ["anyera.one@yandex.ru"]
 
         send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+        send_telegram_message(message=message)
 
 
 class BriefingViewSet(
@@ -99,7 +104,7 @@ class BriefingViewSet(
         )
 
         self.send_to_bitrix24(message, briefing)
-        self.send_email_notification(message, briefing)
+        self.send_notifications(message, briefing)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -117,16 +122,17 @@ class BriefingViewSet(
         }
         requests.post(url, json=payload)
 
-    def send_email_notification(self, message, briefing):
-        subject = "Заявка на новый проект"
+    def send_notifications(self, message, briefing):
+        subject = "Заявка \"Брифинг\""
         message = (
             f"Детали заявки 'Брифинг':\n\n"
             f"Как обращаться: {briefing.fio}\n"
             f"Номер телефона: {briefing.phone}\n"
         ) + message
-        recipient_list = ["NikSen09@mail.ru"]
+        recipient_list = ["anyera.one@yandex.ru"]
 
         send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+        send_telegram_message(message=message)
 
 
 class FeedbackViewSet(
@@ -146,7 +152,7 @@ class FeedbackViewSet(
         )
 
         self.send_to_bitrix24(message, feedback)
-        self.send_email_notification(message, feedback)
+        self.send_notifications(message, feedback)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
 
@@ -164,13 +170,14 @@ class FeedbackViewSet(
         }
         requests.post(url, json=payload)
 
-    def send_email_notification(self, message, feedback):
+    def send_notifications(self, message, feedback):
         subject = "Заявка на обратную связь"
         message = (
             f"Детали заявки 'Обратная связь':\n\n"
             f"Имя: {feedback.name}\n"
-            f"Телефон: {feedback.phone if feedback.phone else "Не указано"}\n"
+            f"Телефон: {feedback.phone}\n"
         ) + message
-        recipient_list = ["NikSen09@mail.ru"]
+        recipient_list = ["anyera.one@yandex.ru"]
 
         send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+        send_telegram_message(message=message)
