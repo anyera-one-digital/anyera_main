@@ -118,12 +118,13 @@ if(form) {
         method: 'POST',
         body: JSON.stringify({
           fio: usernameValue,
+          email: emailValue,
           phone: phoneValue,
           project_descr: textValue,
-          company: companyValue,
+          company_name: companyValue,
           phone: phoneValue,
-          formsum: formsumValue,
-          formtype: formtypeValue
+          budget: formsumValue,
+          type_of_product: formtypeValue
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"
@@ -364,12 +365,12 @@ if(formfeedback) {
     feedbacksocialValue !== '' && feedbacksocialValue.length >= feedbacksocialMin && feedbacksocialValue.length <= feedbacksocialMax) {
       formfeedback.classList.add("hidden");
       document.getElementById('form__successfully_form__feedback').classList.add("active");
-      fetch('/ajax/sendMail.php', {
+      fetch('/api/v1/feedback/', {
         method: 'POST',
         body: JSON.stringify({
-          one: feedbackusernameValue,
-          two: feedbackphoneValue,
-          three: feedbacksocialValue
+          name: feedbackusernameValue,
+          phone: feedbackphoneValue,
+          telegram: feedbacksocialValue
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8"

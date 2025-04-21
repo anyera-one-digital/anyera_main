@@ -7,9 +7,23 @@ class NewProject(models.Model):
         "Как обращаться",
         max_length=40
     )
+    company_name = models.CharField(
+        "Название компании",
+        max_length=100,
+        null=True,
+        blank=True
+    )
     email = models.CharField(
         "E-mail",
         max_length=40
+    )
+    phone = models.CharField(
+        "Номер телефона",
+        null=True,
+        blank=True
+    )
+    type_of_product = models.TextField(
+        "Тип продукта"
     )
     budget = models.TextField(
         "Бюджет проекта"
