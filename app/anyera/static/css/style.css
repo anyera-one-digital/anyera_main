@@ -8971,6 +8971,7 @@ section.services {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
 }
 
 .article__info_left,
@@ -8980,6 +8981,14 @@ section.services {
   display: flex;
   width: 50%;
   flex-direction: column;
+}
+
+.article__info_left {
+  width: 25%;
+}
+
+.article__info_right {
+  width: 50%;
 }
 
 .article__info_sticky {
@@ -8995,10 +9004,6 @@ section.services {
   padding: 70px 0 80px;
   flex-direction: column;
   gap: 10px;
-}
-
-.article__info_right {
-  padding: 0 40px 80px;
 }
 
 .article__info_flex {
