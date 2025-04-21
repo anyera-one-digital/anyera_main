@@ -5493,7 +5493,10 @@ html.has-scroll-dragging {
   display: flex;
 }
 
-.project__head,
+.project__head {
+  padding: 15px 0;
+}
+
 .project__desc {
   padding: 0 0 15px;
 }
