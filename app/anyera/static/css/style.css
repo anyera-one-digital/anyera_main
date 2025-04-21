@@ -5489,6 +5489,29 @@ html.has-scroll-dragging {
   padding: 80px 0;
 }
 
+.project__info_flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project__info_top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project__info_bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.project__info_bottom img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .project__info_left,
 .project__info_right {
   display: -webkit-box;
