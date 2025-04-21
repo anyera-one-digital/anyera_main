@@ -5281,6 +5281,7 @@ html.has-scroll-dragging {
   display: flex;
   height: 100%;
   padding: 80px 0 100px;
+  justify-content: space-between;
   gap: 80px;
 }
 
@@ -10041,7 +10042,7 @@ section.services {
     top: 90px;
   }
   .project_top__info {
-    width: calc(40% - 60px);
+    width: calc(50% - 60px);
     padding: 0;
   }
   .project_top__block {
@@ -10664,7 +10665,7 @@ section.services {
     padding: 120px 0 80px;
   }
   .articles__top {
-    padding: 0 30px 30px;
+    padding: 0 0 30px;
   }
   .projects__filter_list {
     gap: 10px 20px;
@@ -10752,7 +10753,7 @@ section.services {
     top: 72px;
   }
   .project_top__info {
-    width: calc(40% - 40px);
+    width: calc(50% - 40px);
   }
   .project_top__block {
     padding: 90px 0 60px;
