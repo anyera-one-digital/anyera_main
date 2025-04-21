@@ -193,7 +193,7 @@ h5,
   font-family: var(--title-font);
   font-size: 75px;
   font-weight: 700;
-  line-height: 78px;
+  line-height: 120%;
   color: var(--text);
 }
 
@@ -202,7 +202,7 @@ h2,
   font-family: var(--title-font);
   font-size: 36px;
   font-weight: 700;
-  line-height: 124%;
+  line-height: 120%;
   color: var(--text);
 }
 
@@ -211,7 +211,7 @@ h3,
   font-family: var(--title-font);
   font-size: 39px;
   font-weight: 700;
-  line-height: 45px;
+  line-height: 120%;
   color: var(--text);
 }
 
@@ -220,7 +220,7 @@ h4,
   font-family: var(--title-font);
   font-size: 20px;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 120%;
   color: var(--text);
 }
 
@@ -228,7 +228,7 @@ h6 {
   font-family: var(--title-font);
   font-size: 36px;
   font-weight: 600;
-  line-height: 45px;
+  line-height: 120%;
   color: var(--text);
 }
 
@@ -244,7 +244,7 @@ textarea,
 [data-select-item],
 .digital__heading {
   font-size: 16px;
-  line-height: 19px;
+  line-height: 120%;
 }
 
 a {
@@ -5386,10 +5386,10 @@ html.has-scroll-dragging {
 }
 
 .project_top__info_tag {
-  padding: 15px;
-  color: var(--purple);
-  border: 1px solid var(--purple);
-  border-radius: 24px;
+  padding: 10px;
+  color: var(--text);
+  border: 1px solid var(--text);
+  border-radius: 12px;
 }
 
 .project_top__info_desc::before {
@@ -5494,16 +5494,19 @@ html.has-scroll-dragging {
   padding: 80px 0;
 }
 
+.project__head,
+.project__desc {
+  padding: 0 0 15px;
+}
+
 .project__info_flex {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .project__info_top {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .project__info_bottom {
@@ -6812,7 +6815,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 116px 0 55px 0;
+  padding: 40px 0;
   margin: 0 2px;
   flex-direction: column;
   gap: 40px;
@@ -9858,18 +9861,15 @@ section.services {
 @media (max-width: 1919px) {
   .team__bottom_heading {
     font-size: 120px;
-    line-height: 130px;
   }
   h1,
   .digital__head,
   .team__bottom_count {
     font-size: 61px;
-    line-height: 62px;
   }
   h2,
   .title_two {
     font-size: 36px;
-    line-height: 124%;
   }
   h3,
   .title_three {
@@ -9878,20 +9878,16 @@ section.services {
   }
   .header__nav_link h3 {
     font-size: 36px;
-    line-height: 45px;
   }
   h4,
   .team__top_count {
     font-size: 20px;
-    line-height: 25px;
   }
   h5 {
     font-size: 49px;
-    line-height: 61px;
   }
   h6 {
     font-size: 36px;
-    line-height: 45px;
   }
   a,
   p,
@@ -9905,8 +9901,7 @@ section.services {
   [data-select-title],
   [data-select-item],
   .digital__heading {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 14px;
   }
   button,
   .btn,
@@ -9917,7 +9912,6 @@ section.services {
   .footer__copyright,
   .footer__privacy {
     font-size: 12px;
-    line-height: 14px;
   }
   .btn {
     height: 40px;
@@ -10176,7 +10170,7 @@ section.services {
     right: 160px;
   }
   .services_top__block {
-    padding: 140px 0 55px 0;
+    padding: 40px 0;
   }
   .services__left {
     padding: 0px 0 0 35px;
@@ -10855,7 +10849,7 @@ section.services {
     bottom: 40px;
   }
   .services_top__block {
-    padding: 116px 0 55px 0;
+    padding: 40px 0;
   }
   .services_top__right {
     max-width: 750px;
@@ -11745,7 +11739,7 @@ section.services {
     top: 35px;
   }
   .services_top__block {
-    padding: 116px 0 50px 0;
+    padding: 40px 0;
   }
   .services_top__right {
     max-width: 481px;
