@@ -11047,7 +11047,7 @@ section.services {
     margin: 0 30px;
   }
   .article__info {
-    padding: 60px 30px;
+    padding: 60px 0;
   }
   .article__info_left {
     display: none;
@@ -11888,7 +11888,7 @@ section.services {
     display: block;
   }
   .article__info {
-    padding: 80px 20px;
+    padding: 80px 0;
   }
   .article__info_right {
     gap: 80px;
@@ -12577,7 +12577,7 @@ section.services {
     margin: 10px 0 0;
   }
   .article__info {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
   .article__info_right {
     gap: 40px;
