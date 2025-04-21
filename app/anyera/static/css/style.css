@@ -5279,7 +5279,7 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  padding: 180px 0 100px;
+  padding: 80px 0 100px;
   gap: 80px;
 }
 
@@ -5294,6 +5294,10 @@ html.has-scroll-dragging {
   gap: 20px;
   position: relative;
   z-index: 1;
+}
+
+.project_top__info.article_top__info {
+  width: 100%;
 }
 
 .project_top__shadow .project_top__info {
@@ -5498,7 +5502,7 @@ html.has-scroll-dragging {
 .project__info_top {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .project__info_bottom {
@@ -9012,10 +9016,11 @@ section.services {
   max-width: 100%;
 }
 
+.article__info_flex img,
 .article__image {
   width: 100%;
-  max-height: 500px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .article__heading {
@@ -10041,7 +10046,7 @@ section.services {
     padding: 0;
   }
   .project_top__block {
-    padding: 200px 0 80px;
+    padding: 90px 0 80px;
     gap: 60px;
   }
   .project_top__image {
@@ -10051,7 +10056,7 @@ section.services {
     gap: 10px 30px;
   }
   .project_top__shadow .project_top__block {
-    padding: 140px 0 60px;
+    padding: 90px 0 60px;
   }
   .project_present__swiper {
     height: 360px;
@@ -10710,7 +10715,7 @@ section.services {
     padding: 20px;
   }
   .project_top__shadow .project_top__block {
-    padding: 120px 0 40px;
+    padding: 90px 0 40px;
   }
   .project_phone_flex {
     padding: 40px 0;
@@ -10754,7 +10759,7 @@ section.services {
     width: calc(40% - 40px);
   }
   .project_top__block {
-    padding: 160px 0 60px;
+    padding: 90px 0 60px;
     gap: 40px;
   }
   .career_top__block {
@@ -11487,7 +11492,7 @@ section.services {
     padding: 0;
   }
   .project_top__shadow .project_top__block {
-    padding: 100px 0 40px;
+    padding: 90px 0 40px;
   }
   .project__info {
     flex-direction: column;
