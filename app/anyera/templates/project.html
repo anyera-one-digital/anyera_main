@@ -10,14 +10,13 @@
       <div class="project_top__info">
         <div class="project_top__info_block">
           <h1 class="project_top__head">{{ project.name }}</h1>
-          <h4 class="project_top__desc">{{ project.intro_text }}</h4>
+          <p class="project_top__info_desc">{{ project.additional_intro_field }}</p>
           <div class="project_top__info_tags">
             {% for service in project.services.all %} 
                 <p class="project_top__info_tag">#{{ service }}</p>
             {% endfor %}
           </div>
           <div class="project_top__info_flex">
-            <p class="project_top__info_desc">{{ project.additional_intro_field }}</p>
             <a href="{{ project.link }}" target="_blank" class="btn btn_new project_top__button">
               <span class="button__text">Веб-сайт</span>
             </a>

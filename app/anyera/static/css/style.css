@@ -191,7 +191,7 @@ h1,
 h5,
 .digital__head {
   font-family: var(--title-font);
-  font-size: 75px;
+  font-size: 44px;
   font-weight: 700;
   line-height: 120%;
   color: var(--text);
@@ -5498,7 +5498,7 @@ html.has-scroll-dragging {
   padding: 15px 0;
 }
 
-.project__desc {
+.project__desc p {
   padding: 0 0 15px;
 }
 
@@ -9868,7 +9868,7 @@ section.services {
   h1,
   .digital__head,
   .team__bottom_count {
-    font-size: 61px;
+    font-size: 44px;
   }
   h2,
   .title_two {
