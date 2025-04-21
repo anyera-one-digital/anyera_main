@@ -20,9 +20,11 @@ class NewProjectViewSet(
     serializer_class = NewProjectSerializer
 
     def create(self, request, *args, **kwargs):
+        print('1')
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         new_project = serializer.save()
+        print('2')
 
         message = (
             f"Название компании: {new_project.company_name if new_project.company_name else "Не указано"}\n"
@@ -35,6 +37,7 @@ class NewProjectViewSet(
         )
 
         self.send_to_bitrix24(message, new_project)
+        print('3')
         self.send_notifications(message, new_project)
 
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -59,8 +62,10 @@ class NewProjectViewSet(
             f"Как обращаться: {new_project.fio}\n"
         ) + message
         recipient_list = ["anyera.one@yandex.ru"]
+        print('4')
 
         send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+        print('5')
         send_telegram_message(message=message)
 
 
