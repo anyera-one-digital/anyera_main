@@ -64,7 +64,7 @@ class NewProjectViewSet(
         recipient_list = ["anyera.one@yandex.ru"]
         print('4')
 
-        send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
+        # send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
         print('5')
         send_telegram_message(message=message)
 
