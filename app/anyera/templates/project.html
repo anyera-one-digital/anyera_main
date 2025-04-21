@@ -38,9 +38,9 @@
           <div class="project__info">
             <div class="project__info_flex">
               <div class="project__info_top">
-                <h4 class="project__head">
-                  {% if block.title %}{{ block.title }}{% endif %}
-                </h4>
+                {% if block.title %}
+                <h4 class="project__head">{{ block.title }}</h4>
+                {% endif %}
                 <div class="project__desc">{{ block.text|safe }}</div>
               </div>
               <div class="project__info_bottom">

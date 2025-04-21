@@ -42,7 +42,9 @@
       <div class="article__info_right">
        {% for block in blocks.all %} 
         <div class="article__info_flex" id="article_{{ block.order }}">
+          {% if block.name %}
           <h3 class="article__head">{{ block.name }}</h3>
+          {% endif %}
           <div class="article__desc">{{ block.text|safe }}</div>
         </div>
         {% endfor %}
