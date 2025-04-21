@@ -242,7 +242,8 @@ input::placeholder,
 textarea,
 [data-select-title],
 [data-select-item],
-.digital__heading {
+.digital__heading,
+.text {
   font-size: 16px;
   line-height: 120%;
 }
@@ -5288,7 +5289,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(40% - 80px);
+  width: calc(50% - 80px);
   padding: 60px 0 0;
   flex-direction: column;
   justify-content: space-between;
@@ -5363,7 +5364,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60%;
+  width: 50%;
   height: calc(var(--height) - 280px);
   max-height: 720px;
 }
