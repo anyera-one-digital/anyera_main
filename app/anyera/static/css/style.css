@@ -4405,11 +4405,12 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 20px;
 }
 
 .expertise__left {
   width: 50%;
-  padding: 80px 80px 80px 0 ;
+  padding: 80px 0;
 }
 
 .expertise__right {
@@ -4417,7 +4418,7 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  padding: 80px;
+  padding: 80px 0;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
@@ -9971,7 +9972,7 @@ section.services {
   }
   .expertise__left,
   .expertise__right {
-    padding: 60px;
+    padding: 60px 0;
   }
   .projects__link {
     gap: 10px;
@@ -10633,7 +10634,7 @@ section.services {
   .expertise__left,
   .expertise__right {
     width: 100%;
-    padding: 40px 30px;
+    padding: 40px 0;
   }
   .expertise__border {
     display: none;
@@ -11605,7 +11606,7 @@ section.services {
   }
   .expertise__left,
   .expertise__right {
-    padding: 20px;
+    padding: 20px 0;
   }
   .project__desc,
   .team__bottom_desc,
