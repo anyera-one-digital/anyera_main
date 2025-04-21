@@ -41,7 +41,7 @@
                 <h4 class="project__head">
                   {% if block.title %}{{ block.title }}{% endif %}
                 </h4>
-                <p class="project__desc">{{ block.text|safe }}</p>
+                <div class="project__desc">{{ block.text|safe }}</div>
               </div>
               <div class="project__info_bottom">
                 <img src="/media/{{ block.image }}" alt="">

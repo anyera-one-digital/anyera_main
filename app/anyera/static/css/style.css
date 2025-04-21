@@ -5491,7 +5491,6 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px 0;
 }
 
 .project__head,
@@ -10007,9 +10006,6 @@ section.services {
   .project_phone_flex {
     padding: 60px 0;
   }
-  .project__info {
-    padding: 60px 0;
-  }
   .project__info_left {
     padding: 0 60px;
   }
@@ -10718,9 +10714,6 @@ section.services {
     padding: 90px 0 40px;
   }
   .project_phone_flex {
-    padding: 40px 0;
-  }
-  .project__info {
     padding: 40px 0;
   }
   .project__info_left,
