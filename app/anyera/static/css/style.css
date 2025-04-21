@@ -8990,7 +8990,8 @@ section.services {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 170px 80px 80px;
+  width: 25%;
+  padding: 70px 0 80px;
   flex-direction: column;
   gap: 10px;
 }
@@ -9003,7 +9004,8 @@ section.services {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 170px 0 0;
+  width: 50%;
+  padding: 70px 0 0;
   flex-direction: column;
   gap: 40px;
 }
@@ -10321,10 +10323,10 @@ section.services {
     width: 100%;
   }
   .article__info_block {
-    padding: 150px 60px 80px;
+    padding: 50px 0 80px;
   }
   .article__info_flex {
-    padding: 150px 0 0;
+    padding: 50px 0 0;
   }
   .articles_page__block {
     max-width: 100%;
