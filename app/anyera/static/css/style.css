@@ -242,8 +242,7 @@ input::placeholder,
 textarea,
 [data-select-title],
 [data-select-item],
-.digital__heading,
-.text {
+.digital__heading {
   font-size: 16px;
   line-height: 120%;
 }
