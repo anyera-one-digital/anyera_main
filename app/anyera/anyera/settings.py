@@ -206,8 +206,13 @@ UNFOLD = {
                     },
                     {
                         "title": "Content",
-                        "icon": "search",
+                        "icon": "description",
                         "link": reverse_lazy("admin:pages_pagecontent_changelist"),
+                    },
+                    {
+                        "title": "Аккордноны",
+                        "icon": "view_list",
+                        "link": reverse_lazy("admin:pages_accordion_changelist"),
                     },
                 ],
             },
