@@ -139,39 +139,60 @@ class ProjectSEO(models.Model):
         return self.project.name
 
 
-# class Block(models.Model):
+class Accordion(models.Model):
 
-#     class Page(models.TextChoices):
-#         MAIN = 'main', 'Главная'
-#         SERVICES = 'services', 'Услуги'
+    class Page(models.TextChoices):
+        MAIN = 'main', 'Главная'
+        SERVICES = 'services', 'Услуги'
 
-#     type = models.CharField(
-#         "Страница",
-#         max_length=20,
-#         choices=Page.choices,
-#         unique=True
-#     )
-#     title = models.CharField(
-#         max_length=255
-#     )
-#     description = models.TextField(
-#         blank=True
-#     )
+    type = models.CharField(
+        "Страница",
+        max_length=20,
+        choices=Page.choices,
+        unique=True
+    )
+    title = models.CharField(
+        "Заголовок",
+        max_length=255
+    )
+    description = RichTextField(
+        "Текст",
+        blank=True
+    )
 
-#     def __str__(self):
-#         return self.title
+    class Meta:
+        verbose_name = "Аккардеон"
+        verbose_name_plural = "Аккордеоны"
+
+    def __str__(self):
+        return self.title
 
 
-# class SubBlock(models.Model):
+class AccordionItem(models.Model):
 
-#     parent = models.ForeignKey(
-#         Block,
-#         on_delete=models.CASCADE,
-#         related_name='subblocks'
-#     )
-#     title = models.CharField(max_length=255)
-#     content = models.TextField()
-#     order = models.PositiveIntegerField(default=0)
+    parent = models.ForeignKey(
+        Accordion,
+        on_delete=models.CASCADE,
+        related_name='accordion_items',
+        verbose_name='Аккардеон'
+    )
+    title = models.CharField(
+        "Заголовок",
+        max_length=255
+    )
+    content = RichTextField(
+        "Текст"
+    )
+    order = models.PositiveIntegerField(
+        "Порядок",
+        default=0
+    )
 
-#     def __str__(self):
-#         return f"{self.parent.title} > {self.title}"
+    class Meta:
+        verbose_name = "Элемент аккардеона"
+        verbose_name_plural = "Элементы аккордеона"
+        ordering = ['order',]
+        unique_together = ["parent", "order", ]
+
+    def __str__(self):
+        return f"{self.parent.title} > {self.title}"

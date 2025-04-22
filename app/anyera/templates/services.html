@@ -164,13 +164,16 @@
     </div>
   </div>
 </section>
+
+{% if accordion %}
 <section class="expertise" data-scroll-section>
   <div class="expertise__border"></div>
   <div class="container expertise__container">
     <div class="expertise__block">
       <div class="expertise__left">
+        {% for item in accordion.accordion_items.all %}
         <button class="expertise__button">
-          <h4 class="expertise__heading">FIX PRICE</h4>
+          <h4 class="expertise__heading">{{ item.title }}</h4>
           <div class="btn__arrow expertise__btn">
             <div class="btn__side btn__side_hover">
               <svg width="37.222656" height="36.380859" viewBox="0 0 37.2227 36.3809" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -183,78 +186,23 @@
               <svg width="20.806641" height="20.345703" viewBox="0 0 20.8066 20.3457" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs/>
                 <path id="Линия 4" d="M1.19 19.35L19.6 0.98M1.01 1.17L19.6 0.98L19.79 19.15" stroke="#544BE0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg>                  
-            </div>
-          </div>
-        </button>
-        <div class="expertise__panel">
-          <p class="body_long"> 
-            &bull; Для понятных и прозрачных проектов, где можно максимально точно просчитать бюджет и сроки выполнения; <br>
-            &bull; Работаем по методологии Waterfall или Scrum; <br>
-            &bull; Оплата за каждый этап 50/50%;<br>
-            &bull; полностью фиксированные условия без гибкости.<br>
-          </p>
-        </div>
-        <button class="expertise__button">
-          <h4 class="expertise__heading">TIME &amp; MATERIALS</h4>
-          <div class="btn__arrow expertise__btn">
-            <div class="btn__side btn__side_hover">
-              <svg width="37.222656" height="36.380859" viewBox="0 0 37.2227 36.3809" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs/>
-                <rect id="stay=Default" width="37.185303" height="36.344238" transform="translate(37.185547 36.380859) rotate(-179.942764)" fill="#FFFFFF" fill-opacity="0"/>
-                <path id="Линия 4" d="M27.81 9L9.41 27.37M28 27.18L9.41 27.37L9.21 9.2" stroke="#63606D" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
               </svg>
             </div>
-            <div class="btn__side btn__side_default">
-              <svg width="20.806641" height="20.345703" viewBox="0 0 20.8066 20.3457" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs/>
-                <path id="Линия 4" d="M1.19 19.35L19.6 0.98M1.01 1.17L19.6 0.98L19.79 19.15" stroke="#544BE0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg>                  
-            </div>
           </div>
         </button>
         <div class="expertise__panel">
-          <p class="body_long"> 
-            &bull; Для понятных и прозрачных проектов, где можно максимально точно просчитать бюджет и сроки выполнения; <br>
-            &bull; Работаем по методологии Waterfall или Scrum; <br>
-            &bull; Оплата за каждый этап 50/50%;<br>
-            &bull; полностью фиксированные условия без гибкости.<br>
-          </p>
+          <div class="body_long">{{ item.content|safe }}</div>
         </div>
-        <button class="expertise__button">
-          <h4 class="expertise__heading">RETENTION</h4>
-          <div class="btn__arrow expertise__btn">
-            <div class="btn__side btn__side_hover">
-              <svg width="37.222656" height="36.380859" viewBox="0 0 37.2227 36.3809" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs/>
-                <rect id="stay=Default" width="37.185303" height="36.344238" transform="translate(37.185547 36.380859) rotate(-179.942764)" fill="#FFFFFF" fill-opacity="0"/>
-                <path id="Линия 4" d="M27.81 9L9.41 27.37M28 27.18L9.41 27.37L9.21 9.2" stroke="#63606D" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="btn__side btn__side_default">
-              <svg width="20.806641" height="20.345703" viewBox="0 0 20.8066 20.3457" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs/>
-                <path id="Линия 4" d="M1.19 19.35L19.6 0.98M1.01 1.17L19.6 0.98L19.79 19.15" stroke="#544BE0" stroke-opacity="1.000000" stroke-width="2.000000" stroke-linejoin="round" stroke-linecap="round"/>
-              </svg>                  
-            </div>
-          </div>
-        </button>
-        <div class="expertise__panel">
-          <p class="body_long"> 
-            &bull; Для понятных и прозрачных проектов, где можно максимально точно просчитать бюджет и сроки выполнения; <br>
-            &bull; Работаем по методологии Waterfall или Scrum; <br>
-            &bull; Оплата за каждый этап 50/50%;<br>
-            &bull; полностью фиксированные условия без гибкости.<br>
-          </p>
-        </div>
+        {% endfor %}
       </div>
       <div class="expertise__right">
         <div class="expertise__flex">
-          <h2 class="expertise__head">Схемы сотрудничества</h2>
-          <p class="expertise__desc">Придерживаемся партнёрских и долгосрочных отношений со своими клиентами и работаем на результат</p>
+          <h2 class="expertise__head">{{ accordion.title }}</h2>
+          <div class="expertise__desc">{{ accordion.description|safe }}</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+{% endif %}
 {% endblock %}
