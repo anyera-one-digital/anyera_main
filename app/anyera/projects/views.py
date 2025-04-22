@@ -3,7 +3,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from django.db.models import Count, Q
 from django_filters.rest_framework import DjangoFilterBackend
-from pages.models import SEO, ProjectSEO
+from pages.models import PageType, PageSEO, PageContent, ProjectSEO
 from projects.models import Project, Block, Industry, Type, Service
 from projects.serializers import ProjectSerializer, ProjectsListSerializer
 from projects.filters import ProjectFilter
@@ -44,7 +44,8 @@ def project_list(request):
     )
     services_count = services.count()
 
-    seo = SEO.objects.filter(type=SEO.SEOType.PROJECTS).first()
+    seo = PageSEO.objects.filter(type=PageType.PROJECTS).first()
+    content = PageContent.objects.filter(type=PageType.PROJECTS).first()
 
     return render(request, 'projects.html', {
         'projects': projects,
@@ -54,7 +55,8 @@ def project_list(request):
         'types': types,
         'services_count': services_count,
         'services': services,
-        'seo': seo
+        'seo': seo,
+        'content': content
     })
 
 def project_detail(request, id):

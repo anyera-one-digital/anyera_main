@@ -16,8 +16,8 @@
           <p class="rubik">ПРОЕКТЫ</p>
         </div>
         <div class="services_top__right">
-          <h1 class="services_top__head title_two">ПРОЕКТЫ</h1>
-          <p class="services_top__desc">Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации.</p> 
+          <h1 class="services_top__head title_two">{{ content.title|default:"ПРОЕКТЫ" }}</h1>
+          <div class="services_top__desc">{{ content.description|safe|default:"Команда дизайнеров и программных инженеров разрабатываем функциональные продукты широкого круга от идеи до реализации." }}</div> 
         </div>
       </div>
     </div>

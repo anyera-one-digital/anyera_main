@@ -7,7 +7,7 @@ from articles.models import Article, ContentBlock, Theme
 from articles.serializers import ArticleSerializer, ArticleListSerializer
 from articles.filters import ArticleFilter
 from articles.pagination import ArticlePagination
-from pages.models import SEO, ArticleSEO
+from pages.models import PageType, PageSEO, PageContent, ArticleSEO
 
 def article_list(request):
     articles = Article.objects.all()
@@ -20,14 +20,16 @@ def article_list(request):
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    seo = SEO.objects.filter(type=SEO.SEOType.ARTICLE).first()
+    seo = PageSEO.objects.filter(type=PageType.ARTICLE).first()
+    content = PageContent.objects.filter(type=PageType.ARTICLE).first()
 
     return render(request, 'articles.html', {
         'articles': page_obj.object_list,
         'themes': themes,
         'page_obj': page_obj,
         'total_pages': paginator.num_pages,
-        'seo': seo
+        'seo': seo,
+        'content': content
     })
 
 def article_detail(request, code):
@@ -48,7 +50,7 @@ class ArticleViewSet(
     mixins.RetrieveModelMixin,
     viewsets.GenericViewSet
 ):
-    queryset = Article.objects.all()
+    queryset = Article.objects.all().order_by('-created_at')
     serializer_class = ArticleSerializer
     filter_backends = [DjangoFilterBackend]
     filterset_class = ArticleFilter

@@ -6,8 +6,8 @@
 <section class="competencies" data-scroll-section>
   <div class="container competencies__container">
     <div class="competencies__block">
-      <h1 class="competencies__head">КОМПЕТЕНЦИИ</h1>
-      <p class="competencies__desc">При разработке сайтов используем уникальную технологию «1С-Битрикс: Управление сайтом» и интегрируем сайт с системами «1С:Предприятие».</p>
+      <h1 class="competencies__head">{{ content.title|default:"КОМПЕТЕНЦИИ" }}</h1>
+      <div class="competencies__desc">{{ content.description|safe|default:"При разработке сайтов используем уникальную технологию «1С-Битрикс: Управление сайтом» и интегрируем сайт с системами «1С:Предприятие»." }}</div>
     </div>
   </div>
   <div class="competencies__divider"></div>

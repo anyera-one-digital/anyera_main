@@ -16,8 +16,8 @@
           <p class="rubik">КОМАНДА</p>
         </div>
         <div class="services_top__right">
-          <h1 class="services_top__head title_two">КОМАНДА</h1>
-          <p class="services_top__desc">Мы - единомышленники, которые стремятся создавать уникальные и функциональные продукты на основе аналитики, данных из метрик и исследовании пользовательского опыта.</p> 
+          <h1 class="services_top__head title_two">{{ content.title|default:"КОМАНДА" }}</h1>
+          <div class="services_top__desc">{{ content.description|safe|default:"Мы - единомышленники, которые стремятся создавать уникальные и функциональные продукты на основе аналитики, данных из метрик и исследовании пользовательского опыта." }}</div>
         </div>
       </div>
     </div>

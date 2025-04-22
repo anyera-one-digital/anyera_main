@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from projects.models import Project, Type
 from articles.models import Article
-from pages.models import SEO
+from pages.models import PageType, PageSEO, PageContent
 
 def main_page(request):
     types_with_projects = []
@@ -20,11 +20,13 @@ def main_page(request):
             })
     
     articles = Article.objects.all()
-    seo = SEO.objects.filter(type=SEO.SEOType.MAIN).first()
+    seo = PageSEO.objects.filter(type=PageType.MAIN).first()
+    content = PageContent.objects.filter(type=PageType.MAIN).first()
     return render(request, 'index.html', {
         'types_with_projects': types_with_projects,
         'articles': articles,
-        'seo': seo
+        'seo': seo,
+        'content': content
     })
 
 class SEOPageView(TemplateView):
@@ -32,5 +34,6 @@ class SEOPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['seo'] = SEO.objects.filter(type=self.seo_type).first()
+        context['seo'] = PageSEO.objects.filter(type=self.seo_type).first()
+        context['content'] = PageContent.objects.filter(type=self.seo_type).first()
         return context

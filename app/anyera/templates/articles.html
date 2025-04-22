@@ -16,8 +16,8 @@
           <p class="rubik">МЕДИА</p>
         </div>
         <div class="services_top__right">
-          <h1 class="services_top__head title_two">МЕДИА</h1>
-          <p class="services_top__desc">Рассказываем о digital-трендах и о мире цифровизации. Делимся личным опытом и кейсами.</p> 
+          <h1 class="services_top__head title_two">{{ content.title|default:"МЕДИА" }}</h1>
+          <div class="services_top__desc">{{ content.description|safe|default:"Рассказываем о digital-трендах и о мире цифровизации. Делимся личным опытом и кейсами."}}</div> 
         </div>
         <div class="articles_page__checks">
           <label class="btn checkbox articles_page__check active"><span class="button__text">Все статьи</span><span class="button__hover"></span><input class="checkbox__input articles_page__check_input" name="type" type="radio" value="" checked=""></label>
@@ -43,11 +43,7 @@
           </div>
           <div class="articles__info">
             <h4 class="articles__head">{{ article.title }}</h4>
-            <p class="articles__desc">
-              {% for theme in article.theme.all %} 
-              {{ theme }}
-              {% endfor %}
-            </p>
+            <p class="articles__desc">{{ article.preview }}</p>
           </div>
         </a>
       </li>

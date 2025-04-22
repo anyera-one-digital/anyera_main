@@ -10,16 +10,10 @@
         <div class="hero__left">
           <div class="hero__info">
             <p class="hero__info_about_us text_font">Мы капсульная IT-компания.</p>
-            <h3 class="hero__info_head title_three">Разрабатываем <span>Digital</span> продукты</h3>
-            <p class="hero__info_desc text_font">Мы — капсульная IT-компания, разрабатывающая веб-сервисы для повышения узнаваемости и 
-              эффективности бизнеса через эстетичный дизайн. Наш формат позволяет фокусировать экспертизу 
-              и оперативно реализовывать проекты любой сложности.                          
-              <br><br>Изучаем бизнес клиентов, анализируем конкурентов и аудиторию, 
-              чтобы создавать индивидуальные цифровые продукты. 
-              Клиенты вовлечены на всех этапах и получают презентационные материалы и видеоскринкасты 
-              для полной прозрачности процессов.  
-              <br><br>                     
-            </p>
+            <h3 class="hero__info_head title_three">{{ content.title|default:"Разрабатываем <span>Digital</span> продукты" }}</h3>
+            <div class="hero__info_desc text_font">{{ content.description|safe|default:"Мы — капсульная IT-компания, разрабатывающая веб-сервисы для повышения узнаваемости и эффективности бизнеса через эстетичный дизайн. Наш формат позволяет фокусировать экспертизу и оперативно реализовывать проекты любой сложности.<br><br>Изучаем бизнес клиентов, анализируем конкурентов и аудиторию, чтобы создавать индивидуальные цифровые продукты. Клиенты вовлечены на всех этапах и получают презентационные материалы и видеоскринкасты для полной прозрачности процессов." }}
+            </div>
+            <br>
             <div class="hero__info_buttons">
               <a href="https://t.me/" target="_blank" class="btn btn_new hero__info_link">
                 <span class="button__text">Связаться в Telegram</span>
@@ -33,7 +27,7 @@
         <div class="hero__right">
           <div class="hero__content">
             <div class= "hero__card">
-              <a href="#" class="hero__card_link">
+              <a href="/projects/" class="hero__card_link">
               <div class="hero__card_info">
                 <p class="hero__card_desc">Успешно запустили</p>
                 <p class="hero__card_number title_three">150+</p>
@@ -53,7 +47,7 @@
             </a>
             </div>
             <div class="hero__card">
-              <a href="#" class="hero__card_link">
+              <a href="/briefing/" class="hero__card_link">
               <div class="hero__card_info">
                 <p class="hero__card_desc">Расскажите нам о своем бизнесе и мы поможем с решением его цифровых задач</p>
                 <h4 class="hero__card_title">Брифинг</h4>
@@ -72,7 +66,7 @@
             </a>
             </div>
             <div class="hero__card">
-              <a href="#" class="hero__card_link">
+              <a href="/services/" class="hero__card_link">
                 <div class="hero__card_info">
                   <p class="hero__card_desc">ЧЕМ  МОЖЕМ <br> ПОМОЧЬ?</p>
                   <p class="hero__card_rubik">Startups launching<br>

@@ -202,7 +202,12 @@ UNFOLD = {
                     {
                         "title": "SEO",
                         "icon": "search",
-                        "link": reverse_lazy("admin:pages_seo_changelist"),
+                        "link": reverse_lazy("admin:pages_pageseo_changelist"),
+                    },
+                    {
+                        "title": "Content",
+                        "icon": "search",
+                        "link": reverse_lazy("admin:pages_pagecontent_changelist"),
                     },
                 ],
             },
