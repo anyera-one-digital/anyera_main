@@ -3040,7 +3040,7 @@ html.has-scroll-dragging {
 }
 
 .hero__info_head {
-  max-width: 660px;
+  max-width: 460px;
   padding-top: 23px;
   padding-bottom: 48px;
   text-transform: uppercase;
@@ -3123,6 +3123,10 @@ html.has-scroll-dragging {
   font-weight: 300;
   font-size: 12px;
   line-height: 150%;
+}
+
+.hero__card:nth-child(2) .hero__card_desc {
+  max-width: calc(100% - 30px);
 }
 
 .hero__card:nth-child(1) .hero__card_number,
