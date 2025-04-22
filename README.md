@@ -2,8 +2,8 @@
 
 docker compose down
 docker compose up --build  -d
-
 docker compose exec app sh
+
 python3 manage.py makemigrations
 python3 manage.py migrate
 
