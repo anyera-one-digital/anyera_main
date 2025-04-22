@@ -119,11 +119,6 @@
                 <div class="projects__info">
                   <p class="projects__description">{{ other.name }}</p>
                   <h4 class="projects__heading">{{ other.intro_text }}</h4>
-                  <ul class="projects_tags">
-                    {% for service in other.services.all %} 
-                      <li class="projects_tags__item">{{ service.name }}</li>
-                    {% endfor %}
-                  </ul>
                 </div>
               </a>
             </li>

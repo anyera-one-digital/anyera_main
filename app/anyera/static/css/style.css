@@ -4410,7 +4410,6 @@ html.has-scroll-dragging {
 
 .expertise__left {
   width: 50%;
-  padding: 80px 0;
 }
 
 .expertise__right {
@@ -4418,7 +4417,6 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  padding: 80px 0;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
@@ -9970,10 +9968,6 @@ section.services {
   .new_project_banner .showreel__inview {
     max-height: 100%;
   }
-  .expertise__left,
-  .expertise__right {
-    padding: 60px 0;
-  }
   .projects__link {
     gap: 10px;
   }
@@ -10631,7 +10625,6 @@ section.services {
   .expertise__left,
   .expertise__right {
     width: 100%;
-    padding: 40px 0;
   }
   .expertise__border {
     display: none;
@@ -11597,10 +11590,6 @@ section.services {
   .digital__info {
     padding: 40px 20px 20px;
     gap: 20px;
-  }
-  .expertise__left,
-  .expertise__right {
-    padding: 20px 0;
   }
   .project__desc,
   .team__bottom_desc,
