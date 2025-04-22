@@ -189,6 +189,7 @@ h6 {
 
 h1,
 h5,
+.title_one,
 .digital__head {
   font-family: var(--title-font);
   font-size: 44px;
@@ -209,7 +210,7 @@ h2,
 h3,
 .title_three {
   font-family: var(--title-font);
-  font-size: 39px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 120%;
   color: var(--text);
@@ -1986,7 +1987,7 @@ html.has-scroll-dragging {
 
 .header__nav_link h3 {
   font-size: 36px;
-  line-height: 45px;
+  line-height: 120%;
 }
 
 .header__subnav_list {
@@ -4518,7 +4519,6 @@ html.has-scroll-dragging {
   text-transform: uppercase;
 }
 
-.project__desc,
 .team__bottom_desc,
 .team_slider__desc,
 .briefing__desc,
@@ -4546,7 +4546,6 @@ html.has-scroll-dragging {
 }
 
 .team__bottom_desc::before,
-.project__desc::before,
 .team_slider__desc::before,
 .briefing__desc::before,
 .error_page__desc::before,
@@ -5364,7 +5363,7 @@ html.has-scroll-dragging {
   display: flex;
   width: 50%;
   height: calc(var(--height) - 280px);
-  max-height: 720px;
+  max-height: 520px;
 }
 
 .project_top__image img {
@@ -5493,11 +5492,11 @@ html.has-scroll-dragging {
 }
 
 .project__head {
-  padding: 15px 0;
+  padding: 60px 0 15px;
 }
 
 .project__desc p {
-  padding: 0 0 15px;
+  padding: 0 0 60px;
 }
 
 .project__info_flex {
@@ -9864,6 +9863,7 @@ section.services {
     font-size: 120px;
   }
   h1,
+  .title_one,
   .digital__head,
   .team__bottom_count {
     font-size: 44px;
@@ -9874,8 +9874,7 @@ section.services {
   }
   h3,
   .title_three {
-    font-size: 44px;
-    line-height: -1px;
+    font-size: 36px;
   }
   .header__nav_link h3 {
     font-size: 36px;
@@ -10040,7 +10039,7 @@ section.services {
     padding: 0;
   }
   .project_top__block {
-    padding: 90px 0 80px;
+    padding: 90px 0 40px;
     gap: 60px;
   }
   .project_top__image {
@@ -10315,10 +10314,10 @@ section.services {
     width: 100%;
   }
   .article__info_block {
-    padding: 50px 0 80px;
+    padding: 90px 0 80px;
   }
   .article__info_flex {
-    padding: 50px 0 0;
+    padding: 75px 0 0;
   }
   .articles_page__block {
     max-width: 100%;
@@ -10413,6 +10412,7 @@ section.services {
     line-height: 130px;
   }
   h1,
+  .title_one,
   .digital__head,
   .team__bottom_count {
     font-size: 61px;
@@ -10632,7 +10632,6 @@ section.services {
   .expertise__head {
     padding: 0;
   }
-  .project__desc,
   .team__bottom_desc,
   .team_slider__desc,
   .briefing__desc,
@@ -11226,6 +11225,7 @@ section.services {
     line-height: 82px;
   }
   h1,
+  .title_one,
   .digital__head,
   .team__bottom_count {
     font-size: 61px;
@@ -11591,7 +11591,6 @@ section.services {
     padding: 40px 20px 20px;
     gap: 20px;
   }
-  .project__desc,
   .team__bottom_desc,
   .team_slider__desc,
   .briefing__desc,
@@ -12208,6 +12207,7 @@ section.services {
     line-height: 82px;
   }
   h1,
+  .title_one,
   .digital__head,
   .team__bottom_count {
     font-size: 38px;
@@ -12328,7 +12328,6 @@ section.services {
     width: 100%;
   }
   .projects__desc,
-  .project__desc,
   .team__bottom_desc,
   .team_slider__desc,
   .briefing__desc,
