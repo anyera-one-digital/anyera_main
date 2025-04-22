@@ -3072,8 +3072,10 @@ html.has-scroll-dragging {
 }
 
 .hero__right {
+  display: flex;
   width: 664px;
   height: 520px;
+  align-items: flex-end;
 }
 
 .hero__content {
