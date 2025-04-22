@@ -1120,7 +1120,7 @@ section {
   color: rgb(255, 255, 255);
   background-color: var(--primary-violet);
   border: none;
-  border-radius: 16px;
+  border-radius: 6px;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
@@ -1131,7 +1131,7 @@ section {
   line-height: 17px;
   color: var(--primary-violet);
   border: 1px solid var(--primary-violet);
-  border-radius: 16px;
+  border-radius: 6px;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
@@ -1154,7 +1154,7 @@ section {
 .link_arrow__btn {
   padding: 15px 20px;
   transform: rotate(0);
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #ffffff00;
   transition: background-color 0.5s, transform 0.5s;
 }
@@ -3077,7 +3077,7 @@ html.has-scroll-dragging {
   width: 324px;
   height: 243px;
   padding: 16px;
-  border-radius: 16px;
+  border-radius: 6px;
   position: relative;
   z-index: 3;
   overflow: hidden;
@@ -3627,7 +3627,7 @@ html.has-scroll-dragging {
   position: relative;
   font-size: 0;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: none;
 }
 
@@ -3638,7 +3638,7 @@ html.has-scroll-dragging {
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: 5px;
+  border-radius: 6px;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
   opacity: 1;
@@ -3653,7 +3653,7 @@ html.has-scroll-dragging {
   z-index: 0;
   border: 1px solid hsla(0,0%,100%,.2);
   border-bottom: 0;
-  border-radius: 30px 30px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .spec__title {
@@ -3684,7 +3684,7 @@ html.has-scroll-dragging {
 .spec__button.toggle {
   padding: 20px 40px;
   border: 1px solid hsla(0,0%,100%,.2);
-  border-radius: 0 0 0 30px;
+  border-radius: 0 0 0 12px;
 }
 
 .spec__button.volume {
@@ -3696,7 +3696,7 @@ html.has-scroll-dragging {
 .spec__button.fullscreen {
   padding: 20px 40px;
   border: 1px solid hsla(0,0%,100%,.2);
-  border-radius: 0 0 30px 0;
+  border-radius: 0 0 12px 0;
 }
 
 .spec__button.toggle:hover,
@@ -3858,7 +3858,7 @@ html.has-scroll-dragging {
   position: relative;
   font-size: 0;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: none;
 }
 
@@ -3869,7 +3869,7 @@ html.has-scroll-dragging {
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: 5px;
+  border-radius: 6px;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
   opacity: 1;
@@ -3955,7 +3955,7 @@ html.has-scroll-dragging {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 6px 6px;
 }
 
 .minimal.is-playing:before {
@@ -3994,7 +3994,7 @@ html.has-scroll-dragging {
   -webkit-transition: height 0.3s linear;
   transition: height 0.3s linear;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
+  border-radius: 6px;
   position: relative;
   cursor: none;
 }
@@ -4006,7 +4006,7 @@ html.has-scroll-dragging {
   flex: 0;
   -ms-flex-preferred-size: 0%;
   flex-basis: 0%;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .compact {
@@ -4016,7 +4016,7 @@ html.has-scroll-dragging {
   position: relative;
   font-size: 0;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: none;
 }
 
@@ -4027,7 +4027,7 @@ html.has-scroll-dragging {
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: 5px;
+  border-radius: 6px;
   -webkit-transition: opacity 0.3s linear;
   transition: opacity 0.3s linear;
   opacity: 1;
@@ -4113,7 +4113,7 @@ html.has-scroll-dragging {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .compact.is-playing:before {
@@ -4152,7 +4152,7 @@ html.has-scroll-dragging {
   -webkit-transition: height 0.3s linear;
   transition: height 0.3s linear;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
+  border-radius: 6px;
   position: relative;
   cursor: none;
 }
@@ -4164,7 +4164,7 @@ html.has-scroll-dragging {
   flex: 0;
   -ms-flex-preferred-size: 0%;
   flex-basis: 0%;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 #showreel__video::-webkit-media-controls-enclosure {
@@ -4853,7 +4853,7 @@ html.has-scroll-dragging {
 .projects__filter_label {
   height: 35px;
   padding: 0 20px;
-  border-radius: 16px;
+  border-radius: 6px;
 }
 
 .projects__head {
@@ -5015,7 +5015,7 @@ html.has-scroll-dragging {
   width: 100%;
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
-  border-radius: 24px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -5026,7 +5026,7 @@ html.has-scroll-dragging {
   top: 0;
   left: 0;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 12px;
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: -webkit-transform 0.2s linear;
@@ -5232,7 +5232,7 @@ html.has-scroll-dragging {
   padding: 15px;
   color: var(--primary-violet);  
   border: 1px solid var(--primary-violet);
-  border-radius: 16px
+  border-radius: 6px
   
 }
 
@@ -5388,7 +5388,7 @@ html.has-scroll-dragging {
   padding: 10px;
   color: var(--text);
   border: 1px solid var(--text);
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .project_top__info_desc::before {
@@ -5644,7 +5644,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 125px;
   left: 50%;
-  border-radius: 20px 20px 0 0;
+  border-radius: 6px 6px 0 0;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -5696,7 +5696,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 125px;
   left: 50%;
-  border-radius: 20px;
+  border-radius: 6px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -5731,7 +5731,7 @@ html.has-scroll-dragging {
   display: flex;
   width: 316px;
   height: 100%;
-  border-radius: 40px;
+  border-radius: 6px;
   overflow: visible;
 }
 
@@ -5779,12 +5779,12 @@ html.has-scroll-dragging {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 12px 12px;
 }
 
 .project_phone__swiper .swiper-slide-shadow-left,
 .project_phone__swiper .swiper-slide-shadow-right {
-  border-radius: 40px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -5926,7 +5926,7 @@ html.has-scroll-dragging {
   display: flex;
   padding-top: 75%;
   position: relative;
-  border-radius: 24px;
+  border-radius: 12px;
 }
 
 .articles__image img {
@@ -5936,7 +5936,7 @@ html.has-scroll-dragging {
   top: 0;
   left: 0;
   object-fit: cover;
-  border-radius: 24px;
+  border-radius: 12px;
 }
 
 .articles__date {
@@ -6865,7 +6865,7 @@ html.has-scroll-dragging {
   min-height: 264px;
   padding: 55px 36px;
   margin: 0 2px;
-  border-radius: 0px;
+  border-radius: 0;
   gap: 160px;
   position: relative;
   background-color: var(--bg);
@@ -6884,7 +6884,7 @@ html.has-scroll-dragging {
 }
 
 .services__block .services__flex:hover {
-  border-radius: 44px;
+  border-radius: 12px;
   background-color: #262626;
   border-top: none;
   border-bottom: none;
@@ -7646,7 +7646,7 @@ section.services {
   align-items: center;
   gap: 10px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .form__file_item button,
@@ -8658,7 +8658,7 @@ section.services {
   background-color: var(--bg);
   border: 1px solid var(--border);
   box-shadow: 0px 2px 7px 0px rgba(22, 21, 21, 0.12);
-  border-radius: 4px;
+  border-radius: 6px;
   visibility: hidden;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -9553,7 +9553,7 @@ section.services {
 .dark .generation__button.active {
   width: 100%;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 .dark .generation__button .button__hover,
@@ -10200,7 +10200,7 @@ section.services {
   .briefing__check {
     height: 40px;
     padding: 0 15px;
-    border-radius: 10px;
+    border-radius: 6px;
   }
   .error_page__flex {
     padding: 120px 60px;
@@ -11503,7 +11503,7 @@ section.services {
     max-width: 384px;
     max-height: 250px;
     top: 60px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 6px 6px 0 0;
   }
   .project_tab__slider {
     padding: 40px 20px 70px;
@@ -11515,7 +11515,7 @@ section.services {
     max-width: 355px;
     max-height: 250px;
     top: 60px;
-    border-radius: 10px;
+    border-radius: 6px;
   }
   .project_top__info {
     height: 100%;
@@ -12019,7 +12019,7 @@ section.services {
     display: none;
   }
   .spec__button.volume {
-    border-radius: 0 0 30px 0;
+    border-radius: 0 0 6px 0;
   }
   .spec .progress {
     height: 60px;
@@ -12384,7 +12384,7 @@ section.services {
     max-width: 240px;
     max-height: 156px;
     top: 50px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 6px 6px 0 0;
   }
   .project_tab__img {
     max-width: 250px;
