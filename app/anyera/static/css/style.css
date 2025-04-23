@@ -832,6 +832,7 @@ section {
   flex: 0 0 auto;
   align-items: center;
   border: 1px solid var(--border);
+  border-radius: 12px;
   background-color: transparent;
   position: relative;
   z-index: 1;
@@ -5985,7 +5986,7 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   height: calc(100% - 280px);
-  padding: 20px 0px 40px;
+  padding: 20px 0;
   flex-direction: column;
   gap: 10px;
 }
@@ -6007,23 +6008,32 @@ html.has-scroll-dragging {
   overflow: hidden;
 }
 
+.articles__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
 .articles__prev,
 .articles__next {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 36px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   margin-top: 0;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 190px;
+  position: relative;
+  top: 0;
   bottom: auto;
   color: var(--bg);
   border: none;
-  background: var(--text);
-  background-color: var(--text);
+  background: var(--border);
+  background-color: var(--border);
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   cursor: none;
@@ -6031,12 +6041,43 @@ html.has-scroll-dragging {
 
 .articles__prev {
   left: 0;
-  right: auto;
+  right: 0;
 }
 
 .articles__next {
-  left: auto;
+  left: 0;
   right: 0;
+}
+
+.articles__navigation .articles__prev,
+.articles__navigation .articles__next,
+.articles__navigation .btn__arrow,
+.articles__navigation .btn__side {
+  width: 50px;
+  height: 50px;
+}
+
+.articles__navigation .swiper-button-disabled .btn__arrow:hover .btn__side_hover,
+.articles__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.articles__navigation .swiper-button-disabled .btn__arrow:hover .btn__side_default,
+.articles__navigation .swiper-button-disabled .active .btn__arrow .btn__side_default {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.articles__navigation .btn__arrow:hover .btn__side_default,
+.articles__navigation .active .btn__arrow .btn__side_default {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.articles__navigation .btn__side_hover {
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
 }
 
 .articles__prev svg,
@@ -6044,6 +6085,34 @@ html.has-scroll-dragging {
   display: inline-block;
   width: 10px;
   height: 10px;
+}
+
+.articles__buttons .btn__side_default svg {
+  color: var(--text);
+}
+
+.articles__buttons .btn__side_hover {
+  background-color: var(--text);
+}
+
+.articles__buttons .btn__side_hover svg {
+  color: var(--bg);
+}
+
+.articles__buttons .btn__side_default {
+  background-color: var(--bg);
+}
+
+.articles__buttons .btn__side {
+  border: 1px solid var(--border);
+  -webkit-transition: -webkit-transform 0.2s linear, border 0.1s linear;
+  transition: transform 0.2s linear, border 0.1s linear;
+}
+
+.articles__buttons .btn__side:hover {
+  border: 1px solid var(--text);
+  -webkit-transition: -webkit-transform 0.2s linear, border 0.1s linear 0.2s;
+  transition: transform 0.2s linear, border 0.1s linear 0.2s;
 }
 
 /* end articles */
@@ -10094,21 +10163,30 @@ section.services {
   .projects__navigation .projects__prev,
   .projects__navigation .projects__next,
   .projects__navigation .btn__arrow,
-  .projects__navigation .btn__side {
+  .projects__navigation .btn__side,
+  .articles__navigation .articles__prev,
+  .articles__navigation .articles__next,
+  .articles__navigation .btn__arrow,
+  .articles__navigation .btn__side {
     width: 40px;
     height: 40px;
   }
   .projects__navigation .swiper-button-disabled .btn__arrow:hover .btn__side_hover,
-  .projects__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover {
+  .projects__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover,
+  .articles__navigation .swiper-button-disabled .btn__arrow:hover .btn__side_hover,
+  .articles__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
   }
   .projects__navigation .btn__arrow:hover .btn__side_default,
-  .projects__navigation .active .btn__arrow .btn__side_default {
+  .projects__navigation .active .btn__arrow .btn__side_defaul,
+  .articles__navigation .btn__arrow:hover .btn__side_default,
+  .articles__navigation .active .btn__arrow .btn__side_defaultt {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
   }
-  .projects__navigation .btn__side_hover {
+  .projects__navigation .btn__side_hover,
+  .articles__navigation .btn__side_hover {
     -webkit-transform: translateY(-40px);
     transform: translateY(-40px);
   }
@@ -10133,7 +10211,7 @@ section.services {
   }
   .articles__info {
     height: calc(100% - 200px);
-    padding: 50px 30px 30px;
+    padding: 20px 0;
     gap: 10px;
   }
   .articles__prev,
@@ -10807,7 +10885,7 @@ section.services {
   }
   .articles__info {
     height: calc(100% - 200px);
-    padding: 50px 30px 30px;
+    padding: 20px 0;
     gap: 10px;
   }
   .articles__prev,
@@ -10820,7 +10898,7 @@ section.services {
   }
   .articles__info {
     height: calc(100% - 80px);
-    padding: 20px;
+    padding: 20px 0;
     gap: 0;
   }
   .newteam__slider_item {
@@ -12444,6 +12522,10 @@ section.services {
   .projects__navigation .projects__next,
   .projects__navigation .btn__arrow,
   .projects__navigation .btn__side,
+  .articles__navigation .articles__prev,
+  .articles__navigation .articles__next,
+  .articles__navigation .btn__arrow,
+  .articles__navigation .btn__side,
   .team_comments__navigation .team_comments__prev,
   .team_comments__navigation .team_comments__next,
   .team_comments__navigation .btn__arrow,
