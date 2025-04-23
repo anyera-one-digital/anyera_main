@@ -2099,7 +2099,6 @@ if(expertise){
 
 const projects = document.querySelector('.projects');
 const projectsflex = document.querySelectorAll('.projects__flex');
-const articlesflex = document.querySelectorAll('.articles__flex');
 const projectsallflex = document.querySelector('.projects__all_flex');
 const projectsallflexs = document.querySelectorAll('.projects__all_flex');
 const projectsitem = document.querySelectorAll('.projects__item');
@@ -2115,10 +2114,6 @@ if(projects){
   let projectsflexopt = {threshold: [0.5]};
   let projectsflexserv = new IntersectionObserver(onEntry, projectsflexopt);
   for (let elm of projectsflex) {projectsflexserv.observe(elm);}
-
-  let articlesflexopt = {threshold: [0.5]};
-  let articlesflexserv = new IntersectionObserver(onEntry, articlesflexopt);
-  for (let elm of articlesflex) {articlesflexserv.observe(elm);}
 
   let projectsitemopt = {threshold: [0.3]};
   let projectsitemserv = new IntersectionObserver(onEntry, projectsitemopt);
@@ -2148,12 +2143,17 @@ if(projecti){
 const articles = document.querySelector('.articles');
 const articlestop = document.querySelectorAll('.articles__top');
 const articlesitem = document.querySelectorAll('.articles__item');
+const articlesflex = document.querySelectorAll('.articles__flex');
 if(articles){
   function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});};
 
   let articlestopopt = {threshold: [0.5]};
   let articlestopserv = new IntersectionObserver(onEntry, articlestopopt);
   for (let elm of articlestop) {articlestopserv.observe(elm);}
+
+  let articlesflexopt = {threshold: [0.5]};
+  let articlesflexserv = new IntersectionObserver(onEntry, articlesflexopt);
+  for (let elm of articlesflex) {articlesflexserv.observe(elm);}
 
   let articlesitemopt = {threshold: [0.5]};
   let articlesitemserv = new IntersectionObserver(onEntry, articlesitemopt);
