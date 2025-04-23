@@ -4434,7 +4434,7 @@ html.has-scroll-dragging {
   width: 50%;
 }
 
-.expertise__right {
+.expertise__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
