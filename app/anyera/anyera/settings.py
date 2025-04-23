@@ -261,6 +261,23 @@ UNFOLD = {
                     },
                 ],
             },
+            {
+                "title": "Вакансии",
+                "separator": True,
+                "collapsible": True,
+                "items": [
+                    {
+                        "title": "Вакансии",
+                        "icon": "work",
+                        "link": reverse_lazy("admin:vacancies_vacancy_changelist"),
+                    },
+                    {
+                        "title": "Отклики",
+                        "icon": "mail",
+                        "link": reverse_lazy("admin:vacancies_response_changelist"),
+                    },
+                ],
+            },
         ],
     },
 }

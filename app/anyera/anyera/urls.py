@@ -9,7 +9,8 @@ from pages.views import main_page
 urlpatterns = [
     path('', include("pages.urls")), 
     path('projects/', include("projects.urls")), 
-    path('articles/', include("articles.urls")), 
+    path('articles/', include("articles.urls")),
+    path("career/", include("vacancies.urls")),
     path('admin/', admin.site.urls),
     path("api/v1/", include("api.urls")),
     path(

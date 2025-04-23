@@ -116,14 +116,17 @@
   </div>
   <div class="career__divider"></div>
 </section>
+
+{% if vacancies %}
 <section class="career_bottom" data-scroll-section>
   <div class="career_bottom__block">
+    {% for vacancy in vacancies %}
     <button class="expertise__button">
       <div class="container career_bottom__container">
         <div class="career_bottom__flex">
           <div class="career_bottom__head">
-            <h4 class="expertise__heading">Бизнес - аналитик</h4>
-            <p class="career_bottom__desc">Ищем классного бизнес-аналитика, чтобы работал заебись и вообще всё что надо делал и вопросов не было</p>
+            <h4 class="expertise__heading">{{ vacancy.title }}</h4>
+            <p class="career_bottom__desc">{{ vacancy.description }}</p>
           </div>
           <div class="btn__arrow expertise__btn">
             <div class="btn__side btn__side_hover">
@@ -144,28 +147,34 @@
       <div class="container career_bottom__container">
         <div class="career_bottom__list">
           <ul>
-            <li><b>Локация:</b> Удаленная работа.</li>
-            <li><b>Опыт:</b> 5+ лет.</li>
-            <li><b>Hard skills:</b> Figma, UX patterns, UX analysis, CJM design, UI design.</li>
-            <li><b>Soft skills:</b> Добрый и внимательный.</li>
+            <li><b>Локация:</b> {{ vacancy.location }}</li>
+            <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
+            <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
+            <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
           </ul>
           <ul>
-            <li><b>Требования:</b></li>
-            <li>· Не сидел.</li>
-            <li>· Не наркоман.</li>
-            <li>· Не чёрный.</li>
-            <li>· Толерантный ко всему и вся.</li>
-            <li>· За вкусняшки.</li>
+            {% with vacancy.requirement.all as requirements %}
+              {% if requirements %}
+                <li><b>Требования:</b></li>
+                {% for requirement in vacancy.requirement.all %}
+                  <li>· {{ requirement.text }}</li>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
           </ul>
           <ul>
-            <li><b>Обязанности:</b></li>
-            <li>· Кушать.</li>
-            <li>· Классно работать.</li>
-            <li>· Очень классно работать.</li>
+            {% with vacancy.responsibility.all as responsibility %}
+              {% if responsibility %}
+                <li><b>Обязанности:</b></li>
+                {% for responsibility in vacancy.responsibility.all %}
+                  <li>· {{ responsibility.text }}</li>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
           </ul>
           <ul>
             <li><b>Зарплата</b></li>
-            <li><b>600 $/час</b></li>
+            <li><b>{{ vacancy.salary }} ₽/час</b></li>
             <button class="btn btn_new career_bottom__button">
               <span class="button__text">Откликнуться</span>
             </button>
@@ -173,116 +182,8 @@
         </div>
       </div>
     </div>
-    <button class="expertise__button">
-      <div class="container career_bottom__container">
-        <div class="career_bottom__flex">
-          <div class="career_bottom__head">
-            <h4 class="expertise__heading">Диджитал-маркетолог</h4>
-            <p class="career_bottom__desc">Ищем классного диджитал-маркетолога, чтобы работал заебись и вообще всё что надо делал и вопросов не было</p>
-          </div>
-          <div class="btn__arrow expertise__btn">
-            <div class="btn__side btn__side_hover">
-              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <div class="btn__side btn__side_default">
-              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </button>
-    <div class="expertise__panel">
-      <div class="container career_bottom__container">
-        <div class="career_bottom__list">
-          <ul>
-            <li><b>Локация:</b> Удаленная работа.</li>
-            <li><b>Опыт:</b> 5+ лет.</li>
-            <li><b>Hard skills:</b> Figma, UX patterns, UX analysis, CJM design, UI design.</li>
-            <li><b>Soft skills:</b> Добрый и внимательный.</li>
-          </ul>
-          <ul>
-            <li><b>Требования:</b></li>
-            <li>· Не сидел.</li>
-            <li>· Не наркоман.</li>
-            <li>· Не чёрный.</li>
-            <li>· Толерантный ко всему и вся.</li>
-            <li>· За вкусняшки.</li>
-          </ul>
-          <ul>
-            <li><b>Обязанности:</b></li>
-            <li>· Кушать.</li>
-            <li>· Классно работать.</li>
-            <li>· Очень классно работать.</li>
-          </ul>
-          <ul>
-            <li><b>Зарплата</b></li>
-            <li><b>600 $/час</b></li>
-            <button class="btn btn_new career_bottom__button">
-              <span class="button__text">Откликнуться</span>
-            </button>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <button class="expertise__button">
-      <div class="container career_bottom__container">
-        <div class="career_bottom__flex">
-          <div class="career_bottom__head">
-            <h4 class="expertise__heading">Аккаунт-менеджер</h4>
-            <p class="career_bottom__desc">Ищем классного аккаунт-менеджера, чтобы работал заебись и вообще всё что надо делал и вопросов не было</p>
-          </div>
-          <div class="btn__arrow expertise__btn">
-            <div class="btn__side btn__side_hover">
-              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-              </svg>
-            </div>
-            <div class="btn__side btn__side_default">
-              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.928932 0.928993C0.65279 0.928993 0.428932 1.15285 0.428932 1.42899L0.428932 5.92899C0.428932 6.20514 0.65279 6.42899 0.928932 6.42899C1.20507 6.42899 1.42893 6.20514 1.42893 5.92899L1.42893 1.92899L5.42893 1.92899C5.70507 1.92899 5.92893 1.70514 5.92893 1.42899C5.92893 1.15285 5.70507 0.928993 5.42893 0.928993L0.928932 0.928993ZM8.35355 8.14651L1.28249 1.07544L0.575379 1.78255L7.64645 8.85361L8.35355 8.14651Z" fill="currentColor"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </button>
-    <div class="expertise__panel">
-      <div class="container career_bottom__container">
-        <div class="career_bottom__list">
-          <ul>
-            <li><b>Локация:</b> Удаленная работа.</li>
-            <li><b>Опыт:</b> 5+ лет.</li>
-            <li><b>Hard skills:</b> Figma, UX patterns, UX analysis, CJM design, UI design.</li>
-            <li><b>Soft skills:</b> Добрый и внимательный.</li>
-          </ul>
-          <ul>
-            <li><b>Требования:</b></li>
-            <li>· Не сидел.</li>
-            <li>· Не наркоман.</li>
-            <li>· Не чёрный.</li>
-            <li>· Толерантный ко всему и вся.</li>
-            <li>· За вкусняшки.</li>
-          </ul>
-          <ul>
-            <li><b>Обязанности:</b></li>
-            <li>· Кушать.</li>
-            <li>· Классно работать.</li>
-            <li>· Очень классно работать.</li>
-          </ul>
-          <ul>
-            <li><b>Зарплата</b></li>
-            <li><b>600 $/час</b></li>
-            <button class="btn btn_new career_bottom__button">
-              <span class="button__text">Откликнуться</span>
-            </button>
-          </ul>
-        </div>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
+{% endif %}
 {% endblock %}

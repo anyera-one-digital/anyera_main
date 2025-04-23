@@ -3,7 +3,6 @@ from vacancies.models import (
     Vacancy,
     Requirement,
     Responsibility,
-    InfoBlock,
     Response
 )
 
@@ -22,18 +21,10 @@ class ResponsibilitySerializer(serializers.ModelSerializer):
         fields = ['order', 'text']
 
 
-class InfoBlockSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = InfoBlock
-        fields = ['order', 'title', 'content']
-
-
 class VacancySerializer(serializers.ModelSerializer):
 
     requirements = serializers.SerializerMethodField()
     responsibilities = serializers.SerializerMethodField()
-    info_blocks = serializers.SerializerMethodField()
 
     class Meta:
         model = Vacancy
@@ -44,9 +35,6 @@ class VacancySerializer(serializers.ModelSerializer):
 
     def get_responsibilities(self, obj):
         return self.sort_object(Responsibility, obj, ResponsibilitySerializer)
-
-    def get_info_blocks(self, obj):
-        return self.sort_object(InfoBlock, obj, InfoBlockSerializer)
 
     def sort_object(self, type_obj, object, serializer):
         blocks = type_obj.objects.filter(

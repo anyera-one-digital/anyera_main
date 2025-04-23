@@ -10,6 +10,22 @@ class Vacancy(models.Model):
     description = models.TextField(
         "Описание вакансии"
     )
+    location = models.CharField(
+        "Локация",
+        max_length=255
+    )
+    work_experience = models.CharField(
+        "Опыт работы",
+        max_length=255
+    )
+    hard_skills = models.CharField(
+        "Hard skills",
+        max_length=255
+    )
+    soft_skills = models.CharField(
+        "Soft skills",
+        max_length=255
+    )
     salary = models.CharField(
         "Зарплата",
         max_length=255
@@ -42,6 +58,7 @@ class Requirement(models.Model):
         verbose_name = "Требование"
         verbose_name_plural = "Требования"
         unique_together = ["vacancy", "order", ]
+        ordering = ['order']
 
     def __str__(self):
         return self.text
@@ -49,7 +66,7 @@ class Requirement(models.Model):
 
 class Responsibility(models.Model):
 
-    text = models.TextField(
+    text = models.CharField(
         "Обязанность"
     )
     order = models.PositiveSmallIntegerField(
@@ -66,37 +83,10 @@ class Responsibility(models.Model):
         verbose_name = "Обязанность"
         verbose_name_plural = "Обязанности"
         unique_together = ["vacancy", "order", ]
+        ordering = ['order']
 
     def __str__(self):
         return self.text
-
-
-class InfoBlock(models.Model):
-
-    title = models.CharField(
-        "Название",
-        max_length=255
-    )
-    content = models.TextField(
-        "Содержание"
-    )
-    order = models.PositiveSmallIntegerField(
-        "Положение"
-    )
-    vacancy = models.ForeignKey(
-        Vacancy,
-        on_delete=models.CASCADE,
-        related_name="info_block",
-        verbose_name="Вакансия"
-    )
-
-    class Meta:
-        verbose_name = "Информационный блок"
-        verbose_name_plural = "Информационные блоки"
-        unique_together = ["vacancy", "order", ]
-
-    def __str__(self):
-        return self.title
 
 
 class Response(models.Model):
