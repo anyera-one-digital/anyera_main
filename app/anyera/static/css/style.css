@@ -4507,10 +4507,6 @@ html.has-scroll-dragging {
   transition: max-height 0.5s linear, padding 0.5s linear;
 }
 
-.expertise__panel li::before {
-  content: "·";
-}
-
 .expertise__panel p {
   width: 100%;
   max-width: 550px;
