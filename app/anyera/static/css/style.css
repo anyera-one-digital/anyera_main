@@ -5609,6 +5609,10 @@ html.has-scroll-dragging {
   max-width: 100%;
 }
 
+.project_banner__block {
+  padding: 0 0 80px;
+}
+
 .project_banner__inview {
   max-height: 620px;
 }
@@ -10754,6 +10758,9 @@ section.services {
   }
   .project_tab__slider {
     padding: 40px 40px 110px;
+  }
+  .project_banner__block {
+    padding: 0 0 40px;
   }
   .project_banner__inview {
     max-height: 450px;
