@@ -41,7 +41,7 @@ class Vacancy(models.Model):
 
 class Requirement(models.Model):
 
-    text = models.TextField(
+    text = models.CharField(
         "Требование"
     )
     order = models.PositiveSmallIntegerField(
