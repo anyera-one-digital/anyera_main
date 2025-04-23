@@ -4469,7 +4469,7 @@ html.has-scroll-dragging {
   transition: opacity 0.3s linear, transform 0.2s linear;
 }
 
-.loaded .expertise__left.animate .expertise__button,
+.loaded .expertise__right.animate .expertise__button,
 .loaded .career_bottom__block.animate .expertise__button {
   opacity: 1;
   -webkit-transform: translateY(0px);
