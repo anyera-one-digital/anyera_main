@@ -10177,21 +10177,16 @@ section.services {
     height: 40px;
   }
   .projects__navigation .swiper-button-disabled .btn__arrow:hover .btn__side_hover,
-  .projects__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover,
-  .articles__navigation .swiper-button-disabled .btn__arrow:hover .btn__side_hover,
-  .articles__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover {
+  .projects__navigation .swiper-button-disabled .active .btn__arrow .btn__side_hover {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
   }
   .projects__navigation .btn__arrow:hover .btn__side_default,
-  .projects__navigation .active .btn__arrow .btn__side_defaul,
-  .articles__navigation .btn__arrow:hover .btn__side_default,
-  .articles__navigation .active .btn__arrow .btn__side_defaultt {
+  .projects__navigation .active .btn__arrow .btn__side_defaul {
     -webkit-transform: translateY(40px);
     transform: translateY(40px);
   }
-  .projects__navigation .btn__side_hover,
-  .articles__navigation .btn__side_hover {
+  .projects__navigation .btn__side_hover {
     -webkit-transform: translateY(-40px);
     transform: translateY(-40px);
   }
@@ -12519,10 +12514,6 @@ section.services {
   .projects__navigation .projects__next,
   .projects__navigation .btn__arrow,
   .projects__navigation .btn__side,
-  .articles__navigation .articles__prev,
-  .articles__navigation .articles__next,
-  .articles__navigation .btn__arrow,
-  .articles__navigation .btn__side,
   .team_comments__navigation .team_comments__prev,
   .team_comments__navigation .team_comments__next,
   .team_comments__navigation .btn__arrow,
