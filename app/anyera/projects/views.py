@@ -1,4 +1,5 @@
 from rest_framework import mixins, viewsets
+from rest_framework.response import Response
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from django.db.models import Count, Q
@@ -88,3 +89,51 @@ class ProjectViewSet(
         if self.action == "retrieve":
             return ProjectSerializer
         return ProjectsListSerializer
+    
+    def list(self, request, *args, **kwargs):
+        qs = self.filter_queryset(self.get_queryset())
+
+        projects_data = self.get_serializer(qs, many=True).data
+
+
+        params_no_ind = request.query_params.copy()
+        params_no_ind.pop('industries', None)
+        qs_no_ind = ProjectFilter(params_no_ind, queryset=self.get_queryset()).qs
+
+        industry_facets = (
+            Industry.objects.filter()
+            .annotate(count=Count('project', filter=Q(project__in=qs_no_ind)))
+            .filter(count__gt=0)
+            .values('id', 'name', 'count')
+        )
+
+        params_no_type = request.query_params.copy()
+        params_no_type.pop('types', None)
+        qs_no_type = ProjectFilter(params_no_type, queryset=self.get_queryset()).qs
+
+        type_facets = (
+            Type.objects.filter()
+            .annotate(count=Count('project', filter=Q(project__in=qs_no_type)))
+            .filter(count__gt=0)
+            .values('id', 'name', 'count')
+        )
+ 
+        params_no_srv = request.query_params.copy()
+        params_no_srv.pop('services', None)
+        qs_no_srv = ProjectFilter(params_no_srv, queryset=self.get_queryset()).qs
+
+        service_facets = (
+            Service.objects.filter()
+            .annotate(count=Count('project', filter=Q(project__in=qs_no_srv)))
+            .filter(count__gt=0)
+            .values('id', 'name', 'count')
+        )
+
+        return Response({
+            'projects': projects_data,
+            'facets': {
+                'industries': list(industry_facets),
+                'types':      list(type_facets),
+                'services':   list(service_facets),
+            }
+        })

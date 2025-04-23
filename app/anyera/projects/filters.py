@@ -8,7 +8,7 @@ class ProjectFilter(filters.FilterSet):
         to_field_name="id",
         label="Отрасли"
     )
-    type = filters.ModelMultipleChoiceFilter(
+    types = filters.ModelMultipleChoiceFilter(
         field_name="type__id",
         queryset=Type.objects.all(),
         to_field_name="id",
@@ -23,4 +23,4 @@ class ProjectFilter(filters.FilterSet):
 
     class Meta:
         model = Project
-        fields = ['industries', 'type', 'services']
+        fields = ['industries', 'types', 'services']
