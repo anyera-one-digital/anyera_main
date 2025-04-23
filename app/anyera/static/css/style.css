@@ -1073,16 +1073,17 @@ section {
   display: flex;
   width: 35px;
   height: 35px;
+  border: 1px solid var(--text);
   justify-content: center;
   align-items: center;
   position: absolute;
   backface-visibility: hidden;
-  background-color:#00000000;
   -webkit-transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
 }
 
 .btn__side_default {
+  background-color: var(--text);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
