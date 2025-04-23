@@ -37,8 +37,4 @@ urlpatterns = [
         template_name='services.html',
         seo_type=PageType.SERVICES
     ), name='services'),
-    path('career/',SEOPageView.as_view(
-        template_name='career.html',
-        seo_type=PageType.CAREER
-    ), name='services'),
 ]

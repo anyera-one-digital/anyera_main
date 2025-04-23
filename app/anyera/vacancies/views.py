@@ -1,11 +1,20 @@
 from django.conf import settings
 from django.core.mail import EmailMessage
+from django.shortcuts import render
 from rest_framework import mixins, viewsets, status
 from rest_framework.decorators import action
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
 from vacancies.models import Vacancy, Response as ResponseModel
 from vacancies.serializers import VacancySerializer, ResponseSerializer
+
+def vacancy_list(request):
+    vacancies = Vacancy.objects.all()
+    print(vacancies)
+
+    return render(request, 'career.html', {
+        'vacancies': vacancies
+    })
 
 
 class VacancyViewSet(
