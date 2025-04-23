@@ -10167,14 +10167,12 @@ section.services {
   .projects__flex {
     gap: 0;
   }
+  .articles__prev,
+  .articles__next,
   .projects__navigation .projects__prev,
   .projects__navigation .projects__next,
   .projects__navigation .btn__arrow,
-  .projects__navigation .btn__side,
-  .articles__navigation .articles__prev,
-  .articles__navigation .articles__next,
-  .articles__navigation .btn__arrow,
-  .articles__navigation .btn__side {
+  .projects__navigation .btn__side {
     width: 40px;
     height: 40px;
   }
@@ -10220,10 +10218,6 @@ section.services {
     height: calc(100% - 200px);
     padding: 20px 0;
     gap: 10px;
-  }
-  .articles__prev,
-  .articles__next {
-    top: 210px;
   }
   .newteam__slider_item {
     padding: 60px 60px 100px;
@@ -10894,10 +10888,6 @@ section.services {
     height: calc(100% - 200px);
     padding: 20px 0;
     gap: 10px;
-  }
-  .articles__prev,
-  .articles__next {
-    top: 210px;
   }
   .articles__prev,
   .articles__next {
