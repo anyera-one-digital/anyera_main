@@ -4649,9 +4649,9 @@ html.has-scroll-dragging {
   transition: opacity 0.3s linear, transform 0.2s linear;
 }
 
-.loaded .expertise__right.animate .expertise__head,
-.loaded .expertise__right.animate .expertise__desc,
-.loaded .expertise__right.animate .expertise__arrow {
+.loaded .expertise__left.animate .expertise__head,
+.loaded .expertise__left.animate .expertise__desc,
+.loaded .expertise__left.animate .expertise__arrow {
   opacity: 1;
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
@@ -4659,12 +4659,12 @@ html.has-scroll-dragging {
   transition-delay: 0.1s;
 }
 
-.loaded .expertise__right.animate .expertise__desc {
+.loaded .expertise__left.animate .expertise__desc {
   -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
 }
 
-.loaded .expertise__right.animate .expertise__arrow {
+.loaded .expertise__left.animate .expertise__arrow {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
 }
