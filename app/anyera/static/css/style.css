@@ -4510,10 +4510,6 @@ html.has-scroll-dragging {
   content: "·";
 }
 
-.expertise__panel li {
-  padding: 0 0 0 20px;
-}
-
 .expertise__panel p {
   width: 100%;
   max-width: 550px;
@@ -4606,6 +4602,10 @@ html.has-scroll-dragging {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.expertise__arrow span {
+  transform: rotate(180deg);
 }
 
 .expertise__arrow svg {
