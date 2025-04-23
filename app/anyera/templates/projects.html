@@ -109,7 +109,7 @@
           const labelText = cb.closest('ul').previousElementSibling.textContent;
           let key = '';
           if (labelText.includes('Отрасл')) key = 'industries';
-          if (labelText.includes('Тип'))    key = 'types';      // <-- внимайте: именно 'types'
+          if (labelText.includes('Тип'))    key = 'types';
           if (labelText.includes('Услуг'))   key = 'services';
           params.append(key, cb.value);
         }
@@ -117,9 +117,7 @@
       return params;
     }
   
-    // Обновление UI-счётчиков по группе (industries/types/services)
     function updateFacetCounts(groupName, facetList) {
-      // перебираем все лейблы в этой группе
       document.querySelectorAll(`.projects__filter_item[data-group="${groupName}"] .projects__filter_label`)
         .forEach(label => {
           const input = label.querySelector('input');
@@ -127,18 +125,15 @@
           const f = facetList.find(x=> x.id === id);
   
           if (!f) {
-            // count = 0 → скрываем или дизейблим
             label.style.display = 'none';
             input.disabled = true;
           } else {
             label.style.display = '';
             input.disabled = false;
-            // обновляем число
             label.querySelector('.button__count small').textContent = f.count;
           }
         });
   
-      // а в шапке группки обновляем общее число опций >0
       const nonZero = facetList.length;
       const header  = document.querySelector(`.projects__filter_item[data-group="${groupName}"] .projects__filter_button small`);
       if (header) header.textContent = nonZero;
@@ -151,11 +146,9 @@
         const res  = await fetch(url);
         const json = await res.json();
   
-        // 1) Рендерим проекты
         const projects = json.projects || json.results || [];
         renderProjects(projects);
   
-        // 2) Обновляем фасеты, если они есть в ответе
         if (json.facets) {
           updateFacetCounts('industries', json.facets.industries);
           updateFacetCounts('types',      json.facets.types);
@@ -205,7 +198,6 @@
     });
   }
 
-  // проставляем data-group на контейнеры фильтра
   document.querySelectorAll('.projects__filter_item').forEach(item => {
     const btnText = item.querySelector('.projects__filter_button').textContent;
     let grp = '';
@@ -215,14 +207,12 @@
     item.setAttribute('data-group', grp);
   });
 
-  // подписываемся на события
   checkboxes.forEach(cb => cb.addEventListener('change', fetchProjects));
   filterClearButton.addEventListener('click', () => {
     checkboxes.forEach(cb => { cb.checked = false; });
     fetchProjects();
   });
 
-  // начальная загрузка (если что-то уже отмечено)
   fetchProjects();
 });
 </script>
