@@ -171,6 +171,12 @@
   <div class="container expertise__container">
     <div class="expertise__block">
       <div class="expertise__left">
+        <div class="expertise__flex">
+          <h2 class="expertise__head">{{ accordion.title }}</h2>
+          <div class="expertise__desc">{{ accordion.description|safe }}</div>
+        </div>
+      </div>
+      <div class="expertise__right">
         {% for item in accordion.accordion_items.all %}
         <button class="expertise__button">
           <h4 class="expertise__heading">{{ item.title }}</h4>
@@ -194,12 +200,6 @@
           <div class="body_long">{{ item.content|safe }}</div>
         </div>
         {% endfor %}
-      </div>
-      <div class="expertise__right">
-        <div class="expertise__flex">
-          <h2 class="expertise__head">{{ accordion.title }}</h2>
-          <div class="expertise__desc">{{ accordion.description|safe }}</div>
-        </div>
       </div>
     </div>
   </div>

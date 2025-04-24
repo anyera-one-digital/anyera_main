@@ -38,7 +38,7 @@
   --text: #f8f8f8;
   --border: #424242;
   --gray-border: #424242;
-  --text-gray: #d3d3d3;
+  --text-gray: rgb(99, 96, 109);
   --purple: #644bb1;
 }
 /* Dark mode */
@@ -3142,9 +3142,9 @@ html.has-scroll-dragging {
   transition: background-color 0.3s linear;
 }
 
-.hero__card_arrow:hover {
-  color: var(--bg);
-  background-color: var(--dark-grey);
+.hero__card_link:hover .hero__card_arrow {
+  color: var(--white);
+  background-color: var(--black);
 }
 
 .hero__card:nth-child(1)  .hero__card_figurines {
@@ -5376,7 +5376,7 @@ html.has-scroll-dragging {
 .project_top__head_new,
 .project_top__info_desc_new,
 .project_top__info_tag_new {
-  color: var(--black);
+  color: var(--text);
 }
 
 .project_top__info_tag {
@@ -7001,8 +7001,13 @@ html.has-scroll-dragging {
 }
 
 .services__flex:hover .services__number ,
-.services__flex:hover .services__head{
+.services__flex:hover .services__head {
   color: var(--bg);
+}
+
+.dark .services__flex:hover .services__number ,
+.dark .services__flex:hover .services__head {
+  color: var(--white);
 }
 
 .services__flex:hover .services__arrow svg{
