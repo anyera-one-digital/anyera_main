@@ -186,5 +186,95 @@
     {% endfor %}
   </div>
 </section>
+<div class="career_popup">
+  <div class="career_popup__scroll" data-scrollbar>
+    <div class="container career_popup__container">
+      <button class="career_popup__close" aria-label="Закрыть меню">
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 21.3241L21.3241 1M1.42335 1L21.7475 21.3241" stroke="currentColor"></path>
+        </svg>
+      </button>
+      <div class="career_popup__blocks">
+        <div class="career_popup__block">
+          <div class="form__successfully" id="form__successfully_form__career">
+            <div class="form__successfully_image">
+              <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M226.83 74.8303L98.8298 202.83C98.4583 203.202 98.0171 203.497 97.5315 203.699C97.046 203.9 96.5254 204.003 95.9998 204.003C95.4741 204.003 94.9536 203.9 94.468 203.699C93.9824 203.497 93.5413 203.202 93.1698 202.83L37.1698 146.83C36.4192 146.08 35.9976 145.062 35.9976 144C35.9976 142.939 36.4192 141.921 37.1698 141.17C37.9203 140.42 38.9383 139.998 39.9998 139.998C41.0612 139.998 42.0792 140.42 42.8298 141.17L95.9998 194.34L221.17 69.1703C221.92 68.4197 222.938 67.998 224 67.998C225.061 67.998 226.079 68.4197 226.83 69.1703C227.58 69.9208 228.002 70.9388 228.002 72.0003C228.002 73.0617 227.58 74.0797 226.83 74.8303Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h4 class="form__successfully_head">Отправлено</h4>
+            <p class="form__successfully_desc">Форма заполнена и отправлена. Спасибо за обращение в ближайшее время мы свяжемся с вами</p>
+          </div>
+          <form id="form__career" class="career_popup__forms_form">
+            <h4 class="career_popup__head">Отклик на вакансию «<span class="career_popup__vacancy"></span>»</h4>
+            <input type="text" class="career_popup__input">
+            <div class="header__forms_form_controls">
+              <div class="form__control">
+                <input class="form__input" type="text" minl="4" maxl="40" id="career__username" />
+                <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
+                <label class="form__label" for="career__username">Имя <span>*</span></label>
+                <span class="form__bar"></span>
+                <span class="form__border"></span>
+                <small class="form__error">Введите имя</small>
+              </div>
+              <div class="form__control">
+                <input class="form__input" type="text" minl="7" maxl="40" id="career__email" />
+                <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
+                <label class="form__label" for="career__email">E-mail <span>*</span></label>
+                <span class="form__bar"></span>
+                <span class="form__border"></span>
+                <small class="form__error">Введите корректный email</small>
+              </div>
+              <div class="form__control">
+                <input class="form__input" type="text" minl="4" maxl="40" id="career__social" />
+                <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
+                <label class="form__label" for="career__social">Telegram</label>
+                <span class="form__bar"></span>
+                <span class="form__border"></span>
+                <small class="form__error">Введите telegram</small>
+              </div>
+              <div class="form__control">
+                <input class="form__input" type="text" minl="4" maxl="40" id="career__link" />
+                <small class="form__counter"><span class="form__counter_min">0</span> из <span class="form__counter_max">0</span></small>
+                <label class="form__label" for="career__link">Ссылка на резюме</label>
+                <span class="form__bar"></span>
+                <span class="form__border"></span>
+                <small class="form__error">Введите cсылку или загрузите файл</small>
+              </div>
+              <div class="form__file">
+                <input type="file" class="form__input_file" id="career__file" hidden>
+                <label class="btn checkbox form__file_button" for="career__file">
+                  <span class="button__text">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18 3L6 3M12 7L12 21M12 7L18 13M12 7L6 13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Загрузить резюме
+                  </span>
+                  <span class="button__hover"></span>
+                </label>
+                <ul id="form__file_container" class="form__file_list"></ul>
+              </div>
+            </div>
+            <div class="career_popup__form_bottom">
+              <label class="form__policy">
+                <input class="form__policy_input" type="checkbox" checked>
+                <span class="form__policy_check">
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.3335 3.73301L4.8335 7.33301L10.6668 1.33301" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span>Я даю свое согласие на <a href="policy.html" class="text text__middle"><span>обработку персональных данных</span></a>.</span>
+              </label>
+              <div class="btn btn__input career__form_button">
+                <input type="submit" name="submit" value="Отправить" class="button__text">
+                <span class="button__hover"></span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endif %}
 {% endblock %}
