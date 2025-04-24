@@ -859,8 +859,8 @@ section {
 .btn__input .button__text {
   width: 100%;
   height: 100%;
-  padding: 0 60px;
-  color: var(--text-gray);
+  padding: 10px 20px;
+  color: var(--white);
   background: transparent;
   border: none;
   cursor: none;
@@ -12294,9 +12294,6 @@ section.services {
   }
   .btn__input {
     padding: 0;
-  }
-  .btn__input .button__text {
-    padding: 0 30px;
   }
   .button__project,
   .button__briefing,
