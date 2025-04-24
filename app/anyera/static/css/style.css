@@ -970,7 +970,7 @@ section {
 .btn:hover .button__text,
 .btn.active .button__count small,
 .btn:hover .button__count small {
-  color: var(--black);
+  color: var(--white);
 }
 
 .dark .btn.active .button__text,
