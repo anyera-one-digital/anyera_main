@@ -34,7 +34,7 @@
         <div class="article__info_sticky" data-scroll data-scroll-sticky data-scroll-target="#article__fixed">
           <div class="article__info_block" data-scroll>
             {% for block in blocks.all %} 
-            <a data-scroll-to href="#article_{{ block.order }}" class="article__heading text text__big"><h4>{{ block.name }}</h4></a>
+            <a data-scroll-to href="#article_{{ block.order }}" class="article__heading"><h4>{{ block.name }}</h4></a>
             {% endfor %}
           </div>
         </div>
