@@ -10412,9 +10412,6 @@ section.services {
     padding: 100px 30px;
     gap: 0;
   }
-  .stack_scroll__block {
-    overflow: visible;
-  }
   .generation__button {
     height: 72px;
   }
@@ -11202,6 +11199,9 @@ section.services {
   }
   .stack_scroll__link {
     padding: 40px 40px;
+  }
+  .stack_scroll__block {
+    overflow: visible;
   }
 }
 /* end 1439px */
