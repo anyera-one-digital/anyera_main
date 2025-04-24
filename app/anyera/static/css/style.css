@@ -8074,6 +8074,7 @@ section.services {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  gap: 20px;
 }
 
 .contacts__head,
@@ -8087,7 +8088,7 @@ section.services {
 }
 
 .contacts__head {
-  padding: 160px 80px 80px;
+  padding: 160px 0 80px;
 }
 
 .contacts__head,
@@ -8130,7 +8131,7 @@ section.services {
 }
 
 .contacts__info {
-  padding: 160px 40px 80px;
+  padding: 160px 0 80px;
 }
 
 .contacts__divider {
@@ -8139,6 +8140,7 @@ section.services {
 
 .contacts__social_block {
   display: flex;
+  gap: 20px;
 }
 
 .contacts__social_list {
@@ -8146,7 +8148,7 @@ section.services {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
-  padding: 60px 80px;
+  padding: 60px 0;
   flex-direction: column;
   align-items: flex-start;
   gap: 60px 15px;
@@ -8155,7 +8157,7 @@ section.services {
 .contacts__social_info {
   display: flex;
   width: 50%;
-  padding: 60px 40px;
+  padding: 60px 0;
   flex-direction: column;
   gap: 90px;
 }
@@ -10242,16 +10244,16 @@ section.services {
     gap: 60px;
   }
   .contacts__head {
-    padding: 140px 60px 20px;
+    padding: 140px 0 20px;
   }
   .contacts__info {
-    padding: 140px 30px 20px;
+    padding: 140px 0 20px;
   }
   .contacts__social_list {
-    padding: 90px 60px;
+    padding: 90px 0;
   }
   .contacts__social_info {
-    padding: 90px 30px;
+    padding: 90px 0;
   }
   .career_top__block {
     padding: 120px 60px 80px;
