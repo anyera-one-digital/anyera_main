@@ -1114,7 +1114,7 @@ if(projectsSlider){
     watchSlidesProgress: true,
     slidesPerView: 1,
     loopedSlides: 2,
-    spaceBetween: 0,
+    spaceBetween: 40,
     navigation: {
       nextEl: '.projects__next',
       prevEl: '.projects__prev',
@@ -1122,6 +1122,7 @@ if(projectsSlider){
     breakpoints: {
       1024: {
         slidesPerView: 2,
+        spaceBetween: 20,
       },
     },
   });

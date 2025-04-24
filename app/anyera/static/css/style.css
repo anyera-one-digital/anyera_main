@@ -5210,12 +5210,7 @@ html.has-scroll-dragging {
 }
 
 .projects__swiper_container .projects__flex {
-  padding: 0 160px 80px;
-}
-
-.projects__swiper .projects__item:nth-child(1n),
-.projects__swiper .projects__item:nth-child(2n) {
-  padding: 0 40px;
+  padding: 0 0 80px;
 }
 
 .projects__border {
@@ -10027,15 +10022,11 @@ section.services {
   .projects__item:nth-child(2n) {
     padding: 0 0 0 30px;
   }
-  .projects__swiper .projects__item:nth-child(1n),
-  .projects__swiper .projects__item:nth-child(2n) {
-    padding: 0 30px;
-  }
   .projects__flex {
     padding: 0  0 60px 0;
   }
   .projects__swiper_container .projects__flex {
-    padding: 0 140px 60px;
+    padding: 0 0 60px;
   }
   .projects__all_block {
     padding: 0 0 60px;
@@ -10601,10 +10592,6 @@ section.services {
   .projects__swiper_container {
     padding: 0;
   }
-  .projects__swiper .projects__item:nth-child(1n),
-  .projects__swiper .projects__item:nth-child(2n) {
-    padding: 0 10px;
-  }
   .project_present__container {
     padding: 0;
   }
@@ -10707,7 +10694,7 @@ section.services {
     padding: 0 0 50px 0;
   }
   .projects__swiper_container .projects__flex {
-    padding: 0 70px 40px;
+    padding: 0 0 40px;
     flex-direction: column;
     gap: 40px;
   }
@@ -11456,10 +11443,6 @@ section.services {
     padding: 0;
   }
   .projects__item:nth-child(2n) {
-    padding: 0;
-  }
-  .projects__swiper .projects__item:nth-child(1n),
-  .projects__swiper .projects__item:nth-child(2n) {
     padding: 0;
   }
   .projects__swiper_container .projects__flex {
@@ -12423,7 +12406,7 @@ section.services {
     padding: 0 20px;
   }
   .projects__swiper_container .projects__flex {
-    padding: 0 20px 20px;
+    padding: 0 0 20px;
   }
   .projects__navigation .projects__prev,
   .projects__navigation .projects__next,
