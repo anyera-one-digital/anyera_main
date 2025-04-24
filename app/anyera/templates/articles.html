@@ -99,8 +99,11 @@
   
         nextUrl = data.next;
   
-        if (nextUrl) loadMoreBtn.style.display = '';
-        else          loadMoreBtn.style.display = 'none';
+        if (nextUrl && loadMoreBtn) {
+          loadMoreBtn.style.display = '';
+        } else if (loadMoreBtn) {
+          loadMoreBtn.style.display = 'none';
+        }
       } catch (err) {
         console.error('Error loading articles:', err);
       }
@@ -117,12 +120,13 @@
     filters.forEach(i =>
       i.addEventListener('change', onFilterChange)
     );
-  
-    loadMoreBtn.addEventListener('click', () => {
-      if (nextUrl) {
-        loadArticles(nextUrl, true);
-      }
-    });
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', () => {
+        if (nextUrl) {
+          loadArticles(nextUrl, true);
+        }
+      });
+    }
   
     onFilterChange();
   });

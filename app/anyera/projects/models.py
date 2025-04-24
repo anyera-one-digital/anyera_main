@@ -74,12 +74,11 @@ class Project(models.Model):
         "Выводить в блоке на главной",
         default=False
     )
-    intro_text = models.TextField(
+    intro_text = models.CharField(
         "Вводный текст"
     )
-    additional_intro_field = models.CharField(
-        "Вводное описание",
-        max_length=200,
+    additional_intro_field = models.TextField(
+        "Описание",
         blank=True,
         null=True
     )

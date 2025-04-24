@@ -211,12 +211,12 @@ UNFOLD = {
                     },
                     {
                         "title": "Аккордеоны",
-                        "icon": "view_list",
+                        "icon": "unfold_more",
                         "link": reverse_lazy("admin:pages_accordion_changelist"),
                     },
                     {
                         "title": "Таблица цен",
-                        "icon": "view_list",
+                        "icon": "table_chart",
                         "link": reverse_lazy("admin:pages_price_changelist"),
                     },
                 ],
