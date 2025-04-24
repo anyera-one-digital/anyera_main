@@ -256,6 +256,14 @@ textarea,
   color: var(--text);
 }
 
+.hero__card_number {
+  font-family: var(--title-font);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--text);
+}
+
 a {
   font-family: var(--title-font);
   font-weight: 400;
@@ -9946,6 +9954,9 @@ section.services {
   .footer__privacy {
     font-size: 12px;
   }
+  .hero__card_number {
+    font-size: 36px;
+  }
   .header__nav_container {
     padding: 60px;
     max-width: 1280px;
@@ -10472,7 +10483,6 @@ section.services {
   [data-select-item],
   .digital__heading {
     font-size: 14px;
-    line-height: 17px;
   }
   button,
   .btn,
@@ -10483,7 +10493,6 @@ section.services {
   .footer__copyright,
   .footer__privacy {
     font-size: 10px;
-    line-height: 13px;
   }
   .header__links {
     display: none;
@@ -12171,41 +12180,34 @@ section.services {
 @media (max-width: 579px) {
   .team__bottom_heading {
     font-size: 80px;
-    line-height: 82px;
   }
   h1,
   .title_one,
   .digital__head,
   .team__bottom_count {
     font-size: 38px;
-    line-height: 38px;
   }
-  h2, .title_two {
+  h2,
+  .title_two {
     font-size: 24px;
-    line-height: 124%;
   }
   h3,
   .title_three,
   .team__top_head {
     font-size: 29px;
-    line-height: 30px;
   }
   .header__nav_link h3 {
     font-size: 24px;
-    line-height: 28px;
   }
   h4,
   .team__top_count {
     font-size: 16px;
-    line-height: 20px;
   }
   h5 {
     font-size: 29px;
-    line-height: 36px;
   }
   h6 {
     font-size: 20px;
-    line-height: 26px;
   }
   a,
   p,
@@ -12220,7 +12222,6 @@ section.services {
   [data-select-item],
   .digital__heading {
     font-size: 16px;
-    line-height: 19px;
   }
   button,
   .btn,
@@ -12231,7 +12232,6 @@ section.services {
   .footer__copyright,
   .footer__privacy {
     font-size: 10px;
-    line-height: 13px;
   }
   .footer__button_up {
     padding: 0;
