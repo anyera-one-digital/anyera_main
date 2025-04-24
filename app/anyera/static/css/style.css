@@ -5220,7 +5220,7 @@ html.has-scroll-dragging {
 
 .projects_tags {
   display: flex;
-  padding: 5px 0 0;
+  padding: 20px 0 0;
   flex-wrap: wrap;
   gap: 4px;
 }
