@@ -5988,6 +5988,7 @@ html.has-scroll-dragging {
   bottom: auto;
   color: var(--bg);
   border: none;
+  border-radius: 6px;
   background: var(--border);
   background-color: var(--border);
   -webkit-transition: background-color 0.2s linear;
