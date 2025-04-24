@@ -7,8 +7,12 @@ class Vacancy(models.Model):
         "Название вакансии",
         max_length=255
     )
+    short_description = models.TextField(
+        "Короткое описание вакансии",
+        max_length=150
+    )
     description = models.TextField(
-        "Описание вакансии"
+        "Полное описание вакансии"
     )
     location = models.CharField(
         "Локация",

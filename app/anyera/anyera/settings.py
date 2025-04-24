@@ -210,9 +210,14 @@ UNFOLD = {
                         "link": reverse_lazy("admin:pages_pagecontent_changelist"),
                     },
                     {
-                        "title": "Аккордноны",
+                        "title": "Аккордеоны",
                         "icon": "view_list",
                         "link": reverse_lazy("admin:pages_accordion_changelist"),
+                    },
+                    {
+                        "title": "Таблица цен",
+                        "icon": "view_list",
+                        "link": reverse_lazy("admin:pages_price_changelist"),
                     },
                 ],
             },

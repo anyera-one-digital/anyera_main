@@ -161,7 +161,7 @@ class Accordion(models.Model):
     )
 
     class Meta:
-        verbose_name = "Аккардеон"
+        verbose_name = "Аккордеон"
         verbose_name_plural = "Аккордеоны"
 
     def __str__(self):
@@ -174,7 +174,7 @@ class AccordionItem(models.Model):
         Accordion,
         on_delete=models.CASCADE,
         related_name='accordion_items',
-        verbose_name='Аккардеон'
+        verbose_name='Аккордеон'
     )
     title = models.CharField(
         "Заголовок",
@@ -189,10 +189,65 @@ class AccordionItem(models.Model):
     )
 
     class Meta:
-        verbose_name = "Элемент аккардеона"
+        verbose_name = "Элемент аккордеона"
         verbose_name_plural = "Элементы аккордеона"
         ordering = ['order',]
         unique_together = ["parent", "order", ]
 
     def __str__(self):
         return f"{self.parent.title} > {self.title}"
+
+
+class Price(models.Model):
+
+    name = models.CharField(
+        "Название",
+        max_length=255
+    )
+    description = RichTextField(
+        "Текст",
+        max_length=255
+    )
+    price = models.PositiveIntegerField(
+        "Цена"
+    )
+    price_discount_4 = models.PositiveIntegerField(
+        "Цена со скидкой 4%",
+        blank=True,
+        null=True
+    )
+    price_discount_6 = models.PositiveIntegerField(
+        "Цена со скидкой 6%",
+        blank=True,
+        null=True
+    )
+    price_discount_7 = models.PositiveIntegerField(
+        "Цена со скидкой 7%",
+        blank=True,
+        null=True
+    )
+    price_discount_12 = models.PositiveIntegerField(
+        "Цена со скидкой 12%",
+        blank=True,
+        null=True
+    )
+    order = models.PositiveIntegerField(
+        "Порядок",
+        default=0
+    )
+
+    class Meta:
+        verbose_name = "Элемент таблицы цен"
+        verbose_name_plural = "Элементы таблицы цен"
+        ordering = ['order',]
+
+    def __str__(self):
+        return self.name
+
+    def save(self, *args, **kwargs):
+        if self.price:
+            self.price_discount_4 = round(self.price * 0.96)
+            self.price_discount_6 = round(self.price * 0.94)
+            self.price_discount_7 = round(self.price * 0.93)
+            self.price_discount_12 = round(self.price * 0.88)
+        super().save(*args, **kwargs)

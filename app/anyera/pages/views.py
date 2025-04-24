@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from projects.models import Project, Type
 from articles.models import Article
-from pages.models import Accordion, PageType, PageSEO, PageContent
+from pages.models import Accordion, PageType, PageSEO, PageContent, Price
 
 def main_page(request):
     types_with_projects = []
@@ -51,5 +51,8 @@ class SEOPageView(TemplateView):
             context['accordion'] = Accordion.objects.filter(
                 type=self.seo_type
             ).prefetch_related('accordion_items').first()
+        
+        if self.seo_type == PageType.PRICE:
+            context['prices'] = Price.objects.all()
 
         return context
