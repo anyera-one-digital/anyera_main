@@ -4749,9 +4749,8 @@ html.has-scroll-dragging {
   top: 100%;
   z-index: 10;
   background-color: var(--bg);
-  -webkit-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
-  transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
-  border-bottom: 1px solid transparent;
+  -webkit-transition: max-height 0.3s linear, padding 0.3s linear;
+  transition: max-height 0.3s linear, padding 0.3s linear;
   overflow: hidden;
 }
 
@@ -4759,7 +4758,6 @@ html.has-scroll-dragging {
   max-height: 1000px;
   padding: 20px 80px 40px;
   z-index: 11;
-  border-bottom: 1px solid var(--border);
 }
 
 .projects__filter_subitem {
