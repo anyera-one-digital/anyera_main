@@ -5226,11 +5226,10 @@ html.has-scroll-dragging {
 }
 
 .projects_tags__item {
-  padding: 15px;
-  color: var(--primary-violet);  
-  border: 1px solid var(--primary-violet);
-  border-radius: 6px
-  
+  padding: 10px 15px;
+  color: var(--text-gray);
+  background-color: var(--button-gray);
+  border-radius: 98px;
 }
 
 /* end projects */
@@ -5874,6 +5873,7 @@ html.has-scroll-dragging {
 }
 
 .articles__list_new {
+  padding: 0 0 60px;
   flex-wrap: wrap;
   gap: 40px;
 }
@@ -12177,6 +12177,7 @@ section.services {
     width: calc(50% - 10px);
   }
   .articles__list_new {
+    padding: 0 0 40px;
     gap: 20px;
   }
 
