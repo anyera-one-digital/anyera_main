@@ -8428,7 +8428,7 @@ section.services {
 
 .career_bottom__flex {
   display: flex;
-  padding: 60px 80px;
+  padding: 60px 0;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
@@ -8453,7 +8453,7 @@ section.services {
 
 .career_bottom__list {
   display: flex;
-  padding: 0 80px 40px;
+  padding: 0 0 40px;
   justify-content: space-between;
 }
 
@@ -10318,10 +10318,10 @@ section.services {
   .career__left,
   .career__right,
   .career_bottom__flex {
-    padding: 60px;
+    padding: 60px 0;
   }
   .career_bottom__list {
-    padding: 0 60px 40px;
+    padding: 0 0 40px;
   }
   .career_popup__blocks,
   .feedback_popup__blocks,
@@ -11024,10 +11024,10 @@ section.services {
   .career__left,
   .career__right,
   .career_bottom__flex {
-    padding: 60px 30px;
+    padding: 60px 0;
   }
   .career_bottom__list {
-    padding: 0 30px 40px;
+    padding: 0 0 40px;
   }
   .career_bottom__list ul {
     padding: 0;
@@ -11861,10 +11861,10 @@ section.services {
   .career__left,
   .career__right,
   .career_bottom__flex {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
   .career_bottom__list {
-    padding: 0 20px 20px;
+    padding: 0 0 20px;
     flex-direction: column;
     gap: 20px;
   }
