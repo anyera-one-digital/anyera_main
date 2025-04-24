@@ -839,7 +839,7 @@ section {
   flex: 0 0 auto;
   align-items: center;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 6px;
   background-color: var(--purple);
   position: relative;
   z-index: 1;
@@ -5042,7 +5042,6 @@ html.has-scroll-dragging {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  text-align: center;
 }
 
 .projects__arrow {
@@ -5056,6 +5055,11 @@ html.has-scroll-dragging {
 
 .projects__item:nth-child(2n) .projects__arrow {
   left: 20px;
+}
+
+.projects__arrow .btn__side,
+.projects__arrow:hover .btn__side {
+  border: none;
 }
 
 .projects__link:hover .btn__side_default {

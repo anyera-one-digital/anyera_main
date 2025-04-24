@@ -188,9 +188,6 @@
             <div class="projects__info">
               <h4 class="projects__heading">${p.name}</h4>
               <p class="projects__description">${p.intro_text}</p>
-              <ul class="projects_tags">
-                ${p.services.map(s => `<li class="projects_tags__item">${s.name}</li>`).join('')}
-              </ul>
             </div>
           </a>`;
       projectList.appendChild(li);
