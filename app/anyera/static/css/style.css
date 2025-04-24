@@ -4472,9 +4472,10 @@ html.has-scroll-dragging {
   transition: max-height 0.5s linear, padding 0.5s linear;
 }
 
-.expertise__panel p {
-  width: 100%;
-  max-width: 550px;
+.career_bottom__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .expertise__panel.active {
