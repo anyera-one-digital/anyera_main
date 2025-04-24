@@ -12,7 +12,7 @@
   --text: #161616;
   --white: #fff;
   --black: #000;
-  --text-gray: #6c6c6c;
+  --text-gray: rgb(99, 96, 109);
   --gray-border: #d3d3d3;
   --button-gray: #f0f0f0;
   --border: #dfdfdf;
@@ -246,6 +246,14 @@ textarea,
 .digital__heading {
   font-size: 16px;
   line-height: 120%;
+}
+
+.text_two {
+  font-family: var(--title-font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 145%;
+  color: var(--text);
 }
 
 a {
@@ -4552,8 +4560,7 @@ html.has-scroll-dragging {
 .competencies__desc,
 .competencies__description,
 .articles_page__desc,
-.generation__desc,
-.project_top__info_desc {
+.generation__desc {
   max-width: 430px;
   padding: 0 0 0 40px;
   position: relative;
@@ -4578,8 +4585,7 @@ html.has-scroll-dragging {
 .competencies__desc::before,
 .competencies__description::before,
 .articles_page__desc::before,
-.generation__desc::before,
-.project_top__info_desc::before {
+.generation__desc::before {
   content: "";
   display: inline-block;
   width: 2px;
@@ -5406,7 +5412,6 @@ html.has-scroll-dragging {
 .project_top__desc,
 .project_top__head,
 .project_top__info_desc,
-.project_top__info_tag,
 .project_top__desc_new,
 .project_top__head_new,
 .project_top__info_desc_new,
@@ -5415,14 +5420,10 @@ html.has-scroll-dragging {
 }
 
 .project_top__info_tag {
-  padding: 10px;
-  color: var(--text);
-  border: 1px solid var(--text);
-  border-radius: 6px;
-}
-
-.project_top__info_desc::before {
-  background-color: var(--black);
+  padding: 10px 15px;
+  color: var(--text-gray);
+  background-color: var(--button-gray);
+  border-radius: 98px;
 }
 
 .project_top__white .project_top__desc,
@@ -5432,19 +5433,11 @@ html.has-scroll-dragging {
   color: var(--white);
 }
 
-.project_top__white .project_top__info_desc::before {
-  background-color: var(--white);
-}
-
 .project_top__bg .project_top__desc,
 .project_top__bg .project_top__head,
 .project_top__bg .project_top__info_desc,
 .project_top__bg .project_top__info_tag {
   color: var(--text);
-}
-
-.project_top__bg .project_top__info_desc::before {
-  background-color: var(--text);
 }
 
 .project_top__head,
@@ -5512,6 +5505,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 20px 0 0;
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -9963,7 +9957,7 @@ section.services {
   .title_one,
   .digital__head,
   .team__bottom_count {
-    font-size: 44px;
+    font-size: 34px;
   }
   h2,
   .title_two {
@@ -10501,41 +10495,33 @@ section.services {
 @media (max-width: 1439px) {
   .team__bottom_heading {
     font-size: 120px;
-    line-height: 130px;
   }
   h1,
   .title_one,
   .digital__head,
   .team__bottom_count {
-    font-size: 61px;
-    line-height: 62px;
+    font-size: 34px;
   }
   h2,
   .title_two {
-    font-size: 36px;
-    line-height: 52px;
+    font-size: 28px;
   }
   h3,
   .title_three {
-    font-size: 39px;
-    line-height: 49px;
+    font-size: 24px;
   }
   .header__nav_link h3 {
-    font-size: 36px;
-    line-height: 45px;
+    font-size: 24px;
   }
   h4,
   .team__top_count {
     font-size: 20px;
-    line-height: 25px;
   }
   h5 {
-    font-size: 49px;
-    line-height: 61px;
+    font-size: 34px;
   }
   h6 {
-    font-size: 36px;
-    line-height: 45px;
+    font-size: 28px;
   }
   .sub_headerXL {
     font-size: 32px;
@@ -10738,8 +10724,7 @@ section.services {
   .competencies__desc,
   .competencies__description,
   .articles_page__desc,
-  .generation__desc,
-  .project_top__info_desc {
+  .generation__desc {
     padding: 0 0 0 30px;
   }
   .articles__block {
@@ -11689,8 +11674,7 @@ section.services {
   .competencies__desc,
   .competencies__description,
   .articles_page__desc,
-  .generation__desc,
-  .project_top__info_desc {
+  .generation__desc {
     padding: 0 0 0 20px;
   }
   .expertise__button {
@@ -12423,8 +12407,7 @@ section.services {
   .competencies__desc,
   .competencies__description,
   .articles_page__desc,
-  .generation__desc,
-  .project_top__info_desc {
+  .generation__desc {
     max-width: 100%;
   }
   .header__consultation_blocks {

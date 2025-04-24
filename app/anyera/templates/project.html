@@ -18,12 +18,13 @@
           <p class="project_top__info_desc">{{ project.additional_intro_field }}</p>
           <div class="project_top__info_tags">
             {% for service in project.services.all %} 
-                <p class="project_top__info_tag">#{{ service }}</p>
+                <p class="project_top__info_tag text_two">#{{ service }}</p>
             {% endfor %}
           </div>
           <div class="project_top__info_flex">
-            <a href="{{ project.link }}" target="_blank" class="btn btn_new project_top__button">
+            <a href="{{ project.link }}" class="btn project_top__button">
               <span class="button__text">Веб-сайт</span>
+              <span class="button__hover"></span>
             </a>
           </div>
         </div>
@@ -65,8 +66,9 @@
           <h3 class="projects__head">Похожие кейсы</h3>
           <div class="projects__right_btn">
             <div class="projects__buttons">
-              <a href="/projects/" class="btn btn_new projects__button">
+              <a href="/projects/" class="btn projects__button">
                 <span class="button__text">Все работы</span>
+                <span class="button__hover"></span>
               </a>
               <div class="projects__navigation">
                 <div class="swiper-button-prev projects__prev">
