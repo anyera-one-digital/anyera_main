@@ -5972,7 +5972,6 @@ html.has-scroll-dragging {
   gap: 10px;
 }
 
-
 .articles__prev,
 .articles__next {
   display: -webkit-box;
@@ -5995,6 +5994,11 @@ html.has-scroll-dragging {
   transition: background-color 0.2s linear;
   cursor: none;
   overflow: hidden;
+}
+
+.articles__prev:hover,
+.articles__next:hover {
+  border: none;
 }
 
 .articles__prev {
