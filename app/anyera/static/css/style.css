@@ -258,7 +258,7 @@ textarea,
 
 .hero__card_number {
   font-family: var(--title-font);
-  font-size: 36px;
+  font-size: 68px;
   font-weight: 700;
   line-height: 120%;
   color: var(--text);
@@ -9953,9 +9953,6 @@ section.services {
   .footer__copyright,
   .footer__privacy {
     font-size: 12px;
-  }
-  .hero__card_number {
-    font-size: 36px;
   }
   .header__nav_container {
     padding: 60px;
