@@ -5994,6 +5994,7 @@ html.has-scroll-dragging {
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   cursor: none;
+  overflow: hidden;
 }
 
 .articles__prev {
