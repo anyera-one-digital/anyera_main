@@ -9077,6 +9077,10 @@ section.services {
   transition-delay: 1s;
 }
 
+.article__heading p {
+  font-weight: 600;
+}
+
 .loaded .article__info_block.animate .article__heading {
   opacity: 1;
   top: 0px;
