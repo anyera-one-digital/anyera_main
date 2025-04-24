@@ -4513,7 +4513,6 @@ html.has-scroll-dragging {
 .policy__desc,
 .career_top__desc,
 .career__desc,
-.career_bottom__desc,
 .header__consultation_desc,
 .price__desc,
 .certificates__desc,
@@ -4522,38 +4521,12 @@ html.has-scroll-dragging {
 .articles_page__desc,
 .generation__desc {
   max-width: 430px;
-  padding: 0 0 0 40px;
   position: relative;
 }
 
 .projects__desc {
   max-width: 630px;
   position: relative;
-}
-
-.team__bottom_desc::before,
-.team_slider__desc::before,
-.briefing__desc::before,
-.error_page__desc::before,
-.policy__desc::before,
-.career_top__desc::before,
-.career__desc::before,
-.career_bottom__desc::before,
-.header__consultation_desc::before,
-.price__desc::before,
-.certificates__desc::before,
-.competencies__desc::before,
-.competencies__description::before,
-.articles_page__desc::before,
-.generation__desc::before {
-  content: "";
-  display: inline-block;
-  width: 2px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--text);
 }
 
 .expertise__arrow {
@@ -5152,11 +5125,13 @@ html.has-scroll-dragging {
   bottom: auto;
   color: var(--bg);
   border: none;
+  border-radius: 6px;
   background: var(--border);
   background-color: var(--border);
   -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   cursor: none;
+  overflow: hidden;
 }
 
 .projects__prev {
@@ -8444,6 +8419,11 @@ section.services {
   color: var(--text);
 }
 
+.career_bottom__desc {
+  max-width: 680px;
+  position: relative;
+}
+
 .career_popup,
 .feedback_popup,
 .generation_popup {
@@ -10657,23 +10637,6 @@ section.services {
   .expertise__head {
     padding: 0;
   }
-  .team__bottom_desc,
-  .team_slider__desc,
-  .briefing__desc,
-  .error_page__desc,
-  .policy__desc,
-  .career_top__desc,
-  .career__desc,
-  .career_bottom__desc,
-  .header__consultation_desc,
-  .price__desc,
-  .certificates__desc,
-  .competencies__desc,
-  .competencies__description,
-  .articles_page__desc,
-  .generation__desc {
-    padding: 0 0 0 30px;
-  }
   .articles__block {
     padding: 100px 0;
   }
@@ -11605,23 +11568,6 @@ section.services {
   .digital__info {
     padding: 40px 20px 20px;
     gap: 20px;
-  }
-  .team__bottom_desc,
-  .team_slider__desc,
-  .briefing__desc,
-  .error_page__desc,
-  .policy__desc,
-  .career_top__desc,
-  .career__desc,
-  .career_bottom__desc,
-  .header__consultation_desc,
-  .price__desc,
-  .certificates__desc,
-  .competencies__desc,
-  .competencies__description,
-  .articles_page__desc,
-  .generation__desc {
-    padding: 0 0 0 20px;
   }
   .expertise__button {
     height: 60px;

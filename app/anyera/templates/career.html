@@ -145,41 +145,44 @@
     </button>
     <div class="expertise__panel">
       <div class="container career_bottom__container">
-        <div class="career_bottom__list">
-          <ul>
-            <li><b>Локация:</b> {{ vacancy.location }}</li>
-            <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
-            <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
-            <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
-          </ul>
-          <ul>
-            {% with vacancy.requirement.all as requirements %}
-              {% if requirements %}
-                <li><b>Требования:</b></li>
-                {% for requirement in vacancy.requirement.all %}
-                  <li>· {{ requirement.text }}</li>
-                {% endfor %}
-              {% endif %}
-            {% endwith %}
-          </ul>
-          <ul>
-            {% with vacancy.responsibility.all as responsibility %}
-              {% if responsibility %}
-                <li><b>Обязанности:</b></li>
-                {% for responsibility in vacancy.responsibility.all %}
-                  <li>· {{ responsibility.text }}</li>
-                {% endfor %}
-              {% endif %}
-            {% endwith %}
-          </ul>
-          <ul>
-            <li><b>Зарплата</b></li>
-            <li><b>{{ vacancy.salary }} ₽/час</b></li>
-            <button class="btn career_bottom__button">
-              <span class="button__text">Откликнуться</span>
-              <span class="button__hover"></span>
-            </button>
-          </ul>
+        <div class="career_bottom__info">
+          <p class="career_bottom__desc">{{ vacancy.description }}</p>
+          <div class="career_bottom__list">
+            <ul>
+              <li><b>Локация:</b> {{ vacancy.location }}</li>
+              <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
+              <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
+              <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
+            </ul>
+            <ul>
+              {% with vacancy.requirement.all as requirements %}
+                {% if requirements %}
+                  <li><b>Требования:</b></li>
+                  {% for requirement in vacancy.requirement.all %}
+                    <li>· {{ requirement.text }}</li>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            </ul>
+            <ul>
+              {% with vacancy.responsibility.all as responsibility %}
+                {% if responsibility %}
+                  <li><b>Обязанности:</b></li>
+                  {% for responsibility in vacancy.responsibility.all %}
+                    <li>· {{ responsibility.text }}</li>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            </ul>
+            <ul>
+              <li><b>Зарплата</b></li>
+              <li><b>{{ vacancy.salary }} ₽/час</b></li>
+              <button class="btn career_bottom__button">
+                <span class="button__text">Откликнуться</span>
+                <span class="button__hover"></span>
+              </button>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
