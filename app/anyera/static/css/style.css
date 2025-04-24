@@ -1676,7 +1676,7 @@ html.has-scroll-dragging {
 .header__link,
 .header__link:hover {
   text-transform: uppercase;
-  color: var(--text-gray);
+  color: var(--text);
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
