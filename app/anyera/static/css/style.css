@@ -914,19 +914,12 @@ section {
   align-items: center;
   gap: 10px;
   font-family: var(--title-font);
-  color: var(--bg);
+  color: var(--white);
   position: relative;
   margin: auto;
   z-index: 1;
   -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
-}
-
-.btn_new .button__text {
-  color: var(--white);
-  background: transparent;
-  outline: none;
-  border: 0;
 }
 
 .button__text svg {
@@ -977,14 +970,14 @@ section {
 .btn:hover .button__text,
 .btn.active .button__count small,
 .btn:hover .button__count small {
-  color: var(--bg);
+  color: var(--black);
 }
 
 .dark .btn.active .button__text,
 .dark .btn:hover .button__text,
 .dark .btn.active .button__count small,
 .dark .btn:hover .button__count small {
-  color: var(--text);
+  color: var(--black);
 }
 
 .button__hover {
@@ -1122,44 +1115,6 @@ section {
 
 .btn__side_hover svg {
   color: var(--text);
-}
-
-.btn_new {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: rgb(255, 255, 255);
-  background-color: var(--primary-violet);
-  border: none;
-  border-radius: 6px;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-
-.btn_new_two {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  color: var(--primary-violet);
-  border: 1px solid var(--primary-violet);
-  border-radius: 6px;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-.btn_new_two span{
-  color: var(--primary-violet);
-}
-
-.btn_new:hover {
-  color: rgb(255, 255, 255);
-  background-color: var(--violet);
-  border: none;
-}
-
-.btn_new:active {
-  color: rgb(255, 255, 255);
-  background-color: var(--violet-dark);
-  border: none;
 }
 
 .link_arrow__btn {
@@ -3316,6 +3271,11 @@ html.has-scroll-dragging {
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: color 0.15s linear;
+}
+
+.showreel__button:hover {
+  color: var(--purple);
 }
 
 .showreel__container {
@@ -7148,13 +7108,8 @@ section.services {
   text-transform: uppercase;
 }
 
-.services_top__left p {
-  color: var(--primary-dark)
-}
-
 .services_top__head {
   text-transform: uppercase;
-  color: var(--primary-dark)
 }
 
 .services_top__desc {

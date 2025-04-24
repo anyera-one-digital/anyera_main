@@ -346,9 +346,13 @@ burger.addEventListener('click', function() {
       burger_c.classList.remove("active");
     }
     for (var i = 0; i < menuItemActive.length; i++) {
-      menuItemActive[i].children[1].style.maxHeight = null;
-      menuItemActive[i].children[1].classList.remove("active");
-      menuItemActive[i].classList.remove("active");
+      if(menuItemActive[i].children[1]) {
+        menuItemActive[i].children[1].style.maxHeight = null;
+        menuItemActive[i].children[1].classList.remove("active");
+      }
+      if(menuItemActive[i]) {
+        menuItemActive[i].classList.remove("active");
+      }
     }
     scroll.start();
   } else {
@@ -363,9 +367,13 @@ burger.addEventListener('click', function() {
       burger_c.classList.remove("active");
     }
     for (var i = 0; i < menuItemActive.length; i++) {
-      menuItemActive[i].children[1].style.maxHeight = null;
-      menuItemActive[i].children[1].classList.remove("active");
-      menuItemActive[i].classList.remove("active");
+      if(menuItemActive[i].children[1]) {
+        menuItemActive[i].children[1].style.maxHeight = null;
+        menuItemActive[i].children[1].classList.remove("active");
+      }
+      if(menuItemActive[i]) {
+        menuItemActive[i].classList.remove("active");
+      }
     }
     headerbuttons.classList.remove("active");
     headerlinks.classList.remove("hidden");
