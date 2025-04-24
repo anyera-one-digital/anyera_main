@@ -5190,14 +5190,14 @@ html.has-scroll-dragging {
 
 .projects__buttons .btn__side {
   border: 1px solid var(--border);
-  -webkit-transition: -webkit-transform 0.2s linear, border 0.1s linear;
-  transition: transform 0.2s linear, border 0.1s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
 }
 
 .projects__buttons .btn__side:hover {
-  border: 1px solid var(--text);
-  -webkit-transition: -webkit-transform 0.2s linear, border 0.1s linear 0.2s;
-  transition: transform 0.2s linear, border 0.1s linear 0.2s;
+  border: 1px solid var(--border);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
 }
 
 .projects__swiper_container {
