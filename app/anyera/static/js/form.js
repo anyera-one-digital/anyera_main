@@ -439,6 +439,17 @@ if(formsubscription) {
   const apinput = [...document.querySelectorAll('.articles_page__checks .articles_page__check_input')];
   const apcheck = document.querySelectorAll('.articles_page__checks .articles_page__check');
 
+  var projectsfilter = document.getElementsByClassName("projects__filter_button");
+  for (i = 0; i < projectsfilter.length; i++) {
+    projectsfilter[i].onclick = function(e) {
+      apinput.forEach(input => input.addEventListener('input', function(event) {
+        if (event.target.checked) {
+          for(var i = 0;i < apcheck.length; i++) {apcheck[i].classList.remove('active');}
+          event.target.closest('.articles_page__check').classList.add('active');
+        }
+      }))
+    };
+  }
   apinput.forEach(input => input.addEventListener('input', function(event) {
     if (event.target.checked) {
       for(var i = 0;i < apcheck.length; i++) {apcheck[i].classList.remove('active');}

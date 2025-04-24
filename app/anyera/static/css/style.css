@@ -1175,12 +1175,12 @@ a.link_arrow:hover {
 }
 
 .checkbox .button__hover,
-.checkbox .button__hover:after {
+.checkbox .button__hover::after {
   background-color: var(--border);
 }
 
 .checkbox.active .button__hover,
-.checkbox.active .button__hover:after {
+.checkbox.active .button__hover::after {
   display: none;
 }
 
@@ -8083,12 +8083,9 @@ section.services {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
+  padding: 60px 0;
   flex-direction: column;
   gap: 30px;
-}
-
-.contacts__head {
-  padding: 160px 0 80px;
 }
 
 .contacts__head,
@@ -8128,10 +8125,6 @@ section.services {
 .loaded .contacts__block.animate .contacts__link:nth-child(2) {
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
-}
-
-.contacts__info {
-  padding: 160px 0 80px;
 }
 
 .contacts__divider {
@@ -10243,11 +10236,9 @@ section.services {
     padding: 0 60px;
     gap: 60px;
   }
-  .contacts__head {
-    padding: 140px 0 20px;
-  }
+  .contacts__head,
   .contacts__info {
-    padding: 140px 0 20px;
+    padding: 40px 0;
   }
   .contacts__social_list {
     padding: 90px 0;
