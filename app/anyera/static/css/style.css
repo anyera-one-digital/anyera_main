@@ -856,6 +856,11 @@ section {
   overflow: hidden;
 }
 
+.projects__filter_label {
+  border: 1px solid var(--border);
+  background-color: var(--button-gray);
+}
+
 .btn.checkbox {
   height: 40px;
 }
@@ -882,7 +887,7 @@ section {
 .btn:hover,
 .btn.active:hover {
   color: var(--bg);
-  border: 1px solid var(--purple);
+  border: 1px solid var(--black);
 }
 
 .btn.active {
@@ -933,6 +938,15 @@ section {
 .button__text svg {
   width: 24px;
   height: 24px;
+}
+
+.projects__filter_label .button__text {
+  color: var(---black);
+}
+
+.projects__filter_label:hover .button__text,
+.projects__filter_label.active .button__text {
+  color: var(--white);
 }
 
 .header.header__transparent .button__text {
