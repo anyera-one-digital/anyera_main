@@ -9822,8 +9822,8 @@ section.services {
 
 /* start stack_scroll */
 
-.stack_scroll  { 
-  padding: 0 0 80px;
+.stack_scroll { 
+  padding: 40px 0;
 }
 
 .stack_scroll .body_long { 
@@ -9880,8 +9880,8 @@ section.services {
 } 
 
 .stack_scroll__icon {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   filter: grayscale(100%);
   -webkit-transition: filter 0.3s;
   transition: filter 0.3s;
@@ -11201,7 +11201,7 @@ section.services {
     max-width: 1000px;
   }
   .stack_scroll__link {
-    padding: 40px 40px;
+    padding: 40px 0;
   }
   .stack_scroll__block {
     overflow: visible;
@@ -12068,6 +12068,11 @@ section.services {
   .hero__card_team {
     justify-content: center;
   }
+  
+  .stack_scroll__icon {
+    width: 40px;
+    height: 40px;
+  }
 
   .footer__flex {
     padding: 0 0 130px;
@@ -12104,9 +12109,12 @@ section.services {
     width: 100%;
   }
 
+  .stack_scroll__block {
+    height: 100px;
+  }
   .stack_scroll__link {
-    padding: 15px 15px;
-    gap: 0;
+    padding: 15px 20px;
+    gap: 10px;
   }
 
   .projects__flex {
