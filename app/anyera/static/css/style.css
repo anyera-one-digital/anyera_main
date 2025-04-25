@@ -4484,6 +4484,14 @@ html.has-scroll-dragging {
   transition: max-height 0.5s linear, padding 0.5s linear;
 }
 
+.expertise__panel ul li::before {
+  content: "·";
+}
+
+.expertise__panel ul li {
+  padding: 0 0 0 20px;
+}
+
 .career_bottom__info {
   display: flex;
   flex-direction: column;
