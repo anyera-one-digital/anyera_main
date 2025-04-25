@@ -138,6 +138,7 @@ if(form) {
 // start validate form career
 const formcareer = document.getElementById('form__career');
 if(formcareer) {
+  const careernumber = document.getElementById('career_popup__number');
   const careerusername = document.getElementById('career__username');
   const careeremail = document.getElementById('career__email');
   const careerlink = document.getElementById('career__link');
@@ -219,7 +220,7 @@ if(formcareer) {
     careersocialValue !== '' && careersocialValue.length >= careersocialMin && careersocialValue.length <= careersocialMax) {
       formcareer.classList.add("hidden");
       document.getElementById('form__successfully_form__career').classList.add("active");
-      fetch('/api/v1/vacancies/<<<<ID>>>>/response/', {
+      fetch('/api/v1/vacancies/' + careernumber.value + '/response/', {
         method: 'POST',
         body: JSON.stringify({
           one: careerusernameValue,
@@ -238,7 +239,7 @@ if(formcareer) {
     careerfileValue !== '') {
       formcareer.classList.add("hidden");
       document.getElementById('form__successfully_form__career').classList.add("active");
-      fetch('/api/v1/vacancies/<<<<ID>>>>/response/', {
+      fetch('/api/v1/vacancies/' + careernumber.value + '/response/', {
         method: 'POST',
         body: JSON.stringify({
           one: careerusernameValue,

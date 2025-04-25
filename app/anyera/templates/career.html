@@ -177,7 +177,7 @@
               <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
               <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
               <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
-              <button class="btn career_bottom__button">
+              <button class="btn career_bottom__button" number="117">
                 <span class="button__text">Откликнуться</span>
                 <span class="button__hover"></span>
               </button>
@@ -211,6 +211,7 @@
           <form id="form__career" class="career_popup__forms_form">
             <h4 class="career_popup__head">Отклик на вакансию «<span class="career_popup__vacancy"></span>»</h4>
             <input type="text" class="career_popup__input">
+            <input type="text" id="career_popup__number" class="hidden">
             <div class="header__forms_form_controls">
               <div class="form__control">
                 <input class="form__input" type="text" minl="4" maxl="40" id="career__username" />

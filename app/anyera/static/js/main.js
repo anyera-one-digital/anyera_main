@@ -542,6 +542,8 @@ if(careerpopup) {
   const careerpopupclose = document.querySelector('.career_popup__close');
   for (i = 0; i < careerbutton.length; i++) {
     careerbutton[i].onclick = function(e) {
+      document.getElementById('career_popup__number').value = this.querySelector('[type="number"]');
+      console.log(document.getElementById('career_popup__number').value)
       if (careerpopup.classList.contains("active")) {
         bodyoverlay.classList.remove("active");
         careerpopup.classList.remove("active");
