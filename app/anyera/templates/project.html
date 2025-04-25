@@ -11,8 +11,8 @@
         <div class="project_top__info_block">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link text">Главная</a></li>
-            <li class="breadcrumbs__item"><a href="/articles/" class="breadcrumbs__link text">Медиа</a></li>
-            <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link text">{{ article.title }}</a></li>
+            <li class="breadcrumbs__item"><a href="/projects/" class="breadcrumbs__link text">Проекты</a></li>
+            <li class="breadcrumbs__item"><a href="/projects/{{ project.id }}" class="breadcrumbs__link text">{{ project.name }}</a></li>
           </ul>
           <h1 class="project_top__head">{{ project.name }}</h1>
           <p class="project_top__info_desc">{{ project.additional_intro_field }}</p>
