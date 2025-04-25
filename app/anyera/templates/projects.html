@@ -100,6 +100,24 @@
     const checkboxes        = Array.from(document.querySelectorAll('.projects__filter_check'));
     const projectList       = document.querySelector('.projects__list');
     const filterClearButton = document.querySelector('.projects__filter_clear');
+    const urlParams = new URLSearchParams(window.location.search);
+
+    ['industries', 'types', 'services'].forEach(group => {
+      const ids = urlParams.getAll(group);
+      ids.forEach(id => {
+        const checkbox = document.querySelector(`.projects__filter_check[value="${id}"]`);
+        if (checkbox) {
+          checkbox.checked = true;
+          checkbox.parentElement.classList.add('active')
+          filterClearButton.classList.add('active')
+        }
+      });
+    });
+
+    if (urlParams.toString()) {
+      const event = new Event("change");
+      document.querySelectorAll('.projects__filter_check:checked').forEach(cb => cb.dispatchEvent(event));
+    }
   
     function buildParams() {
       const params = new URLSearchParams();
