@@ -4837,11 +4837,14 @@ html.has-scroll-dragging {
   align-items: center;
   gap: 20px;
   color: var(--text-gray);
+  transition: color 0.15s linear;
+}
+
+.projects__filter_clear:hover {
+  color: var(--text-gray);
 }
 
 .projects__filter_clear.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -12158,7 +12161,7 @@ section.services {
   }
 
   .expertise__block {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .articles__list_new .articles__item {
