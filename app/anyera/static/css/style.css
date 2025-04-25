@@ -4484,7 +4484,8 @@ html.has-scroll-dragging {
   transition: max-height 0.5s linear, padding 0.5s linear;
 }
 
-.expertise__panel .body_long ul li::before {
+.expertise__panel .body_long ul li::before,
+.expertise__desc ul li::before {
   content: "·";
 }
 
