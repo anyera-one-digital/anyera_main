@@ -1236,18 +1236,14 @@ a.link_arrow:hover {
 }
 
 .dark .checkbox.active .button__text,
-.dark .checkbox.active .button__count small {
-  color: var(--bg);
-}
-
+.dark .checkbox.active .button__count small,
 .dark .checkbox:hover .button__text,
 .dark .checkbox:hover .button__count small {
-  color: var(--bg);
+  color: var(--white);
 }
 
 .dark .checkbox.active:hover {
-  color: var(--text);
-  border: 1px solid var(--bg);
+  border: 1px solid var(--border);
 }
 
 .checkbox:hover .button__text,
@@ -1257,22 +1253,22 @@ a.link_arrow:hover {
 
 .checkbox.active:hover .button__text,
 .checkbox.active:hover .button__count small {
-  color: var(--bg);
+  color: var(--black);
 }
 
 .dark .checkbox.active:hover .button__text,
 .dark .checkbox.active:hover .button__count small {
-  color: var(--bg);
+  color: var(--white);
 }
 
 .dark .checkbox .button__hover,
 .dark .checkbox .button__hover:after {
-  background-color: var(--text-gray);
+  background-color: var(--border);
 }
 
 .dark .checkbox:hover,
 .dark .checkbox.active:hover {
-  border: 1px solid var(--text-gray);
+  border: 1px solid var(--border);
 }
 
 /* end buttons */
@@ -2935,7 +2931,7 @@ html.has-scroll-dragging {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 80px;
+  gap: 15px 40px;
 }
 
 .footer__link,
@@ -3119,7 +3115,7 @@ html.has-scroll-dragging {
   height: 200%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -6px;
   z-index: 0;
   background: var(--purple);
   border-radius: 50%;
@@ -4978,7 +4974,7 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   min-height: 200px;
-  gap: 60px 0;
+  gap: 36px 0;
   flex-wrap: wrap;
 }
 
@@ -5008,11 +5004,11 @@ html.has-scroll-dragging {
 }
 
 .projects__item:nth-child(1n) {
-  padding: 0 40px 0 0;
+  padding: 0 6px 0 0;
 }
 
 .projects__item:nth-child(2n) {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 6px;
   text-align: left;
 }
 
@@ -5901,7 +5897,7 @@ html.has-scroll-dragging {
 .articles__list_new {
   padding: 0 0 60px;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 36px 12px;
 }
 
 .articles__flex .articles__list {
@@ -5910,7 +5906,7 @@ html.has-scroll-dragging {
 }
 
 .articles__item {
-  width: calc(25% - 30px);
+  width: calc(25% - 9px);
   height: auto;
   opacity: 0;
   -webkit-transform: translateY(30px);
@@ -10441,7 +10437,6 @@ section.services {
   .generation__button {
     height: 72px;
   }
-  .footer__list,
   .footer__social {
     gap: 60px;
   }
@@ -11150,7 +11145,7 @@ section.services {
   .footer__list {
     flex-direction: column;
     align-items: flex-end;
-    gap: 40px;
+    gap: 10px;
   }
   .footer__contact {
     flex-direction: column;
@@ -11601,10 +11596,7 @@ section.services {
     width: 235px;
   }
   .articles__list_new .articles__item {
-    width: calc(50% - 20px);
-  }
-  .articles__list_new {
-    gap: 30px;
+    width: calc(50% - 6px);
   }
   .accredited__flex {
     border-top: none;
@@ -12094,7 +12086,7 @@ section.services {
     padding: 0 0 130px;
   }
   .footer__right {
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 0;
   }
   .footer__buttons {
@@ -12164,12 +12156,8 @@ section.services {
     flex-direction: column;
   }
 
-  .articles__list_new .articles__item {
-    width: calc(50% - 10px);
-  }
   .articles__list_new {
     padding: 0 0 40px;
-    gap: 20px;
   }
 
   .footer__button_up {

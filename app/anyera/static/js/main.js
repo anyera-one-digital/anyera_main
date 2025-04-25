@@ -974,7 +974,7 @@ if(articlesSlider){
     watchSlidesProgress: true,
     slidesPerView: 'auto',
     loopedSlides: 4,
-    spaceBetween: 10,
+    spaceBetween: 12,
     speed: 1000,
     navigation: {
       nextEl: '.articles__next',
@@ -982,25 +982,25 @@ if(articlesSlider){
     },
     breakpoints: {
       1919: {
-        spaceBetween: 30,
+        spaceBetween: 12,
       },
       1023: {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 12,
       },
     },
     breakpoints: {
       1920: {
         slidesPerView: 4,
-        spaceBetween: 40,
+        spaceBetween: 12,
       },
       1440: {
         slidesPerView: 4,
-        spaceBetween: 30,
+        spaceBetween: 12,
       },
       1024: {
         slidesPerView: 'auto',
-        spaceBetween: 20,
+        spaceBetween: 12,
       },
     },
   });
