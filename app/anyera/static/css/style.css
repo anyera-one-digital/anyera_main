@@ -4784,7 +4784,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: calc(100% + 78px);
+  width: calc(100% + 156px);
   height: max-content;
   max-height: 0;
   padding: 0 80px;
@@ -5296,7 +5296,7 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  padding: 80px 0 100px;
+  padding: 80px 0 30px;
   justify-content: space-between;
   gap: 80px;
 }
@@ -5330,7 +5330,7 @@ html.has-scroll-dragging {
 }
 
 .project_top__shadow .project_top__block {
-  padding: 80px 0 100px;
+  padding: 80px 0 30px;
 }
 
 .project_top__info_block {
@@ -5477,7 +5477,6 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 0 0;
   flex-direction: column;
   gap: 60px;
 }
@@ -10065,7 +10064,7 @@ section.services {
     padding: 0 0 60px;
   }
   .projects__filter_sublist {
-    width: calc(100% + 58px);
+    width: calc(100% + 114px);
     padding: 0 60px;
     left: -59px;
   }
@@ -10111,7 +10110,7 @@ section.services {
     padding: 0;
   }
   .project_top__block {
-    padding: 90px 0 40px;
+    padding: 90px 0 30px;
     gap: 60px;
   }
   .project_top__image {
@@ -10121,7 +10120,7 @@ section.services {
     gap: 10px 30px;
   }
   .project_top__shadow .project_top__block {
-    padding: 90px 0 60px;
+    padding: 90px 0 30px;
   }
   .project_present__swiper {
     height: 360px;
@@ -10739,7 +10738,7 @@ section.services {
     padding: 20px;
   }
   .project_top__shadow .project_top__block {
-    padding: 90px 0 40px;
+    padding: 90px 0 30px;
   }
   .project_phone_flex {
     padding: 40px 0;
@@ -10783,7 +10782,7 @@ section.services {
     width: calc(50% - 40px);
   }
   .project_top__block {
-    padding: 90px 0 60px;
+    padding: 90px 0 30px;
     gap: 40px;
   }
   .career_top__block {
@@ -10794,7 +10793,7 @@ section.services {
     height: calc(var(--height) - 220px);
   }
   .project_top__info_flex {
-    padding: 30px 0 0;
+    padding: 0;
     gap: 40px;
   }
   .projects__desc {
@@ -11251,29 +11250,24 @@ section.services {
     cursor: pointer;
   }
   .team__bottom_heading {
-    font-size: 80px;
-    line-height: 82px;
+    font-size: 40px;
   }
   h1,
   .title_one,
   .digital__head,
   .team__bottom_count {
-    font-size: 61px;
-    line-height: 62px;
+    font-size: 32px;
   }
   h2,
   .team__top_head,
   .title_two {
     font-size: 24px;
-    line-height: 124%;
   }
   h3 {
-    font-size: 34px;
-    line-height: 36px;
+    font-size: 24px;
   }
   .header__nav_link h3 {
-    font-size: 30px;
-    line-height: 45px;
+    font-size: 24px;
   }
   .header__nav_link svg {
     width: 7px;
@@ -11285,20 +11279,16 @@ section.services {
   h4,
   .team__top_count {
     font-size: 16px;
-    line-height: 20px;
   }
   h5 {
     font-size: 29px;
-    line-height: 36px;
   }
   h6 {
     font-size: 16px;
-    line-height: 20px;
   }
   
   .display_footer {
     font-size: 36px;
-    line-height: 124%;
   }
 
   a,
@@ -11314,7 +11304,6 @@ section.services {
   [data-select-item],
   .digital__heading {
     font-size: 16px;
-    line-height: 19px;
   }
   button,
   .btn,
@@ -11325,7 +11314,6 @@ section.services {
   .footer__copyright,
   .footer__privacy {
     font-size: 10px;
-    line-height: 13px;
   }
   .header,
   .top {
@@ -11505,7 +11493,7 @@ section.services {
     padding: 0;
   }
   .project_top__shadow .project_top__block {
-    padding: 90px 0 40px;
+    padding: 90px 0 30px;
   }
   .project__info {
     flex-direction: column;
@@ -11547,11 +11535,7 @@ section.services {
   .project_top__block {
     height: 100%;
     flex-direction: column;
-    padding: 110px 0 40px;
-    gap: 20px;
-  }
-  .project_top__block {
-    padding: 110px 0 80px;
+    padding: 110px 0 30px;
     gap: 40px;
   }
   .project_top__image {
@@ -11872,10 +11856,10 @@ section.services {
     display: block;
   }
   .article__info {
-    padding: 80px 0;
+    padding: 40px 0;
   }
   .article__info_right {
-    gap: 80px;
+    gap: 40px;
   }
   .article__image {
     width: calc(100% + 80px);
