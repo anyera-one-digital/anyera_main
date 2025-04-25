@@ -4692,7 +4692,7 @@ html.has-scroll-dragging {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0  0  60px 0;
+  padding: 0 0 35px;
   gap: 80px;
 }
 
@@ -5233,7 +5233,7 @@ html.has-scroll-dragging {
 }
 
 .projects__swiper_container .projects__flex {
-  padding: 0 0 60px;
+  padding: 0 0 35px;
 }
 
 .projects__border {
@@ -10053,10 +10053,10 @@ section.services {
     padding: 0 0 0 30px;
   }
   .projects__flex {
-    padding: 0  0 60px 0;
+    padding: 0 0 35px;
   }
   .projects__swiper_container .projects__flex {
-    padding: 0 0 60px;
+    padding: 0 0 35px;
   }
   .projects__all_block {
     padding: 0 0 60px;
@@ -10699,7 +10699,7 @@ section.services {
     padding: 0;
   }
   .projects__flex {
-    padding: 0 0 60px 0;
+    padding: 0 0 35px;
   }
   .projects__swiper_container .projects__flex {
     padding: 0 0 40px;
@@ -12125,7 +12125,7 @@ section.services {
 
   .projects__flex {
     flex-direction: column;
-    padding: 0 0 30px;
+    padding: 0 0 35px;
     gap: 37px;
   }
 
