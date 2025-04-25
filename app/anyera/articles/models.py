@@ -41,13 +41,13 @@ class Article(models.Model):
         "Картинка в элементе",
         upload_to='imgs/'
     )
-    created_at = models.DateField(
-        "Дата создания",
-        auto_now_add=True
-    )
     theme = models.ManyToManyField(
         Theme,
         verbose_name="Тема"
+    )
+    created_at = models.DateField(
+        "Дата создания",
+        default=timezone.now
     )
 
     def save(self, *args, **kwargs):
