@@ -82,9 +82,7 @@
             </div>
             <div class="articles__info">
               <h4 class="articles__head">${a.title}</h4>
-              <p class="articles__desc">
-                ${a.theme.map(t => t.name).join(', ')}
-              </p>
+              <p class="articles__desc">${a.preview}</p>
             </div>
           </a>`;
         listEl.appendChild(li);
