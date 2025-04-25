@@ -3,6 +3,8 @@ if(!briefing){} else {
   var getMeTo = document.getElementById("top");
   const bctype = document.getElementById('briefing__check_type');
   const bcsum = document.getElementById('briefing__check_sum');
+  bctype.value = document.querySelector(".briefing__checks_type").children[1].children[0].textContent;
+  bcsum.value = document.querySelector(".briefing__checks_type").children[1].children[0].textContent;
   const bformone = document.getElementById('briefing__form_one');
   const bstepone = document.querySelector('.briefing__step_one');
   const bstepsone = document.querySelector('.briefing__steps_one');
@@ -388,7 +390,6 @@ if(!briefing){} else {
       for(var i = 0;i < bchecktype.length; i++) {bchecktype[i].classList.remove('active');}
       event.target.closest('.briefing__check').classList.add('active');
       bctype.value = event.target.closest('.briefing__check').children[0].textContent;
-      console.log(bctype.value);
     }
   }))
 
@@ -397,7 +398,6 @@ if(!briefing){} else {
       for(var i = 0;i < bchecksum.length; i++) {bchecksum[i].classList.remove('active');}
       event.target.closest('.briefing__check').classList.add('active');
       bcsum.value = event.target.closest('.briefing__check').children[0].textContent;
-      console.log(bcsum.value);
     }
   }))
   // END validate briefing__form_one
@@ -1048,6 +1048,8 @@ if(!briefing){} else {
           fio: busernameValue,
           phone: bphoneValue,
           email: bemailValue,
+          type: bctype.value,
+          sum: bcsum.value,
 
           project_descr: bbasictermsValue,
           purpose: btargetValue,
