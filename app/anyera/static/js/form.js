@@ -219,7 +219,7 @@ if(formcareer) {
     careersocialValue !== '' && careersocialValue.length >= careersocialMin && careersocialValue.length <= careersocialMax) {
       formcareer.classList.add("hidden");
       document.getElementById('form__successfully_form__career').classList.add("active");
-      fetch('/ajax/sendMail.php', {
+      fetch('/api/v1/vacancies/<<<<ID>>>>/response/', {
         method: 'POST',
         body: JSON.stringify({
           one: careerusernameValue,
@@ -238,7 +238,7 @@ if(formcareer) {
     careerfileValue !== '') {
       formcareer.classList.add("hidden");
       document.getElementById('form__successfully_form__career').classList.add("active");
-      fetch('/ajax/sendMail.php', {
+      fetch('/api/v1/vacancies/<<<<ID>>>>/response/', {
         method: 'POST',
         body: JSON.stringify({
           one: careerusernameValue,

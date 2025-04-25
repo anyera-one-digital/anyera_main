@@ -5,15 +5,22 @@ from rest_framework import mixins, viewsets, status
 from rest_framework.decorators import action
 from rest_framework.exceptions import ValidationError
 from rest_framework.response import Response
+from applications.utils.telegram_utils import send_telegram_message
 from vacancies.models import Vacancy, Response as ResponseModel
 from vacancies.serializers import VacancySerializer, ResponseSerializer
+from pages.models import PageContent, PageType
 
 def vacancy_list(request):
     vacancies = Vacancy.objects.all()
-    print(vacancies)
+
+
+    content = PageContent.objects.filter(
+        type=PageType.CAREER
+    ).first()
 
     return render(request, 'career.html', {
-        'vacancies': vacancies
+        'vacancies': vacancies,
+        'content': content
     })
 
 
@@ -26,7 +33,7 @@ class VacancyViewSet(
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
 
-    @action(detail=True, methods=['post'], url_path='response')
+    @action(detail=True, methods=['post'])
     def response(self, request, **kwargs):
         vacancy = self.get_object()
 
@@ -42,12 +49,12 @@ class VacancyViewSet(
             )
 
         serializer.save(vacancy=vacancy)
-        self.send_email_notification(serializer.validated_data, vacancy.title)
+        self.send_notifications(serializer.validated_data, vacancy.title)
         return Response(
             serializer.data, status=status.HTTP_201_CREATED
         )
 
-    def send_email_notification(self, response, vacancy_title):
+    def send_notifications(self, response, vacancy_title):
         subject = "Отклик на вакансию"
         message = (
             f"Детали отклика:\n\n"
@@ -57,18 +64,22 @@ class VacancyViewSet(
             f"Telegram: {response['telegram'] if response.get('telegram') else "Не указано"}\n"
             f"Ссылка на резюме: {response.get('portfolio_url') if response.get('portfolio_url') else "Не указано"}\n"
         )
-        recipient_list = ["NikSen09@mail.ru"]
+        recipient_list = ["anyera.one@yandex.ru"]
 
-        email = EmailMessage(
-            subject,
-            message,
-            settings.EMAIL_HOST_USER,
-            recipient_list
-        )
+        # email = EmailMessage(
+        #     subject,
+        #     message,
+        #     settings.EMAIL_HOST_USER,
+        #     recipient_list
+        # )
 
-        if response.get('portfolio_file'):
-            file = response.get('portfolio_file')
-            file.seek(0)
-            email.attach(file.name, file.read(), file.content_type)
+        # if response.get('portfolio_file'):
+        #     file = response.get('portfolio_file')
+        #     file.seek(0)
+        #     email.attach(file.name, file.read(), file.content_type)
 
-        email.send()
+        # email.send()
+
+        send_telegram_message(message=f"{subject}\n\n{message}", html=True)
+
+

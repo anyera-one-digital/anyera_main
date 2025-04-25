@@ -4,9 +4,7 @@ import requests
 
 env = os.environ
 
-def send_telegram_message(
-    message
-):
+def send_telegram_message(message, html=False):
     telegram_token = env.get("TELEGRAM_TOKEN")
     chat_id = env.get("TELEGRAM_CHANNEL_ID")
     telegram_api_url = f'https://api.telegram.org/bot{telegram_token}/sendMessage'
@@ -16,6 +14,9 @@ def send_telegram_message(
         'text': message,
         'parse_mode': 'Markdown',
     }
+
+    if html:
+        payload['parse_mode'] = "HTML"
 
     response = requests.post(telegram_api_url, data=payload)
 

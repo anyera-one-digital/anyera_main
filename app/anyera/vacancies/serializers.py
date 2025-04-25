@@ -50,3 +50,13 @@ class ResponseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Response
         fields = '__all__'
+
+    def validate(self, data):
+        portfolio_url = data.get('portfolio_url')
+        portfolio_file = data.get('portfolio_file')
+
+        if not portfolio_url and not portfolio_file:
+            raise serializers.ValidationError(
+                "Необходимо заполнить хотя бы одно из полей: ссылка на портфолио(portfolio_url) или файл портфолио(portfolio_file)."
+            )
+        return data
