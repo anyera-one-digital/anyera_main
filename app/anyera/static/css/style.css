@@ -856,7 +856,7 @@ section {
   overflow: hidden;
 }
 
-.projects__filter_label {
+.btn.projects__filter_label {
   border: 1px solid var(--border);
   background-color: var(--button-gray);
 }
@@ -940,15 +940,15 @@ section {
   height: 24px;
 }
 
-.dark .projects__filter_label .button__text,
-.projects__filter_label .button__text {
+.dark .btn.projects__filter_label .button__text,
+.btn.projects__filter_label .button__text {
   color: var(--black);
 }
 
-.dark .projects__filter_label:hover .button__text,
-.dark .projects__filter_label.active .button__text,
-.projects__filter_label:hover .button__text,
-.projects__filter_label.active .button__text {
+.dark .btn.projects__filter_label:hover .button__text,
+.dark .btn.projects__filter_label.active .button__text,
+.btn.projects__filter_label:hover .button__text,
+.btn.projects__filter_label.active .button__text {
   color: var(--white);
 }
 
@@ -1025,10 +1025,10 @@ section {
   transition-duration: 0.2s;
 }
 
-.dark .projects__filter_label.active .button__hover,
-.dark .projects__filter_label .button__hover,
-.dark .projects__filter_label .button__hover:after{
-  background-color: var(--text);
+.dark .btn.projects__filter_label.active .button__hover,
+.dark .btn.projects__filter_label .button__hover,
+.dark .btn.projects__filter_label .button__hover:after{
+  background-color: var(--black);
 }
 
 .button__hover:after {
