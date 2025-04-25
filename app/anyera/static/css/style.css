@@ -940,10 +940,13 @@ section {
   height: 24px;
 }
 
+.dark .projects__filter_label .button__text,
 .projects__filter_label .button__text {
-  color: var(---black);
+  color: var(--black);
 }
 
+.dark .projects__filter_label:hover .button__text,
+.dark .projects__filter_label.active .button__text,
 .projects__filter_label:hover .button__text,
 .projects__filter_label.active .button__text {
   color: var(--white);
@@ -1020,6 +1023,12 @@ section {
   background-color: var(--text);
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
+}
+
+.dark .projects__filter_label.active .button__hover,
+.dark .projects__filter_label .button__hover,
+.dark .projects__filter_label .button__hover:after{
+  background-color: var(--text);
 }
 
 .button__hover:after {
@@ -4699,8 +4708,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
-  padding: 0 30px 0 0;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
