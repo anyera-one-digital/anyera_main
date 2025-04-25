@@ -1239,7 +1239,7 @@ a.link_arrow:hover {
 .dark .checkbox.active .button__count small,
 .dark .checkbox:hover .button__text,
 .dark .checkbox:hover .button__count small {
-  color: var(--white);
+  color: var(--black);
 }
 
 .dark .checkbox.active:hover {
@@ -1248,17 +1248,17 @@ a.link_arrow:hover {
 
 .checkbox:hover .button__text,
 .checkbox:hover .button__count small {
-  color: var(--text);
+  color: var(--black);
 }
 
 .checkbox.active:hover .button__text,
 .checkbox.active:hover .button__count small {
-  color: var(--black);
+  color: var(--white);
 }
 
 .dark .checkbox.active:hover .button__text,
 .dark .checkbox.active:hover .button__count small {
-  color: var(--white);
+  color: var(--black);
 }
 
 .dark .checkbox .button__hover,
