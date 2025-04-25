@@ -4488,10 +4488,6 @@ html.has-scroll-dragging {
   content: "·";
 }
 
-.expertise__panel ul li {
-  padding: 0 0 0 20px;
-}
-
 .career_bottom__info {
   display: flex;
   flex-direction: column;
@@ -4515,12 +4511,12 @@ html.has-scroll-dragging {
 }
 
 .expertise__item,
-.expertise__panel li {
+.expertise__panel .body_long li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .expertise__head {
