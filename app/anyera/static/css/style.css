@@ -857,8 +857,13 @@ section {
 }
 
 .btn.projects__filter_label {
-  border: 1px solid var(--border);
+  border: 1px solid var(--button-gray);
   background-color: var(--button-gray);
+}
+
+.dark .btn.projects__filter_label.active:hover {
+  border: 1px solid var(--border);
+  background-color: var(--border);
 }
 
 .btn.checkbox {
@@ -1028,7 +1033,7 @@ section {
 .dark .btn.projects__filter_label.active .button__hover,
 .dark .btn.projects__filter_label .button__hover,
 .dark .btn.projects__filter_label .button__hover:after{
-  background-color: var(--black);
+  background-color: var(--border);
 }
 
 .button__hover:after {
