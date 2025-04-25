@@ -102,7 +102,7 @@
     const filterClearButton = document.querySelector('.projects__filter_clear');
     const urlParams = new URLSearchParams(window.location.search);
 
-    ['industries', 'types', 'services'].forEach(group => {
+    ['types'].forEach(group => {
       const ids = urlParams.getAll(group);
       ids.forEach(id => {
         const checkbox = document.querySelector(`.projects__filter_check[value="${id}"]`);
