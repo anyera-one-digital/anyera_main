@@ -5956,6 +5956,7 @@ html.has-scroll-dragging {
   left: 20px;
   padding: 3px 10px;
   border: 1px solid var(--border);
+  border-radius: 6px;
   background-color: var(--bg);
 }
 
