@@ -4489,6 +4489,11 @@ html.has-scroll-dragging {
   content: "·";
 }
 
+.expertise__desc ul li {
+  display: flex;
+  gap: 10px;
+}
+
 .career_bottom__info {
   display: flex;
   flex-direction: column;
