@@ -149,12 +149,6 @@
           <p class="career_bottom__desc">{{ vacancy.description }}</p>
           <div class="career_bottom__list">
             <ul>
-              <li><b>Локация:</b> {{ vacancy.location }}</li>
-              <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
-              <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
-              <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
-            </ul>
-            <ul>
               {% with vacancy.requirement.all as requirements %}
                 {% if requirements %}
                   <li><b>Требования:</b></li>
@@ -173,6 +167,12 @@
                   {% endfor %}
                 {% endif %}
               {% endwith %}
+            </ul>
+            <ul>
+              <li><b>Локация:</b> {{ vacancy.location }}</li>
+              <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
+              <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
+              <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
             </ul>
             <ul>
               <li><b>Зарплата</b></li>
