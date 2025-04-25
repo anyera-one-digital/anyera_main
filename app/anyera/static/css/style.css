@@ -1263,12 +1263,12 @@ a.link_arrow:hover {
 
 .dark .checkbox .button__hover,
 .dark .checkbox .button__hover:after {
-  background-color: var(--border);
+  background-color: var(--button-gray);
 }
 
 .dark .checkbox:hover,
 .dark .checkbox.active:hover {
-  border: 1px solid var(--border);
+  border: 1px solid var(--button-gray);
 }
 
 /* end buttons */
