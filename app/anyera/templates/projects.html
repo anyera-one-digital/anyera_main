@@ -38,7 +38,7 @@
                 {% endfor %}
               </ul>
             </li>
-            <li class="projects__filter_item">
+            <li class="projects__filter_item" data-group="types">
               <button class="projects__filter_button"><p>Тип сайта<small>{{ types_count }}</small></p>
                 <span><svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L8.95181 8.5L16 1.5" stroke="currentColor" stroke-width="2"></path></svg></span>
               </button>
@@ -105,7 +105,7 @@
     ['types'].forEach(group => {
       const ids = urlParams.getAll(group);
       ids.forEach(id => {
-        const checkbox = document.querySelector(`.projects__filter_check[value="${id}"]`);
+        const checkbox = document.querySelector(`.projects__filter_item[data-group="types"] .projects__filter_check[value="${id}"]`);
         if (checkbox) {
           checkbox.checked = true;
           checkbox.parentElement.classList.add('active')
