@@ -861,6 +861,7 @@ section {
   background-color: var(--button-gray);
 }
 
+.dark .btn.projects__filter_label:hover,
 .dark .btn.projects__filter_label.active:hover {
   border: 1px solid var(--border);
   background-color: var(--border);
