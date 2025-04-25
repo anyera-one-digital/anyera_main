@@ -543,8 +543,6 @@ if(careerpopup) {
   for (i = 0; i < careerbutton.length; i++) {
     careerbutton[i].onclick = function(e) {
       document.getElementById('career_popup__number').value = this.getAttribute('number');
-      console.log(this.getAttribute('number')); // Проверяем значение
-      console.log(this); // Проверяем элемент
       if (careerpopup.classList.contains("active")) {
         bodyoverlay.classList.remove("active");
         careerpopup.classList.remove("active");
