@@ -1048,8 +1048,8 @@ if(!briefing){} else {
           fio: busernameValue,
           phone: bphoneValue,
           email: bemailValue,
-          type: bctype.value,
-          sum: bcsum.value,
+          product: bctype.value,
+          budget: bcsum.value,
 
           project_descr: bbasictermsValue,
           purpose: btargetValue,
