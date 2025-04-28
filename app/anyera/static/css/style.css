@@ -7765,6 +7765,10 @@ section.services {
   gap: 20px;
 }
 
+.form__checks_sum {
+  max-width: 640px;
+}
+
 .briefing__checks.active,
 .form__check.active {
   color: var(--bg);
