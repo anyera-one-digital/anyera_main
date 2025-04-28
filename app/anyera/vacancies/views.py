@@ -73,13 +73,15 @@ class VacancyViewSet(
         #     recipient_list
         # )
 
-        # if response.get('portfolio_file'):
-        #     file = response.get('portfolio_file')
-        #     file.seek(0)
-        #     email.attach(file.name, file.read(), file.content_type)
-
+        if response.get('portfolio_file'):
+            file = response.get('portfolio_file')
+            file.seek(0)
+            # email.attach(file.name, file.read(), file.content_type)
+            send_telegram_message(
+                message=f"{subject}\n\n{message}",
+                html=True,
+                file=file
+            )
+        else:
+            send_telegram_message(message=f"{subject}\n\n{message}", html=True)
         # email.send()
-
-        send_telegram_message(message=f"{subject}\n\n{message}", html=True)
-
-

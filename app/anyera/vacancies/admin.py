@@ -5,6 +5,7 @@ from vacancies.models import (
     Vacancy,
     Requirement,
     Responsibility,
+    Condition,
     Response
 )
 
@@ -18,6 +19,13 @@ class RequirementInline(TabularInline):
 
 class ResponsibilityInline(TabularInline):
     model = Responsibility
+    extra = 0
+    fields = ('text', 'order')
+    classes = ['collapse']
+
+
+class ConditionInline(TabularInline):
+    model = Condition
     extra = 0
     fields = ('text', 'order')
     classes = ['collapse']
@@ -39,9 +47,10 @@ class VacancyAdmin(ModelAdmin):
     inlines = [
         RequirementInline,
         ResponsibilityInline,
+        ConditionInline,
         ResponseInline
     ]
-    list_display = ['title', 'description', 'salary']
+    list_display = ['title', 'work_experience', 'location']
     search_fields = ['title']
 
 

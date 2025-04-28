@@ -220,18 +220,25 @@ if(formcareer) {
     careersocialValue !== '' && careersocialValue.length >= careersocialMin && careersocialValue.length <= careersocialMax) {
       formcareer.classList.add("hidden");
       document.getElementById('form__successfully_form__career').classList.add("active");
+      const formData = new FormData();
+      formData.append('name', careerusernameValue);
+      formData.append('email', careeremailValue);
+      formData.append('portfolio_url', careerlinkValue);
+      formData.append('telegram', careersocialValue);
+      formData.append('portfolio_file', careerfile.files[0]);
       fetch('/api/v1/vacancies/' + careernumber.value + '/response/', {
         method: 'POST',
-        body: JSON.stringify({
-          one: careerusernameValue,
-          two: careeremailValue,
-          three: careerlinkValue,
-          four: careersocialValue,
-          five: careerfileValue
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
-        }
+        body: formData
+        // body: JSON.stringify({
+        //   name: careerusernameValue,
+        //   email: careeremailValue,
+        //   portfolio_url: careerlinkValue,
+        //   telegram: careersocialValue,
+        //   portfolio_file: careerfileValue
+        // }),
+        // headers: {
+        //   "Content-type": "application/json; charset=UTF-8"
+        // }
       });
     } else if(careerusernameValue !== '' && careerusernameValue.length >= careerusernameMin && careerusernameValue.length <= careerusernameMax && 
     careeremailValue !== '' && careeremailValue.length >= careeremailMin && careeremailValue.length <= careeremailMax &&  
@@ -239,18 +246,25 @@ if(formcareer) {
     careerfileValue !== '') {
       formcareer.classList.add("hidden");
       document.getElementById('form__successfully_form__career').classList.add("active");
+      const formData = new FormData();
+      formData.append('name', careerusernameValue);
+      formData.append('email', careeremailValue);
+      formData.append('portfolio_url', careerlinkValue);
+      formData.append('telegram', careersocialValue);
+      formData.append('portfolio_file', careerfile.files[0]);
       fetch('/api/v1/vacancies/' + careernumber.value + '/response/', {
         method: 'POST',
-        body: JSON.stringify({
-          one: careerusernameValue,
-          two: careeremailValue,
-          three: careerlinkValue,
-          four: careersocialValue,
-          five: careerfileValue
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
-        }
+        body: formData
+        // body: JSON.stringify({
+        //   name: careerusernameValue,
+        //   email: careeremailValue,
+        //   portfolio_url: careerlinkValue,
+        //   telegram: careersocialValue,
+        //   portfolio_file: careerfileValue
+        // }),
+        // headers: {
+        //   "Content-type": "application/json; charset=UTF-8"
+        // }
       });
     }
   }

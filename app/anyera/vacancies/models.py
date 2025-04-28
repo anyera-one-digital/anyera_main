@@ -30,10 +30,6 @@ class Vacancy(models.Model):
         "Soft skills",
         max_length=255
     )
-    salary = models.CharField(
-        "Зарплата",
-        max_length=255
-    )
 
     class Meta:
         verbose_name = "Вакансия"
@@ -86,6 +82,31 @@ class Responsibility(models.Model):
     class Meta:
         verbose_name = "Обязанность"
         verbose_name_plural = "Обязанности"
+        unique_together = ["vacancy", "order", ]
+        ordering = ['order']
+
+    def __str__(self):
+        return self.text
+    
+
+class Condition(models.Model):
+
+    text = models.CharField(
+        "Условие"
+    )
+    order = models.PositiveSmallIntegerField(
+        "Положение"
+    )
+    vacancy = models.ForeignKey(
+        Vacancy,
+        on_delete=models.CASCADE,
+        related_name="сondition",
+        verbose_name="Вакансия"
+    )
+
+    class Meta:
+        verbose_name = "Условие"
+        verbose_name_plural = "Условия"
         unique_together = ["vacancy", "order", ]
         ordering = ['order']
 

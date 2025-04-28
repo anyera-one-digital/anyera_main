@@ -169,15 +169,21 @@
               {% endwith %}
             </ul>
             <ul>
-              <li><b>Условия</b></li>
-              <li><b>{{ vacancy.salary }} ₽/час</b></li>
+              {% with vacancy.сondition.all as сondition %}
+                {% if сondition %}
+                  <li><b>Условия</b></li>
+                  {% for сondition in vacancy.сondition.all %}
+                    <li>· {{ сondition.text }}</li>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
             </ul>
             <ul>
               <li><b>Локация:</b> {{ vacancy.location }}</li>
               <li><b>Опыт:</b> {{ vacancy.work_experience }}</li>
               <li><b>Hard skills:</b> {{ vacancy.hard_skills }}</li>
               <li><b>Soft skills:</b> {{ vacancy.soft_skills }}</li>
-              <button class="btn career_bottom__button" number="117">
+              <button class="btn career_bottom__button" number="{{ vacancy.id }}">
                 <span class="button__text">Откликнуться</span>
                 <span class="button__hover"></span>
               </button>
