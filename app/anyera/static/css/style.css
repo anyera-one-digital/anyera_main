@@ -6283,7 +6283,9 @@ html.has-scroll-dragging {
 }
 
 .team_slider_block {
+  border-radius: 12px;
   transition: opacity 0.5s linear;
+  overflow: hidden;
 }
 
 .team_slider__item.swiper-slide .team_slider_block {
@@ -6333,6 +6335,8 @@ html.has-scroll-dragging {
 
 .team_clients__item {
   width: calc(25% - 30px);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .team_clients__item {
@@ -6461,6 +6465,8 @@ html.has-scroll-dragging {
 .team_comments__quotes svg {
   width: 50px;
   height: 50px;
+  border-radius: 6px;
+  object-fit: contain;
 }
 
 .team_comments__quotes svg rect {
@@ -6524,6 +6530,7 @@ html.has-scroll-dragging {
   bottom: auto;
   color: var(--bg);
   border: none;
+  border-radius: 6px;
   background: var(--border);
   background-color: var(--border);
   -webkit-transition: background-color 0.2s linear;
