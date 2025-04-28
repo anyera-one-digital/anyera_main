@@ -6232,7 +6232,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px;
+  padding: 80px 0;
   margin: 0 2px;
   justify-content: space-between;
   gap: 40px;
@@ -6315,7 +6315,7 @@ html.has-scroll-dragging {
 }
 
 .team_slider_flex {
-  padding: 80px;
+  padding: 80px 0;
   margin: 0 2px;
   background-color: var(--bg);
 }
@@ -6324,7 +6324,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 80px 80px;
+  padding: 0 0 80px;
   margin: 0 2px;
   flex-wrap: wrap;
   gap: 40px;
@@ -6392,7 +6392,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px;
+  padding: 80px 0;
   margin: 0 2px;
   justify-content: space-between;
   gap: 40px;
@@ -10190,14 +10190,14 @@ section.services {
   .team__bottom_block,
   .team_slider__info,
   .team_comments__block {
-    padding: 60px;
+    padding: 60px 0;
     gap: 20px;
   }
   .team_clients_block {
     height: 257px;
   }
   .team_clients__list {
-    padding: 0 60px 60px;
+    padding: 0 0 60px;
     gap: 20px;
   }
   .team_clients__item {
@@ -10207,7 +10207,7 @@ section.services {
     height: 400px;
   }
   .team_slider_flex {
-    padding: 60px;
+    padding: 60px 0;
   }
   .team_slider__info_left,
   .team_slider__info_right,
@@ -10834,19 +10834,19 @@ section.services {
     align-items: flex-end;
   }
   .team_slider_flex {
-    padding: 30px;
+    padding: 30px 0;
   }
   .team_clients_block {
     height: 211px;
   }
   .team_clients__list {
-    padding: 0 30px 30px;
+    padding: 0 0 30px;
   }
   .team_slider__info {
-    padding: 60px 30px;
+    padding: 60px 0;
   }
   .team_comments__block {
-    padding: 30px 30px 60px;
+    padding: 30px 0 60px;
   }
   .team__bottom_info {
     width: 100%;
@@ -11676,10 +11676,10 @@ section.services {
     gap: 60px;
   }
   .team_slider_flex {
-    padding: 20px;
+    padding: 20px 0;
   }
   .team_slider__info {
-    padding: 60px 20px;
+    padding: 60px 0;
     flex-direction: column;
     gap: 40px;
   }
@@ -11693,14 +11693,14 @@ section.services {
     width: 100%;
   }
   .team_clients__list {
-    padding: 0 20px 20px;
+    padding: 0 0 20px;
     gap: 10px;
   }
   .team_clients__item {
     width: calc(33.333% - 7px);
   }
   .team_comments__block {
-    padding: 20px 20px 60px;
+    padding: 20px 0 60px;
     flex-direction: column;
     gap: 40px;
   }
