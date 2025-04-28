@@ -48,7 +48,8 @@ class BlockInline(TabularInline):
 @admin.register(Project)
 class ProjectAdmin(ModelAdmin):
     compressed_fields = True
-    list_display = ("name", "select_on_main", "is_visible")
+    list_display = ("name", "select_on_main", "is_visible", "order")
+    list_editable = ("order", )
     search_fields = ("name", )
     list_filter = ("type", "industries", "services")
     list_filter_submit = True

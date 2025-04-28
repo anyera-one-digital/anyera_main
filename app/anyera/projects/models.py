@@ -138,10 +138,17 @@ class Project(models.Model):
         null=True,
         verbose_name="Другие проекты"
     )
+    order = models.PositiveSmallIntegerField(
+        "Положение",
+        unique=True,
+        blank=True,
+        null=True
+    )
 
     class Meta:
         verbose_name = 'Проект'
         verbose_name_plural = 'Проекты'
+        ordering = ["order"]
 
     def __str__(self):
         return self.name
