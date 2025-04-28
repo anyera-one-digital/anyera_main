@@ -21,12 +21,14 @@
                 <p class="project_top__info_tag text_two">#{{ service }}</p>
             {% endfor %}
           </div>
-          <div class="project_top__info_flex">
-            <a href="{{ project.link }}" class="btn project_top__button">
-              <span class="button__text">Веб-сайт</span>
-              <span class="button__hover"></span>
-            </a>
-          </div>
+          {% if project.link %}
+            <div class="project_top__info_flex">
+              <a href="{{ project.link }}" class="btn project_top__button">
+                <span class="button__text">Веб-сайт</span>
+                <span class="button__hover"></span>
+              </a>
+            </div>
+          {% endif %}
         </div>
       </div>
       <div class="project_top__image">

@@ -66,9 +66,9 @@ class Project(models.Model):
     )
     link = models.CharField(
         "Ссылка на сайт",
-        null=True,
         max_length=200,
-        default=""
+        null=True,
+        blank=True,
     )
     select_on_main = models.BooleanField(
         "Выводить в блоке на главной",
@@ -140,9 +140,7 @@ class Project(models.Model):
     )
     order = models.PositiveSmallIntegerField(
         "Положение",
-        unique=True,
-        blank=True,
-        null=True
+        unique=True
     )
 
     class Meta:
