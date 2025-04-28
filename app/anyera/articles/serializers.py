@@ -10,13 +10,6 @@ class ContentBlockSerializer(serializers.ModelSerializer):
         fields = ['order', 'name', 'text']
 
 
-class ThemeSerializers(serializers.ModelSerializer):
-
-    class Meta:
-        model = ContentBlock
-        fields = ['name']
-
-
 class ArticleSerializer(serializers.ModelSerializer):
 
     content_blocks = serializers.SerializerMethodField()
@@ -34,8 +27,6 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 class ArticleListSerializer(serializers.ModelSerializer):
 
-    theme = ThemeSerializers(many=True)
-
     class Meta:
         model = Article
-        fields = ['code', 'title', 'preview', 'preview_img', 'theme']
+        fields = ['code', 'title', 'preview', 'preview_img', 'created_at']
