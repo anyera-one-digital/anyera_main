@@ -17,6 +17,8 @@ DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = ["*"]
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 104857600 # 100МБ
+
 INSTALLED_APPS = [
     'unfold',
     'django.contrib.admin',
