@@ -12,26 +12,26 @@
       </ul>
       <div class="services_top__info">
         <div class="services_top__left">
-          <p class="rubik">Текст 2</p>
+          <p class="rubik">КОНТАКТЫ</p>
         </div>
         <div class="services_top__right">
-          <h1 class="services_top__head title_two">Текст 3</h1>
-          <div class="services_top__desc">Текст 4</div>
+          <h1 class="services_top__head title_two">{{ content.title|default:"КОНТАКТЫ" }}</h1>
+          <div class="services_top__desc">{{ content.description|safe|default:"<p></p>" }}</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 <section class="contacts" data-scroll-section>
-  <div class="container contacts__container">
+  <!-- <div class="container contacts__container">
     <div class="contacts__block">
       <h1 class="contacts__head">{{ content.title|default:"КОНТАКТЫ" }}</h1>
       <div class="contacts__info">
-        <a href="mailto://HELLO@ANYERA.RU" class="contacts__link"><h2 class="text text__big">HELLO@ANYERA.RU</h2></a>
+        <a href="mailto://HELLO@ANYERA.ONE" class="contacts__link"><h2 class="text text__big">HELLO@ANYERA.ONE</h2></a>
         <a href="tel://+79270030100" class="contacts__link"><h3 class="text text__big">+7 (927) 003-01-00</h3></a>
       </div>
     </div>
-  </div>
+  </div> -->
   <div class="contacts__divider"></div>
   <div class="container contacts__container">
     <div class="contacts__social_block">
