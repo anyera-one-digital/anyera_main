@@ -4,6 +4,7 @@ from articles.models import Article
 from projects.models import Project
 
 class StaticViewSitemap(Sitemap):
+    protocol = "https"
     priority = 1
     changefreq = "monthly"
 
@@ -27,6 +28,7 @@ class StaticViewSitemap(Sitemap):
 
 
 class ArticleSitemap(Sitemap):
+    protocol = "https"
     changefreq = "weekly"
     priority = 0.6
 
@@ -38,6 +40,7 @@ class ArticleSitemap(Sitemap):
 
 
 class ProjectSitemap(Sitemap):
+    protocol = "https"
     changefreq = "weekly"
     priority = 0.6
 
