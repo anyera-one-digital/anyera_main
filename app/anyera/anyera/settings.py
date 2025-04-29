@@ -221,6 +221,11 @@ UNFOLD = {
                         "icon": "table_chart",
                         "link": reverse_lazy("admin:pages_price_changelist"),
                     },
+                    {
+                        "title": "Команда",
+                        "icon": "people",
+                        "link": reverse_lazy("admin:pages_teampage_changelist"),
+                    },
                 ],
             },
             {

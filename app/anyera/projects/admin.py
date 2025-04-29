@@ -1,17 +1,11 @@
 from django.contrib import admin
-from django.core.exceptions import ValidationError
-from django.forms.models import BaseInlineFormSet
-from django.utils.html import format_html
-from django.urls import reverse
 from unfold.admin import ModelAdmin, TabularInline
 from projects.models import (
     Project,
     Industry,
     Type,
     Service,
-    # DescriptionBlock,
-    Block,
-    SliderImage
+    Block
 )
 from pages.admin import ProjectSEOInline
 

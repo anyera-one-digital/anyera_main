@@ -7,7 +7,11 @@ from pages.models import (
     PageSEO,
     PageContent,
     ProjectSEO,
-    Price
+    Price,
+    TeamPage,
+    Team,
+    ClientImage,
+    ClientFeedBack,
 )
 
 
@@ -61,3 +65,28 @@ class PriceAdmin(ModelAdmin):
         'price_discount_7',
         'price_discount_12',
     )
+
+
+class TeamInline(TabularInline):
+    model = Team
+    classes = ['collapse']
+    extra = 0
+
+
+class ClientImageInline(TabularInline):
+    model = ClientImage
+    classes = ['collapse']
+    extra = 0
+
+
+class ClientFeedBackInline(TabularInline):
+    model = ClientFeedBack
+    classes = ['collapse']
+    extra = 0
+
+
+@admin.register(TeamPage)
+class TeamPageAdmin(ModelAdmin):
+    compressed_fields = True
+    list_display = ("title",)
+    inlines = [TeamInline, ClientImageInline, ClientFeedBackInline]

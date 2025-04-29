@@ -1,5 +1,6 @@
 from django.db import models
 from ckeditor.fields import RichTextField
+from rest_framework.exceptions import ValidationError
 from articles.models import Article
 from projects.models import Project
 
@@ -251,3 +252,158 @@ class Price(models.Model):
             self.price_discount_7 = round(self.price * 0.93)
             self.price_discount_12 = round(self.price * 0.88)
         super().save(*args, **kwargs)
+
+
+class TeamPage(models.Model):
+
+    title = models.CharField(
+        "Заголовок",
+        max_length=100,
+        blank=True,
+        null=True
+    )
+    description = RichTextField(
+        "Описание",
+        max_length=255,
+        blank=True,
+        null=True
+    )
+    number_of_projects = models.CharField(
+        "Кол-во проектов",
+        max_length=20
+    )
+    experience_of_specialists = models.CharField(
+        "Опыт специалистов",
+        max_length=20
+    )
+    number_of_experts = models.CharField(
+        "Кол-во экспертов",
+        max_length=20
+    )
+    clients_title = models.CharField(
+        "Заголовок у клиентов",
+        max_length=100,
+        blank=True,
+        null=True
+    )
+    clients_description = RichTextField(
+        "Описание у клиентов",
+        max_length=255,
+        blank=True,
+        null=True
+    )
+
+    def clean(self):
+        super().clean()
+        if TeamPage.objects.exists() and not self.pk:
+            raise ValidationError("Можно создать только одну страницу 'Команда'.")
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name = "Страница \"Команда\""
+        verbose_name_plural = "Страница \"Команда\""
+
+    def __str__(self):
+        return self.title
+
+
+class Team(models.Model):
+
+    page = models.ForeignKey(
+        TeamPage,
+        on_delete=models.CASCADE,
+        related_name='team',
+        verbose_name='Страница команды'
+    )
+    name = models.CharField(
+        "Имя и фамилия",
+        max_length=100
+    )
+    text = models.CharField(
+        "Текст",
+        max_length=100
+    )
+    image = models.ImageField(
+        "Фото",
+        upload_to='imgs/'
+    )
+    order = models.PositiveIntegerField(
+        "Порядок"
+    )
+
+    class Meta:
+        verbose_name = "Член команды"
+        verbose_name_plural = "Команда"
+        ordering = ['order',]
+        unique_together = ["page", "order", ]
+
+    def __str__(self):
+        return self.name
+
+
+class ClientImage(models.Model):
+
+    page = models.ForeignKey(
+        TeamPage,
+        on_delete=models.CASCADE,
+        related_name='client_image',
+        verbose_name='Страница команды'
+    )
+    image = models.ImageField(
+        "Изображение",
+        upload_to='imgs/'
+    )
+    order = models.PositiveIntegerField(
+        "Порядок"
+    )
+
+    class Meta:
+        verbose_name = "Изображение клиента"
+        verbose_name_plural = "Изображения клиентов"
+        ordering = ['order',]
+        unique_together = ["page", "order", ]
+
+    def __str__(self):
+        return f"Изображение №{self.order}"
+    
+
+class ClientFeedBack(models.Model):
+
+    page = models.ForeignKey(
+        TeamPage,
+        on_delete=models.CASCADE,
+        related_name='client_feedback',
+        verbose_name='Страница команды'
+    )
+    text = RichTextField(
+        "Текст"
+    )
+    name = models.CharField(
+        "Имя и фамилия клиента",
+        max_length=100
+    )
+    position = models.CharField(
+        "Должность",
+        max_length=100
+    )
+    image = models.ImageField(
+        "Фото клиента",
+        upload_to='imgs/'
+    )
+    order = models.PositiveIntegerField(
+        "Порядок"
+    )
+
+    class Meta:
+        verbose_name = "Отзыв клиента"
+        verbose_name_plural = "Отзывы клиентов"
+        ordering = ['order',]
+        unique_together = ["page", "order", ]
+
+    def __str__(self):
+        return f"Отзыв: {self.name}"
+    
+

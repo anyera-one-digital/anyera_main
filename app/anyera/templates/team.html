@@ -26,21 +26,21 @@
   <div class="container team__bottom_container">
     <div class="team__bottom_block">
       <div class="team__bottom_info">
-        <h2 class="team__bottom_head">Наша цель</h2>
-        <p class="team__bottom_desc">Текст про цель Во многих сферах мы уже разрабатывали продукты и уверенны, что сможем добиться в них еще большего результата. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2 class="team__bottom_head">{{ page_data.title|default:"Наша цель" }}</h2>
+        <div class="team__bottom_desc">{{ page_data.description|safe|default:"<p>Текст про цель Во многих сферах мы уже разрабатывали продукты и уверенны, что сможем добиться в них еще большего результата. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>" }}</div>
       </div>
       <div class="team__bottom_counters">
         <div class="team__bottom_top">
-          <p class="team__bottom_heading"><span>100</span>+</p>
+          <p class="team__bottom_heading">{{ page_data.number_of_projects|default:"100+" }}</p>
           <p class="team__bottom_description">Проектов реализовано</p>
         </div>
         <div class="team__bottom_bottom">
           <div class="team__bottom_left">
-            <p class="team__bottom_count"><span>5</span>+ лет</p>
+            <p class="team__bottom_count">{{ page_data.experience_of_specialists|default:"5+ ЛЕТ" }}</p>
             <p class="team__bottom_description">Средний коммерческий опыт специалистов</p>
           </div>
           <div class="team__bottom_right">
-            <p class="team__bottom_count"><span>10</span>+</p>
+            <p class="team__bottom_count">{{ page_data.number_of_experts|default:"10+" }}</p>
             <p class="team__bottom_description">Экспертов в нашей команде</p>
           </div>
         </div>
@@ -48,209 +48,123 @@
     </div>
   </div>
 </section>
-<section class="team_slider" data-scroll-section>
-  <div class="container team_slider__container">
-    <div class="team_slider_flex">
-      <div class="team_slider__swiper swiper">
-        <ul class="team_slider__list swiper-wrapper">
-          <li class="team_slider__item swiper-slide">
-            <div class="team_slider_block">
-              <img src="img/team/team_1.webp" alt="">
-            </div>
-            <div class="team_slider_info">
-              <h4 class="team_slider_name">Алина Алинова</h4>
-              <p class="team_slider_job">Финансовый трекер</p>
-            </div>
-          </li>
-          <li class="team_slider__item swiper-slide">
-            <div class="team_slider_block">
-              <img src="img/team/team_2.webp" alt="">
-            </div>
-            <div class="team_slider_info">
-              <h4 class="team_slider_name">Алина Алинова</h4>
-              <p class="team_slider_job">Финансовый трекер</p>
-            </div>
-          </li>
-          <li class="team_slider__item swiper-slide">
-            <div class="team_slider_block">
-              <img src="img/team/team_3.webp" alt="">
-            </div>
-            <div class="team_slider_info">
-              <h4 class="team_slider_name">Алина Алинова</h4>
-              <p class="team_slider_job">Финансовый трекер</p>
-            </div>
-          </li>
-          <li class="team_slider__item swiper-slide">
-            <div class="team_slider_block">
-              <img src="img/team/team_4.webp" alt="">
-            </div>
-            <div class="team_slider_info">
-              <h4 class="team_slider_name">Алина Алинова</h4>
-              <p class="team_slider_job">Финансовый трекер</p>
-            </div>
-          </li>
-          <li class="team_slider__item swiper-slide">
-            <div class="team_slider_block">
-              <img src="img/team/team_5.webp" alt="">
-            </div>
-            <div class="team_slider_info">
-              <h4 class="team_slider_name">Алина Алинова</h4>
-              <p class="team_slider_job">Финансовый трекер</p>
-            </div>
-          </li>
-          <li class="team_slider__item swiper-slide">
-            <div class="team_slider_block">
-              <img src="img/team/team_6.webp" alt="">
-            </div>
-            <div class="team_slider_info">
-              <h4 class="team_slider_name">Алина Алинова</h4>
-              <p class="team_slider_job">Финансовый трекер</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="team_clients" data-scroll-section>
-  <div class="container team_clients__container">
-    <div class="team_slider__block">
-      <div class="team_slider__info">
-        <div class="team_slider__info_left">
-          <h4 class="team_slider__head">Наши клиенты</h4>
-        </div>
-        <div class="team_slider__info_right">
-          <p class="team_slider__desc">Commitment to the highest quality production standards, a broad expertise, and a genuine strive to help our clients have secured us strategic cooperation with market-leading companies in many sectors and regions.</p>
-        </div>
-      </div>
-    </div>
-    <ul class="team_clients__list">
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-      <li class="team_clients__item">
-        <div class="team_clients_block">
-          <img src="img/clients/clients.webp" alt="">
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-<section class="team_comments" data-scroll-section>
-  <div class="container team_comments__container">
-    <div class="team_comments__block">
-      <div class="team_comments__buttons">
-        <div class="team_comments__quotes">
-          <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="45" height="45" fill="currentColor"/>
-            <path d="M25 15H33.2917V23.3L29.9667 29.95H25.8333L29.1417 23.3H25V15Z" fill="currentColor"/>
-            <path d="M11 15H19.2917V23.3L15.9667 29.95H11.8333L15.1417 23.3H11V15Z" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="team_comments__navigation">
-          <div class="swiper-button-prev team_comments__prev">
-            <div class="btn__arrow">
-              <div class="btn__side btn__side_hover">
-                <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <div class="btn__side btn__side_default">
-                <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next team_comments__next">
-            <div class="btn__arrow">
-              <div class="btn__side btn__side_hover">
-                <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <div class="btn__side btn__side_default">
-                <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
-                </svg>
-              </div>
-            </div>
+{% with page_data.team.all as team %}
+  {% if team %}
+    <section class="team_slider" data-scroll-section>
+      <div class="container team_slider__container">
+        <div class="team_slider_flex">
+          <div class="team_slider__swiper swiper">
+            <ul class="team_slider__list swiper-wrapper">
+              {% for member in page_data.team.all %}
+                <li class="team_slider__item swiper-slide">
+                  <div class="team_slider_block">
+                    <img src="/media/{{ member.image }}" alt="">
+                  </div>
+                  <div class="team_slider_info">
+                    <h4 class="team_slider_name">{{ member.name }}</h4>
+                    <p class="team_slider_job">{{ member.text }}</p>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
           </div>
         </div>
       </div>
-      <div class="team_comments__swiper swiper">
-        <ul class="team_comments__list swiper-wrapper">
-          <li class="team_comments__item swiper-slide">
-            <p class="team_comments__review">I am pleased to recommend Anyera, we have assigned to this company already two projects and they was accomplished perfect — I like their organization of work, their initiative and support, and that they provide assistance after the project is completed. We are satisfied of particular service provided by Anyera and we will be glad to continue our cooperation in the future.</p>
-            <div class="team_comments__flex">
-              <div class="team_comments__image">
-                <img src="img/clients/clients.webp" alt="">
-              </div>
-              <div class="team_comments__info">
-                <h4 class="team_comments__name">Алина Алинова</h4>
-                <p class="team_comments__job">Финансовый директор</p>
-              </div>
+    </section>
+  {% endif %}
+{% endwith %}
+{% with page_data.client_image.all as client_image %}
+  {% if client_image %}
+    <section class="team_clients" data-scroll-section>
+      <div class="container team_clients__container">
+        <div class="team_slider__block">
+          <div class="team_slider__info">
+            <div class="team_slider__info_left">
+              <h4 class="team_slider__head">{{ page_data.clients_title|default:"Наши клиенты" }}</h4>
             </div>
-          </li>
-          <li class="team_comments__item swiper-slide">
-            <p class="team_comments__review">I am pleased to recommend Anyera, we have assigned to this company already two projects and they was accomplished perfect — I like their organization of work, their initiative and support, and that they provide assistance after the project is completed. We are satisfied of particular service provided by Anyera and we will be glad to continue our cooperation in the future.</p>
-            <div class="team_comments__flex">
-              <div class="team_comments__image">
-                <img src="img/clients/clients.webp" alt="">
-              </div>
-              <div class="team_comments__info">
-                <h4 class="team_comments__name">Алина Алинова</h4>
-                <p class="team_comments__job">Финансовый директор</p>
-              </div>
+            <div class="team_slider__info_right">
+              <div class="team_slider__desc">{{ page_data.clients_description|safe|default:"<p>Commitment to the highest quality production standards, a broad expertise, and a genuine strive to help our clients have secured us strategic cooperation with market-leading companies in many sectors and regions.</p>" }}</div>
             </div>
-          </li>
-          <li class="team_comments__item swiper-slide">
-            <p class="team_comments__review">I am pleased to recommend Anyera, we have assigned to this company already two projects and they was accomplished perfect — I like their organization of work, their initiative and support, and that they provide assistance after the project is completed. We are satisfied of particular service provided by Anyera and we will be glad to continue our cooperation in the future.</p>
-            <div class="team_comments__flex">
-              <div class="team_comments__image">
-                <img src="img/clients/clients.webp" alt="">
+          </div>
+        </div>
+        <ul class="team_clients__list">
+          {% for client_image in page_data.client_image.all %}
+            <li class="team_clients__item">
+              <div class="team_clients_block">
+                <img src="/media/{{ client_image.image }}" alt="">
               </div>
-              <div class="team_comments__info">
-                <h4 class="team_comments__name">Алина Алинова</h4>
-                <p class="team_comments__job">Финансовый директор</p>
-              </div>
-            </div>
-          </li>
+            </li>
+          {% endfor %}
         </ul>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  {% endif %}
+{% endwith %}
+{% with page_data.client_feedback.all as client_feedback %}
+  {% if client_feedback %}
+    <section class="team_comments" data-scroll-section>
+      <div class="container team_comments__container">
+        <div class="team_comments__block">
+          <div class="team_comments__buttons">
+            <div class="team_comments__quotes">
+              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="45" height="45" fill="currentColor"/>
+                <path d="M25 15H33.2917V23.3L29.9667 29.95H25.8333L29.1417 23.3H25V15Z" fill="currentColor"/>
+                <path d="M11 15H19.2917V23.3L15.9667 29.95H11.8333L15.1417 23.3H11V15Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="team_comments__navigation">
+              <div class="swiper-button-prev team_comments__prev">
+                <div class="btn__arrow">
+                  <div class="btn__side btn__side_hover">
+                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div class="btn__side btn__side_default">
+                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.11099 4.18209C0.915723 4.37735 0.915723 4.69394 1.11099 4.8892L4.29297 8.07118C4.48823 8.26644 4.80481 8.26644 5.00007 8.07118C5.19533 7.87592 5.19533 7.55933 5.00007 7.36407L2.17165 4.53564L5.00007 1.70722C5.19533 1.51196 5.19533 1.19537 5.00007 1.00011C4.80481 0.804849 4.48823 0.804849 4.29297 1.00011L1.11099 4.18209ZM11.4645 4.03564L1.46454 4.03564V5.03564L11.4645 5.03564V4.03564Z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next team_comments__next">
+                <div class="btn__arrow">
+                  <div class="btn__side btn__side_hover">
+                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                  <div class="btn__side btn__side_default">
+                    <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.8181 4.8892C11.0134 4.69394 11.0134 4.37735 10.8181 4.18209L7.63611 1.00011C7.44085 0.804849 7.12427 0.804849 6.929 1.00011C6.73374 1.19537 6.73374 1.51196 6.929 1.70722L9.75743 4.53564L6.929 7.36407C6.73374 7.55933 6.73374 7.87592 6.929 8.07118C7.12427 8.26644 7.44085 8.26644 7.63611 8.07118L10.8181 4.8892ZM0.464539 5.03564L10.4645 5.03564V4.03564L0.464539 4.03564L0.464539 5.03564Z" fill="currentColor"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="team_comments__swiper swiper">
+            <ul class="team_comments__list swiper-wrapper">
+              {% for client_feedback in page_data.client_feedback.all %}
+                <li class="team_comments__item swiper-slide">
+                  <div class="team_comments__review">{{ client_feedback.text|safe }}</div>
+                  <div class="team_comments__flex">
+                    <div class="team_comments__image">
+                      <img src="/media/{{ client_feedback.image }}" alt="">
+                    </div>
+                    <div class="team_comments__info">
+                      <h4 class="team_comments__name">{{ client_feedback.name }}</h4>
+                      <p class="team_comments__job">{{ client_feedback.position }}</p>
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endwith %}
 {% endblock %}
