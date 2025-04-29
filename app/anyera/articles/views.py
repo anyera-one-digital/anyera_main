@@ -10,7 +10,7 @@ from articles.pagination import ArticlePagination
 from pages.models import PageType, PageSEO, PageContent, ArticleSEO
 
 def article_list(request):
-    articles = Article.objects.all()
+    articles = Article.objects.all().order_by('-created_at')
     themes = (
         Theme.objects.annotate(article_count=Count('article'))
         .filter(article_count__gt=0)
