@@ -2759,6 +2759,7 @@ html.has-scroll-dragging {
   display: flex;
   height: 40px;
   width: 40px;
+  background-color: var(--bg);
 }
 
 .header__consultation_burger {
@@ -2911,7 +2912,7 @@ html.has-scroll-dragging {
   display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
-  gap: 40px;
+  gap: 20px;
 }
 
 .footer__button_up {
@@ -4546,6 +4547,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
 }
