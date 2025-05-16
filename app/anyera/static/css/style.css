@@ -11195,9 +11195,10 @@ section.services {
   .hero__flex {
     flex-direction: column;
     align-items: center;
+    gap: 40px;
   }
   .hero__left {
-    width: 80%;
+    width: 100%;
   }
   .hero__right {
     height: auto;
@@ -12064,7 +12065,6 @@ section.services {
   }
 
   .hero__flex {
-    /* flex-direction: column; */
     align-items: center;
   }
   .hero__left {
