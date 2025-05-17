@@ -3157,8 +3157,9 @@ html.has-scroll-dragging {
 .hero__card:nth-child(4){
   text-decoration: none;  
   display: flex;
+  height: 243px;
+  padding: 0;
   justify-content: space-between;
-  height: 243px; 
 }
 
 .hero__card_recall {
