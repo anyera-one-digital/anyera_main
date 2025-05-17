@@ -4438,8 +4438,9 @@ html.has-scroll-dragging {
   gap: 20px;
 }
 
-.expertise__left {
-  width: 50%;
+.expertise__left,
+.expertise__right {
+  width: calc(50% - 10px);
 }
 
 .expertise__left {
@@ -10253,10 +10254,6 @@ section.services {
   .services__left {
     padding: 0px 0 0 35px;
   }
-  .services__container,
-  .expertise__container {
-    padding: 0 170px;
-  } 
 
   .briefing__block {
     padding: 120px 60px;
@@ -10470,10 +10467,6 @@ section.services {
 
 /* start 1680px */
 @media (max-width: 1680px) {
-  .services__container,
-  .expertise__container {
-    padding: 0 55px;
-  }
   .services__img {
     right: 110px;
   }
@@ -11216,7 +11209,7 @@ section.services {
     max-width: 1000px;
   }
   .stack_scroll__link {
-    padding: 40px;
+    padding: 40px 80px;
   }
   .stack_scroll__block {
     overflow: visible;

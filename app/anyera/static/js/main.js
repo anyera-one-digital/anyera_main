@@ -1278,13 +1278,14 @@ const showreelmodalClose = document.querySelector('.showreel__modal_close');
 const showreelvideor = document.querySelector('.showreel__video_responsive');
 window.onload = function(){
   if(showreelvideor){
-    showreelvideor.innerHTML = '<video id="showreel__video" poster="/static/img/showreel/showreel.webp " playsinline autoplay loop data-overlay="1" data-title="ANYERA"><source src="/static/img/showreel/showreel.mov" type="video/mp4"></video>';
     setTimeout(function() {
+      showreelvideor.innerHTML = '<video id="showreel__video" poster="/static/img/showreel/showreel.webp " playsinline autoplay loop data-overlay="1" data-title="ANYERA"><source src="/static/img/showreel/test.mp4" type="video/mp4"></video>';
       const showreelvideo = document.getElementById('showreel__video');
       if(showreelvideo){
         showreelvideo.pause();
         showreelvideo.currentTime = 0;
         preview.onclick = function(e) {
+          showreelvideor.innerHTML = '<video id="showreel__video" poster="/static/img/showreel/showreel.webp " playsinline autoplay loop data-overlay="1" data-title="ANYERA"><source src="/static/img/showreel/showreel.mov" type="video/mp4"></video>';
           e.preventDefault();
           showreelmodal.classList.add('showreel__modal_visible');
           document.querySelector('.spec__overlay').classList.add('is-playing');
