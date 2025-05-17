@@ -3106,7 +3106,7 @@ html.has-scroll-dragging {
 }
 
 .hero__card:nth-child(1) .hero__card_link {
-  padding: 0 20px 0 0;
+  padding: 0 40px 0 0;
   justify-content: flex-end;
 }
 
@@ -4872,6 +4872,7 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
 }
 
@@ -10141,7 +10142,7 @@ section.services {
     height: 360px;
   }
   .projects__flex {
-    gap: 0;
+    gap: 20px;
   }
   .articles__prev,
   .articles__next,
@@ -12569,7 +12570,6 @@ section.services {
   }
   .hero__left {
     width: 100%;
-    text-align: center;
   }
   .hero__right {
     width: 100%;
