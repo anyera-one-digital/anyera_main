@@ -4549,9 +4549,12 @@ html.has-scroll-dragging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
+}
+
+.expertise__item {
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
 }
 
 .expertise__head {
